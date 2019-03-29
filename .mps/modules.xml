@@ -3,6 +3,8 @@
   <component name="MPSProject">
     <projectModules>
       <modulePath path="$PROJECT_DIR$/languages/CompliantControlArchitecture/CompliantControlArchitecture.mpl" folder="" />
+      <modulePath path="$PROJECT_DIR$/languages/CompliantControlTask/CompliantControlTask.mpl" folder="" />
+      <modulePath path="$PROJECT_DIR$/solutions/Sandbox/Sandbox.msd" folder="" />
     </projectModules>
   </component>
 </project>
