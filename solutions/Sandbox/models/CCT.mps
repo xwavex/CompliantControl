@@ -28,7 +28,6 @@
         <property id="6011303867108309083" name="space" index="30w4_v" />
       </concept>
       <concept id="6011303867108097887" name="CompliantControlTask.structure.MassSpringDamper" flags="ng" index="30x8Tr" />
-      <concept id="6011303867108097761" name="CompliantControlTask.structure.ICouplingFormalism" flags="ng" index="30x8Z_" />
       <concept id="6011303867108202796" name="CompliantControlTask.structure.Constraint" flags="ng" index="30xIwC" />
       <concept id="6011303867107887364" name="CompliantControlTask.structure.FrameRef" flags="ng" index="30yrw0">
         <reference id="6011303867107888059" name="ref" index="30yrEZ" />
@@ -47,7 +46,6 @@
         <property id="7718836250436394528" name="space" index="pHoUc" />
         <property id="7718836250436145802" name="value" index="pIk8A" />
       </concept>
-      <concept id="4056863864937650413" name="CompliantControlTask.structure.IReferenceGeometry" flags="ng" index="3rXJzt" />
     </language>
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
       <concept id="1169194658468" name="jetbrains.mps.lang.core.structure.INamedConcept" flags="ng" index="TrEIO">
@@ -98,13 +96,6 @@
           <property role="pHoUc" value="position (rad)" />
         </node>
         <node concept="30x8Tr" id="6GuOaLMH18K" role="3rXgel" />
-      </node>
-    </node>
-    <node concept="30yr_X" id="6GuOaLMKc7i" role="pFT7q">
-      <node concept="pzsIR" id="6GuOaLMKc7j" role="30yrBN">
-        <node concept="3rXJzt" id="6GuOaLMKc7k" role="3rXgej" />
-        <node concept="3rXJzt" id="6GuOaLMKc7l" role="3rXgek" />
-        <node concept="30x8Z_" id="6GuOaLMKc7m" role="3rXgel" />
       </node>
     </node>
   </node>
