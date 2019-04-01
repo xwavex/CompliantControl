@@ -38,7 +38,9 @@
       </concept>
     </language>
     <language id="d35899bf-1f8a-4727-b7b5-90d52a21d317" name="CompliantControlTask">
+      <concept id="7718836250447559293" name="CompliantControlTask.structure.DynamicAnnotation" flags="ng" index="oiQFh" />
       <concept id="7718836250434804507" name="CompliantControlTask.structure.Coupling" flags="ng" index="pzsIR">
+        <property id="7718836250444803976" name="showHierachy" index="odnW$" />
         <property id="4056863864937636767" name="state" index="3rXgeJ" />
         <child id="4056863864937636771" name="base" index="3rXgej" />
         <child id="4056863864937636772" name="target" index="3rXgek" />
@@ -75,7 +77,9 @@
         <child id="7718836250442232059" name="damping" index="o6E1n" />
         <child id="7718836250442141498" name="stiffness" index="o7tYm" />
       </concept>
-      <concept id="6011303867108202796" name="CompliantControlTask.structure.Constraint" flags="ng" index="30xIwC" />
+      <concept id="6011303867108202796" name="CompliantControlTask.structure.Constraint" flags="ng" index="30xIwC">
+        <child id="7718836250446979416" name="force" index="okz7O" />
+      </concept>
       <concept id="6011303867107887364" name="CompliantControlTask.structure.FrameRef" flags="ng" index="30yrw0">
         <reference id="6011303867107888059" name="ref" index="30yrEZ" />
       </concept>
@@ -92,6 +96,7 @@
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
       <concept id="1133920641626" name="jetbrains.mps.lang.core.structure.BaseConcept" flags="ng" index="2VYdi">
         <property id="1193676396447" name="virtualPackage" index="3GE5qa" />
+        <child id="5169995583184591170" name="smodelAttribute" index="lGtFl" />
       </concept>
       <concept id="1169194658468" name="jetbrains.mps.lang.core.structure.INamedConcept" flags="ng" index="TrEIO">
         <property id="1169194664001" name="name" index="TrG5h" />
@@ -411,26 +416,6 @@
         <node concept="30yrw0" id="6GuOaLMNLOw" role="3rXgej">
           <ref role="30yrEZ" node="6GuOaLMNzk$" resolve="BarManipulatorFrame" />
         </node>
-        <node concept="30w5Ui" id="6GuOaLMVqBf" role="3rXgek">
-          <node concept="3b6qkQ" id="6GuOaLMVqBh" role="pXyqr">
-            <property role="$nhwW" value="0.4" />
-          </node>
-          <node concept="3b6qkQ" id="6GuOaLMVqBj" role="pXyrL">
-            <property role="$nhwW" value="0.3" />
-          </node>
-          <node concept="3b6qkQ" id="6GuOaLMVqBl" role="pW_3b">
-            <property role="$nhwW" value="0.33" />
-          </node>
-          <node concept="3b6qkQ" id="6GuOaLMVqBn" role="pXyvC">
-            <property role="$nhwW" value="0.0" />
-          </node>
-          <node concept="3b6qkQ" id="6GuOaLMVqBp" role="pW_10">
-            <property role="$nhwW" value="0.0" />
-          </node>
-          <node concept="3b6qkQ" id="6GuOaLMVqBr" role="pW_7H">
-            <property role="$nhwW" value="0.0" />
-          </node>
-        </node>
         <node concept="30x8Tr" id="6GuOaLN3euf" role="3rXgel">
           <node concept="3b6qkQ" id="6GuOaLN3euh" role="o7tYm">
             <property role="$nhwW" value="100.0" />
@@ -469,10 +454,12 @@
             <property role="$nhwW" value="30.0" />
           </node>
         </node>
+        <node concept="30yrw0" id="6GuOaLNi54p" role="3rXgek">
+          <ref role="30yrEZ" node="6GuOaLNi52o" resolve="VF_BarTarget (external)" />
+        </node>
       </node>
       <node concept="30B06x" id="6GuOaLMNLOW" role="30yrBN">
         <property role="TrG5h" value="force_constraint" />
-        <node concept="30xIwC" id="6GuOaLMNLPT" role="3rXgel" />
         <node concept="30yrw0" id="6GuOaLMNLQ6" role="3rXgej">
           <ref role="30yrEZ" node="6GuOaLMNzk$" resolve="BarManipulatorFrame" />
         </node>
@@ -496,6 +483,27 @@
             <property role="$nhwW" value="0.0" />
           </node>
         </node>
+        <node concept="30xIwC" id="6GuOaLNje4X" role="3rXgel">
+          <node concept="3b6qkQ" id="6GuOaLNjO54" role="okz7O">
+            <property role="$nhwW" value="0.0" />
+          </node>
+          <node concept="3b6qkQ" id="6GuOaLNk7yu" role="okz7O">
+            <property role="$nhwW" value="0.0" />
+          </node>
+          <node concept="3b6qkQ" id="6GuOaLNk7yX" role="okz7O">
+            <property role="$nhwW" value="5.0" />
+          </node>
+          <node concept="3b6qkQ" id="6GuOaLNk7zC" role="okz7O">
+            <property role="$nhwW" value="0.0" />
+          </node>
+          <node concept="3b6qkQ" id="6GuOaLNk7$p" role="okz7O">
+            <property role="$nhwW" value="0.0" />
+          </node>
+          <node concept="3b6qkQ" id="6GuOaLNk7_s" role="okz7O">
+            <property role="$nhwW" value="0.0" />
+          </node>
+          <node concept="oiQFh" id="6GuOaLNmX3z" role="lGtFl" />
+        </node>
       </node>
     </node>
     <node concept="30yr_X" id="6GuOaLMNLLA" role="pFT7q">
@@ -505,6 +513,7 @@
       <node concept="30B04z" id="6GuOaLMNLLB" role="30yrBN">
         <property role="TrG5h" value="Full Chain Arm Nullspace Tracking" />
         <property role="3rXgeJ" value="active" />
+        <property role="odnW$" value="false" />
         <node concept="pQWJo" id="6GuOaLMPQsS" role="3rXgej">
           <ref role="pNcCJ" to="d49h:6bIwLn$0JLd" resolve="full_arm" />
         </node>
@@ -587,6 +596,10 @@
         </node>
       </node>
     </node>
+  </node>
+  <node concept="30yLgp" id="6GuOaLNi52o">
+    <property role="3GE5qa" value="frames" />
+    <property role="TrG5h" value="VF_BarTarget (external)" />
   </node>
 </model>
 

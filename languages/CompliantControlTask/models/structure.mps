@@ -253,6 +253,18 @@
     <property role="TrG5h" value="Constraint" />
     <property role="34LRSv" value="Constraint" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="6GuOaLNje5o" role="1TKVEi">
+      <property role="IQ2ns" value="7718836250446979416" />
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="force" />
+      <property role="20lbJX" value="1..n" />
+      <ref role="20lvS9" to="tpee:gbb6qgO" resolve="FloatingPointConstant" />
+    </node>
+    <node concept="1TJgyi" id="6GuOaLNje5b" role="1TKVEl">
+      <property role="IQ2nx" value="7718836250446979403" />
+      <property role="TrG5h" value="taskspace" />
+      <ref role="AX2Wp" to="tpck:fKAQMTB" resolve="boolean" />
+    </node>
     <node concept="PrWs8" id="5dGsgijUD$H" role="PzmwI">
       <ref role="PrY4T" node="5dGsgijUfVx" resolve="ICouplingFormalism" />
     </node>
@@ -450,6 +462,16 @@
       <property role="TrG5h" value="state" />
       <ref role="AX2Wp" node="5dGsgijVggB" resolve="CouplingState" />
     </node>
+    <node concept="1TJgyi" id="6GuOaLNaUY8" role="1TKVEl">
+      <property role="IQ2nx" value="7718836250444803976" />
+      <property role="TrG5h" value="showHierachy" />
+      <ref role="AX2Wp" to="tpck:fKAQMTB" resolve="boolean" />
+    </node>
+    <node concept="1TJgyi" id="6GuOaLNf$$g" role="1TKVEl">
+      <property role="IQ2nx" value="7718836250446022928" />
+      <property role="TrG5h" value="prioritycolor" />
+      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+    </node>
     <node concept="1TJgyj" id="3xcS33zIuez" role="1TKVEi">
       <property role="IQ2ns" value="4056863864937636771" />
       <property role="20lmBu" value="aggregation" />
@@ -470,6 +492,12 @@
       <property role="20kJfa" value="formalism" />
       <property role="20lbJX" value="1" />
       <ref role="20lvS9" node="5dGsgijUfVx" resolve="ICouplingFormalism" />
+    </node>
+    <node concept="1TJgyj" id="6GuOaLN7_HA" role="1TKVEi">
+      <property role="IQ2ns" value="7718836250443930470" />
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="advancedPriority" />
+      <ref role="20lvS9" to="tpee:fzcmrck" resolve="IntegerConstant" />
     </node>
     <node concept="PrWs8" id="6GuOaLM$MdX" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
@@ -640,6 +668,30 @@
       </node>
       <node concept="trNpa" id="6GuOaLMWnJc" role="EQaZv">
         <ref role="trN6q" node="6GuOaLM$LGr" resolve="Coupling" />
+      </node>
+    </node>
+  </node>
+  <node concept="1TIwiD" id="6GuOaLNiU7w">
+    <property role="EcuMT" value="7718836250446897632" />
+    <property role="3GE5qa" value="formalism" />
+    <property role="TrG5h" value="PureCompliance" />
+    <property role="34LRSv" value="PureCompliance" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="PrWs8" id="6GuOaLNiU7$" role="PzmwI">
+      <ref role="PrY4T" node="5dGsgijUfVx" resolve="ICouplingFormalism" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="6GuOaLNlrDX">
+    <property role="EcuMT" value="7718836250447559293" />
+    <property role="TrG5h" value="DynamicAnnotation" />
+    <ref role="1TJDcQ" to="tpck:2ULFgo8_XDk" resolve="NodeAttribute" />
+    <node concept="M6xJ_" id="6GuOaLNlrFV" role="lGtFl">
+      <property role="Hh88m" value="dynamic" />
+      <node concept="trNpa" id="6GuOaLNlrG8" role="EQaZv">
+        <ref role="trN6q" node="5dGsgijUfVx" resolve="ICouplingFormalism" />
+      </node>
+      <node concept="tn0Fv" id="6GuOaLNlrGl" role="HhnKV">
+        <property role="tnX3d" value="false" />
       </node>
     </node>
   </node>
