@@ -12,6 +12,7 @@
     <dependency reexport="false">3385964e-5b3d-433b-a45e-c97c2abf2862(RSTRTa)</dependency>
   </dependencies>
   <languageVersions>
+    <language slang="l:708de3ab-d65c-48c9-a632-40656bd206af:CompliantControlArchitecture" version="0" />
     <language slang="l:d35899bf-1f8a-4727-b7b5-90d52a21d317:CompliantControlTask" version="0" />
     <language slang="l:d6d7f6e1-f407-48f8-a582-7b1489b7163f:ProtoBuf" version="0" />
     <language slang="l:f3061a53-9226-4cc5-a443-f952ceaf5816:jetbrains.mps.baseLanguage" version="5" />

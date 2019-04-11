@@ -13,7 +13,6 @@
     <import index="lrob" ref="r:d01e7c48-4315-4a97-a560-4b91cd1fec15(RobotRepository.interfaces)" />
     <import index="yzc3" ref="r:fb46aa12-7f49-4ac6-ac4c-bc9fd1f3fb28(RSTRTa.sandbox)" />
     <import index="sxll" ref="r:b16aad8a-7e70-4535-bb6a-8f44c10f77e2(RSTRTa.stable)" />
-    <import index="sxll" ref="r:b16aad8a-7e70-4535-bb6a-8f44c10f77e2(RSTRTa.stable)" />
   </imports>
   <registry>
     <language id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage">
@@ -63,9 +62,11 @@
         <reference id="7718836250438933123" name="chain" index="pNcCJ" />
       </concept>
       <concept id="7718836250438081894" name="CompliantControlTask.structure.InPlaceSetPointSet" flags="ng" index="pQWRa">
+        <property id="7718836250438081896" name="space" index="pQWR4" />
         <child id="7718836250438082023" name="value" index="pQWPb" />
       </concept>
       <concept id="6011303867108306838" name="CompliantControlTask.structure.RelativeFrame" flags="ng" index="30w5Ui">
+        <property id="6011303867108309083" name="space" index="30w4_v" />
         <child id="7718836250440663276" name="rp" index="pW_10" />
         <child id="7718836250440663143" name="z" index="pW_3b" />
         <child id="7718836250440663361" name="ry" index="pW_7H" />
@@ -199,6 +200,7 @@
     <node concept="30yr_X" id="6GuOaLMMS2f" role="pFT7q">
       <property role="TrG5h" value="Left_eef_vFrame" />
       <property role="30wYnu" value="true" />
+      <property role="o4zO8" value="1" />
       <node concept="30B06x" id="6GuOaLMMS2g" role="30yrBN">
         <property role="TrG5h" value="Left_eef_vFrame_tracking" />
         <node concept="30yrw0" id="6GuOaLMMS2h" role="3rXgej">
@@ -207,12 +209,50 @@
         <node concept="30yrw0" id="6GuOaLMMS2i" role="3rXgek">
           <ref role="30yrEZ" node="5dGsgijU34v" resolve="EEF_left_target" />
         </node>
-        <node concept="30x8Tr" id="6GuOaLMMS2j" role="3rXgel" />
+        <node concept="30x8Tr" id="IplcUZGn$r" role="3rXgel">
+          <node concept="3b6qkQ" id="IplcUZGn$t" role="o7tYm">
+            <property role="$nhwW" value="1.0" />
+          </node>
+          <node concept="3b6qkQ" id="IplcUZGn_e" role="o7tYm">
+            <property role="$nhwW" value="1.0" />
+          </node>
+          <node concept="3b6qkQ" id="IplcUZGn_H" role="o7tYm">
+            <property role="$nhwW" value="1.0" />
+          </node>
+          <node concept="3b6qkQ" id="IplcUZGnAl" role="o7tYm">
+            <property role="$nhwW" value="1.0" />
+          </node>
+          <node concept="3b6qkQ" id="IplcUZGnBc" role="o7tYm">
+            <property role="$nhwW" value="1.0" />
+          </node>
+          <node concept="3b6qkQ" id="IplcUZGnCc" role="o7tYm">
+            <property role="$nhwW" value="1.0" />
+          </node>
+          <node concept="3b6qkQ" id="IplcUZGn$v" role="o6E1n">
+            <property role="$nhwW" value="0.5" />
+          </node>
+          <node concept="3b6qkQ" id="IplcUZGnPX" role="o6E1n">
+            <property role="$nhwW" value="0.5" />
+          </node>
+          <node concept="3b6qkQ" id="IplcUZGnQv" role="o6E1n">
+            <property role="$nhwW" value="0.5" />
+          </node>
+          <node concept="3b6qkQ" id="IplcUZGnRg" role="o6E1n">
+            <property role="$nhwW" value="0.5" />
+          </node>
+          <node concept="3b6qkQ" id="IplcUZGnS4" role="o6E1n">
+            <property role="$nhwW" value="0.5" />
+          </node>
+          <node concept="3b6qkQ" id="IplcUZGnT1" role="o6E1n">
+            <property role="$nhwW" value="0.5" />
+          </node>
+        </node>
       </node>
     </node>
     <node concept="30yr_X" id="6GuOaLMMRsF" role="pFT7q">
       <property role="TrG5h" value="Right_eef_vFrame" />
       <property role="30wYnu" value="true" />
+      <property role="o4zO8" value="1" />
       <node concept="30B06x" id="6GuOaLMMRsG" role="30yrBN">
         <property role="TrG5h" value="Right_eef_vFrame_tracking" />
         <node concept="30yrw0" id="6GuOaLMMSb1" role="3rXgej">
@@ -221,12 +261,50 @@
         <node concept="30yrw0" id="6GuOaLMMSbf" role="3rXgek">
           <ref role="30yrEZ" node="6GuOaLMMS75" resolve="EEF_right_target" />
         </node>
-        <node concept="30x8Tr" id="6GuOaLMMS1N" role="3rXgel" />
+        <node concept="30x8Tr" id="6GuOaLMMS1N" role="3rXgel">
+          <node concept="3b6qkQ" id="IplcUZGo02" role="o6E1n">
+            <property role="$nhwW" value="0.2" />
+          </node>
+          <node concept="3b6qkQ" id="IplcUZGo0i" role="o6E1n">
+            <property role="$nhwW" value="0.2" />
+          </node>
+          <node concept="3b6qkQ" id="IplcUZGo0L" role="o6E1n">
+            <property role="$nhwW" value="0.2" />
+          </node>
+          <node concept="3b6qkQ" id="IplcUZGo1m" role="o6E1n">
+            <property role="$nhwW" value="0.2" />
+          </node>
+          <node concept="3b6qkQ" id="IplcUZGo2j" role="o6E1n">
+            <property role="$nhwW" value="0.2" />
+          </node>
+          <node concept="3b6qkQ" id="IplcUZGo3g" role="o6E1n">
+            <property role="$nhwW" value="0.2" />
+          </node>
+          <node concept="3b6qkQ" id="IplcUZGnUm" role="o7tYm">
+            <property role="$nhwW" value="1.0" />
+          </node>
+          <node concept="3b6qkQ" id="IplcUZGnUG" role="o7tYm">
+            <property role="$nhwW" value="1.0" />
+          </node>
+          <node concept="3b6qkQ" id="IplcUZGnWh" role="o7tYm">
+            <property role="$nhwW" value="1.0" />
+          </node>
+          <node concept="3b6qkQ" id="IplcUZGnWW" role="o7tYm">
+            <property role="$nhwW" value="1.0" />
+          </node>
+          <node concept="3b6qkQ" id="IplcUZGnXN" role="o7tYm">
+            <property role="$nhwW" value="1.0" />
+          </node>
+          <node concept="3b6qkQ" id="IplcUZGnYN" role="o7tYm">
+            <property role="$nhwW" value="1.0" />
+          </node>
+        </node>
       </node>
     </node>
     <node concept="30yr_X" id="6GuOaLMMSfE" role="pFT7q">
       <property role="TrG5h" value="NullspaceTracking" />
       <property role="30wYnu" value="true" />
+      <property role="o4zO8" value="2" />
       <node concept="30B04z" id="6GuOaLMMSfF" role="30yrBN">
         <property role="TrG5h" value="Full Chain Arm Nullspace Tracking" />
         <property role="3rXgeJ" value="active" />
@@ -464,6 +542,7 @@
           <ref role="30yrEZ" node="6GuOaLMNzk$" resolve="BarManipulatorFrame" />
         </node>
         <node concept="30w5Ui" id="6GuOaLMVqDg" role="3rXgek">
+          <property role="30w4_v" value="space" />
           <node concept="3b6qkQ" id="6GuOaLMVqDi" role="pXyqr">
             <property role="$nhwW" value="0.0" />
           </node>
@@ -562,6 +641,7 @@
           </node>
         </node>
         <node concept="pQWRa" id="6GuOaLN5MPF" role="3rXgek">
+          <property role="pQWR4" value="space" />
           <node concept="2ShNRf" id="6GuOaLN63wO" role="pQWPb">
             <node concept="qghkx" id="6GuOaLN63B0" role="2ShVmc">
               <ref role="qghDu" to="sxll:3xBfiZ$w$pA" resolve="JointAngles" />
