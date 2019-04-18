@@ -41,7 +41,9 @@
         <child id="2857908486279275932" name="outA" index="1UUn4W" />
       </concept>
       <concept id="2857908486279326042" name="CompliantControlArchitecture.structure.NullSpaceRelation" flags="ng" index="1UUrRU" />
-      <concept id="2857908486279694076" name="CompliantControlArchitecture.structure.CartesianController" flags="ng" index="1UVX9s" />
+      <concept id="2857908486279694076" name="CompliantControlArchitecture.structure.CartesianController" flags="ng" index="1UVX9s">
+        <child id="6165337268370569749" name="frame" index="3seXu1" />
+      </concept>
       <concept id="2857908486279694373" name="CompliantControlArchitecture.structure.EntryRelation" flags="ng" index="1UVXM5">
         <reference id="6165337268367503910" name="kinchain" index="3s2xYM" />
         <child id="2857908486279694499" name="entry" index="1UVXK3" />
@@ -61,20 +63,32 @@
       <node concept="1UUrRU" id="2uDla1ti1Lp" role="1UVXK3">
         <node concept="1UVX9s" id="2uDla1tiNwX" role="1UUn5U">
           <property role="TrG5h" value="dfdfdfdfdfdf" />
+          <node concept="30yrG9" id="5mfFpi9KtFO" role="3seXu1">
+            <ref role="3s7PV0" to="oet6:C_g3bnWAzK" resolve="lwr_tool_link" />
+          </node>
         </node>
         <node concept="1UUn3G" id="2UiBD4$6cVQ" role="1UUn57">
           <node concept="1UUnix" id="2UiBD4$6cWF" role="1UUn4J">
-            <property role="TrG5h" value="dfdfd" />
+            <property role="TrG5h" value="gghhgh" />
           </node>
           <node concept="1UVX9s" id="2UiBD4$6cX7" role="1UUn4l">
             <property role="TrG5h" value="dfdfdfdf" />
+            <node concept="30yrG9" id="5mfFpi9KtG1" role="3seXu1">
+              <ref role="3s7PV0" to="oet6:C_g3bnWAzK" resolve="lwr_tool_link" />
+            </node>
           </node>
           <node concept="1UUn3G" id="2UiBD4$7PPc" role="1UUn4W">
             <node concept="1UVX9s" id="2UiBD4$7PQE" role="1UUn4W">
               <property role="TrG5h" value="dfdf" />
+              <node concept="30yrG9" id="5mfFpi9KtGe" role="3seXu1">
+                <ref role="3s7PV0" to="oet6:C_g3bnW$LW" resolve="lwr_arm_4_link" />
+              </node>
             </node>
             <node concept="1UVX9s" id="2UiBD4$7PQS" role="1UUn4l">
               <property role="TrG5h" value="dfdfdfdf" />
+              <node concept="30yrG9" id="5mfFpi9KtGr" role="3seXu1">
+                <ref role="3s7PV0" to="oet6:C_g3bnW$LW" resolve="lwr_arm_4_link" />
+              </node>
             </node>
             <node concept="1UUnix" id="2UiBD4$7PQs" role="1UUn4J">
               <property role="TrG5h" value="dfdfdfdf" />

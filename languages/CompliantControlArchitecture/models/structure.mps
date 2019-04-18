@@ -231,6 +231,16 @@
     <property role="EcuMT" value="2857908486279694076" />
     <property role="TrG5h" value="CartesianController" />
     <ref role="1TJDcQ" node="2uDla1tg201" resolve="Controller" />
+    <node concept="1TJgyj" id="5mfFpi9H7Cl" role="1TKVEi">
+      <property role="IQ2ns" value="6165337268370569749" />
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="frame" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" to="iobv:5mfFpi9_5x3" resolve="IReferenceFrameRef" />
+    </node>
+    <node concept="PrWs8" id="5mfFpi9H7MF" role="PzmwI">
+      <ref role="PrY4T" to="tpck:3fifI_xCcJN" resolve="ScopeProvider" />
+    </node>
   </node>
   <node concept="1TIwiD" id="2uDla1thCw_">
     <property role="EcuMT" value="2857908486279694373" />
