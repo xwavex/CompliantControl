@@ -11,7 +11,6 @@
     <import index="o8zo" ref="r:314576fc-3aee-4386-a0a5-a38348ac317d(jetbrains.mps.scope)" />
     <import index="cewj" ref="r:cd13618c-02ad-4af8-a3e4-3414c58c4613(Kinematics.structure)" />
     <import index="3n2x" ref="r:508cb62d-392f-4e80-8340-a4df853548eb(Kinematics.behavior)" />
-    <import index="o8zo" ref="r:314576fc-3aee-4386-a0a5-a38348ac317d(jetbrains.mps.scope)" />
     <import index="6x1p" ref="r:483af612-b3fd-4a7c-8796-4bbe630b321d(CompliantControlArchitecture.editor)" />
     <import index="gqxc" ref="r:ce334b97-cfdc-4551-a5ec-98bf9b071729(CompliantControlArchitecture.structure)" implicit="true" />
   </imports>
@@ -34,6 +33,10 @@
       <concept id="1225194691553" name="jetbrains.mps.lang.behavior.structure.ThisNodeExpression" flags="nn" index="13iPFW" />
     </language>
     <language id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage">
+      <concept id="1215693861676" name="jetbrains.mps.baseLanguage.structure.BaseAssignmentExpression" flags="nn" index="d038R">
+        <child id="1068498886297" name="rValue" index="37vLTx" />
+        <child id="1068498886295" name="lValue" index="37vLTJ" />
+      </concept>
       <concept id="1197027756228" name="jetbrains.mps.baseLanguage.structure.DotExpression" flags="nn" index="2OqwBi">
         <child id="1197027771414" name="operand" index="2Oq$k0" />
         <child id="1197027833540" name="operation" index="2OqNvi" />
@@ -57,6 +60,7 @@
         <reference id="1068581517664" name="variableDeclaration" index="3cqZAo" />
       </concept>
       <concept id="1068498886292" name="jetbrains.mps.baseLanguage.structure.ParameterDeclaration" flags="ir" index="37vLTG" />
+      <concept id="1068498886294" name="jetbrains.mps.baseLanguage.structure.AssignmentExpression" flags="nn" index="37vLTI" />
       <concept id="1225271177708" name="jetbrains.mps.baseLanguage.structure.StringType" flags="in" index="17QB3L" />
       <concept id="4972933694980447171" name="jetbrains.mps.baseLanguage.structure.BaseVariableDeclaration" flags="ng" index="19Szcq">
         <child id="5680397130376446158" name="type" index="1tU5fm" />
@@ -806,6 +810,27 @@
       </node>
       <node concept="3uibUv" id="5mfFpiaXYd2" role="3clF45">
         <ref role="3uigEE" to="o8zo:3fifI_xCtN$" resolve="Scope" />
+      </node>
+    </node>
+  </node>
+  <node concept="13h7C7" id="37XPM2OeWXf">
+    <property role="3GE5qa" value="controlformalism" />
+    <ref role="13h7C2" to="gqxc:5mfFpiaYK6H" resolve="IControllerFormalism" />
+    <node concept="13hLZK" id="37XPM2OeWXg" role="13h7CW">
+      <node concept="3clFbS" id="37XPM2OeWXh" role="2VODD2">
+        <node concept="3clFbF" id="37XPM2OeWZo" role="3cqZAp">
+          <node concept="37vLTI" id="37XPM2OeXLd" role="3clFbG">
+            <node concept="3clFbT" id="37XPM2OeXMZ" role="37vLTx">
+              <property role="3clFbU" value="false" />
+            </node>
+            <node concept="2OqwBi" id="37XPM2OeX7e" role="37vLTJ">
+              <node concept="13iPFW" id="37XPM2OeWZn" role="2Oq$k0" />
+              <node concept="3TrcHB" id="37XPM2OeXj9" role="2OqNvi">
+                <ref role="3TsBF5" to="gqxc:37XPM2OeV_m" resolve="external" />
+              </node>
+            </node>
+          </node>
+        </node>
       </node>
     </node>
   </node>

@@ -27,6 +27,7 @@
       </concept>
     </language>
     <language id="708de3ab-d65c-48c9-a632-40656bd206af" name="CompliantControlArchitecture">
+      <concept id="3602271812424903819" name="CompliantControlArchitecture.structure.JointLimitOptimizationController" flags="ng" index="220fIF" />
       <concept id="6165337268399446442" name="CompliantControlArchitecture.structure.INORelation" flags="ng" index="3uSFgY">
         <child id="6165337268399446444" name="outN" index="3uSFgS" />
       </concept>
@@ -134,7 +135,7 @@
               <node concept="pQWJo" id="5mfFpibtiLM" role="3ve2oX">
                 <ref role="pNcCJ" to="d49h:C_g3bnXz3c" resolve="full_arm" />
               </node>
-              <node concept="3vtaBq" id="5mfFpibtiL8" role="3vtaj5" />
+              <node concept="220fIF" id="37XPM2O1KkG" role="3vtaj5" />
             </node>
             <node concept="3ve2oW" id="5mfFpibtiGR" role="3uSFgS">
               <property role="TrG5h" value="dfd" />

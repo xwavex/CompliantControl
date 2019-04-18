@@ -326,6 +326,11 @@
     <property role="EcuMT" value="6165337268391969197" />
     <property role="TrG5h" value="IControllerFormalism" />
     <property role="3GE5qa" value="controlformalism" />
+    <node concept="1TJgyi" id="37XPM2OeV_m" role="1TKVEl">
+      <property role="IQ2nx" value="3602271812429003094" />
+      <property role="TrG5h" value="external" />
+      <ref role="AX2Wp" to="tpck:fKAQMTB" resolve="boolean" />
+    </node>
     <node concept="PrWs8" id="5mfFpiaYK8F" role="PrDN$">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
     </node>
@@ -360,6 +365,66 @@
     <property role="TrG5h" value="CartesianMassSpringDamperController" />
     <property role="3GE5qa" value="controlformalism" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyi" id="37XPM2Oe7BV" role="1TKVEl">
+      <property role="IQ2nx" value="3602271812428790267" />
+      <property role="TrG5h" value="spx" />
+      <ref role="AX2Wp" to="tpee:4_5hYVHKxAU" resolve="_FloatNumberValue" />
+    </node>
+    <node concept="1TJgyi" id="37XPM2Oe7_t" role="1TKVEl">
+      <property role="IQ2nx" value="3602271812428790109" />
+      <property role="TrG5h" value="spy" />
+      <ref role="AX2Wp" to="tpee:4_5hYVHKxAU" resolve="_FloatNumberValue" />
+    </node>
+    <node concept="1TJgyi" id="37XPM2Oe7CT" role="1TKVEl">
+      <property role="IQ2nx" value="3602271812428790329" />
+      <property role="TrG5h" value="spz" />
+      <ref role="AX2Wp" to="tpee:4_5hYVHKxAU" resolve="_FloatNumberValue" />
+    </node>
+    <node concept="1TJgyi" id="37XPM2Oe7DE" role="1TKVEl">
+      <property role="IQ2nx" value="3602271812428790378" />
+      <property role="TrG5h" value="srr" />
+      <ref role="AX2Wp" to="tpee:4_5hYVHKxAU" resolve="_FloatNumberValue" />
+    </node>
+    <node concept="1TJgyi" id="37XPM2Oe7EB" role="1TKVEl">
+      <property role="IQ2nx" value="3602271812428790439" />
+      <property role="TrG5h" value="srp" />
+      <ref role="AX2Wp" to="tpee:4_5hYVHKxAU" resolve="_FloatNumberValue" />
+    </node>
+    <node concept="1TJgyi" id="37XPM2Oe7Ck" role="1TKVEl">
+      <property role="IQ2nx" value="3602271812428790292" />
+      <property role="TrG5h" value="sry" />
+      <ref role="AX2Wp" to="tpee:4_5hYVHKxAU" resolve="_FloatNumberValue" />
+    </node>
+    <node concept="1TJgyi" id="37XPM2Oe7J$" role="1TKVEl">
+      <property role="IQ2nx" value="3602271812428790756" />
+      <property role="TrG5h" value="dpx" />
+      <ref role="AX2Wp" to="tpee:4_5hYVHKxAU" resolve="_FloatNumberValue" />
+    </node>
+    <node concept="1TJgyi" id="37XPM2Oe7J_" role="1TKVEl">
+      <property role="IQ2nx" value="3602271812428790757" />
+      <property role="TrG5h" value="dpy" />
+      <ref role="AX2Wp" to="tpee:4_5hYVHKxAU" resolve="_FloatNumberValue" />
+    </node>
+    <node concept="1TJgyi" id="37XPM2Oe7JA" role="1TKVEl">
+      <property role="IQ2nx" value="3602271812428790758" />
+      <property role="TrG5h" value="dpz" />
+      <ref role="AX2Wp" to="tpee:4_5hYVHKxAU" resolve="_FloatNumberValue" />
+    </node>
+    <node concept="1TJgyi" id="37XPM2Oe7JB" role="1TKVEl">
+      <property role="IQ2nx" value="3602271812428790759" />
+      <property role="TrG5h" value="drr" />
+      <ref role="AX2Wp" to="tpee:4_5hYVHKxAU" resolve="_FloatNumberValue" />
+    </node>
+    <node concept="1TJgyi" id="37XPM2Oe7JC" role="1TKVEl">
+      <property role="IQ2nx" value="3602271812428790760" />
+      <property role="TrG5h" value="drp" />
+      <ref role="AX2Wp" to="tpee:4_5hYVHKxAU" resolve="_FloatNumberValue" />
+    </node>
+    <node concept="1TJgyi" id="37XPM2Oe7JD" role="1TKVEl">
+      <property role="IQ2nx" value="3602271812428790761" />
+      <property role="TrG5h" value="dry" />
+      <ref role="AX2Wp" to="tpee:4_5hYVHKxAU" resolve="_FloatNumberValue" />
+    </node>
     <node concept="PrWs8" id="5mfFpiaYKfg" role="PzmwI">
       <ref role="PrY4T" node="5mfFpiaYKb3" resolve="ICartesianControllerFormalism" />
     </node>
@@ -386,6 +451,20 @@
     </node>
     <node concept="PrWs8" id="5mfFpibrhAH" role="PrDN$">
       <ref role="PrY4T" node="2uDla1tg2ah" resolve="ICCARelation" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="37XPM2NZiMb">
+    <property role="EcuMT" value="3602271812424903819" />
+    <property role="TrG5h" value="JointLimitOptimizationController" />
+    <property role="3GE5qa" value="controlformalism" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyi" id="37XPM2O1LIG" role="1TKVEl">
+      <property role="IQ2nx" value="3602271812425554860" />
+      <property role="TrG5h" value="gain" />
+      <ref role="AX2Wp" to="tpee:4_5hYVHKxAU" resolve="_FloatNumberValue" />
+    </node>
+    <node concept="PrWs8" id="37XPM2NZiMc" role="PzmwI">
+      <ref role="PrY4T" node="5mfFpiaYKdg" resolve="IJointControllerFormalism" />
     </node>
   </node>
 </model>
