@@ -188,10 +188,12 @@
     <property role="TrG5h" value="JointRef" />
     <property role="3GE5qa" value="frame" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
-    <node concept="1TJgyi" id="6GuOaLMDEfP" role="1TKVEl">
-      <property role="IQ2nx" value="7718836250436084725" />
-      <property role="TrG5h" value="linkname" />
-      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+    <node concept="1TJgyj" id="5mfFpiaOz2Q" role="1TKVEi">
+      <property role="IQ2ns" value="6165337268389294262" />
+      <property role="20lmBu" value="reference" />
+      <property role="20kJfa" value="joint" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" to="cewj:3Wmswgx0nyV" resolve="RobotJoint" />
     </node>
     <node concept="PrWs8" id="6GuOaLML4lT" role="PzmwI">
       <ref role="PrY4T" node="6GuOaLML4jV" resolve="IJointRef" />

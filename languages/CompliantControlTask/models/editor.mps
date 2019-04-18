@@ -649,13 +649,13 @@
   <node concept="24kQdi" id="6GuOaLMDEgr">
     <property role="3GE5qa" value="frame" />
     <ref role="1XX52x" to="gjk0:5dGsgijTsEo" resolve="JointRef" />
-    <node concept="3EZMnI" id="6GuOaLMDEiC" role="2wV5jI">
-      <node concept="l2Vlx" id="6GuOaLMDEiD" role="2iSdaV" />
-      <node concept="3F0ifn" id="6GuOaLMDEj2" role="3EZMnx">
-        <property role="3F0ifm" value="linknametodo" />
-      </node>
-      <node concept="3F0A7n" id="6GuOaLMDEjC" role="3EZMnx">
-        <ref role="1NtTu8" to="gjk0:6GuOaLMDEfP" resolve="linkname" />
+    <node concept="1iCGBv" id="5mfFpiaOz3s" role="2wV5jI">
+      <ref role="1NtTu8" to="gjk0:5mfFpiaOz2Q" resolve="joint" />
+      <node concept="1sVBvm" id="5mfFpiaOz3u" role="1sWHZn">
+        <node concept="3F0A7n" id="5mfFpiaOz46" role="2wV5jI">
+          <property role="1Intyy" value="true" />
+          <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+        </node>
       </node>
     </node>
   </node>

@@ -521,5 +521,25 @@
       </node>
     </node>
   </node>
+  <node concept="1M2fIO" id="5mfFpiaOROZ">
+    <property role="3GE5qa" value="frame" />
+    <ref role="1M2myG" to="iobv:5dGsgijTsEo" resolve="JointRef" />
+    <node concept="1N5Pfh" id="5mfFpiaORQX" role="1Mr941">
+      <ref role="1N5Vy1" to="iobv:5mfFpiaORN8" resolve="joint" />
+      <node concept="1dDu$B" id="5mfFpiaORRa" role="1N6uqs">
+        <ref role="1dDu$A" to="cewj:3Wmswgx0nyV" resolve="RobotJoint" />
+      </node>
+    </node>
+  </node>
+  <node concept="1M2fIO" id="5mfFpiaPU7q">
+    <property role="3GE5qa" value="frame" />
+    <ref role="1M2myG" to="iobv:6GuOaLMLhHO" resolve="KinematicChainRef" />
+    <node concept="1N5Pfh" id="5mfFpiaPU9o" role="1Mr941">
+      <ref role="1N5Vy1" to="iobv:6GuOaLMOxE3" resolve="chain" />
+      <node concept="1dDu$B" id="5mfFpiaPU9_" role="1N6uqs">
+        <ref role="1dDu$A" to="cewj:3Wmswgx0$rv" resolve="KinematicChain" />
+      </node>
+    </node>
+  </node>
 </model>
 

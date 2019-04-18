@@ -9,12 +9,14 @@
     <import index="cewj" ref="r:cd13618c-02ad-4af8-a3e4-3414c58c4613(Kinematics.structure)" />
     <import index="iobv" ref="r:19496bad-2dd3-478c-9baf-0de95edabf63(Geometry.structure)" />
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" />
+    <import index="tpee" ref="r:00000000-0000-4000-0000-011c895902ca(jetbrains.mps.baseLanguage.structure)" />
   </imports>
   <registry>
     <language id="c72da2b9-7cce-4447-8389-f407dc1158b7" name="jetbrains.mps.lang.structure">
       <concept id="1169125787135" name="jetbrains.mps.lang.structure.structure.AbstractConceptDeclaration" flags="ig" index="PkWjJ">
         <property id="6714410169261853888" name="conceptId" index="EcuMT" />
         <child id="1071489727083" name="linkDeclaration" index="1TKVEi" />
+        <child id="1071489727084" name="propertyDeclaration" index="1TKVEl" />
       </concept>
       <concept id="1169125989551" name="jetbrains.mps.lang.structure.structure.InterfaceConceptDeclaration" flags="ig" index="PlHQZ">
         <child id="1169127546356" name="extends" index="PrDN$" />
@@ -27,11 +29,16 @@
         <reference id="1071489389519" name="extends" index="1TJDcQ" />
         <child id="1169129564478" name="implements" index="PzmwI" />
       </concept>
+      <concept id="1071489288299" name="jetbrains.mps.lang.structure.structure.PropertyDeclaration" flags="ig" index="1TJgyi">
+        <property id="241647608299431129" name="propertyId" index="IQ2nx" />
+        <reference id="1082985295845" name="dataType" index="AX2Wp" />
+      </concept>
       <concept id="1071489288298" name="jetbrains.mps.lang.structure.structure.LinkDeclaration" flags="ig" index="1TJgyj">
         <property id="1071599776563" name="role" index="20kJfa" />
         <property id="1071599893252" name="sourceCardinality" index="20lbJX" />
         <property id="1071599937831" name="metaClass" index="20lmBu" />
         <property id="241647608299431140" name="linkId" index="IQ2ns" />
+        <reference id="1071599698500" name="specializedLink" index="20ksaX" />
         <reference id="1071599976176" name="target" index="20lvS9" />
       </concept>
     </language>
@@ -70,6 +77,18 @@
     <property role="EcuMT" value="2857908486279274497" />
     <property role="TrG5h" value="Controller" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyi" id="5mfFpibu30S" role="1TKVEl">
+      <property role="IQ2nx" value="6165337268400173112" />
+      <property role="TrG5h" value="weight" />
+      <ref role="AX2Wp" to="tpee:4_5hYVHKxAU" resolve="_FloatNumberValue" />
+    </node>
+    <node concept="1TJgyj" id="5mfFpiaYK_h" role="1TKVEi">
+      <property role="IQ2ns" value="6165337268391971153" />
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="controlformalism" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="5mfFpiaYK6H" resolve="IControllerFormalism" />
+    </node>
     <node concept="PrWs8" id="2uDla1tg23X" role="PzmwI">
       <ref role="PrY4T" node="2uDla1tg21Z" resolve="ICCABlock" />
     </node>
@@ -210,8 +229,8 @@
     <property role="3GE5qa" value="relations" />
     <property role="TrG5h" value="WeightedSumRelation" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
-    <node concept="PrWs8" id="2uDla1tge_d" role="PzmwI">
-      <ref role="PrY4T" node="2uDla1tg2eq" resolve="I1INORelation" />
+    <node concept="PrWs8" id="5mfFpibrhCR" role="PzmwI">
+      <ref role="PrY4T" node="5mfFpibrhAE" resolve="INORelation" />
     </node>
   </node>
   <node concept="1TIwiD" id="2uDla1tge_q">
@@ -219,8 +238,18 @@
     <property role="3GE5qa" value="relations" />
     <property role="TrG5h" value="NullSpaceRelation" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="5mfFpiaXY6C" role="1TKVEi">
+      <property role="IQ2ns" value="6165337268391764392" />
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="frame" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" to="iobv:5mfFpi9_5x3" resolve="IReferenceFrameRef" />
+    </node>
     <node concept="PrWs8" id="2uDla1tgeBo" role="PzmwI">
       <ref role="PrY4T" node="2uDla1tg28j" resolve="I1I1ORelation" />
+    </node>
+    <node concept="PrWs8" id="5mfFpiaXY7e" role="PzmwI">
+      <ref role="PrY4T" to="tpck:3fifI_xCcJN" resolve="ScopeProvider" />
     </node>
   </node>
   <node concept="PlHQZ" id="2uDla1tgeB_">
@@ -237,6 +266,14 @@
       <property role="20kJfa" value="frame" />
       <property role="20lbJX" value="1" />
       <ref role="20lvS9" to="iobv:5mfFpi9_5x3" resolve="IReferenceFrameRef" />
+    </node>
+    <node concept="1TJgyj" id="5mfFpiaYKYw" role="1TKVEi">
+      <property role="IQ2ns" value="6165337268391972768" />
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="controlformalism" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="5mfFpiaYKb3" resolve="ICartesianControllerFormalism" />
+      <ref role="20ksaX" node="5mfFpiaYK_h" resolve="controlformalism" />
     </node>
     <node concept="PrWs8" id="5mfFpi9H7MF" role="PzmwI">
       <ref role="PrY4T" to="tpck:3fifI_xCcJN" resolve="ScopeProvider" />
@@ -260,6 +297,95 @@
       <property role="20kJfa" value="entry" />
       <property role="20lbJX" value="1" />
       <ref role="20lvS9" node="2uDla1tgeB_" resolve="ICCAEntry" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="5mfFpiaHSIC">
+    <property role="EcuMT" value="6165337268387548072" />
+    <property role="TrG5h" value="JointSpaceController" />
+    <ref role="1TJDcQ" node="2uDla1tg201" resolve="Controller" />
+    <node concept="1TJgyj" id="5mfFpiaHSID" role="1TKVEi">
+      <property role="IQ2ns" value="6165337268387548073" />
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="joint" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" to="iobv:6GuOaLML4jV" resolve="IJointRef" />
+    </node>
+    <node concept="1TJgyj" id="5mfFpiaYKLC" role="1TKVEi">
+      <property role="IQ2ns" value="6165337268391971944" />
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="controlformalism" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="5mfFpiaYKdg" resolve="IJointControllerFormalism" />
+      <ref role="20ksaX" node="5mfFpiaYK_h" resolve="controlformalism" />
+    </node>
+    <node concept="PrWs8" id="5mfFpiaHSIE" role="PzmwI">
+      <ref role="PrY4T" to="tpck:3fifI_xCcJN" resolve="ScopeProvider" />
+    </node>
+  </node>
+  <node concept="PlHQZ" id="5mfFpiaYK6H">
+    <property role="EcuMT" value="6165337268391969197" />
+    <property role="TrG5h" value="IControllerFormalism" />
+    <property role="3GE5qa" value="controlformalism" />
+    <node concept="PrWs8" id="5mfFpiaYK8F" role="PrDN$">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="5mfFpiaYK8S">
+    <property role="EcuMT" value="6165337268391969336" />
+    <property role="TrG5h" value="CartesianConstraintController" />
+    <property role="3GE5qa" value="controlformalism" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="PrWs8" id="5mfFpiaYKd2" role="PzmwI">
+      <ref role="PrY4T" node="5mfFpiaYKb3" resolve="ICartesianControllerFormalism" />
+    </node>
+  </node>
+  <node concept="PlHQZ" id="5mfFpiaYKb3">
+    <property role="EcuMT" value="6165337268391969475" />
+    <property role="TrG5h" value="ICartesianControllerFormalism" />
+    <property role="3GE5qa" value="controlformalism" />
+    <node concept="PrWs8" id="5mfFpiaZr4w" role="PrDN$">
+      <ref role="PrY4T" node="5mfFpiaYK6H" resolve="IControllerFormalism" />
+    </node>
+  </node>
+  <node concept="PlHQZ" id="5mfFpiaYKdg">
+    <property role="EcuMT" value="6165337268391969616" />
+    <property role="TrG5h" value="IJointControllerFormalism" />
+    <property role="3GE5qa" value="controlformalism" />
+    <node concept="PrWs8" id="5mfFpiaZr7c" role="PrDN$">
+      <ref role="PrY4T" node="5mfFpiaYK6H" resolve="IControllerFormalism" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="5mfFpiaYKff">
+    <property role="EcuMT" value="6165337268391969743" />
+    <property role="TrG5h" value="CartesianMassSpringDamperController" />
+    <property role="3GE5qa" value="controlformalism" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="PrWs8" id="5mfFpiaYKfg" role="PzmwI">
+      <ref role="PrY4T" node="5mfFpiaYKb3" resolve="ICartesianControllerFormalism" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="5mfFpiaYKhe">
+    <property role="EcuMT" value="6165337268391969870" />
+    <property role="TrG5h" value="JointMassSpringDamperController" />
+    <property role="3GE5qa" value="controlformalism" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="PrWs8" id="5mfFpiaYKjd" role="PzmwI">
+      <ref role="PrY4T" node="5mfFpiaYKdg" resolve="IJointControllerFormalism" />
+    </node>
+  </node>
+  <node concept="PlHQZ" id="5mfFpibrhAE">
+    <property role="EcuMT" value="6165337268399446442" />
+    <property role="TrG5h" value="INORelation" />
+    <property role="3GE5qa" value="relations.relation-interfaces" />
+    <node concept="1TJgyj" id="5mfFpibrhAG" role="1TKVEi">
+      <property role="IQ2ns" value="6165337268399446444" />
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="outN" />
+      <property role="20lbJX" value="1..n" />
+      <ref role="20lvS9" node="2uDla1tgeB_" resolve="ICCAEntry" />
+    </node>
+    <node concept="PrWs8" id="5mfFpibrhAH" role="PrDN$">
+      <ref role="PrY4T" node="2uDla1tg2ah" resolve="ICCARelation" />
     </node>
   </node>
 </model>
