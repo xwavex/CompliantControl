@@ -78,8 +78,13 @@
       <concept id="1103016434866" name="jetbrains.mps.lang.editor.structure.CellModel_JComponent" flags="sg" stub="8104358048506731196" index="3gTLQM">
         <child id="1176475119347" name="componentProvider" index="3FoqZy" />
       </concept>
+      <concept id="1088013125922" name="jetbrains.mps.lang.editor.structure.CellModel_RefCell" flags="sg" stub="730538219795941030" index="1iCGBv">
+        <child id="1088186146602" name="editorComponent" index="1sWHZn" />
+      </concept>
+      <concept id="1088185857835" name="jetbrains.mps.lang.editor.structure.InlineEditorComponent" flags="ig" index="1sVBvm" />
       <concept id="1219226236603" name="jetbrains.mps.lang.editor.structure.DrawBracketsStyleClassItem" flags="ln" index="3vyZuw" />
       <concept id="1139848536355" name="jetbrains.mps.lang.editor.structure.CellModel_WithRole" flags="ng" index="1$h60E">
+        <property id="1140017977771" name="readOnly" index="1Intyy" />
         <reference id="1140103550593" name="relationDeclaration" index="1NtTu8" />
       </concept>
       <concept id="1073389446423" name="jetbrains.mps.lang.editor.structure.CellModel_Collection" flags="sn" stub="3013115976261988961" index="3EZMnI">
@@ -184,6 +189,7 @@
       </concept>
       <concept id="1068498886292" name="jetbrains.mps.baseLanguage.structure.ParameterDeclaration" flags="ir" index="37vLTG" />
       <concept id="1068498886294" name="jetbrains.mps.baseLanguage.structure.AssignmentExpression" flags="nn" index="37vLTI" />
+      <concept id="1225271177708" name="jetbrains.mps.baseLanguage.structure.StringType" flags="in" index="17QB3L" />
       <concept id="4972933694980447171" name="jetbrains.mps.baseLanguage.structure.BaseVariableDeclaration" flags="ng" index="19Szcq">
         <child id="5680397130376446158" name="type" index="1tU5fm" />
       </concept>
@@ -525,13 +531,13 @@
       <node concept="2iRfu4" id="2UiBD4$TEjm" role="2iSdaV" />
       <node concept="3EZMnI" id="2UiBD4$T6gb" role="3EZMnx">
         <node concept="fvoJi" id="2UiBD4$T6RA" role="2iSdaV" />
-        <node concept="3F0ifn" id="2UiBD4zR_j5" role="3EZMnx">
-          <property role="3F0ifm" value="todo kinematic chain" />
-          <node concept="Vb9p2" id="2UiBD4zRCwB" role="3F10Kt">
-            <property role="Vbekb" value="ITALIC" />
-          </node>
-          <node concept="VechU" id="2UiBD4zRCy8" role="3F10Kt">
-            <property role="Vb096" value="red" />
+        <node concept="1iCGBv" id="5mfFpi9xAWO" role="3EZMnx">
+          <ref role="1NtTu8" to="gqxc:5mfFpi9xr8A" resolve="kinchain" />
+          <node concept="1sVBvm" id="5mfFpi9xAWS" role="1sWHZn">
+            <node concept="3F0A7n" id="5mfFpi9xB48" role="2wV5jI">
+              <property role="1Intyy" value="true" />
+              <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+            </node>
           </node>
         </node>
         <node concept="gc7cB" id="2UiBD4$UY7H" role="3EZMnx">
@@ -542,6 +548,9 @@
                   <node concept="1pGfFk" id="2UiBD4$UY_W" role="2ShVmc">
                     <ref role="37wK5l" node="2UiBD4$TVYk" resolve="DrawImageCellProvider" />
                     <node concept="pncrf" id="2UiBD4$UYE8" role="37wK5m" />
+                    <node concept="Xl_RD" id="2UiBD4$TVYB" role="37wK5m">
+                      <property role="Xl_RC" value="/home/dwigand/code/cogimon/Cosmo/DSLs/mps2017-2/compliant-control/languages/CompliantControlArchitecture/resources/robotic-arm.png" />
+                    </node>
                   </node>
                 </node>
               </node>
@@ -571,39 +580,54 @@
   </node>
   <node concept="24kQdi" id="2uDla1tiBTp">
     <ref role="1XX52x" to="gqxc:2uDla1thCrW" resolve="CartesianController" />
-    <node concept="3EZMnI" id="2uDla1tiBVo" role="2wV5jI">
-      <node concept="3EZMnI" id="2UiBD4$0Uhb" role="3EZMnx">
-        <node concept="2iRfu4" id="2UiBD4$0Uhc" role="2iSdaV" />
-        <node concept="3F0ifn" id="2uDla1tiBW0" role="3EZMnx">
-          <property role="3F0ifm" value="Cart. Controller" />
+    <node concept="3EZMnI" id="5mfFpi9xUR6" role="2wV5jI">
+      <node concept="2iRfu4" id="5mfFpi9xUR7" role="2iSdaV" />
+      <node concept="3F0ifn" id="5mfFpi9xVax" role="3EZMnx">
+        <property role="3F0ifm" value="TODO icon" />
+        <node concept="Vb9p2" id="5mfFpi9yDHn" role="3F10Kt">
+          <property role="Vbekb" value="ITALIC" />
         </node>
-        <node concept="3F0A7n" id="2uDla1tiBWB" role="3EZMnx">
-          <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+        <node concept="VechU" id="5mfFpi9yDHX" role="3F10Kt">
+          <property role="Vb096" value="red" />
+        </node>
+        <node concept="VPM3Z" id="5mfFpi9yX0X" role="3F10Kt">
+          <property role="VOm3f" value="false" />
         </node>
       </node>
-      <node concept="2iRkQZ" id="2UiBD4$0FR_" role="2iSdaV" />
-      <node concept="3vyZuw" id="2uDla1tiBX1" role="3F10Kt">
-        <property role="VOm3f" value="true" />
-      </node>
-      <node concept="gc7cB" id="2UiBD4$3Ii5" role="3EZMnx">
-        <node concept="3VJUX4" id="2UiBD4$3Ii7" role="3YsKMw">
-          <node concept="3clFbS" id="2UiBD4$3Ii9" role="2VODD2">
-            <node concept="3cpWs6" id="2UiBD4$3I$1" role="3cqZAp">
-              <node concept="2ShNRf" id="2UiBD4$3IBr" role="3cqZAk">
-                <node concept="1pGfFk" id="2UiBD4$3IUK" role="2ShVmc">
-                  <ref role="37wK5l" node="2UiBD4$2ZSj" resolve="HorizontalLineCellProvider" />
-                  <node concept="pncrf" id="2UiBD4$3IYW" role="37wK5m" />
+      <node concept="3EZMnI" id="2uDla1tiBVo" role="3EZMnx">
+        <node concept="3EZMnI" id="2UiBD4$0Uhb" role="3EZMnx">
+          <node concept="2iRfu4" id="2UiBD4$0Uhc" role="2iSdaV" />
+          <node concept="3F0ifn" id="2uDla1tiBW0" role="3EZMnx">
+            <property role="3F0ifm" value="Cart. Controller" />
+          </node>
+          <node concept="3F0A7n" id="2uDla1tiBWB" role="3EZMnx">
+            <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+          </node>
+        </node>
+        <node concept="2iRkQZ" id="2UiBD4$0FR_" role="2iSdaV" />
+        <node concept="3vyZuw" id="2uDla1tiBX1" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+        <node concept="gc7cB" id="2UiBD4$3Ii5" role="3EZMnx">
+          <node concept="3VJUX4" id="2UiBD4$3Ii7" role="3YsKMw">
+            <node concept="3clFbS" id="2UiBD4$3Ii9" role="2VODD2">
+              <node concept="3cpWs6" id="2UiBD4$3I$1" role="3cqZAp">
+                <node concept="2ShNRf" id="2UiBD4$3IBr" role="3cqZAk">
+                  <node concept="1pGfFk" id="2UiBD4$3IUK" role="2ShVmc">
+                    <ref role="37wK5l" node="2UiBD4$2ZSj" resolve="HorizontalLineCellProvider" />
+                    <node concept="pncrf" id="2UiBD4$3IYW" role="37wK5m" />
+                  </node>
                 </node>
               </node>
             </node>
           </node>
+          <node concept="VPM3Z" id="2UiBD4$4Xch" role="3F10Kt">
+            <property role="VOm3f" value="false" />
+          </node>
         </node>
-        <node concept="VPM3Z" id="2UiBD4$4Xch" role="3F10Kt">
-          <property role="VOm3f" value="false" />
+        <node concept="3F0ifn" id="2UiBD4zVsWY" role="3EZMnx">
+          <property role="3F0ifm" value="ssdsdstrytreyryyytry" />
         </node>
-      </node>
-      <node concept="3F0ifn" id="2UiBD4zVsWY" role="3EZMnx">
-        <property role="3F0ifm" value="ssdsdstrytreyryyytry" />
       </node>
     </node>
   </node>
@@ -987,8 +1011,8 @@
           </node>
         </node>
       </node>
-      <node concept="3F0ifn" id="2UiBD4$9Tfc" role="3EZMnx">
-        <property role="3F0ifm" value="J_f_1" />
+      <node concept="3F1sOY" id="5mfFpi9_rFn" role="3EZMnx">
+        <ref role="1NtTu8" to="gqxc:5mfFpi9_fp0" resolve="frame" />
       </node>
       <node concept="gc7cB" id="2UiBD4$qX2J" role="3EZMnx">
         <node concept="3VJUX4" id="2UiBD4$qX2L" role="3YsKMw">
@@ -4101,6 +4125,10 @@
         <property role="3TUv4t" value="false" />
         <node concept="3Tqbb2" id="2UiBD4$TVYn" role="1tU5fm" />
       </node>
+      <node concept="37vLTG" id="5mfFpi9yeNK" role="3clF46">
+        <property role="TrG5h" value="path" />
+        <node concept="17QB3L" id="5mfFpi9yfuj" role="1tU5fm" />
+      </node>
       <node concept="3clFbS" id="2UiBD4$TVYo" role="3clF47">
         <node concept="3clFbF" id="2UiBD4$TVYp" role="3cqZAp">
           <node concept="37vLTI" id="2UiBD4$TVYq" role="3clFbG">
@@ -4125,8 +4153,8 @@
                   <node concept="2ShNRf" id="2UiBD4$TVY_" role="37wK5m">
                     <node concept="1pGfFk" id="2UiBD4$TVYA" role="2ShVmc">
                       <ref role="37wK5l" to="guwi:~File.&lt;init&gt;(java.lang.String)" resolve="File" />
-                      <node concept="Xl_RD" id="2UiBD4$TVYB" role="37wK5m">
-                        <property role="Xl_RC" value="/home/dwigand/code/cogimon/Cosmo/DSLs/mps2017-2/compliant-control/languages/CompliantControlArchitecture/resources/robotic-arm.png" />
+                      <node concept="37vLTw" id="5mfFpi9yfCX" role="37wK5m">
+                        <ref role="3cqZAo" node="5mfFpi9yeNK" resolve="path" />
                       </node>
                     </node>
                   </node>

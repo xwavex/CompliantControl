@@ -57,6 +57,8 @@
       <concept id="7718836250438026365" name="CompliantControlTask.structure.VirtualManipulator" flags="ng" index="pQDjh">
         <child id="7718836250438557637" name="anchorLeft" index="pOCXD" />
         <child id="7718836250438557650" name="anchorRight" index="pOCXY" />
+        <child id="6165337268367337246" name="chainLeft" index="3s38Ea" />
+        <child id="6165337268367337331" name="chainRight" index="3s38FB" />
       </concept>
       <concept id="7718836250438081396" name="CompliantControlTask.structure.KinematicChainRef" flags="ng" index="pQWJo">
         <reference id="7718836250438933123" name="chain" index="pNcCJ" />
@@ -90,6 +92,9 @@
         <child id="6011303867107887351" name="couplings" index="30yrBN" />
       </concept>
       <concept id="6011303867107887907" name="CompliantControlTask.structure.Frame" flags="ng" index="30yrCB" />
+      <concept id="6011303867107887629" name="CompliantControlTask.structure.LinkRef" flags="ng" index="30yrG9">
+        <reference id="6165337268367421969" name="link" index="3s2XY5" />
+      </concept>
       <concept id="6011303867107992861" name="CompliantControlTask.structure.VirtualFrame" flags="ng" index="30yLgp" />
       <concept id="6011303867108585511" name="CompliantControlTask.structure.JointSpaceCoupling" flags="ng" index="30B04z" />
       <concept id="6011303867108585637" name="CompliantControlTask.structure.TaskSpaceCoupling" flags="ng" index="30B06x" />
@@ -474,11 +479,17 @@
   <node concept="pQDjh" id="6GuOaLMNzk$">
     <property role="TrG5h" value="BarManipulatorFrame" />
     <property role="3GE5qa" value="manipulators" />
-    <node concept="30yrw0" id="6GuOaLMN$nu" role="pOCXD">
-      <ref role="30yrEZ" node="5dGsgijUfT7" resolve="EEF_left (TEST ONLY)" />
+    <node concept="30yrG9" id="5mfFpi9xpbV" role="pOCXD">
+      <ref role="3s2XY5" to="oet6:3XZE$oGsP4M" resolve="laEnd" />
     </node>
-    <node concept="30yrw0" id="6GuOaLMN$nG" role="pOCXY">
-      <ref role="30yrEZ" node="6GuOaLMMS93" resolve="EEF_right (TEST ONLY)" />
+    <node concept="30yrG9" id="5mfFpi9xr44" role="pOCXY">
+      <ref role="3s2XY5" to="oet6:3XZE$oGsP5g" resolve="raEnd" />
+    </node>
+    <node concept="pQWJo" id="5mfFpi9x77P" role="3s38Ea">
+      <ref role="pNcCJ" to="d49h:3XZE$oGsO4F" resolve="left_arm" />
+    </node>
+    <node concept="pQWJo" id="5mfFpi9x783" role="3s38FB">
+      <ref role="pNcCJ" to="d49h:3XZE$oGsQ3c" resolve="right_arm" />
     </node>
   </node>
   <node concept="pGqKh" id="6GuOaLMNLLr">

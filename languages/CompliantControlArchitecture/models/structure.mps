@@ -6,7 +6,9 @@
     <devkit ref="78434eb8-b0e5-444b-850d-e7c4ad2da9ab(jetbrains.mps.devkit.aspect.structure)" />
   </languages>
   <imports>
-    <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
+    <import index="cewj" ref="r:cd13618c-02ad-4af8-a3e4-3414c58c4613(Kinematics.structure)" />
+    <import index="iobv" ref="r:19496bad-2dd3-478c-9baf-0de95edabf63(Geometry.structure)" />
+    <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" />
   </imports>
   <registry>
     <language id="c72da2b9-7cce-4447-8389-f407dc1158b7" name="jetbrains.mps.lang.structure">
@@ -192,6 +194,16 @@
     <property role="TrG5h" value="MotionForceSubSpaceRelation" />
     <property role="3GE5qa" value="relations" />
     <ref role="1TJDcQ" node="2uDla1tg24a" resolve="SubSpaceRelation" />
+    <node concept="1TJgyj" id="5mfFpi9_fp0" role="1TKVEi">
+      <property role="IQ2ns" value="6165337268368504384" />
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="frame" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" to="iobv:5mfFpi9_5x3" resolve="IReferenceFrameRef" />
+    </node>
+    <node concept="PrWs8" id="5mfFpi9$Dp9" role="PzmwI">
+      <ref role="PrY4T" to="tpck:3fifI_xCcJN" resolve="ScopeProvider" />
+    </node>
   </node>
   <node concept="1TIwiD" id="2uDla1tgezf">
     <property role="EcuMT" value="2857908486279325903" />
@@ -225,6 +237,13 @@
     <property role="3GE5qa" value="relations" />
     <property role="TrG5h" value="EntryRelation" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="5mfFpi9xr8A" role="1TKVEi">
+      <property role="IQ2ns" value="6165337268367503910" />
+      <property role="20lmBu" value="reference" />
+      <property role="20kJfa" value="kinchain" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" to="cewj:3Wmswgx0$rv" resolve="KinematicChain" />
+    </node>
     <node concept="1TJgyj" id="2uDla1thCyz" role="1TKVEi">
       <property role="IQ2ns" value="2857908486279694499" />
       <property role="20lmBu" value="aggregation" />

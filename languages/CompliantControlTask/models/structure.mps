@@ -172,6 +172,13 @@
     <property role="TrG5h" value="LinkRef" />
     <property role="3GE5qa" value="frame" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="5mfFpi9x78h" role="1TKVEi">
+      <property role="IQ2ns" value="6165337268367421969" />
+      <property role="20lmBu" value="reference" />
+      <property role="20kJfa" value="link" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" to="cewj:3Wmswgx0nyW" resolve="RobotLink" />
+    </node>
     <node concept="PrWs8" id="5dGsgijTsEb" role="PzmwI">
       <ref role="PrY4T" node="5dGsgijTsA2" resolve="IReferenceFrame" />
     </node>
@@ -571,14 +578,28 @@
       <property role="20lmBu" value="aggregation" />
       <property role="20kJfa" value="anchorLeft" />
       <property role="20lbJX" value="1" />
-      <ref role="20lvS9" node="5dGsgijTsA2" resolve="IReferenceFrame" />
+      <ref role="20lvS9" node="5dGsgijTsCd" resolve="LinkRef" />
+    </node>
+    <node concept="1TJgyj" id="5mfFpi9wMsu" role="1TKVEi">
+      <property role="IQ2ns" value="6165337268367337246" />
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="chainLeft" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="6GuOaLMLhHO" resolve="KinematicChainRef" />
     </node>
     <node concept="1TJgyj" id="6GuOaLMN5Zi" role="1TKVEi">
       <property role="IQ2ns" value="7718836250438557650" />
       <property role="20lmBu" value="aggregation" />
       <property role="20kJfa" value="anchorRight" />
       <property role="20lbJX" value="1" />
-      <ref role="20lvS9" node="5dGsgijTsA2" resolve="IReferenceFrame" />
+      <ref role="20lvS9" node="5dGsgijTsCd" resolve="LinkRef" />
+    </node>
+    <node concept="1TJgyj" id="5mfFpi9wMtN" role="1TKVEi">
+      <property role="IQ2ns" value="6165337268367337331" />
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="chainRight" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="6GuOaLMLhHO" resolve="KinematicChainRef" />
     </node>
   </node>
   <node concept="PlHQZ" id="6GuOaLML4jV">

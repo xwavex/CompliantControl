@@ -14,6 +14,7 @@
     <language id="c72da2b9-7cce-4447-8389-f407dc1158b7" name="jetbrains.mps.lang.structure">
       <concept id="1169125787135" name="jetbrains.mps.lang.structure.structure.AbstractConceptDeclaration" flags="ig" index="PkWjJ">
         <property id="6714410169261853888" name="conceptId" index="EcuMT" />
+        <property id="4628067390765907488" name="conceptShortDescription" index="R4oN_" />
         <child id="1071489727083" name="linkDeclaration" index="1TKVEi" />
         <child id="1071489727084" name="propertyDeclaration" index="1TKVEl" />
       </concept>
@@ -58,6 +59,9 @@
     <node concept="PrWs8" id="5dGsgijTsJV" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
     </node>
+    <node concept="PrWs8" id="5mfFpi9zRqp" role="PzmwI">
+      <ref role="PrY4T" node="5dGsgijTsA2" resolve="IReferenceFrame" />
+    </node>
   </node>
   <node concept="1TIwiD" id="3xcS33zIwKV">
     <property role="EcuMT" value="4056863864937647163" />
@@ -88,8 +92,8 @@
       <property role="20lbJX" value="1" />
       <ref role="20lvS9" node="5dGsgijTsGz" resolve="Frame" />
     </node>
-    <node concept="PrWs8" id="5dGsgijTsC0" role="PzmwI">
-      <ref role="PrY4T" node="5dGsgijTsA2" resolve="IReferenceFrame" />
+    <node concept="PrWs8" id="5mfFpi9_5zU" role="PzmwI">
+      <ref role="PrY4T" node="5mfFpi9_5x3" resolve="IReferenceFrameRef" />
     </node>
   </node>
   <node concept="PlHQZ" id="6GuOaLML4jV">
@@ -198,8 +202,15 @@
     <property role="TrG5h" value="LinkRef" />
     <property role="3GE5qa" value="frame" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
-    <node concept="PrWs8" id="5dGsgijTsEb" role="PzmwI">
-      <ref role="PrY4T" node="5dGsgijTsA2" resolve="IReferenceFrame" />
+    <node concept="1TJgyj" id="5mfFpi9$fdk" role="1TKVEi">
+      <property role="IQ2ns" value="6165337268368241492" />
+      <property role="20lmBu" value="reference" />
+      <property role="20kJfa" value="link" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" to="cewj:3Wmswgx0nyW" resolve="RobotLink" />
+    </node>
+    <node concept="PrWs8" id="5mfFpi9_5zG" role="PzmwI">
+      <ref role="PrY4T" node="5mfFpi9_5x3" resolve="IReferenceFrameRef" />
     </node>
   </node>
   <node concept="1TIwiD" id="5dGsgijV2Ym">
@@ -265,6 +276,49 @@
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="PrWs8" id="3xcS33zIwKZ" role="PzmwI">
       <ref role="PrY4T" node="3xcS33zIwKY" resolve="IReferenceSetPoint" />
+    </node>
+  </node>
+  <node concept="PlHQZ" id="5mfFpi9_5x3">
+    <property role="EcuMT" value="6165337268368463939" />
+    <property role="TrG5h" value="IReferenceFrameRef" />
+    <property role="3GE5qa" value="frame" />
+    <node concept="PrWs8" id="5mfFpi9_5zu" role="PrDN$">
+      <ref role="PrY4T" node="5dGsgijTsA2" resolve="IReferenceFrame" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="6GuOaLML4hX">
+    <property role="EcuMT" value="7718836250438026365" />
+    <property role="TrG5h" value="VirtualManipulator" />
+    <property role="R4oN_" value="End points could be virtrual but at both ends of the sequence there need to be a non-virtual one!" />
+    <property role="19KtqR" value="true" />
+    <ref role="1TJDcQ" node="5dGsgijTsGz" resolve="Frame" />
+    <node concept="1TJgyj" id="6GuOaLMN5Z5" role="1TKVEi">
+      <property role="IQ2ns" value="7718836250438557637" />
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="anchorLeft" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="5dGsgijTsCd" resolve="LinkRef" />
+    </node>
+    <node concept="1TJgyj" id="5mfFpi9wMsu" role="1TKVEi">
+      <property role="IQ2ns" value="6165337268367337246" />
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="chainLeft" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="6GuOaLMLhHO" resolve="KinematicChainRef" />
+    </node>
+    <node concept="1TJgyj" id="6GuOaLMN5Zi" role="1TKVEi">
+      <property role="IQ2ns" value="7718836250438557650" />
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="anchorRight" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="5dGsgijTsCd" resolve="LinkRef" />
+    </node>
+    <node concept="1TJgyj" id="5mfFpi9wMtN" role="1TKVEi">
+      <property role="IQ2ns" value="6165337268367337331" />
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="chainRight" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="6GuOaLMLhHO" resolve="KinematicChainRef" />
     </node>
   </node>
 </model>
