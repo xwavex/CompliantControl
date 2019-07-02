@@ -39,6 +39,7 @@
     <language id="d35899bf-1f8a-4727-b7b5-90d52a21d317" name="CompliantControlTask">
       <concept id="7718836250447559293" name="CompliantControlTask.structure.DynamicAnnotation" flags="ng" index="oiQFh" />
       <concept id="7718836250434804507" name="CompliantControlTask.structure.Coupling" flags="ng" index="pzsIR">
+        <property id="7718836250446022928" name="prioritycolor" index="o89AW" />
         <property id="7718836250444803976" name="showHierachy" index="odnW$" />
         <property id="4056863864937636767" name="state" index="3rXgeJ" />
         <child id="4056863864937636771" name="base" index="3rXgej" />
@@ -67,6 +68,10 @@
         <property id="7718836250438081896" name="space" index="pQWR4" />
         <child id="7718836250438082023" name="value" index="pQWPb" />
       </concept>
+      <concept id="7718836250437797000" name="CompliantControlTask.structure.Realization" flags="ng" index="pRxg$">
+        <property id="7718836250437797126" name="refToComponent" index="pRxmE" />
+      </concept>
+      <concept id="3935613358949427562" name="CompliantControlTask.structure.VirtuallyCombinedJoints" flags="ng" index="2ZU78l" />
       <concept id="6011303867108306838" name="CompliantControlTask.structure.RelativeFrame" flags="ng" index="30w5Ui">
         <property id="6011303867108309083" name="space" index="30w4_v" />
         <child id="7718836250440663276" name="rp" index="pW_10" />
@@ -79,6 +84,9 @@
       <concept id="6011303867108097887" name="CompliantControlTask.structure.MassSpringDamper" flags="ng" index="30x8Tr">
         <child id="7718836250442232059" name="damping" index="o6E1n" />
         <child id="7718836250442141498" name="stiffness" index="o7tYm" />
+      </concept>
+      <concept id="6011303867108097761" name="CompliantControlTask.structure.ICouplingFormalism" flags="ng" index="30x8Z_">
+        <child id="7718836250437797371" name="realization" index="pRxln" />
       </concept>
       <concept id="6011303867108202796" name="CompliantControlTask.structure.Constraint" flags="ng" index="30xIwC">
         <child id="7718836250446979416" name="force" index="okz7O" />
@@ -114,7 +122,7 @@
     <property role="3GE5qa" value="frames" />
   </node>
   <node concept="30yrCB" id="5dGsgijUfT7">
-    <property role="TrG5h" value="EEF_left (TEST ONLY)" />
+    <property role="TrG5h" value="lwr_tool_link (left)" />
     <property role="3GE5qa" value="frames" />
   </node>
   <node concept="pGqKh" id="6GuOaLMGKTI">
@@ -209,7 +217,7 @@
       <node concept="30B06x" id="6GuOaLMMS2g" role="30yrBN">
         <property role="TrG5h" value="Left_eef_vFrame_tracking" />
         <node concept="30yrw0" id="6GuOaLMMS2h" role="3rXgej">
-          <ref role="30yrEZ" node="5dGsgijUfT7" resolve="EEF_left (TEST ONLY)" />
+          <ref role="30yrEZ" node="5dGsgijUfT7" resolve="lwr_tool_link (left)" />
         </node>
         <node concept="30yrw0" id="6GuOaLMMS2i" role="3rXgek">
           <ref role="30yrEZ" node="5dGsgijU34v" resolve="EEF_left_target" />
@@ -261,7 +269,7 @@
       <node concept="30B06x" id="6GuOaLMMRsG" role="30yrBN">
         <property role="TrG5h" value="Right_eef_vFrame_tracking" />
         <node concept="30yrw0" id="6GuOaLMMSb1" role="3rXgej">
-          <ref role="30yrEZ" node="6GuOaLMMS93" resolve="EEF_right (TEST ONLY)" />
+          <ref role="30yrEZ" node="6GuOaLMMS93" resolve="lwr_tool_link (right)" />
         </node>
         <node concept="30yrw0" id="6GuOaLMMSbf" role="3rXgek">
           <ref role="30yrEZ" node="6GuOaLMMS75" resolve="EEF_right_target" />
@@ -473,7 +481,7 @@
     <property role="3GE5qa" value="frames" />
   </node>
   <node concept="30yrCB" id="6GuOaLMMS93">
-    <property role="TrG5h" value="EEF_right (TEST ONLY)" />
+    <property role="TrG5h" value="lwr_tool_link (right)" />
     <property role="3GE5qa" value="frames" />
   </node>
   <node concept="pQDjh" id="6GuOaLMNzk$">
@@ -691,6 +699,1003 @@
   <node concept="30yLgp" id="6GuOaLNi52o">
     <property role="3GE5qa" value="frames" />
     <property role="TrG5h" value="VF_BarTarget (external)" />
+  </node>
+  <node concept="pGqKh" id="3qu6RY9uIGo">
+    <property role="3GE5qa" value="situations" />
+    <property role="TrG5h" value="RollingTask_FreeSpace_Single" />
+    <node concept="30yr_X" id="3qu6RY9uIGp" role="pFT7q">
+      <property role="TrG5h" value="Virtual_Motion_Trajectory_left" />
+      <property role="30wYnu" value="true" />
+      <property role="o4zO8" value="0" />
+      <node concept="30B06x" id="3qu6RY9uIGq" role="30yrBN">
+        <property role="odnW$" value="false" />
+        <property role="o89AW" value="#DDDDDD" />
+        <property role="TrG5h" value="motion_tracking" />
+        <node concept="30yrw0" id="3qu6RY9uIIr" role="3rXgej">
+          <ref role="30yrEZ" node="5dGsgijUfT7" resolve="lwr_tool_link (left)" />
+        </node>
+        <node concept="30yrw0" id="3qu6RY9uIM_" role="3rXgek">
+          <ref role="30yrEZ" node="3qu6RY9uIID" resolve="VF_Traj_tool_left (external)" />
+        </node>
+        <node concept="30x8Tr" id="3qu6RY9uIMN" role="3rXgel">
+          <node concept="3b6qkQ" id="3qu6RY9uIMP" role="o7tYm">
+            <property role="$nhwW" value="30.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uINA" role="o7tYm">
+            <property role="$nhwW" value="30.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uIO2" role="o7tYm">
+            <property role="$nhwW" value="30.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uION" role="o7tYm">
+            <property role="$nhwW" value="30.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uIPH" role="o7tYm">
+            <property role="$nhwW" value="30.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uIQK" role="o7tYm">
+            <property role="$nhwW" value="30.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uIMR" role="o6E1n">
+            <property role="$nhwW" value="10.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uIS2" role="o6E1n">
+            <property role="$nhwW" value="10.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uIS$" role="o6E1n">
+            <property role="$nhwW" value="10.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uITf" role="o6E1n">
+            <property role="$nhwW" value="10.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uIU6" role="o6E1n">
+            <property role="$nhwW" value="10.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uIV9" role="o6E1n">
+            <property role="$nhwW" value="10.0" />
+          </node>
+          <node concept="pRxg$" id="3qu6RY9uIWo" role="pRxln">
+            <property role="pRxmE" value="PositionController" />
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="30yr_X" id="3qu6RY9uMyW" role="pFT7q">
+      <property role="TrG5h" value="Virtual_Redundancy_Compliance_left" />
+      <property role="30wYnu" value="true" />
+      <property role="o4zO8" value="1" />
+      <node concept="30B04z" id="3qu6RY9uMyX" role="30yrBN">
+        <property role="odnW$" value="false" />
+        <property role="o89AW" value="#DDDDDD" />
+        <property role="TrG5h" value="nullspace_tracking" />
+        <node concept="pQWJo" id="3qu6RY9uMyY" role="3rXgej">
+          <ref role="pNcCJ" to="d49h:C_g3bnXz3c" resolve="full_arm" />
+        </node>
+        <node concept="pQWRa" id="3qu6RY9uMyZ" role="3rXgek">
+          <property role="pQWR4" value="joint-space" />
+          <node concept="2ShNRf" id="3qu6RY9uMz0" role="pQWPb">
+            <node concept="qghkx" id="3qu6RY9uMz1" role="2ShVmc">
+              <ref role="qghDu" to="sxll:3xBfiZ$w$pA" resolve="JointAngles" />
+              <node concept="3sb0db" id="3qu6RY9uMz2" role="qghDs">
+                <ref role="3sb0da" to="sxll:3xBfiZ$w$pC" resolve="angles" />
+                <node concept="3sb0ea" id="3qu6RY9uMz3" role="3sb6Ac">
+                  <node concept="3b6qkQ" id="3qu6RY9uMz4" role="3sb0e2">
+                    <property role="$nhwW" value="0.3" />
+                  </node>
+                  <node concept="3b6qkQ" id="3qu6RY9uMz5" role="3sb0e2">
+                    <property role="$nhwW" value="0.4" />
+                  </node>
+                  <node concept="3b6qkQ" id="3qu6RY9uMz6" role="3sb0e2">
+                    <property role="$nhwW" value="0.5" />
+                  </node>
+                  <node concept="3b6qkQ" id="3qu6RY9uMz7" role="3sb0e2">
+                    <property role="$nhwW" value="0.1" />
+                  </node>
+                  <node concept="3b6qkQ" id="3qu6RY9uMz8" role="3sb0e2">
+                    <property role="$nhwW" value="0.2" />
+                  </node>
+                  <node concept="3b6qkQ" id="3qu6RY9uMz9" role="3sb0e2">
+                    <property role="$nhwW" value="0.5" />
+                  </node>
+                  <node concept="3b6qkQ" id="3qu6RY9uMza" role="3sb0e2">
+                    <property role="$nhwW" value="0.1" />
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="30x8Tr" id="3qu6RY9uMzb" role="3rXgel">
+          <node concept="3b6qkQ" id="3qu6RY9uMzc" role="o7tYm">
+            <property role="$nhwW" value="100.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uMzd" role="o7tYm">
+            <property role="$nhwW" value="100.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uMze" role="o7tYm">
+            <property role="$nhwW" value="100.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uMzf" role="o7tYm">
+            <property role="$nhwW" value="100.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uMzg" role="o7tYm">
+            <property role="$nhwW" value="100.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uMzh" role="o7tYm">
+            <property role="$nhwW" value="100.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uMzi" role="o7tYm">
+            <property role="$nhwW" value="100.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uMzj" role="o6E1n">
+            <property role="$nhwW" value="20.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uMzk" role="o6E1n">
+            <property role="$nhwW" value="20.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uMzl" role="o6E1n">
+            <property role="$nhwW" value="20.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uMzm" role="o6E1n">
+            <property role="$nhwW" value="20.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uMzn" role="o6E1n">
+            <property role="$nhwW" value="20.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uMzo" role="o6E1n">
+            <property role="$nhwW" value="20.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uMzp" role="o6E1n">
+            <property role="$nhwW" value="20.0" />
+          </node>
+          <node concept="pRxg$" id="3qu6RY9uMzq" role="pRxln">
+            <property role="pRxmE" value="JointPositionCtrl" />
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="30yr_X" id="3qu6RY9uIZY" role="pFT7q">
+      <property role="TrG5h" value="Virtual_Motion_Trajectory_right" />
+      <property role="30wYnu" value="true" />
+      <property role="o4zO8" value="0" />
+      <node concept="30B06x" id="3qu6RY9uIZZ" role="30yrBN">
+        <property role="odnW$" value="false" />
+        <property role="o89AW" value="#DDDDDD" />
+        <property role="TrG5h" value="motion_tracking" />
+        <node concept="30yrw0" id="3qu6RY9uJaW" role="3rXgej">
+          <ref role="30yrEZ" node="6GuOaLMMS93" resolve="lwr_tool_link (right)" />
+        </node>
+        <node concept="30yrw0" id="3qu6RY9uJba" role="3rXgek">
+          <ref role="30yrEZ" node="3qu6RY9uIKB" resolve="VF_Traj_tool_right (external)" />
+        </node>
+        <node concept="30x8Tr" id="3qu6RY9uJ02" role="3rXgel">
+          <node concept="3b6qkQ" id="3qu6RY9uJ03" role="o7tYm">
+            <property role="$nhwW" value="30.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uJ04" role="o7tYm">
+            <property role="$nhwW" value="30.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uJ05" role="o7tYm">
+            <property role="$nhwW" value="30.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uJ06" role="o7tYm">
+            <property role="$nhwW" value="30.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uJ07" role="o7tYm">
+            <property role="$nhwW" value="30.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uJ08" role="o7tYm">
+            <property role="$nhwW" value="30.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uJ09" role="o6E1n">
+            <property role="$nhwW" value="10.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uJ0a" role="o6E1n">
+            <property role="$nhwW" value="10.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uJ0b" role="o6E1n">
+            <property role="$nhwW" value="10.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uJ0c" role="o6E1n">
+            <property role="$nhwW" value="10.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uJ0d" role="o6E1n">
+            <property role="$nhwW" value="10.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uJ0e" role="o6E1n">
+            <property role="$nhwW" value="10.0" />
+          </node>
+          <node concept="pRxg$" id="3qu6RY9uJ0f" role="pRxln">
+            <property role="pRxmE" value="PositionController" />
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="30yr_X" id="3qu6RY9uMZg" role="pFT7q">
+      <property role="TrG5h" value="Virtual_Redundancy_Compliance_right" />
+      <property role="30wYnu" value="true" />
+      <property role="o4zO8" value="1" />
+      <node concept="30B04z" id="3qu6RY9uMZh" role="30yrBN">
+        <property role="odnW$" value="false" />
+        <property role="o89AW" value="#DDDDDD" />
+        <property role="TrG5h" value="nullspace_tracking" />
+        <node concept="pQWJo" id="3qu6RY9uMZi" role="3rXgej">
+          <ref role="pNcCJ" to="d49h:C_g3bnXz3c" resolve="full_arm" />
+        </node>
+        <node concept="pQWRa" id="3qu6RY9uMZj" role="3rXgek">
+          <property role="pQWR4" value="joint-space" />
+          <node concept="2ShNRf" id="3qu6RY9uMZk" role="pQWPb">
+            <node concept="qghkx" id="3qu6RY9uMZl" role="2ShVmc">
+              <ref role="qghDu" to="sxll:3xBfiZ$w$pA" resolve="JointAngles" />
+              <node concept="3sb0db" id="3qu6RY9uMZm" role="qghDs">
+                <ref role="3sb0da" to="sxll:3xBfiZ$w$pC" resolve="angles" />
+                <node concept="3sb0ea" id="3qu6RY9uMZn" role="3sb6Ac">
+                  <node concept="3b6qkQ" id="3qu6RY9uMZo" role="3sb0e2">
+                    <property role="$nhwW" value="0.3" />
+                  </node>
+                  <node concept="3b6qkQ" id="3qu6RY9uMZp" role="3sb0e2">
+                    <property role="$nhwW" value="0.4" />
+                  </node>
+                  <node concept="3b6qkQ" id="3qu6RY9uMZq" role="3sb0e2">
+                    <property role="$nhwW" value="0.5" />
+                  </node>
+                  <node concept="3b6qkQ" id="3qu6RY9uMZr" role="3sb0e2">
+                    <property role="$nhwW" value="0.1" />
+                  </node>
+                  <node concept="3b6qkQ" id="3qu6RY9uMZs" role="3sb0e2">
+                    <property role="$nhwW" value="0.2" />
+                  </node>
+                  <node concept="3b6qkQ" id="3qu6RY9uMZt" role="3sb0e2">
+                    <property role="$nhwW" value="0.5" />
+                  </node>
+                  <node concept="3b6qkQ" id="3qu6RY9uMZu" role="3sb0e2">
+                    <property role="$nhwW" value="0.1" />
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="30x8Tr" id="3qu6RY9uMZv" role="3rXgel">
+          <node concept="3b6qkQ" id="3qu6RY9uMZw" role="o7tYm">
+            <property role="$nhwW" value="100.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uMZx" role="o7tYm">
+            <property role="$nhwW" value="100.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uMZy" role="o7tYm">
+            <property role="$nhwW" value="100.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uMZz" role="o7tYm">
+            <property role="$nhwW" value="100.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uMZ$" role="o7tYm">
+            <property role="$nhwW" value="100.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uMZ_" role="o7tYm">
+            <property role="$nhwW" value="100.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uMZA" role="o7tYm">
+            <property role="$nhwW" value="100.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uMZB" role="o6E1n">
+            <property role="$nhwW" value="20.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uMZC" role="o6E1n">
+            <property role="$nhwW" value="20.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uMZD" role="o6E1n">
+            <property role="$nhwW" value="20.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uMZE" role="o6E1n">
+            <property role="$nhwW" value="20.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uMZF" role="o6E1n">
+            <property role="$nhwW" value="20.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uMZG" role="o6E1n">
+            <property role="$nhwW" value="20.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uMZH" role="o6E1n">
+            <property role="$nhwW" value="20.0" />
+          </node>
+          <node concept="pRxg$" id="3qu6RY9uMZI" role="pRxln">
+            <property role="pRxmE" value="JointPositionCtrl" />
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="30yLgp" id="3qu6RY9uIID">
+    <property role="3GE5qa" value="frames" />
+    <property role="TrG5h" value="VF_Traj_tool_left (external)" />
+  </node>
+  <node concept="30yLgp" id="3qu6RY9uIKB">
+    <property role="3GE5qa" value="frames" />
+    <property role="TrG5h" value="VF_Traj_tool_right (external)" />
+  </node>
+  <node concept="pGqKh" id="3qu6RY9uJbo">
+    <property role="3GE5qa" value="situations" />
+    <property role="TrG5h" value="RollingTask_Squeezing_Single" />
+    <node concept="30yr_X" id="3qu6RY9uJbp" role="pFT7q">
+      <property role="TrG5h" value="Virtual_Motion_Trajectory_left" />
+      <property role="o4zO8" value="0" />
+      <node concept="30B06x" id="3qu6RY9uJbq" role="30yrBN">
+        <property role="odnW$" value="false" />
+        <property role="o89AW" value="#DDDDDD" />
+        <property role="TrG5h" value="motion_tracking" />
+        <node concept="30yrw0" id="3qu6RY9uJbr" role="3rXgej">
+          <ref role="30yrEZ" node="5dGsgijUfT7" resolve="lwr_tool_link (left)" />
+        </node>
+        <node concept="30yrw0" id="3qu6RY9uJbs" role="3rXgek">
+          <ref role="30yrEZ" node="3qu6RY9uIID" resolve="VF_Traj_tool_left (external)" />
+        </node>
+        <node concept="30x8Tr" id="3qu6RY9uJbt" role="3rXgel">
+          <node concept="3b6qkQ" id="3qu6RY9uJbu" role="o7tYm">
+            <property role="$nhwW" value="30.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uJbv" role="o7tYm">
+            <property role="$nhwW" value="30.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uJbw" role="o7tYm">
+            <property role="$nhwW" value="30.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uJbx" role="o7tYm">
+            <property role="$nhwW" value="30.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uJby" role="o7tYm">
+            <property role="$nhwW" value="30.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uJbz" role="o7tYm">
+            <property role="$nhwW" value="30.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uJb$" role="o6E1n">
+            <property role="$nhwW" value="10.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uJb_" role="o6E1n">
+            <property role="$nhwW" value="10.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uJbA" role="o6E1n">
+            <property role="$nhwW" value="10.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uJbB" role="o6E1n">
+            <property role="$nhwW" value="10.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uJbC" role="o6E1n">
+            <property role="$nhwW" value="10.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uJbD" role="o6E1n">
+            <property role="$nhwW" value="10.0" />
+          </node>
+          <node concept="pRxg$" id="3qu6RY9uJbE" role="pRxln">
+            <property role="pRxmE" value="PositionController" />
+          </node>
+        </node>
+      </node>
+      <node concept="30B06x" id="3qu6RY9uJga" role="30yrBN">
+        <property role="odnW$" value="false" />
+        <property role="o89AW" value="#DDDDDD" />
+        <property role="TrG5h" value="force_constraint" />
+        <node concept="30yrw0" id="3qu6RY9uJjz" role="3rXgej">
+          <ref role="30yrEZ" node="5dGsgijUfT7" resolve="lwr_tool_link (left)" />
+        </node>
+        <node concept="30w5Ui" id="3qu6RY9uJm$" role="3rXgek">
+          <property role="30w4_v" value="world" />
+          <node concept="3b6qkQ" id="3qu6RY9uJm_" role="pXyqr">
+            <property role="$nhwW" value="0.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uJmA" role="pXyrL">
+            <property role="$nhwW" value="0.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uJmB" role="pW_3b">
+            <property role="$nhwW" value="1.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uJmC" role="pXyvC">
+            <property role="$nhwW" value="0.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uJmD" role="pW_10">
+            <property role="$nhwW" value="0.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uJmE" role="pW_7H">
+            <property role="$nhwW" value="0.0" />
+          </node>
+        </node>
+        <node concept="30xIwC" id="3qu6RY9uJoD" role="3rXgel">
+          <node concept="3b6qkQ" id="3qu6RY9uJoE" role="okz7O">
+            <property role="$nhwW" value="0.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uJpU" role="okz7O">
+            <property role="$nhwW" value="0.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uJqp" role="okz7O">
+            <property role="$nhwW" value="5.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uJr4" role="okz7O">
+            <property role="$nhwW" value="0.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uJrS" role="okz7O">
+            <property role="$nhwW" value="0.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uJsY" role="okz7O">
+            <property role="$nhwW" value="0.0" />
+          </node>
+          <node concept="pRxg$" id="3qu6RY9uJua" role="pRxln">
+            <property role="pRxmE" value="SimpleTaskController" />
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="30yr_X" id="3qu6RY9uJRw" role="pFT7q">
+      <property role="TrG5h" value="Virtual_Redundancy_Compliance_left" />
+      <property role="30wYnu" value="true" />
+      <property role="o4zO8" value="1" />
+      <node concept="30B04z" id="3qu6RY9uK5D" role="30yrBN">
+        <property role="odnW$" value="false" />
+        <property role="o89AW" value="#DDDDDD" />
+        <property role="TrG5h" value="nullspace_tracking" />
+        <node concept="pQWJo" id="3qu6RY9uK9e" role="3rXgej">
+          <ref role="pNcCJ" to="d49h:C_g3bnXz3c" resolve="full_arm" />
+        </node>
+        <node concept="pQWRa" id="3qu6RY9uKa4" role="3rXgek">
+          <property role="pQWR4" value="joint-space" />
+          <node concept="2ShNRf" id="3qu6RY9uKaw" role="pQWPb">
+            <node concept="qghkx" id="3qu6RY9uKe1" role="2ShVmc">
+              <ref role="qghDu" to="sxll:3xBfiZ$w$pA" resolve="JointAngles" />
+              <node concept="3sb0db" id="3qu6RY9uKe3" role="qghDs">
+                <ref role="3sb0da" to="sxll:3xBfiZ$w$pC" resolve="angles" />
+                <node concept="3sb0ea" id="3qu6RY9uKe4" role="3sb6Ac">
+                  <node concept="3b6qkQ" id="3qu6RY9uKf8" role="3sb0e2">
+                    <property role="$nhwW" value="0.3" />
+                  </node>
+                  <node concept="3b6qkQ" id="3qu6RY9uKf9" role="3sb0e2">
+                    <property role="$nhwW" value="0.4" />
+                  </node>
+                  <node concept="3b6qkQ" id="3qu6RY9uKfa" role="3sb0e2">
+                    <property role="$nhwW" value="0.5" />
+                  </node>
+                  <node concept="3b6qkQ" id="3qu6RY9uKfb" role="3sb0e2">
+                    <property role="$nhwW" value="0.1" />
+                  </node>
+                  <node concept="3b6qkQ" id="3qu6RY9uKfc" role="3sb0e2">
+                    <property role="$nhwW" value="0.2" />
+                  </node>
+                  <node concept="3b6qkQ" id="3qu6RY9uKfd" role="3sb0e2">
+                    <property role="$nhwW" value="0.5" />
+                  </node>
+                  <node concept="3b6qkQ" id="3qu6RY9uKfe" role="3sb0e2">
+                    <property role="$nhwW" value="0.1" />
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="30x8Tr" id="3qu6RY9uKlD" role="3rXgel">
+          <node concept="3b6qkQ" id="3qu6RY9uKlF" role="o7tYm">
+            <property role="$nhwW" value="100.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uKmv" role="o7tYm">
+            <property role="$nhwW" value="100.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uKmY" role="o7tYm">
+            <property role="$nhwW" value="100.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uKnD" role="o7tYm">
+            <property role="$nhwW" value="100.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uKow" role="o7tYm">
+            <property role="$nhwW" value="100.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uKpz" role="o7tYm">
+            <property role="$nhwW" value="100.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uKqP" role="o7tYm">
+            <property role="$nhwW" value="100.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uKlH" role="o6E1n">
+            <property role="$nhwW" value="20.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uKyB" role="o6E1n">
+            <property role="$nhwW" value="20.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uKz6" role="o6E1n">
+            <property role="$nhwW" value="20.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uKzO" role="o6E1n">
+            <property role="$nhwW" value="20.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uK$F" role="o6E1n">
+            <property role="$nhwW" value="20.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uK_I" role="o6E1n">
+            <property role="$nhwW" value="20.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uKAX" role="o6E1n">
+            <property role="$nhwW" value="20.0" />
+          </node>
+          <node concept="pRxg$" id="3qu6RY9uKFm" role="pRxln">
+            <property role="pRxmE" value="JointPositionCtrl" />
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="30yr_X" id="3qu6RY9uJbF" role="pFT7q">
+      <property role="TrG5h" value="Virtual_Motion_Trajectory_right" />
+      <property role="o4zO8" value="0" />
+      <node concept="30B06x" id="3qu6RY9uJbG" role="30yrBN">
+        <property role="odnW$" value="false" />
+        <property role="o89AW" value="#DDDDDD" />
+        <property role="TrG5h" value="motion_tracking" />
+        <node concept="30yrw0" id="3qu6RY9uJbH" role="3rXgej">
+          <ref role="30yrEZ" node="6GuOaLMMS93" resolve="lwr_tool_link (right)" />
+        </node>
+        <node concept="30yrw0" id="3qu6RY9uJbI" role="3rXgek">
+          <ref role="30yrEZ" node="3qu6RY9uIKB" resolve="VF_Traj_tool_right (external)" />
+        </node>
+        <node concept="30x8Tr" id="3qu6RY9uJbJ" role="3rXgel">
+          <node concept="3b6qkQ" id="3qu6RY9uJbK" role="o7tYm">
+            <property role="$nhwW" value="30.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uJbL" role="o7tYm">
+            <property role="$nhwW" value="30.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uJbM" role="o7tYm">
+            <property role="$nhwW" value="30.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uJbN" role="o7tYm">
+            <property role="$nhwW" value="30.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uJbO" role="o7tYm">
+            <property role="$nhwW" value="30.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uJbP" role="o7tYm">
+            <property role="$nhwW" value="30.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uJbQ" role="o6E1n">
+            <property role="$nhwW" value="10.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uJbR" role="o6E1n">
+            <property role="$nhwW" value="10.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uJbS" role="o6E1n">
+            <property role="$nhwW" value="10.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uJbT" role="o6E1n">
+            <property role="$nhwW" value="10.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uJbU" role="o6E1n">
+            <property role="$nhwW" value="10.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uJbV" role="o6E1n">
+            <property role="$nhwW" value="10.0" />
+          </node>
+          <node concept="pRxg$" id="3qu6RY9uJbW" role="pRxln">
+            <property role="pRxmE" value="PositionController" />
+          </node>
+        </node>
+      </node>
+      <node concept="30B06x" id="3qu6RY9uJDx" role="30yrBN">
+        <property role="odnW$" value="false" />
+        <property role="o89AW" value="#DDDDDD" />
+        <property role="TrG5h" value="force_constraint" />
+        <node concept="30yrw0" id="3qu6RY9uJRi" role="3rXgej">
+          <ref role="30yrEZ" node="6GuOaLMMS93" resolve="lwr_tool_link (right)" />
+        </node>
+        <node concept="30w5Ui" id="3qu6RY9uJDz" role="3rXgek">
+          <property role="30w4_v" value="world" />
+          <node concept="3b6qkQ" id="3qu6RY9uJD$" role="pXyqr">
+            <property role="$nhwW" value="0.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uJD_" role="pXyrL">
+            <property role="$nhwW" value="0.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uJDA" role="pW_3b">
+            <property role="$nhwW" value="1.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uJDB" role="pXyvC">
+            <property role="$nhwW" value="0.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uJDC" role="pW_10">
+            <property role="$nhwW" value="0.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uJDD" role="pW_7H">
+            <property role="$nhwW" value="0.0" />
+          </node>
+        </node>
+        <node concept="30xIwC" id="3qu6RY9uJDE" role="3rXgel">
+          <node concept="3b6qkQ" id="3qu6RY9uJDF" role="okz7O">
+            <property role="$nhwW" value="0.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uJDG" role="okz7O">
+            <property role="$nhwW" value="0.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uJDH" role="okz7O">
+            <property role="$nhwW" value="5.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uJDI" role="okz7O">
+            <property role="$nhwW" value="0.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uJDJ" role="okz7O">
+            <property role="$nhwW" value="0.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uJDK" role="okz7O">
+            <property role="$nhwW" value="0.0" />
+          </node>
+          <node concept="pRxg$" id="3qu6RY9uJDL" role="pRxln">
+            <property role="pRxmE" value="SimpleTaskController" />
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="30yr_X" id="3qu6RY9uLEy" role="pFT7q">
+      <property role="TrG5h" value="Virtual_Redundancy_Compliance_right" />
+      <property role="30wYnu" value="true" />
+      <property role="o4zO8" value="1" />
+      <node concept="30B04z" id="3qu6RY9uLEz" role="30yrBN">
+        <property role="odnW$" value="false" />
+        <property role="o89AW" value="#DDDDDD" />
+        <property role="TrG5h" value="nullspace_tracking" />
+        <node concept="pQWJo" id="3qu6RY9uM5i" role="3rXgej">
+          <ref role="pNcCJ" to="d49h:C_g3bnXz3c" resolve="full_arm" />
+        </node>
+        <node concept="pQWRa" id="3qu6RY9uLE_" role="3rXgek">
+          <property role="pQWR4" value="joint-space" />
+          <node concept="2ShNRf" id="3qu6RY9uLEA" role="pQWPb">
+            <node concept="qghkx" id="3qu6RY9uLEB" role="2ShVmc">
+              <ref role="qghDu" to="sxll:3xBfiZ$w$pA" resolve="JointAngles" />
+              <node concept="3sb0db" id="3qu6RY9uLEC" role="qghDs">
+                <ref role="3sb0da" to="sxll:3xBfiZ$w$pC" resolve="angles" />
+                <node concept="3sb0ea" id="3qu6RY9uLED" role="3sb6Ac">
+                  <node concept="3b6qkQ" id="3qu6RY9uLEE" role="3sb0e2">
+                    <property role="$nhwW" value="0.3" />
+                  </node>
+                  <node concept="3b6qkQ" id="3qu6RY9uLEF" role="3sb0e2">
+                    <property role="$nhwW" value="0.4" />
+                  </node>
+                  <node concept="3b6qkQ" id="3qu6RY9uLEG" role="3sb0e2">
+                    <property role="$nhwW" value="0.5" />
+                  </node>
+                  <node concept="3b6qkQ" id="3qu6RY9uLEH" role="3sb0e2">
+                    <property role="$nhwW" value="0.1" />
+                  </node>
+                  <node concept="3b6qkQ" id="3qu6RY9uLEI" role="3sb0e2">
+                    <property role="$nhwW" value="0.2" />
+                  </node>
+                  <node concept="3b6qkQ" id="3qu6RY9uLEJ" role="3sb0e2">
+                    <property role="$nhwW" value="0.5" />
+                  </node>
+                  <node concept="3b6qkQ" id="3qu6RY9uLEK" role="3sb0e2">
+                    <property role="$nhwW" value="0.1" />
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="30x8Tr" id="3qu6RY9uLEL" role="3rXgel">
+          <node concept="3b6qkQ" id="3qu6RY9uLEM" role="o7tYm">
+            <property role="$nhwW" value="100.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uLEN" role="o7tYm">
+            <property role="$nhwW" value="100.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uLEO" role="o7tYm">
+            <property role="$nhwW" value="100.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uLEP" role="o7tYm">
+            <property role="$nhwW" value="100.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uLEQ" role="o7tYm">
+            <property role="$nhwW" value="100.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uLER" role="o7tYm">
+            <property role="$nhwW" value="100.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uLES" role="o7tYm">
+            <property role="$nhwW" value="100.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uLET" role="o6E1n">
+            <property role="$nhwW" value="20.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uLEU" role="o6E1n">
+            <property role="$nhwW" value="20.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uLEV" role="o6E1n">
+            <property role="$nhwW" value="20.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uLEW" role="o6E1n">
+            <property role="$nhwW" value="20.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uLEX" role="o6E1n">
+            <property role="$nhwW" value="20.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uLEY" role="o6E1n">
+            <property role="$nhwW" value="20.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uLEZ" role="o6E1n">
+            <property role="$nhwW" value="20.0" />
+          </node>
+          <node concept="pRxg$" id="3qu6RY9uLF0" role="pRxln">
+            <property role="pRxmE" value="JointPositionCtrl" />
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="pGqKh" id="3qu6RY9uNjC">
+    <property role="3GE5qa" value="situations" />
+    <property role="TrG5h" value="RollingTask_Squeezing_Compliance_Joint" />
+    <node concept="30yr_X" id="3qu6RY9uNjD" role="pFT7q">
+      <property role="TrG5h" value="Virtual_Motion_Trajectory" />
+      <property role="o4zO8" value="0" />
+      <node concept="30B06x" id="3qu6RY9uNjE" role="30yrBN">
+        <property role="odnW$" value="false" />
+        <property role="o89AW" value="#DDDDDD" />
+        <property role="TrG5h" value="motion_tracking" />
+        <node concept="30yrw0" id="3qu6RY9vtKT" role="3rXgej">
+          <ref role="30yrEZ" node="3qu6RY9vtIV" resolve="VirtualManipulatorFrame" />
+        </node>
+        <node concept="30yrw0" id="3qu6RY9vtN5" role="3rXgek">
+          <ref role="30yrEZ" node="3qu6RY9vtL7" resolve="VF_Traj_tool (external)" />
+        </node>
+        <node concept="30x8Tr" id="3qu6RY9uNjH" role="3rXgel">
+          <node concept="3b6qkQ" id="3qu6RY9uNjI" role="o7tYm">
+            <property role="$nhwW" value="30.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uNjJ" role="o7tYm">
+            <property role="$nhwW" value="30.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uNjK" role="o7tYm">
+            <property role="$nhwW" value="30.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uNjL" role="o7tYm">
+            <property role="$nhwW" value="30.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uNjM" role="o7tYm">
+            <property role="$nhwW" value="30.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uNjN" role="o7tYm">
+            <property role="$nhwW" value="30.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uNjO" role="o6E1n">
+            <property role="$nhwW" value="10.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uNjP" role="o6E1n">
+            <property role="$nhwW" value="10.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uNjQ" role="o6E1n">
+            <property role="$nhwW" value="10.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uNjR" role="o6E1n">
+            <property role="$nhwW" value="10.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uNjS" role="o6E1n">
+            <property role="$nhwW" value="10.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uNjT" role="o6E1n">
+            <property role="$nhwW" value="10.0" />
+          </node>
+          <node concept="pRxg$" id="3qu6RY9uNjU" role="pRxln">
+            <property role="pRxmE" value="PositionController" />
+          </node>
+        </node>
+      </node>
+      <node concept="30B06x" id="3qu6RY9uNjV" role="30yrBN">
+        <property role="odnW$" value="false" />
+        <property role="o89AW" value="#DDDDDD" />
+        <property role="TrG5h" value="force_constraint" />
+        <node concept="30yrw0" id="3qu6RY9uNjW" role="3rXgej">
+          <ref role="30yrEZ" node="5dGsgijUfT7" resolve="lwr_tool_link (left)" />
+        </node>
+        <node concept="30w5Ui" id="3qu6RY9uNjX" role="3rXgek">
+          <property role="30w4_v" value="world" />
+          <node concept="3b6qkQ" id="3qu6RY9uNjY" role="pXyqr">
+            <property role="$nhwW" value="1.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uNjZ" role="pXyrL">
+            <property role="$nhwW" value="0.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uNk0" role="pW_3b">
+            <property role="$nhwW" value="1.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uNk1" role="pXyvC">
+            <property role="$nhwW" value="0.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uNk2" role="pW_10">
+            <property role="$nhwW" value="0.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uNk3" role="pW_7H">
+            <property role="$nhwW" value="0.0" />
+          </node>
+        </node>
+        <node concept="30xIwC" id="3qu6RY9uNk4" role="3rXgel">
+          <node concept="3b6qkQ" id="3qu6RY9uNk5" role="okz7O">
+            <property role="$nhwW" value="0.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uNk6" role="okz7O">
+            <property role="$nhwW" value="0.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uNk7" role="okz7O">
+            <property role="$nhwW" value="5.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uNk8" role="okz7O">
+            <property role="$nhwW" value="0.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uNk9" role="okz7O">
+            <property role="$nhwW" value="0.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uNka" role="okz7O">
+            <property role="$nhwW" value="0.0" />
+          </node>
+          <node concept="pRxg$" id="3qu6RY9uNkb" role="pRxln">
+            <property role="pRxmE" value="SimpleTaskController" />
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="30yr_X" id="3qu6RY9uNkc" role="pFT7q">
+      <property role="TrG5h" value="Virtual_Redundancy_Compliance" />
+      <property role="30wYnu" value="true" />
+      <property role="o4zO8" value="1" />
+      <node concept="30B04z" id="3qu6RY9uNkd" role="30yrBN">
+        <property role="odnW$" value="false" />
+        <property role="o89AW" value="#DDDDDD" />
+        <property role="TrG5h" value="nullspace_tracking" />
+        <node concept="2ZU78l" id="3qu6RY9vsJ5" role="3rXgej" />
+        <node concept="pQWRa" id="3qu6RY9uNkf" role="3rXgek">
+          <property role="pQWR4" value="joint-space" />
+          <node concept="2ShNRf" id="3qu6RY9uNkg" role="pQWPb">
+            <node concept="qghkx" id="3qu6RY9uNkh" role="2ShVmc">
+              <ref role="qghDu" to="sxll:3xBfiZ$w$pA" resolve="JointAngles" />
+              <node concept="3sb0db" id="3qu6RY9uNki" role="qghDs">
+                <ref role="3sb0da" to="sxll:3xBfiZ$w$pC" resolve="angles" />
+                <node concept="3sb0ea" id="3qu6RY9uNkj" role="3sb6Ac">
+                  <node concept="3b6qkQ" id="3qu6RY9uNkk" role="3sb0e2">
+                    <property role="$nhwW" value="0.3" />
+                  </node>
+                  <node concept="3b6qkQ" id="3qu6RY9uNkl" role="3sb0e2">
+                    <property role="$nhwW" value="0.4" />
+                  </node>
+                  <node concept="3b6qkQ" id="3qu6RY9uNkm" role="3sb0e2">
+                    <property role="$nhwW" value="0.5" />
+                  </node>
+                  <node concept="3b6qkQ" id="3qu6RY9uNkn" role="3sb0e2">
+                    <property role="$nhwW" value="0.1" />
+                  </node>
+                  <node concept="3b6qkQ" id="3qu6RY9uNko" role="3sb0e2">
+                    <property role="$nhwW" value="0.2" />
+                  </node>
+                  <node concept="3b6qkQ" id="3qu6RY9uNkp" role="3sb0e2">
+                    <property role="$nhwW" value="0.5" />
+                  </node>
+                  <node concept="3b6qkQ" id="3qu6RY9uNkq" role="3sb0e2">
+                    <property role="$nhwW" value="0.1" />
+                  </node>
+                  <node concept="3b6qkQ" id="3qu6RY9vsAj" role="3sb0e2">
+                    <property role="$nhwW" value="0.3" />
+                  </node>
+                  <node concept="3b6qkQ" id="3qu6RY9vsAk" role="3sb0e2">
+                    <property role="$nhwW" value="0.4" />
+                  </node>
+                  <node concept="3b6qkQ" id="3qu6RY9vsAl" role="3sb0e2">
+                    <property role="$nhwW" value="0.5" />
+                  </node>
+                  <node concept="3b6qkQ" id="3qu6RY9vsAm" role="3sb0e2">
+                    <property role="$nhwW" value="0.1" />
+                  </node>
+                  <node concept="3b6qkQ" id="3qu6RY9vsAn" role="3sb0e2">
+                    <property role="$nhwW" value="0.2" />
+                  </node>
+                  <node concept="3b6qkQ" id="3qu6RY9vsAo" role="3sb0e2">
+                    <property role="$nhwW" value="0.5" />
+                  </node>
+                  <node concept="3b6qkQ" id="3qu6RY9vsAp" role="3sb0e2">
+                    <property role="$nhwW" value="0.1" />
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="30x8Tr" id="3qu6RY9uNkr" role="3rXgel">
+          <node concept="3b6qkQ" id="3qu6RY9uNks" role="o7tYm">
+            <property role="$nhwW" value="100.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uNkt" role="o7tYm">
+            <property role="$nhwW" value="100.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uNku" role="o7tYm">
+            <property role="$nhwW" value="100.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uNkv" role="o7tYm">
+            <property role="$nhwW" value="100.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uNkw" role="o7tYm">
+            <property role="$nhwW" value="100.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uNkx" role="o7tYm">
+            <property role="$nhwW" value="100.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uNky" role="o7tYm">
+            <property role="$nhwW" value="100.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9vsJj" role="o7tYm">
+            <property role="$nhwW" value="100.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9vsWf" role="o7tYm">
+            <property role="$nhwW" value="100.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9vsXZ" role="o7tYm">
+            <property role="$nhwW" value="100.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9vt01" role="o7tYm">
+            <property role="$nhwW" value="100.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9vt2c" role="o7tYm">
+            <property role="$nhwW" value="100.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9vt4z" role="o7tYm">
+            <property role="$nhwW" value="100.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9vt76" role="o7tYm">
+            <property role="$nhwW" value="100.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uNkz" role="o6E1n">
+            <property role="$nhwW" value="20.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uNk$" role="o6E1n">
+            <property role="$nhwW" value="20.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uNk_" role="o6E1n">
+            <property role="$nhwW" value="20.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uNkA" role="o6E1n">
+            <property role="$nhwW" value="20.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uNkB" role="o6E1n">
+            <property role="$nhwW" value="20.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uNkC" role="o6E1n">
+            <property role="$nhwW" value="20.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9uNkD" role="o6E1n">
+            <property role="$nhwW" value="20.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9vt9P" role="o6E1n">
+            <property role="$nhwW" value="20.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9vtbs" role="o6E1n">
+            <property role="$nhwW" value="20.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9vtdc" role="o6E1n">
+            <property role="$nhwW" value="20.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9vtf5" role="o6E1n">
+            <property role="$nhwW" value="20.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9vthj" role="o6E1n">
+            <property role="$nhwW" value="20.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9vtjE" role="o6E1n">
+            <property role="$nhwW" value="20.0" />
+          </node>
+          <node concept="3b6qkQ" id="3qu6RY9vtri" role="o6E1n">
+            <property role="$nhwW" value="20.0" />
+          </node>
+          <node concept="pRxg$" id="3qu6RY9uNkE" role="pRxln">
+            <property role="pRxmE" value="JointPositionCtrl" />
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="30yLgp" id="3qu6RY9vtIV">
+    <property role="3GE5qa" value="frames" />
+    <property role="TrG5h" value="VirtualManipulatorFrame" />
+  </node>
+  <node concept="30yLgp" id="3qu6RY9vtL7">
+    <property role="3GE5qa" value="frames" />
+    <property role="TrG5h" value="VF_Traj_tool (external)" />
   </node>
 </model>
 

@@ -1592,5 +1592,13 @@
       </node>
     </node>
   </node>
+  <node concept="24kQdi" id="3qu6RY9uNNA">
+    <property role="3GE5qa" value="frame" />
+    <ref role="1XX52x" to="gjk0:3qu6RY9tA_E" resolve="VirtuallyCombinedJoints" />
+    <node concept="3F0ifn" id="3qu6RY9uNP_" role="2wV5jI">
+      <property role="3F0ifm" value="Virtually Combined Joints" />
+      <node concept="Vb9p2" id="3qu6RY9uNPN" role="3F10Kt" />
+    </node>
+  </node>
 </model>
 

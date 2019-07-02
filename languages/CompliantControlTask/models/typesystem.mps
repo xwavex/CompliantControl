@@ -50,6 +50,7 @@
       <concept id="1068580123159" name="jetbrains.mps.baseLanguage.structure.IfStatement" flags="nn" index="3clFbJ">
         <child id="1068580123160" name="condition" index="3clFbw" />
         <child id="1068580123161" name="ifTrue" index="3clFbx" />
+        <child id="1206060520071" name="elsifClauses" index="3eNLev" />
       </concept>
       <concept id="1068580123136" name="jetbrains.mps.baseLanguage.structure.StatementList" flags="sn" stub="5293379017992965193" index="3clFbS">
         <child id="1068581517665" name="statement" index="3cqZAp" />
@@ -62,6 +63,10 @@
         <child id="1068581242865" name="localVariableDeclaration" index="3cpWs9" />
       </concept>
       <concept id="1068581242863" name="jetbrains.mps.baseLanguage.structure.LocalVariableDeclaration" flags="nr" index="3cpWsn" />
+      <concept id="1206060495898" name="jetbrains.mps.baseLanguage.structure.ElsifClause" flags="ng" index="3eNFk2">
+        <child id="1206060619838" name="condition" index="3eO9$A" />
+        <child id="1206060644605" name="statementList" index="3eOfB_" />
+      </concept>
       <concept id="1204053956946" name="jetbrains.mps.baseLanguage.structure.IMethodCall" flags="ng" index="1ndlxa">
         <reference id="1068499141037" name="baseMethodDeclaration" index="37wK5l" />
         <child id="1068499141038" name="actualArgument" index="37wK5m" />
@@ -269,6 +274,40 @@
                   <node concept="1mIQ4w" id="6GuOaLN1Ndz" role="2OqNvi">
                     <node concept="chp4Y" id="6GuOaLN1Ngg" role="cj9EA">
                       <ref role="cht4Q" to="gjk0:6GuOaLMLhHO" resolve="KinematicChainRef" />
+                    </node>
+                  </node>
+                </node>
+                <node concept="3eNFk2" id="3qu6RY9v9cR" role="3eNLev">
+                  <node concept="3clFbS" id="3qu6RY9v9cT" role="3eOfB_">
+                    <node concept="3SKdUt" id="3qu6RY9v9xI" role="3cqZAp">
+                      <node concept="3SKdUq" id="3qu6RY9v9xJ" role="3SKWNk">
+                        <property role="3SKdUp" value="TODO DLW !!!" />
+                      </node>
+                    </node>
+                    <node concept="3clFbF" id="3qu6RY9v9F6" role="3cqZAp">
+                      <node concept="37vLTI" id="3qu6RY9vb38" role="3clFbG">
+                        <node concept="3cmrfG" id="3qu6RY9vb44" role="37vLTx">
+                          <property role="3cmrfH" value="14" />
+                        </node>
+                        <node concept="37vLTw" id="3qu6RY9v9F4" role="37vLTJ">
+                          <ref role="3cqZAo" node="6GuOaLN2aP3" resolve="amount" />
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                  <node concept="2OqwBi" id="3qu6RY9v9mu" role="3eO9$A">
+                    <node concept="2OqwBi" id="3qu6RY9v9mv" role="2Oq$k0">
+                      <node concept="3TrEf2" id="3qu6RY9v9mw" role="2OqNvi">
+                        <ref role="3Tt5mk" to="gjk0:3xcS33zIwKM" resolve="base" />
+                      </node>
+                      <node concept="1YBJjd" id="3qu6RY9v9mx" role="2Oq$k0">
+                        <ref role="1YBMHb" node="6GuOaLN216z" resolve="jsc" />
+                      </node>
+                    </node>
+                    <node concept="1mIQ4w" id="3qu6RY9v9my" role="2OqNvi">
+                      <node concept="chp4Y" id="3qu6RY9v9sF" role="cj9EA">
+                        <ref role="cht4Q" to="gjk0:3qu6RY9tA_E" resolve="VirtuallyCombinedJoints" />
+                      </node>
                     </node>
                   </node>
                 </node>
@@ -644,6 +683,40 @@
               <node concept="1mIQ4w" id="6GuOaLN3Q_G" role="2OqNvi">
                 <node concept="chp4Y" id="6GuOaLN3Q_H" role="cj9EA">
                   <ref role="cht4Q" to="gjk0:6GuOaLMLhHO" resolve="KinematicChainRef" />
+                </node>
+              </node>
+            </node>
+            <node concept="3eNFk2" id="3qu6RY9vc8Q" role="3eNLev">
+              <node concept="3clFbS" id="3qu6RY9vc8R" role="3eOfB_">
+                <node concept="3SKdUt" id="3qu6RY9vc8S" role="3cqZAp">
+                  <node concept="3SKdUq" id="3qu6RY9vc8T" role="3SKWNk">
+                    <property role="3SKdUp" value="TODO DLW !!!" />
+                  </node>
+                </node>
+                <node concept="3clFbF" id="3qu6RY9vc8U" role="3cqZAp">
+                  <node concept="37vLTI" id="3qu6RY9vc8V" role="3clFbG">
+                    <node concept="3cmrfG" id="3qu6RY9vc8W" role="37vLTx">
+                      <property role="3cmrfH" value="14" />
+                    </node>
+                    <node concept="37vLTw" id="3qu6RY9vc8X" role="37vLTJ">
+                      <ref role="3cqZAo" node="6GuOaLN3Q_a" resolve="amount" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+              <node concept="2OqwBi" id="3qu6RY9vc8Y" role="3eO9$A">
+                <node concept="2OqwBi" id="3qu6RY9vc8Z" role="2Oq$k0">
+                  <node concept="3TrEf2" id="3qu6RY9vc90" role="2OqNvi">
+                    <ref role="3Tt5mk" to="gjk0:3xcS33zIwKM" resolve="base" />
+                  </node>
+                  <node concept="1YBJjd" id="3qu6RY9vc91" role="2Oq$k0">
+                    <ref role="1YBMHb" node="6GuOaLN3QAw" resolve="jsc" />
+                  </node>
+                </node>
+                <node concept="1mIQ4w" id="3qu6RY9vc92" role="2OqNvi">
+                  <node concept="chp4Y" id="3qu6RY9vc93" role="cj9EA">
+                    <ref role="cht4Q" to="gjk0:3qu6RY9tA_E" resolve="VirtuallyCombinedJoints" />
+                  </node>
                 </node>
               </node>
             </node>
