@@ -108,8 +108,8 @@
     <property role="TrG5h" value="SubSpaceRelation" />
     <property role="3GE5qa" value="relations" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
-    <node concept="PrWs8" id="2uDla1tg2gZ" role="PzmwI">
-      <ref role="PrY4T" node="2uDla1tg2cf" resolve="I1I2ORelation" />
+    <node concept="PrWs8" id="2iTy0ITF_gH" role="PzmwI">
+      <ref role="PrY4T" node="2iTy0ITF_ej" resolve="I2ORelation" />
     </node>
   </node>
   <node concept="PlHQZ" id="2uDla1tg26l">
@@ -284,19 +284,22 @@
     <property role="3GE5qa" value="relations" />
     <property role="TrG5h" value="EntryRelation" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
-    <node concept="1TJgyj" id="5mfFpi9xr8A" role="1TKVEi">
-      <property role="IQ2ns" value="6165337268367503910" />
-      <property role="20lmBu" value="reference" />
-      <property role="20kJfa" value="kinchain" />
-      <property role="20lbJX" value="1" />
-      <ref role="20lvS9" to="cewj:3Wmswgx0$rv" resolve="KinematicChain" />
-    </node>
     <node concept="1TJgyj" id="2uDla1thCyz" role="1TKVEi">
       <property role="IQ2ns" value="2857908486279694499" />
       <property role="20lmBu" value="aggregation" />
       <property role="20kJfa" value="entry" />
       <property role="20lbJX" value="1" />
       <ref role="20lvS9" node="2uDla1tgeB_" resolve="ICCAEntry" />
+    </node>
+    <node concept="1TJgyj" id="3qu6RY9oTV_" role="1TKVEi">
+      <property role="IQ2ns" value="3935613358948196069" />
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="kinchain" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" to="iobv:3qu6RY9oIci" resolve="IKinematicChainLike" />
+    </node>
+    <node concept="PrWs8" id="3qu6RY9s1tL" role="PzmwI">
+      <ref role="PrY4T" to="tpck:3fifI_xCcJN" resolve="ScopeProvider" />
     </node>
   </node>
   <node concept="1TIwiD" id="5mfFpiaHSIC">
@@ -465,6 +468,28 @@
     </node>
     <node concept="PrWs8" id="37XPM2NZiMc" role="PzmwI">
       <ref role="PrY4T" node="5mfFpiaYKdg" resolve="IJointControllerFormalism" />
+    </node>
+  </node>
+  <node concept="PlHQZ" id="2iTy0ITF_ej">
+    <property role="EcuMT" value="2646295839998104467" />
+    <property role="TrG5h" value="I2ORelation" />
+    <property role="3GE5qa" value="relations.relation-interfaces" />
+    <node concept="1TJgyj" id="2iTy0ITF_el" role="1TKVEi">
+      <property role="IQ2ns" value="2646295839998104469" />
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="outA" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="2uDla1tgeB_" resolve="ICCAEntry" />
+    </node>
+    <node concept="1TJgyj" id="2iTy0ITF_em" role="1TKVEi">
+      <property role="IQ2ns" value="2646295839998104470" />
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="outB" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="2uDla1tgeB_" resolve="ICCAEntry" />
+    </node>
+    <node concept="PrWs8" id="2iTy0ITF_en" role="PrDN$">
+      <ref role="PrY4T" node="2uDla1tg2ah" resolve="ICCARelation" />
     </node>
   </node>
 </model>

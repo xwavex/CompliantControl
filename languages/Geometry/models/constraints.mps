@@ -541,5 +541,25 @@
       </node>
     </node>
   </node>
+  <node concept="1M2fIO" id="1k4mFkMx0Fa">
+    <property role="3GE5qa" value="frame" />
+    <ref role="1M2myG" to="iobv:1k4mFkMwt6M" resolve="ForceSubspaceFrameRef" />
+    <node concept="1N5Pfh" id="1k4mFkMx0H8" role="1Mr941">
+      <ref role="1N5Vy1" to="iobv:1k4mFkMuO7E" resolve="link" />
+      <node concept="1dDu$B" id="1k4mFkMx0Hl" role="1N6uqs">
+        <ref role="1dDu$A" to="iobv:1k4mFkMwt6M" resolve="ForceSubspaceFrameRef" />
+      </node>
+    </node>
+  </node>
+  <node concept="1M2fIO" id="1k4mFkMx0HV">
+    <property role="3GE5qa" value="frame" />
+    <ref role="1M2myG" to="iobv:1k4mFkMwrr4" resolve="MotionSubspaceFrameRef" />
+    <node concept="1N5Pfh" id="1k4mFkMx0JT" role="1Mr941">
+      <ref role="1N5Vy1" to="iobv:1k4mFkMuO7E" resolve="link" />
+      <node concept="1dDu$B" id="1k4mFkMx0K6" role="1N6uqs">
+        <ref role="1dDu$A" to="iobv:1k4mFkMwrr4" resolve="MotionSubspaceFrameRef" />
+      </node>
+    </node>
+  </node>
 </model>
 
