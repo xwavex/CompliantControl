@@ -284,6 +284,11 @@
     <property role="3GE5qa" value="relations" />
     <property role="TrG5h" value="EntryRelation" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyi" id="1S9dQRVWVsA" role="1TKVEl">
+      <property role="IQ2nx" value="2164322041446250278" />
+      <property role="TrG5h" value="robotName" />
+      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+    </node>
     <node concept="1TJgyj" id="2uDla1thCyz" role="1TKVEi">
       <property role="IQ2ns" value="2857908486279694499" />
       <property role="20lmBu" value="aggregation" />

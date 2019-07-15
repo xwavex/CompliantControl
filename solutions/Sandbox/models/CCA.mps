@@ -44,13 +44,9 @@
       </concept>
     </language>
     <language id="708de3ab-d65c-48c9-a632-40656bd206af" name="CompliantControlArchitecture">
-      <concept id="3602271812424903819" name="CompliantControlArchitecture.structure.JointLimitOptimizationController" flags="ng" index="220fIF" />
       <concept id="2646295839998104467" name="CompliantControlArchitecture.structure.I2ORelation" flags="ng" index="2t5XIo">
         <child id="2646295839998104470" name="outB" index="2t5XIt" />
         <child id="2646295839998104469" name="outA" index="2t5XIu" />
-      </concept>
-      <concept id="6165337268399446442" name="CompliantControlArchitecture.structure.INORelation" flags="ng" index="3uSFgY">
-        <child id="6165337268399446444" name="outN" index="3uSFgS" />
       </concept>
       <concept id="6165337268387548072" name="CompliantControlArchitecture.structure.JointSpaceController" flags="ng" index="3ve2oW">
         <child id="6165337268387548073" name="joint" index="3ve2oX" />
@@ -68,14 +64,12 @@
         <child id="6165337268368504384" name="frame" index="3s6PJk" />
       </concept>
       <concept id="2857908486279274497" name="CompliantControlArchitecture.structure.Controller" flags="ng" index="1UUnix">
-        <property id="6165337268400173112" name="weight" index="3uXTQG" />
         <child id="6165337268391971153" name="controlformalism" index="3vtaj5" />
       </concept>
       <concept id="2857908486279275027" name="CompliantControlArchitecture.structure.I1I1ORelation" flags="ng" index="1UUnqN">
         <child id="2857908486279276007" name="out" index="1UUn57" />
         <child id="2857908486279275994" name="in" index="1UUn5U" />
       </concept>
-      <concept id="2857908486279325903" name="CompliantControlArchitecture.structure.WeightedSumRelation" flags="ng" index="1UUrLJ" />
       <concept id="2857908486279326042" name="CompliantControlArchitecture.structure.NullSpaceRelation" flags="ng" index="1UUrRU">
         <child id="6165337268391764392" name="frame" index="3vu4KW" />
       </concept>
@@ -83,173 +77,12 @@
         <child id="6165337268370569749" name="frame" index="3seXu1" />
       </concept>
       <concept id="2857908486279694373" name="CompliantControlArchitecture.structure.EntryRelation" flags="ng" index="1UVXM5">
-        <reference id="6165337268367503910" name="kinchain" index="3s2xYM" />
+        <property id="2164322041446250278" name="robotName" index="3_YC1b" />
         <child id="3935613358948196069" name="kinchain" index="2ZZomq" />
         <child id="2857908486279694499" name="entry" index="1UVXK3" />
       </concept>
     </language>
   </registry>
-  <node concept="1UUkyC" id="2uDla1tgtSu">
-    <property role="TrG5h" value="BarTrackingArchitecture_VirtualBarTracking" />
-    <node concept="1UVXM5" id="2uDla1ti1JZ" role="1UUrXR">
-      <ref role="3s2xYM" to="d49h:6bIwLn$0JLd" resolve="full_arm" />
-      <node concept="3ve2oW" id="5mfFpiaKRdw" role="1UVXK3">
-        <property role="TrG5h" value="JointSpace Controller1" />
-        <node concept="pQWJo" id="5mfFpiaVNGT" role="3ve2oX">
-          <ref role="pNcCJ" to="d49h:6bIwLn$0JLd" resolve="full_arm" />
-        </node>
-        <node concept="3vtaBq" id="5mfFpiaZB0l" role="3vtaj5" />
-      </node>
-    </node>
-    <node concept="1UVXM5" id="3qu6RY9ijbW" role="1UUrXR">
-      <ref role="3s2xYM" to="d49h:6bIwLn$0JLd" resolve="full_arm" />
-      <node concept="1UUn3G" id="3qu6RY9m$JQ" role="1UVXK3">
-        <node concept="30yrw0" id="3qu6RY9m$KF" role="3s6PJk">
-          <ref role="30yrEZ" node="5mfFpi9zRnC" resolve="BarManipulatorFrame" />
-        </node>
-        <node concept="1UVX9s" id="1k4mFkMuO2R" role="2t5XIu">
-          <property role="TrG5h" value="force_constraint" />
-          <node concept="30yrw0" id="2Yj7ZZY3EQm" role="3seXu1">
-            <ref role="30yrEZ" node="5mfFpi9zRnC" resolve="BarManipulatorFrame" />
-          </node>
-          <node concept="3vtaYG" id="1k4mFkMuO4l" role="3vtaj5">
-            <property role="25LATQ" value="false" />
-          </node>
-        </node>
-        <node concept="1UUrRU" id="1k4mFkMuO4Z" role="2t5XIt">
-          <node concept="30yrw0" id="2Yj7ZZY3EQM" role="3vu4KW">
-            <ref role="30yrEZ" node="5mfFpi9zRnC" resolve="BarManipulatorFrame" />
-          </node>
-          <node concept="3ve2oW" id="1k4mFkMuO6n" role="1UUn57">
-            <property role="TrG5h" value="NullspaceTracking" />
-            <node concept="pQWJo" id="1k4mFkMuO7r" role="3ve2oX">
-              <ref role="pNcCJ" to="d49h:6bIwLn$0JLd" resolve="full_arm" />
-            </node>
-            <node concept="3vtaBq" id="1k4mFkMuO6Z" role="3vtaj5">
-              <property role="25LATQ" value="false" />
-            </node>
-          </node>
-          <node concept="1UVX9s" id="3qu6RY9m$H6" role="1UUn5U">
-            <property role="TrG5h" value="motion_tracking" />
-            <node concept="30yrw0" id="3qu6RY9m$HV" role="3seXu1">
-              <ref role="30yrEZ" node="5mfFpi9zRnC" resolve="BarManipulatorFrame" />
-            </node>
-            <node concept="3vtaTr" id="3qu6RY9m$HH" role="3vtaj5">
-              <property role="25LATQ" value="false" />
-            </node>
-          </node>
-        </node>
-      </node>
-    </node>
-    <node concept="1UVXM5" id="3qu6RY9m_kd" role="1UUrXR">
-      <ref role="3s2xYM" to="d49h:6bIwLn$0JLd" resolve="full_arm" />
-      <node concept="1UUn3G" id="3qu6RY9mAa$" role="1UVXK3">
-        <node concept="30yrw0" id="3qu6RY9mAa_" role="3s6PJk">
-          <ref role="30yrEZ" node="5mfFpi9zRnC" resolve="BarManipulatorFrame" />
-        </node>
-        <node concept="1UVX9s" id="3qu6RY9mAaA" role="2t5XIu">
-          <property role="TrG5h" value="force_constraint" />
-          <node concept="30yrw0" id="3qu6RY9mAaB" role="3seXu1">
-            <ref role="30yrEZ" node="5mfFpi9zRnC" resolve="BarManipulatorFrame" />
-          </node>
-          <node concept="3vtaYG" id="3qu6RY9mAaC" role="3vtaj5">
-            <property role="25LATQ" value="false" />
-          </node>
-        </node>
-        <node concept="1UUrRU" id="3qu6RY9mAaD" role="2t5XIt">
-          <node concept="30yrw0" id="3qu6RY9mAaE" role="3vu4KW">
-            <ref role="30yrEZ" node="5mfFpi9zRnC" resolve="BarManipulatorFrame" />
-          </node>
-          <node concept="1UVX9s" id="3qu6RY9mAaI" role="1UUn5U">
-            <property role="TrG5h" value="motion_tracking" />
-            <node concept="30yrw0" id="3qu6RY9mAaJ" role="3seXu1">
-              <ref role="30yrEZ" node="5mfFpi9zRnC" resolve="BarManipulatorFrame" />
-            </node>
-            <node concept="3vtaTr" id="3qu6RY9mAaK" role="3vtaj5">
-              <property role="25LATQ" value="false" />
-            </node>
-          </node>
-          <node concept="1UUrLJ" id="5mfFpibtiF3" role="1UUn57">
-            <node concept="3ve2oW" id="5mfFpibtiFu" role="3uSFgS">
-              <property role="TrG5h" value="jlo" />
-              <property role="3uXTQG" value="1.0f" />
-              <node concept="pQWJo" id="5mfFpibtiLM" role="3ve2oX">
-                <ref role="pNcCJ" to="d49h:6bIwLn$0JLd" resolve="full_arm" />
-              </node>
-              <node concept="220fIF" id="37XPM2O1KkG" role="3vtaj5" />
-            </node>
-            <node concept="3ve2oW" id="5mfFpibtiGR" role="3uSFgS">
-              <property role="TrG5h" value="js_t0" />
-              <property role="3uXTQG" value="0.3f" />
-              <node concept="pQWJo" id="5mfFpibtiM0" role="3ve2oX">
-                <ref role="pNcCJ" to="d49h:6bIwLn$0JLd" resolve="full_arm" />
-              </node>
-              <node concept="3vtaBq" id="5mfFpibtiLm" role="3vtaj5" />
-            </node>
-            <node concept="3ve2oW" id="5mfFpibtiJo" role="3uSFgS">
-              <property role="TrG5h" value="js_t1" />
-              <property role="3uXTQG" value="0.4f" />
-              <node concept="pQWJo" id="5mfFpibtiMe" role="3ve2oX">
-                <ref role="pNcCJ" to="d49h:6bIwLn$0JLd" resolve="full_arm" />
-              </node>
-              <node concept="3vtaBq" id="5mfFpibtiL$" role="3vtaj5" />
-            </node>
-          </node>
-        </node>
-      </node>
-    </node>
-    <node concept="1UVXM5" id="3qu6RY9m$Wl" role="1UUrXR">
-      <ref role="3s2xYM" to="d49h:6bIwLn$0JLd" resolve="full_arm" />
-      <node concept="1UUrLJ" id="3qu6RY9m_67" role="1UVXK3">
-        <node concept="1UUn3G" id="3qu6RY9m_8F" role="3uSFgS">
-          <node concept="30yrG9" id="3qu6RY9m_c2" role="3s6PJk">
-            <ref role="3s7PV0" to="oet6:2jRhxvsk02Z" resolve="lwr_arm_7_link" />
-          </node>
-          <node concept="1UVX9s" id="3qu6RY9m_cu" role="2t5XIu">
-            <property role="TrG5h" value="force_constraint_c0" />
-            <node concept="30yrG9" id="3qu6RY9m_dk" role="3seXu1">
-              <ref role="3s7PV0" to="oet6:2jRhxvsk02Z" resolve="lwr_arm_7_link" />
-            </node>
-            <node concept="3vtaYG" id="3qu6RY9m_d6" role="3vtaj5">
-              <property role="25LATQ" value="false" />
-            </node>
-          </node>
-          <node concept="1UVX9s" id="3qu6RY9m_dB" role="2t5XIt">
-            <property role="TrG5h" value="motion_tracking_c0" />
-            <node concept="30yrG9" id="3qu6RY9m_hP" role="3seXu1">
-              <ref role="3s7PV0" to="oet6:2jRhxvsk02Z" resolve="lwr_arm_7_link" />
-            </node>
-            <node concept="3vtaTr" id="3qu6RY9m_dD" role="3vtaj5">
-              <property role="25LATQ" value="false" />
-            </node>
-          </node>
-        </node>
-        <node concept="1UUn3G" id="3qu6RY9m_at" role="3uSFgS">
-          <node concept="30yrG9" id="3qu6RY9m_cg" role="3s6PJk">
-            <ref role="3s7PV0" to="oet6:2jRhxvsk008" resolve="lwr_arm_4_link" />
-          </node>
-          <node concept="1UVX9s" id="3qu6RY9m_fa" role="2t5XIu">
-            <property role="TrG5h" value="force_constraint_c1" />
-            <node concept="30yrG9" id="3qu6RY9m_hp" role="3seXu1">
-              <ref role="3s7PV0" to="oet6:2jRhxvsk008" resolve="lwr_arm_4_link" />
-            </node>
-            <node concept="3vtaYG" id="3qu6RY9m_fc" role="3vtaj5">
-              <property role="25LATQ" value="false" />
-            </node>
-          </node>
-          <node concept="1UVX9s" id="3qu6RY9m_fQ" role="2t5XIt">
-            <property role="TrG5h" value="motion_tracking_c1" />
-            <node concept="30yrG9" id="3qu6RY9m_hB" role="3seXu1">
-              <ref role="3s7PV0" to="oet6:2jRhxvsk008" resolve="lwr_arm_4_link" />
-            </node>
-            <node concept="3vtaTr" id="3qu6RY9m_fS" role="3vtaj5">
-              <property role="25LATQ" value="false" />
-            </node>
-          </node>
-        </node>
-      </node>
-    </node>
-  </node>
   <node concept="30yrCB" id="5mfFpi9zRnC">
     <property role="TrG5h" value="BarManipulatorFrame" />
   </node>
@@ -259,6 +92,7 @@
   <node concept="1UUkyC" id="3qu6RY9mAsa">
     <property role="TrG5h" value="RollingTaskArchitecture_SingleRobot_FreeSpace" />
     <node concept="1UVXM5" id="3qu6RY9mAP5" role="1UUrXR">
+      <property role="3_YC1b" value="KUKA_Left" />
       <node concept="1UUrRU" id="3qu6RY9mB0v" role="1UVXK3">
         <node concept="30yrG9" id="3qu6RY9uIw_" role="3vu4KW">
           <ref role="3s7PV0" to="oet6:C_g3bnWAzK" resolve="lwr_tool_link" />
@@ -287,6 +121,7 @@
       </node>
     </node>
     <node concept="1UVXM5" id="3qu6RY9mBA5" role="1UUrXR">
+      <property role="3_YC1b" value="KUKA_Right" />
       <node concept="1UUrRU" id="3qu6RY9mBCb" role="1UVXK3">
         <node concept="30yrG9" id="3qu6RY9uIwN" role="3vu4KW">
           <ref role="3s7PV0" to="oet6:C_g3bnWAzK" resolve="lwr_tool_link" />
@@ -321,6 +156,7 @@
   <node concept="1UUkyC" id="3qu6RY9mBiR">
     <property role="TrG5h" value="RollingTaskArchitecture_SingleRobot_PressingGlobalZ" />
     <node concept="1UVXM5" id="3qu6RY9mBiS" role="1UUrXR">
+      <property role="3_YC1b" value="KUKA_Left" />
       <node concept="1UUn3G" id="3qu6RY9mBna" role="1UVXK3">
         <node concept="30yrG9" id="3qu6RY9uIxD" role="3s6PJk">
           <ref role="3s7PV0" to="oet6:C_g3bnWAzK" resolve="lwr_tool_link" />
@@ -363,6 +199,7 @@
       </node>
     </node>
     <node concept="1UVXM5" id="3qu6RY9mBwq" role="1UUrXR">
+      <property role="3_YC1b" value="KUKA_Right" />
       <node concept="1UUn3G" id="3qu6RY9mBzs" role="1UVXK3">
         <node concept="30yrG9" id="3qu6RY9uIyJ" role="3s6PJk">
           <ref role="3s7PV0" to="oet6:C_g3bnWAzK" resolve="lwr_tool_link" />
@@ -408,6 +245,7 @@
   <node concept="1UUkyC" id="3qu6RY9mBDN">
     <property role="TrG5h" value="RollingTaskArchitecture_CombinedRobots_PressingGlobalZandCompliantX" />
     <node concept="1UVXM5" id="3qu6RY9mBDO" role="1UUrXR">
+      <property role="3_YC1b" value="hier macht das keinen sinn.. sollte inferiert werden! TODO" />
       <node concept="1UUn3G" id="3qu6RY9mBDP" role="1UVXK3">
         <node concept="30yrw0" id="3qu6RY9mBIP" role="3s6PJk">
           <ref role="30yrEZ" node="3qu6RY9mAv1" resolve="VirtualManipulatorFrame" />

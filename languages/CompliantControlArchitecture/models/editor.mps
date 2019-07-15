@@ -777,6 +777,9 @@
             </node>
           </node>
         </node>
+        <node concept="3F0A7n" id="1S9dQRVWYo2" role="3EZMnx">
+          <ref role="1NtTu8" to="gqxc:1S9dQRVWVsA" resolve="robotName" />
+        </node>
         <node concept="gc7cB" id="2UiBD4$UY7H" role="3EZMnx">
           <node concept="3VJUX4" id="2UiBD4$UY7J" role="3YsKMw">
             <node concept="3clFbS" id="2UiBD4$UY7L" role="2VODD2">
