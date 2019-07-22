@@ -7,6 +7,8 @@
       <modulePath path="$PROJECT_DIR$/languages/CompliantControlArchitecture/CompliantControlArchitecture.mpl" folder="" />
       <modulePath path="$PROJECT_DIR$/languages/CompliantControlTask/CompliantControlTask.mpl" folder="" />
       <modulePath path="$PROJECT_DIR$/languages/Geometry/Geometry.mpl" folder="" />
+      <modulePath path="$PROJECT_DIR$/languages/GraphToRenderingGen/GraphToRenderingGen.mpl" folder="" />
+      <modulePath path="$PROJECT_DIR$/solutions/GeneratorPlans/GeneratorPlans.msd" folder="" />
       <modulePath path="$PROJECT_DIR$/solutions/Sandbox/Sandbox.msd" folder="" />
     </projectModules>
   </component>

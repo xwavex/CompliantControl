@@ -14,6 +14,7 @@
     <import index="yzc3" ref="r:fb46aa12-7f49-4ac6-ac4c-bc9fd1f3fb28(RSTRTa.sandbox)" />
     <import index="sxll" ref="r:b16aad8a-7e70-4535-bb6a-8f44c10f77e2(RSTRTa.stable)" />
     <import index="lrob" ref="r:d01e7c48-4315-4a97-a560-4b91cd1fec15(RobotRepository.interfaces)" />
+    <import index="zjdh" ref="r:f6e730f9-585c-42db-a364-856fcf8bb498(GeneratorPlans.RenderPlan)" />
   </imports>
   <registry>
     <language id="b744b93e-0522-4237-a6fd-fa650d0b451a" name="Geometry">
@@ -48,6 +49,9 @@
         <child id="2646295839998104470" name="outB" index="2t5XIt" />
         <child id="2646295839998104469" name="outA" index="2t5XIu" />
       </concept>
+      <concept id="6165337268399446442" name="CompliantControlArchitecture.structure.INORelation" flags="ng" index="3uSFgY">
+        <child id="6165337268399446444" name="outN" index="3uSFgS" />
+      </concept>
       <concept id="6165337268387548072" name="CompliantControlArchitecture.structure.JointSpaceController" flags="ng" index="3ve2oW">
         <child id="6165337268387548073" name="joint" index="3ve2oX" />
       </concept>
@@ -64,12 +68,14 @@
         <child id="6165337268368504384" name="frame" index="3s6PJk" />
       </concept>
       <concept id="2857908486279274497" name="CompliantControlArchitecture.structure.Controller" flags="ng" index="1UUnix">
+        <property id="6165337268400173112" name="weight" index="3uXTQG" />
         <child id="6165337268391971153" name="controlformalism" index="3vtaj5" />
       </concept>
       <concept id="2857908486279275027" name="CompliantControlArchitecture.structure.I1I1ORelation" flags="ng" index="1UUnqN">
         <child id="2857908486279276007" name="out" index="1UUn57" />
         <child id="2857908486279275994" name="in" index="1UUn5U" />
       </concept>
+      <concept id="2857908486279325903" name="CompliantControlArchitecture.structure.WeightedSumRelation" flags="ng" index="1UUrLJ" />
       <concept id="2857908486279326042" name="CompliantControlArchitecture.structure.NullSpaceRelation" flags="ng" index="1UUrRU">
         <child id="6165337268391764392" name="frame" index="3vu4KW" />
       </concept>
@@ -245,7 +251,7 @@
   <node concept="1UUkyC" id="3qu6RY9mBDN">
     <property role="TrG5h" value="RollingTaskArchitecture_CombinedRobots_PressingGlobalZandCompliantX" />
     <node concept="1UVXM5" id="3qu6RY9mBDO" role="1UUrXR">
-      <property role="3_YC1b" value="hier macht das keinen sinn.. sollte inferiert werden! TODO" />
+      <property role="3_YC1b" value="hierTODO" />
       <node concept="1UUn3G" id="3qu6RY9mBDP" role="1UVXK3">
         <node concept="30yrw0" id="3qu6RY9mBIP" role="3s6PJk">
           <ref role="30yrEZ" node="3qu6RY9mAv1" resolve="VirtualManipulatorFrame" />
@@ -272,12 +278,23 @@
               <property role="25LATQ" value="false" />
             </node>
           </node>
-          <node concept="3ve2oW" id="3qu6RY9mBDZ" role="1UUn57">
-            <property role="TrG5h" value="nullspace_tracking" />
-            <node concept="3vtaBq" id="3qu6RY9mBE0" role="3vtaj5">
-              <property role="25LATQ" value="false" />
+          <node concept="1UUrLJ" id="1bQsC10G6bz" role="1UUn57">
+            <node concept="3ve2oW" id="3qu6RY9mBDZ" role="3uSFgS">
+              <property role="TrG5h" value="nullspace_tracking1" />
+              <property role="3uXTQG" value="0.5f" />
+              <node concept="3vtaBq" id="3qu6RY9mBE0" role="3vtaj5">
+                <property role="25LATQ" value="false" />
+              </node>
+              <node concept="2ZU78l" id="3qu6RY9uv$h" role="3ve2oX" />
             </node>
-            <node concept="2ZU78l" id="3qu6RY9uv$h" role="3ve2oX" />
+            <node concept="3ve2oW" id="1bQsC10G6bK" role="3uSFgS">
+              <property role="TrG5h" value="nullspace_tracking2" />
+              <property role="3uXTQG" value="0.5f" />
+              <node concept="3vtaBq" id="1bQsC10G6bL" role="3vtaj5">
+                <property role="25LATQ" value="false" />
+              </node>
+              <node concept="2ZU78l" id="1bQsC10G6bM" role="3ve2oX" />
+            </node>
           </node>
         </node>
       </node>

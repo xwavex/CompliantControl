@@ -5,11 +5,15 @@
       <sourceRoot location="models" />
     </modelRoot>
   </models>
+  <facets>
+    <facet planModel="r:f6e730f9-585c-42db-a364-856fcf8bb498(GeneratorPlans.RenderPlan)" type="generator" />
+  </facets>
   <sourcePath />
   <dependencies>
     <dependency reexport="false">99abc364-3965-4ead-ab2d-0b272a528a90(RobotPlatform)</dependency>
     <dependency reexport="false">864bc811-810b-4e2f-97d7-4ee5ae8cdcfe(RobotRepository)</dependency>
     <dependency reexport="false">3385964e-5b3d-433b-a45e-c97c2abf2862(RSTRTa)</dependency>
+    <dependency reexport="false">f9491b51-fad9-4ade-b5db-36db060ccb6d(GeneratorPlans)</dependency>
   </dependencies>
   <languageVersions>
     <language slang="l:708de3ab-d65c-48c9-a632-40656bd206af:CompliantControlArchitecture" version="0" />
@@ -25,6 +29,7 @@
   </languageVersions>
   <dependencyVersions>
     <module reference="3f233e7f-b8a6-46d2-a57f-795d56775243(Annotations)" version="0" />
+    <module reference="f9491b51-fad9-4ade-b5db-36db060ccb6d(GeneratorPlans)" version="0" />
     <module reference="6354ebe7-c22a-4a0f-ac54-50b52ab9b065(JDK)" version="0" />
     <module reference="d6881f78-a85d-4c9e-931e-30879e67afdd(Kinematics)" version="0" />
     <module reference="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea(MPS.Core)" version="0" />
