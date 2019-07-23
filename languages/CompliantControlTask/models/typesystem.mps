@@ -7,6 +7,7 @@
   </languages>
   <imports>
     <import index="gjk0" ref="r:1ea85bd7-610e-43a5-96d1-544363f43d31(CompliantControlTask.structure)" implicit="true" />
+    <import index="iobv" ref="r:19496bad-2dd3-478c-9baf-0de95edabf63(Geometry.structure)" implicit="true" />
     <import index="3n2x" ref="r:508cb62d-392f-4e80-8340-a4df853548eb(Kinematics.behavior)" implicit="true" />
     <import index="fxt4" ref="r:ed8a5271-c522-41fe-bdbe-e2fa60373a9d(ProtoBuf.structure)" implicit="true" />
     <import index="tpcu" ref="r:00000000-0000-4000-0000-011c89590282(jetbrains.mps.lang.core.behavior)" implicit="true" />
@@ -211,8 +212,8 @@
                     <node concept="2OqwBi" id="6GuOaLN2ddr" role="3clFbw">
                       <node concept="2OqwBi" id="6GuOaLN2cy$" role="2Oq$k0">
                         <node concept="1PxgMI" id="6GuOaLN2c7V" role="2Oq$k0">
-                          <node concept="chp4Y" id="6GuOaLN2cnN" role="3oSUPX">
-                            <ref role="cht4Q" to="gjk0:6GuOaLMLhHO" resolve="KinematicChainRef" />
+                          <node concept="chp4Y" id="6gw_H7mEWtH" role="3oSUPX">
+                            <ref role="cht4Q" to="iobv:6GuOaLMLhHO" resolve="KinematicChainRef" />
                           </node>
                           <node concept="2OqwBi" id="6GuOaLN2bfG" role="1m5AlR">
                             <node concept="1YBJjd" id="6GuOaLN2b3u" role="2Oq$k0">
@@ -223,8 +224,8 @@
                             </node>
                           </node>
                         </node>
-                        <node concept="3TrEf2" id="6GuOaLN2cRK" role="2OqNvi">
-                          <ref role="3Tt5mk" to="gjk0:6GuOaLMOxE3" resolve="chain" />
+                        <node concept="3TrEf2" id="6gw_H7mEWHs" role="2OqNvi">
+                          <ref role="3Tt5mk" to="iobv:6GuOaLMOxE3" resolve="chain" />
                         </node>
                       </node>
                       <node concept="3x8VRR" id="6GuOaLN2eh4" role="2OqNvi" />
@@ -238,8 +239,8 @@
                           <node concept="2OqwBi" id="6GuOaLN2ikg" role="37vLTx">
                             <node concept="2OqwBi" id="6GuOaLN2hSq" role="2Oq$k0">
                               <node concept="1PxgMI" id="6GuOaLN2hSr" role="2Oq$k0">
-                                <node concept="chp4Y" id="6GuOaLN2hSs" role="3oSUPX">
-                                  <ref role="cht4Q" to="gjk0:6GuOaLMLhHO" resolve="KinematicChainRef" />
+                                <node concept="chp4Y" id="6gw_H7mEWMj" role="3oSUPX">
+                                  <ref role="cht4Q" to="iobv:6GuOaLMLhHO" resolve="KinematicChainRef" />
                                 </node>
                                 <node concept="2OqwBi" id="6GuOaLN2hSt" role="1m5AlR">
                                   <node concept="1YBJjd" id="6GuOaLN2hSu" role="2Oq$k0">
@@ -250,8 +251,8 @@
                                   </node>
                                 </node>
                               </node>
-                              <node concept="3TrEf2" id="6GuOaLN2hSw" role="2OqNvi">
-                                <ref role="3Tt5mk" to="gjk0:6GuOaLMOxE3" resolve="chain" />
+                              <node concept="3TrEf2" id="6gw_H7mEX2d" role="2OqNvi">
+                                <ref role="3Tt5mk" to="iobv:6GuOaLMOxE3" resolve="chain" />
                               </node>
                             </node>
                             <node concept="2qgKlT" id="6GuOaLN2j1P" role="2OqNvi">
@@ -273,8 +274,8 @@
                     </node>
                   </node>
                   <node concept="1mIQ4w" id="6GuOaLN1Ndz" role="2OqNvi">
-                    <node concept="chp4Y" id="6GuOaLN1Ngg" role="cj9EA">
-                      <ref role="cht4Q" to="gjk0:6GuOaLMLhHO" resolve="KinematicChainRef" />
+                    <node concept="chp4Y" id="6gw_H7mEW7C" role="cj9EA">
+                      <ref role="cht4Q" to="iobv:6GuOaLMLhHO" resolve="KinematicChainRef" />
                     </node>
                   </node>
                 </node>
@@ -307,8 +308,8 @@
                       </node>
                     </node>
                     <node concept="1mIQ4w" id="3qu6RY9v9my" role="2OqNvi">
-                      <node concept="chp4Y" id="3qu6RY9v9sF" role="cj9EA">
-                        <ref role="cht4Q" to="gjk0:3qu6RY9tA_E" resolve="VirtuallyCombinedJoints" />
+                      <node concept="chp4Y" id="6gw_H7mEX95" role="cj9EA">
+                        <ref role="cht4Q" to="iobv:3qu6RY9tA_E" resolve="VirtuallyCombinedJoints" />
                       </node>
                     </node>
                   </node>
@@ -621,8 +622,8 @@
                 <node concept="2OqwBi" id="6GuOaLN3Q_i" role="3clFbw">
                   <node concept="2OqwBi" id="6GuOaLN3Q_j" role="2Oq$k0">
                     <node concept="1PxgMI" id="6GuOaLN3Q_k" role="2Oq$k0">
-                      <node concept="chp4Y" id="6GuOaLN3Q_l" role="3oSUPX">
-                        <ref role="cht4Q" to="gjk0:6GuOaLMLhHO" resolve="KinematicChainRef" />
+                      <node concept="chp4Y" id="6gw_H7mEViT" role="3oSUPX">
+                        <ref role="cht4Q" to="iobv:6GuOaLMLhHO" resolve="KinematicChainRef" />
                       </node>
                       <node concept="2OqwBi" id="6GuOaLN3Q_m" role="1m5AlR">
                         <node concept="1YBJjd" id="6GuOaLN3Q_n" role="2Oq$k0">
@@ -633,8 +634,8 @@
                         </node>
                       </node>
                     </node>
-                    <node concept="3TrEf2" id="6GuOaLN3Q_p" role="2OqNvi">
-                      <ref role="3Tt5mk" to="gjk0:6GuOaLMOxE3" resolve="chain" />
+                    <node concept="3TrEf2" id="6gw_H7mEVC2" role="2OqNvi">
+                      <ref role="3Tt5mk" to="iobv:6GuOaLMOxE3" resolve="chain" />
                     </node>
                   </node>
                   <node concept="3x8VRR" id="6GuOaLN3Q_q" role="2OqNvi" />
@@ -648,8 +649,8 @@
                       <node concept="2OqwBi" id="6GuOaLN3Q_v" role="37vLTx">
                         <node concept="2OqwBi" id="6GuOaLN3Q_w" role="2Oq$k0">
                           <node concept="1PxgMI" id="6GuOaLN3Q_x" role="2Oq$k0">
-                            <node concept="chp4Y" id="6GuOaLN3Q_y" role="3oSUPX">
-                              <ref role="cht4Q" to="gjk0:6GuOaLMLhHO" resolve="KinematicChainRef" />
+                            <node concept="chp4Y" id="6gw_H7mEVo8" role="3oSUPX">
+                              <ref role="cht4Q" to="iobv:6GuOaLMLhHO" resolve="KinematicChainRef" />
                             </node>
                             <node concept="2OqwBi" id="6GuOaLN3Q_z" role="1m5AlR">
                               <node concept="1YBJjd" id="6GuOaLN3Q_$" role="2Oq$k0">
@@ -660,8 +661,8 @@
                               </node>
                             </node>
                           </node>
-                          <node concept="3TrEf2" id="6GuOaLN3Q_A" role="2OqNvi">
-                            <ref role="3Tt5mk" to="gjk0:6GuOaLMOxE3" resolve="chain" />
+                          <node concept="3TrEf2" id="6gw_H7mEVRp" role="2OqNvi">
+                            <ref role="3Tt5mk" to="iobv:6GuOaLMOxE3" resolve="chain" />
                           </node>
                         </node>
                         <node concept="2qgKlT" id="6GuOaLN3Q_B" role="2OqNvi">
@@ -683,8 +684,8 @@
                 </node>
               </node>
               <node concept="1mIQ4w" id="6GuOaLN3Q_G" role="2OqNvi">
-                <node concept="chp4Y" id="6GuOaLN3Q_H" role="cj9EA">
-                  <ref role="cht4Q" to="gjk0:6GuOaLMLhHO" resolve="KinematicChainRef" />
+                <node concept="chp4Y" id="6gw_H7mEUG8" role="cj9EA">
+                  <ref role="cht4Q" to="iobv:6GuOaLMLhHO" resolve="KinematicChainRef" />
                 </node>
               </node>
             </node>
@@ -717,8 +718,8 @@
                   </node>
                 </node>
                 <node concept="1mIQ4w" id="3qu6RY9vc92" role="2OqNvi">
-                  <node concept="chp4Y" id="3qu6RY9vc93" role="cj9EA">
-                    <ref role="cht4Q" to="gjk0:3qu6RY9tA_E" resolve="VirtuallyCombinedJoints" />
+                  <node concept="chp4Y" id="6gw_H7mEVYh" role="cj9EA">
+                    <ref role="cht4Q" to="iobv:3qu6RY9tA_E" resolve="VirtuallyCombinedJoints" />
                   </node>
                 </node>
               </node>
@@ -907,8 +908,8 @@
               </node>
             </node>
             <node concept="1mIQ4w" id="6GuOaLN40FO" role="2OqNvi">
-              <node concept="chp4Y" id="6GuOaLN42x5" role="cj9EA">
-                <ref role="cht4Q" to="gjk0:6GuOaLMLhPA" resolve="InPlaceSetPointSet" />
+              <node concept="chp4Y" id="6gw_H7mEW2Q" role="cj9EA">
+                <ref role="cht4Q" to="iobv:6GuOaLMLhPA" resolve="InPlaceSetPointSet" />
               </node>
             </node>
           </node>

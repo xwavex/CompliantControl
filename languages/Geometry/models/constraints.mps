@@ -37,6 +37,7 @@
         <child id="5680397130376446158" name="type" index="1tU5fm" />
       </concept>
       <concept id="1068580123152" name="jetbrains.mps.baseLanguage.structure.EqualsExpression" flags="nn" index="3clFbC" />
+      <concept id="1068580123157" name="jetbrains.mps.baseLanguage.structure.Statement" flags="nn" index="3clFbH" />
       <concept id="1068580123159" name="jetbrains.mps.baseLanguage.structure.IfStatement" flags="nn" index="3clFbJ">
         <child id="1068580123160" name="condition" index="3clFbw" />
         <child id="1068580123161" name="ifTrue" index="3clFbx" />
@@ -188,8 +189,8 @@
                     </node>
                   </node>
                   <node concept="1mIQ4w" id="6GuOaLMMaHY" role="2OqNvi">
-                    <node concept="chp4Y" id="6GuOaLMMaU0" role="cj9EA">
-                      <ref role="cht4Q" to="gjk0:6GuOaLMLhHO" resolve="KinematicChainRef" />
+                    <node concept="chp4Y" id="6gw_H7mVd6l" role="cj9EA">
+                      <ref role="cht4Q" to="iobv:6GuOaLMLhHO" resolve="KinematicChainRef" />
                     </node>
                   </node>
                 </node>
@@ -206,6 +207,44 @@
                 </node>
               </node>
             </node>
+            <node concept="3clFbJ" id="6gw_H7mVd$I" role="3cqZAp">
+              <node concept="3clFbS" id="6gw_H7mVd$J" role="3clFbx">
+                <node concept="3cpWs6" id="6gw_H7mVd$K" role="3cqZAp">
+                  <node concept="3clFbT" id="6gw_H7mVd$L" role="3cqZAk">
+                    <property role="3clFbU" value="true" />
+                  </node>
+                </node>
+              </node>
+              <node concept="1Wc70l" id="6gw_H7mVd$M" role="3clFbw">
+                <node concept="2OqwBi" id="6gw_H7mVd$N" role="3uHU7w">
+                  <node concept="2OqwBi" id="6gw_H7mVd$O" role="2Oq$k0">
+                    <node concept="37vLTw" id="6gw_H7mVd$P" role="2Oq$k0">
+                      <ref role="3cqZAo" node="6GuOaLMM3EO" resolve="jsc" />
+                    </node>
+                    <node concept="3TrEf2" id="6gw_H7mVd$Q" role="2OqNvi">
+                      <ref role="3Tt5mk" to="gjk0:3xcS33zIwKM" resolve="base" />
+                    </node>
+                  </node>
+                  <node concept="1mIQ4w" id="6gw_H7mVd$R" role="2OqNvi">
+                    <node concept="chp4Y" id="6gw_H7mVdSS" role="cj9EA">
+                      <ref role="cht4Q" to="gjk0:6gw_H7mTP39" resolve="RobotInstKinematicChainRef" />
+                    </node>
+                  </node>
+                </node>
+                <node concept="2OqwBi" id="6gw_H7mVd$T" role="3uHU7B">
+                  <node concept="2OqwBi" id="6gw_H7mVd$U" role="2Oq$k0">
+                    <node concept="37vLTw" id="6gw_H7mVd$V" role="2Oq$k0">
+                      <ref role="3cqZAo" node="6GuOaLMM3EO" resolve="jsc" />
+                    </node>
+                    <node concept="3TrEf2" id="6gw_H7mVd$W" role="2OqNvi">
+                      <ref role="3Tt5mk" to="gjk0:3xcS33zIwKM" resolve="base" />
+                    </node>
+                  </node>
+                  <node concept="3x8VRR" id="6gw_H7mVd$X" role="2OqNvi" />
+                </node>
+              </node>
+            </node>
+            <node concept="3clFbH" id="6gw_H7mVdoY" role="3cqZAp" />
           </node>
         </node>
         <node concept="3cpWs6" id="6GuOaLMMbFl" role="3cqZAp">
@@ -400,8 +439,8 @@
                     </node>
                   </node>
                   <node concept="1mIQ4w" id="6GuOaLMMqx2" role="2OqNvi">
-                    <node concept="chp4Y" id="6GuOaLMMqU6" role="cj9EA">
-                      <ref role="cht4Q" to="gjk0:5dGsgijTsEo" resolve="JointRef" />
+                    <node concept="chp4Y" id="6gw_H7mVeKG" role="cj9EA">
+                      <ref role="cht4Q" to="iobv:5dGsgijTsEo" resolve="JointRef" />
                     </node>
                   </node>
                 </node>
@@ -485,8 +524,8 @@
                     </node>
                   </node>
                   <node concept="1mIQ4w" id="6GuOaLMMCUU" role="2OqNvi">
-                    <node concept="chp4Y" id="6GuOaLMMDjY" role="cj9EA">
-                      <ref role="cht4Q" to="gjk0:5dGsgijTsEo" resolve="JointRef" />
+                    <node concept="chp4Y" id="6gw_H7mVf2c" role="cj9EA">
+                      <ref role="cht4Q" to="iobv:5dGsgijTsEo" resolve="JointRef" />
                     </node>
                   </node>
                 </node>

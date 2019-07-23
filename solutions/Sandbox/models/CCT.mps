@@ -6,6 +6,8 @@
     <use id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage" version="5" />
     <use id="9ded098b-ad6a-4657-bfd9-48636cfe8bc3" name="jetbrains.mps.lang.traceable" version="0" />
     <use id="d6d7f6e1-f407-48f8-a582-7b1489b7163f" name="ProtoBuf" version="0" />
+    <use id="d6881f78-a85d-4c9e-931e-30879e67afdd" name="Kinematics" version="0" />
+    <use id="b744b93e-0522-4237-a6fd-fa650d0b451a" name="Geometry" version="0" />
   </languages>
   <imports>
     <import index="oet6" ref="r:85b31eb0-6551-4bd7-8659-464e8655dad3(RobotRepository.kinematics)" />
@@ -36,6 +38,22 @@
         <child id="4064284464628055725" name="init" index="3sb0e2" />
       </concept>
     </language>
+    <language id="b744b93e-0522-4237-a6fd-fa650d0b451a" name="Geometry">
+      <concept id="7718836250438081396" name="Geometry.structure.KinematicChainRef" flags="ng" index="pQWJo">
+        <reference id="7718836250438933123" name="chain" index="pNcCJ" />
+      </concept>
+      <concept id="7718836250438081894" name="Geometry.structure.InPlaceSetPointSet" flags="ng" index="pQWRa">
+        <property id="7718836250438081896" name="space" index="pQWR4" />
+        <child id="7718836250438082023" name="value" index="pQWPb" />
+      </concept>
+      <concept id="6011303867107887364" name="Geometry.structure.FrameRef" flags="ng" index="30yrw0">
+        <reference id="6011303867107888059" name="ref" index="30yrEZ" />
+      </concept>
+      <concept id="6011303867107887629" name="Geometry.structure.LinkRef" flags="ng" index="30yrG9">
+        <reference id="6165337268368241492" name="link" index="3s7PV0" />
+      </concept>
+      <concept id="6011303867107992861" name="Geometry.structure.VirtualFrame" flags="ng" index="30yLgp" />
+    </language>
     <language id="d35899bf-1f8a-4727-b7b5-90d52a21d317" name="CompliantControlTask">
       <concept id="7718836250447559293" name="CompliantControlTask.structure.DynamicAnnotation" flags="ng" index="oiQFh" />
       <concept id="7718836250434804507" name="CompliantControlTask.structure.Coupling" flags="ng" index="pzsIR">
@@ -56,20 +74,33 @@
         <reference id="7718836250436665223" name="contactSituation" index="pGqWF" />
       </concept>
       <concept id="7718836250438026365" name="CompliantControlTask.structure.VirtualManipulator" flags="ng" index="pQDjh">
+        <reference id="7214932431041788247" name="robotRight" index="2M$6Y6" />
+        <reference id="7214932431041788186" name="robotLeft" index="2M$6Zb" />
         <child id="7718836250438557637" name="anchorLeft" index="pOCXD" />
         <child id="7718836250438557650" name="anchorRight" index="pOCXY" />
         <child id="6165337268367337246" name="chainLeft" index="3s38Ea" />
         <child id="6165337268367337331" name="chainRight" index="3s38FB" />
       </concept>
-      <concept id="7718836250438081396" name="CompliantControlTask.structure.KinematicChainRef" flags="ng" index="pQWJo">
-        <reference id="7718836250438933123" name="chain" index="pNcCJ" />
+      <concept id="7718836250438081396" name="CompliantControlTask.structure.KinematicChainRef" flags="ng" index="pQWJp">
+        <reference id="7718836250438933123" name="chain" index="pNcCK" />
       </concept>
-      <concept id="7718836250438081894" name="CompliantControlTask.structure.InPlaceSetPointSet" flags="ng" index="pQWRa">
-        <property id="7718836250438081896" name="space" index="pQWR4" />
-        <child id="7718836250438082023" name="value" index="pQWPb" />
+      <concept id="7718836250438081894" name="CompliantControlTask.structure.InPlaceSetPointSet" flags="ng" index="pQWRb">
+        <property id="7718836250438081896" name="space" index="pQWR5" />
+        <child id="7718836250438082023" name="value" index="pQWPc" />
       </concept>
       <concept id="7718836250437797000" name="CompliantControlTask.structure.Realization" flags="ng" index="pRxg$">
         <property id="7718836250437797126" name="refToComponent" index="pRxmE" />
+      </concept>
+      <concept id="7214932431041870825" name="CompliantControlTask.structure.RobotInstance" flags="ng" index="2M$EOS">
+        <reference id="7214932431041870951" name="robotPlatform" index="2M$EEQ" />
+      </concept>
+      <concept id="7214932431045349577" name="CompliantControlTask.structure.RobotInstKinematicChainRef" flags="ng" index="2MLWoo">
+        <reference id="7718836250438933123" name="chain" index="pNcCL" />
+        <reference id="7214932431045350187" name="robotInst" index="2MLWnU" />
+      </concept>
+      <concept id="7214932431044644919" name="CompliantControlTask.structure.RobotInstLinkRef" flags="ng" index="2MZ0rA">
+        <reference id="7214932431044928164" name="link" index="2MK7hP" />
+        <reference id="7214932431044645045" name="robotInst" index="2MZ0p$" />
       </concept>
       <concept id="3935613358949427562" name="CompliantControlTask.structure.VirtuallyCombinedJoints" flags="ng" index="2ZU78l" />
       <concept id="6011303867108306838" name="CompliantControlTask.structure.RelativeFrame" flags="ng" index="30w5Ui">
@@ -91,19 +122,14 @@
       <concept id="6011303867108202796" name="CompliantControlTask.structure.Constraint" flags="ng" index="30xIwC">
         <child id="7718836250446979416" name="force" index="okz7O" />
       </concept>
-      <concept id="6011303867107887364" name="CompliantControlTask.structure.FrameRef" flags="ng" index="30yrw0">
-        <reference id="6011303867107888059" name="ref" index="30yrEZ" />
+      <concept id="6011303867107887364" name="CompliantControlTask.structure.FrameRef" flags="ng" index="30yrw1">
+        <reference id="6011303867107888059" name="ref" index="30yrF0" />
       </concept>
       <concept id="6011303867107887225" name="CompliantControlTask.structure.Contact" flags="ng" index="30yr_X">
         <property id="7718836250442788260" name="priority" index="o4zO8" />
         <property id="6011303867108529370" name="virtual" index="30wYnu" />
         <child id="6011303867107887351" name="couplings" index="30yrBN" />
       </concept>
-      <concept id="6011303867107887907" name="CompliantControlTask.structure.Frame" flags="ng" index="30yrCB" />
-      <concept id="6011303867107887629" name="CompliantControlTask.structure.LinkRef" flags="ng" index="30yrG9">
-        <reference id="6165337268367421969" name="link" index="3s2XY5" />
-      </concept>
-      <concept id="6011303867107992861" name="CompliantControlTask.structure.VirtualFrame" flags="ng" index="30yLgp" />
       <concept id="6011303867108585511" name="CompliantControlTask.structure.JointSpaceCoupling" flags="ng" index="30B04z" />
       <concept id="6011303867108585637" name="CompliantControlTask.structure.TaskSpaceCoupling" flags="ng" index="30B06x" />
     </language>
@@ -124,14 +150,6 @@
       </concept>
     </language>
   </registry>
-  <node concept="30yLgp" id="5dGsgijU34v">
-    <property role="TrG5h" value="EEF_left_target" />
-    <property role="3GE5qa" value="frames" />
-  </node>
-  <node concept="30yrCB" id="5dGsgijUfT7">
-    <property role="TrG5h" value="lwr_tool_link (left)" />
-    <property role="3GE5qa" value="frames" />
-  </node>
   <node concept="pGqKh" id="6GuOaLMGKTI">
     <property role="TrG5h" value="VirtualJointSpaceTrackingBoth" />
     <property role="3GE5qa" value="situations" />
@@ -150,8 +168,8 @@
             <property role="$nhwW" value="0.0" />
           </node>
         </node>
-        <node concept="pQWRa" id="6GuOaLMSnpJ" role="3rXgek">
-          <node concept="2ShNRf" id="6GuOaLMSnqb" role="pQWPb">
+        <node concept="pQWRb" id="6GuOaLMSnpJ" role="3rXgek">
+          <node concept="2ShNRf" id="6GuOaLMSnqb" role="pQWPc">
             <node concept="qghkx" id="6GuOaLMSnqc" role="2ShVmc">
               <ref role="qghDu" to="sxll:3xBfiZ$w$pA" resolve="JointAngles" />
               <node concept="3sb0db" id="6GuOaLMSnqd" role="qghDs">
@@ -228,11 +246,11 @@
       <property role="o4zO8" value="1" />
       <node concept="30B06x" id="6GuOaLMMS2g" role="30yrBN">
         <property role="TrG5h" value="Left_eef_vFrame_tracking" />
-        <node concept="30yrw0" id="6GuOaLMMS2h" role="3rXgej">
-          <ref role="30yrEZ" node="5dGsgijUfT7" resolve="lwr_tool_link (left)" />
+        <node concept="30yrw1" id="6GuOaLMMS2h" role="3rXgej">
+          <ref role="30yrF0" node="5dGsgijUfT7" resolve="lwr_tool_link (left)" />
         </node>
-        <node concept="30yrw0" id="6GuOaLMMS2i" role="3rXgek">
-          <ref role="30yrEZ" node="5dGsgijU34v" resolve="EEF_left_target" />
+        <node concept="30yrw1" id="6GuOaLMMS2i" role="3rXgek">
+          <ref role="30yrF0" node="5dGsgijU34v" resolve="EEF_left_target" />
         </node>
         <node concept="30x8Tr" id="IplcUZGn$r" role="3rXgel">
           <node concept="3b6qkQ" id="IplcUZGn$t" role="o7tYm">
@@ -280,11 +298,11 @@
       <property role="o4zO8" value="1" />
       <node concept="30B06x" id="6GuOaLMMRsG" role="30yrBN">
         <property role="TrG5h" value="Right_eef_vFrame_tracking" />
-        <node concept="30yrw0" id="6GuOaLMMSb1" role="3rXgej">
-          <ref role="30yrEZ" node="6GuOaLMMS93" resolve="lwr_tool_link (right)" />
+        <node concept="30yrw1" id="6GuOaLMMSb1" role="3rXgej">
+          <ref role="30yrF0" node="6GuOaLMMS93" resolve="lwr_tool_link (right)" />
         </node>
-        <node concept="30yrw0" id="6GuOaLMMSbf" role="3rXgek">
-          <ref role="30yrEZ" node="6GuOaLMMS75" resolve="EEF_right_target" />
+        <node concept="30yrw1" id="6GuOaLMMSbf" role="3rXgek">
+          <ref role="30yrF0" node="6GuOaLMMS75" resolve="EEF_right_target" />
         </node>
         <node concept="30x8Tr" id="6GuOaLMMS1N" role="3rXgel">
           <node concept="3b6qkQ" id="IplcUZGo02" role="o6E1n">
@@ -342,8 +360,8 @@
             <property role="$nhwW" value="0.0" />
           </node>
         </node>
-        <node concept="pQWRa" id="6GuOaLMSnjd" role="3rXgek">
-          <node concept="2ShNRf" id="6GuOaLMSnjD" role="pQWPb">
+        <node concept="pQWRb" id="6GuOaLMSnjd" role="3rXgek">
+          <node concept="2ShNRf" id="6GuOaLMSnjD" role="pQWPc">
             <node concept="qghkx" id="6GuOaLMSnjE" role="2ShVmc">
               <ref role="qghDu" to="sxll:3xBfiZ$w$pA" resolve="JointAngles" />
               <node concept="3sb0db" id="6GuOaLMSnjF" role="qghDs">
@@ -408,8 +426,8 @@
       <node concept="30B04z" id="6GuOaLMMRuJ" role="30yrBN">
         <property role="TrG5h" value="Left Arm Tracking" />
         <property role="3rXgeJ" value="active" />
-        <node concept="pQWJo" id="6GuOaLMPQvv" role="3rXgej">
-          <ref role="pNcCJ" to="d49h:6bIwLn$0JLd" resolve="full_arm" />
+        <node concept="pQWJp" id="6GuOaLMPQvv" role="3rXgej">
+          <ref role="pNcCK" to="d49h:6bIwLn$0JLd" resolve="full_arm" />
         </node>
         <node concept="30x8Tr" id="6GuOaLMMRuT" role="3rXgel">
           <node concept="3b6qkQ" id="4WbPc0pI_Za" role="o6E1n">
@@ -455,8 +473,8 @@
             <property role="$nhwW" value="0.0" />
           </node>
         </node>
-        <node concept="pQWRa" id="6GuOaLMSnwh" role="3rXgek">
-          <node concept="2ShNRf" id="6GuOaLMSnwH" role="pQWPb">
+        <node concept="pQWRb" id="6GuOaLMSnwh" role="3rXgek">
+          <node concept="2ShNRf" id="6GuOaLMSnwH" role="pQWPc">
             <node concept="qghkx" id="6GuOaLMSnwI" role="2ShVmc">
               <ref role="qghDu" to="sxll:3xBfiZ$w$pA" resolve="JointAngles" />
               <node concept="3sb0db" id="6GuOaLMSnwJ" role="qghDs">
@@ -496,8 +514,8 @@
       <node concept="30B04z" id="6GuOaLMMRuU" role="30yrBN">
         <property role="TrG5h" value="Right Arm Tracking" />
         <property role="3rXgeJ" value="active" />
-        <node concept="pQWJo" id="6GuOaLMPQvH" role="3rXgej">
-          <ref role="pNcCJ" to="d49h:6bIwLn$0JLd" resolve="full_arm" />
+        <node concept="pQWJp" id="6GuOaLMPQvH" role="3rXgej">
+          <ref role="pNcCK" to="d49h:6bIwLn$0JLd" resolve="full_arm" />
         </node>
         <node concept="30x8Tr" id="6GuOaLMMRv4" role="3rXgel">
           <node concept="3b6qkQ" id="4WbPc0pI_ZE" role="o6E1n">
@@ -543,8 +561,8 @@
             <property role="$nhwW" value="0.0" />
           </node>
         </node>
-        <node concept="pQWRa" id="6GuOaLMSnCn" role="3rXgek">
-          <node concept="2ShNRf" id="6GuOaLMSnCN" role="pQWPb">
+        <node concept="pQWRb" id="6GuOaLMSnCn" role="3rXgek">
+          <node concept="2ShNRf" id="6GuOaLMSnCN" role="pQWPc">
             <node concept="qghkx" id="6GuOaLMSnCO" role="2ShVmc">
               <ref role="qghDu" to="sxll:3xBfiZ$w$pA" resolve="JointAngles" />
               <node concept="3sb0db" id="6GuOaLMSnCP" role="qghDs">
@@ -579,28 +597,22 @@
       </node>
     </node>
   </node>
-  <node concept="30yLgp" id="6GuOaLMMS75">
-    <property role="TrG5h" value="EEF_right_target" />
-    <property role="3GE5qa" value="frames" />
-  </node>
-  <node concept="30yrCB" id="6GuOaLMMS93">
-    <property role="TrG5h" value="lwr_tool_link (right)" />
-    <property role="3GE5qa" value="frames" />
-  </node>
   <node concept="pQDjh" id="6GuOaLMNzk$">
     <property role="TrG5h" value="BarManipulatorFrame" />
     <property role="3GE5qa" value="manipulators" />
-    <node concept="30yrG9" id="5mfFpi9xpbV" role="pOCXD">
-      <ref role="3s2XY5" to="oet6:3XZE$oGsP4M" resolve="laEnd" />
+    <ref role="2M$6Zb" node="6gw_H7mGQRQ" resolve="RobotKukaLeft" />
+    <ref role="2M$6Y6" node="6gw_H7mGQTO" resolve="RobotKukaRight" />
+    <node concept="30yrG9" id="6gw_H7mNsQM" role="pOCXD">
+      <ref role="3s7PV0" to="oet6:2jRhxvsk02Z" resolve="lwr_arm_7_link" />
     </node>
-    <node concept="30yrG9" id="5mfFpi9xr44" role="pOCXY">
-      <ref role="3s2XY5" to="oet6:3XZE$oGsP5g" resolve="raEnd" />
+    <node concept="30yrG9" id="6gw_H7mNsR0" role="pOCXY">
+      <ref role="3s7PV0" to="oet6:2jRhxvsk02Z" resolve="lwr_arm_7_link" />
     </node>
-    <node concept="pQWJo" id="5mfFpi9x77P" role="3s38Ea">
-      <ref role="pNcCJ" to="d49h:3XZE$oGsO4F" resolve="left_arm" />
+    <node concept="pQWJo" id="6gw_H7mMnwq" role="3s38Ea">
+      <ref role="pNcCJ" to="d49h:6bIwLn$0JLd" resolve="full_arm" />
     </node>
-    <node concept="pQWJo" id="5mfFpi9x783" role="3s38FB">
-      <ref role="pNcCJ" to="d49h:3XZE$oGsQ3c" resolve="right_arm" />
+    <node concept="pQWJo" id="6gw_H7mMo1N" role="3s38FB">
+      <ref role="pNcCJ" to="d49h:6bIwLn$0JLd" resolve="full_arm" />
     </node>
   </node>
   <node concept="pGqKh" id="6GuOaLMNLLr">
@@ -613,8 +625,8 @@
       <node concept="30B06x" id="6GuOaLMNLLt" role="30yrBN">
         <property role="TrG5h" value="motion_tracking" />
         <property role="3rXgeJ" value="active" />
-        <node concept="30yrw0" id="6GuOaLMNLOw" role="3rXgej">
-          <ref role="30yrEZ" node="6GuOaLMNzk$" resolve="BarManipulatorFrame" />
+        <node concept="30yrw1" id="6GuOaLMNLOw" role="3rXgej">
+          <ref role="30yrF0" node="6GuOaLMNzk$" resolve="BarManipulatorFrame" />
         </node>
         <node concept="30x8Tr" id="6GuOaLN3euf" role="3rXgel">
           <node concept="3b6qkQ" id="6GuOaLN3euh" role="o7tYm">
@@ -654,14 +666,14 @@
             <property role="$nhwW" value="30.0" />
           </node>
         </node>
-        <node concept="30yrw0" id="6GuOaLNi54p" role="3rXgek">
-          <ref role="30yrEZ" node="6GuOaLNi52o" resolve="VF_BarTarget (external)" />
+        <node concept="30yrw1" id="6GuOaLNi54p" role="3rXgek">
+          <ref role="30yrF0" node="6GuOaLNi52o" resolve="VF_BarTarget (external)" />
         </node>
       </node>
       <node concept="30B06x" id="6GuOaLMNLOW" role="30yrBN">
         <property role="TrG5h" value="force_constraint" />
-        <node concept="30yrw0" id="6GuOaLMNLQ6" role="3rXgej">
-          <ref role="30yrEZ" node="6GuOaLMNzk$" resolve="BarManipulatorFrame" />
+        <node concept="30yrw1" id="6GuOaLMNLQ6" role="3rXgej">
+          <ref role="30yrF0" node="6GuOaLMNzk$" resolve="BarManipulatorFrame" />
         </node>
         <node concept="30w5Ui" id="6GuOaLMVqDg" role="3rXgek">
           <property role="30w4_v" value="space" />
@@ -715,8 +727,8 @@
         <property role="TrG5h" value="Full Chain Arm Nullspace Tracking" />
         <property role="3rXgeJ" value="active" />
         <property role="odnW$" value="false" />
-        <node concept="pQWJo" id="6GuOaLMPQsS" role="3rXgej">
-          <ref role="pNcCJ" to="d49h:6bIwLn$0JLd" resolve="full_arm" />
+        <node concept="pQWJp" id="6GuOaLMPQsS" role="3rXgej">
+          <ref role="pNcCK" to="d49h:6bIwLn$0JLd" resolve="full_arm" />
         </node>
         <node concept="30x8Tr" id="6GuOaLN2VBQ" role="3rXgel">
           <node concept="3b6qkQ" id="6GuOaLN2VBS" role="o7tYm">
@@ -762,9 +774,9 @@
             <property role="$nhwW" value="0.1" />
           </node>
         </node>
-        <node concept="pQWRa" id="6GuOaLN5MPF" role="3rXgek">
-          <property role="pQWR4" value="space" />
-          <node concept="2ShNRf" id="6GuOaLN63wO" role="pQWPb">
+        <node concept="pQWRb" id="6GuOaLN5MPF" role="3rXgek">
+          <property role="pQWR5" value="space" />
+          <node concept="2ShNRf" id="6GuOaLN63wO" role="pQWPc">
             <node concept="qghkx" id="6GuOaLN63B0" role="2ShVmc">
               <ref role="qghDu" to="sxll:3xBfiZ$w$pA" resolve="JointAngles" />
               <node concept="3sb0db" id="6GuOaLN63B2" role="qghDs">
@@ -799,10 +811,6 @@
       </node>
     </node>
   </node>
-  <node concept="30yLgp" id="6GuOaLNi52o">
-    <property role="3GE5qa" value="frames" />
-    <property role="TrG5h" value="VF_BarTarget (external)" />
-  </node>
   <node concept="pGqKh" id="3qu6RY9uIGo">
     <property role="3GE5qa" value="situations" />
     <property role="TrG5h" value="RollingTask_FreeSpace_Single" />
@@ -814,12 +822,6 @@
         <property role="odnW$" value="false" />
         <property role="o89AW" value="#DDDDDD" />
         <property role="TrG5h" value="motion_tracking" />
-        <node concept="30yrw0" id="3qu6RY9uIIr" role="3rXgej">
-          <ref role="30yrEZ" node="5dGsgijUfT7" resolve="lwr_tool_link (left)" />
-        </node>
-        <node concept="30yrw0" id="3qu6RY9uIM_" role="3rXgek">
-          <ref role="30yrEZ" node="3qu6RY9uIID" resolve="VF_Traj_tool_left (external)" />
-        </node>
         <node concept="30x8Tr" id="3qu6RY9uIMN" role="3rXgel">
           <node concept="3b6qkQ" id="3qu6RY9uIMP" role="o7tYm">
             <property role="$nhwW" value="30.0" />
@@ -861,6 +863,13 @@
             <property role="pRxmE" value="PositionController" />
           </node>
         </node>
+        <node concept="2MZ0rA" id="6gw_H7mTMQu" role="3rXgej">
+          <ref role="2MZ0p$" node="6gw_H7mGQRQ" resolve="RobotKukaLeft" />
+          <ref role="2MK7hP" to="oet6:2jRhxvsk02Z" resolve="lwr_arm_7_link" />
+        </node>
+        <node concept="30yrw0" id="6gw_H7mTMQT" role="3rXgek">
+          <ref role="30yrEZ" node="6gw_H7mO0S7" resolve="VF_Traj_tool_left (external)" />
+        </node>
       </node>
     </node>
     <node concept="30yr_X" id="3qu6RY9uMyW" role="pFT7q">
@@ -868,46 +877,9 @@
       <property role="30wYnu" value="true" />
       <property role="o4zO8" value="1" />
       <node concept="30B04z" id="3qu6RY9uMyX" role="30yrBN">
-        <property role="odnW$" value="false" />
+        <property role="odnW$" value="true" />
         <property role="o89AW" value="#DDDDDD" />
         <property role="TrG5h" value="nullspace_tracking" />
-        <node concept="pQWJo" id="3qu6RY9uMyY" role="3rXgej">
-          <ref role="pNcCJ" to="d49h:C_g3bnXz3c" resolve="full_arm" />
-        </node>
-        <node concept="pQWRa" id="3qu6RY9uMyZ" role="3rXgek">
-          <property role="pQWR4" value="joint-space" />
-          <node concept="2ShNRf" id="3qu6RY9uMz0" role="pQWPb">
-            <node concept="qghkx" id="3qu6RY9uMz1" role="2ShVmc">
-              <ref role="qghDu" to="sxll:3xBfiZ$w$pA" resolve="JointAngles" />
-              <node concept="3sb0db" id="3qu6RY9uMz2" role="qghDs">
-                <ref role="3sb0da" to="sxll:3xBfiZ$w$pC" resolve="angles" />
-                <node concept="3sb0ea" id="3qu6RY9uMz3" role="3sb6Ac">
-                  <node concept="3b6qkQ" id="3qu6RY9uMz4" role="3sb0e2">
-                    <property role="$nhwW" value="0.3" />
-                  </node>
-                  <node concept="3b6qkQ" id="3qu6RY9uMz5" role="3sb0e2">
-                    <property role="$nhwW" value="0.4" />
-                  </node>
-                  <node concept="3b6qkQ" id="3qu6RY9uMz6" role="3sb0e2">
-                    <property role="$nhwW" value="0.5" />
-                  </node>
-                  <node concept="3b6qkQ" id="3qu6RY9uMz7" role="3sb0e2">
-                    <property role="$nhwW" value="0.1" />
-                  </node>
-                  <node concept="3b6qkQ" id="3qu6RY9uMz8" role="3sb0e2">
-                    <property role="$nhwW" value="0.2" />
-                  </node>
-                  <node concept="3b6qkQ" id="3qu6RY9uMz9" role="3sb0e2">
-                    <property role="$nhwW" value="0.5" />
-                  </node>
-                  <node concept="3b6qkQ" id="3qu6RY9uMza" role="3sb0e2">
-                    <property role="$nhwW" value="0.1" />
-                  </node>
-                </node>
-              </node>
-            </node>
-          </node>
-        </node>
         <node concept="30x8Tr" id="3qu6RY9uMzb" role="3rXgel">
           <node concept="3b6qkQ" id="3qu6RY9uMzc" role="o7tYm">
             <property role="$nhwW" value="100.0" />
@@ -955,6 +927,44 @@
             <property role="pRxmE" value="JointPositionCtrl" />
           </node>
         </node>
+        <node concept="2MLWoo" id="6gw_H7mUAFW" role="3rXgej">
+          <ref role="2MLWnU" node="6gw_H7mGQRQ" resolve="RobotKukaLeft" />
+          <ref role="pNcCL" to="d49h:6bIwLn$0JLd" resolve="full_arm" />
+        </node>
+        <node concept="pQWRa" id="6gw_H7mVsTl" role="3rXgek">
+          <property role="pQWR4" value="joint-space" />
+          <node concept="2ShNRf" id="6gw_H7mVsVH" role="pQWPb">
+            <node concept="qghkx" id="6gw_H7mVsZe" role="2ShVmc">
+              <ref role="qghDu" to="sxll:3xBfiZ$w$pA" resolve="JointAngles" />
+              <node concept="3sb0db" id="6gw_H7mVsZg" role="qghDs">
+                <ref role="3sb0da" to="sxll:3xBfiZ$w$pC" resolve="angles" />
+                <node concept="3sb0ea" id="6gw_H7mVsZh" role="3sb6Ac">
+                  <node concept="3b6qkQ" id="6gw_H7mVt0a" role="3sb0e2">
+                    <property role="$nhwW" value="0.3" />
+                  </node>
+                  <node concept="3b6qkQ" id="6gw_H7mVt0b" role="3sb0e2">
+                    <property role="$nhwW" value="0.4" />
+                  </node>
+                  <node concept="3b6qkQ" id="6gw_H7mVt0c" role="3sb0e2">
+                    <property role="$nhwW" value="0.5" />
+                  </node>
+                  <node concept="3b6qkQ" id="6gw_H7mVt0d" role="3sb0e2">
+                    <property role="$nhwW" value="0.1" />
+                  </node>
+                  <node concept="3b6qkQ" id="6gw_H7mVt0e" role="3sb0e2">
+                    <property role="$nhwW" value="0.2" />
+                  </node>
+                  <node concept="3b6qkQ" id="6gw_H7mVt0f" role="3sb0e2">
+                    <property role="$nhwW" value="0.5" />
+                  </node>
+                  <node concept="3b6qkQ" id="6gw_H7mVt0g" role="3sb0e2">
+                    <property role="$nhwW" value="0.1" />
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
       </node>
     </node>
     <node concept="30yr_X" id="3qu6RY9uIZY" role="pFT7q">
@@ -965,12 +975,6 @@
         <property role="odnW$" value="false" />
         <property role="o89AW" value="#DDDDDD" />
         <property role="TrG5h" value="motion_tracking" />
-        <node concept="30yrw0" id="3qu6RY9uJaW" role="3rXgej">
-          <ref role="30yrEZ" node="6GuOaLMMS93" resolve="lwr_tool_link (right)" />
-        </node>
-        <node concept="30yrw0" id="3qu6RY9uJba" role="3rXgek">
-          <ref role="30yrEZ" node="3qu6RY9uIKB" resolve="VF_Traj_tool_right (external)" />
-        </node>
         <node concept="30x8Tr" id="3qu6RY9uJ02" role="3rXgel">
           <node concept="3b6qkQ" id="3qu6RY9uJ03" role="o7tYm">
             <property role="$nhwW" value="30.0" />
@@ -1012,6 +1016,13 @@
             <property role="pRxmE" value="PositionController" />
           </node>
         </node>
+        <node concept="2MZ0rA" id="6gw_H7mTMRk" role="3rXgej">
+          <ref role="2MZ0p$" node="6gw_H7mGQTO" resolve="RobotKukaRight" />
+          <ref role="2MK7hP" to="oet6:2jRhxvsk02Z" resolve="lwr_arm_7_link" />
+        </node>
+        <node concept="30yrw0" id="6gw_H7mTMRJ" role="3rXgek">
+          <ref role="30yrEZ" node="6gw_H7mO0W2" resolve="VF_Traj_tool_right (external)" />
+        </node>
       </node>
     </node>
     <node concept="30yr_X" id="3qu6RY9uMZg" role="pFT7q">
@@ -1022,43 +1033,6 @@
         <property role="odnW$" value="false" />
         <property role="o89AW" value="#DDDDDD" />
         <property role="TrG5h" value="nullspace_tracking" />
-        <node concept="pQWJo" id="3qu6RY9uMZi" role="3rXgej">
-          <ref role="pNcCJ" to="d49h:C_g3bnXz3c" resolve="full_arm" />
-        </node>
-        <node concept="pQWRa" id="3qu6RY9uMZj" role="3rXgek">
-          <property role="pQWR4" value="joint-space" />
-          <node concept="2ShNRf" id="3qu6RY9uMZk" role="pQWPb">
-            <node concept="qghkx" id="3qu6RY9uMZl" role="2ShVmc">
-              <ref role="qghDu" to="sxll:3xBfiZ$w$pA" resolve="JointAngles" />
-              <node concept="3sb0db" id="3qu6RY9uMZm" role="qghDs">
-                <ref role="3sb0da" to="sxll:3xBfiZ$w$pC" resolve="angles" />
-                <node concept="3sb0ea" id="3qu6RY9uMZn" role="3sb6Ac">
-                  <node concept="3b6qkQ" id="3qu6RY9uMZo" role="3sb0e2">
-                    <property role="$nhwW" value="0.3" />
-                  </node>
-                  <node concept="3b6qkQ" id="3qu6RY9uMZp" role="3sb0e2">
-                    <property role="$nhwW" value="0.4" />
-                  </node>
-                  <node concept="3b6qkQ" id="3qu6RY9uMZq" role="3sb0e2">
-                    <property role="$nhwW" value="0.5" />
-                  </node>
-                  <node concept="3b6qkQ" id="3qu6RY9uMZr" role="3sb0e2">
-                    <property role="$nhwW" value="0.1" />
-                  </node>
-                  <node concept="3b6qkQ" id="3qu6RY9uMZs" role="3sb0e2">
-                    <property role="$nhwW" value="0.2" />
-                  </node>
-                  <node concept="3b6qkQ" id="3qu6RY9uMZt" role="3sb0e2">
-                    <property role="$nhwW" value="0.5" />
-                  </node>
-                  <node concept="3b6qkQ" id="3qu6RY9uMZu" role="3sb0e2">
-                    <property role="$nhwW" value="0.1" />
-                  </node>
-                </node>
-              </node>
-            </node>
-          </node>
-        </node>
         <node concept="30x8Tr" id="3qu6RY9uMZv" role="3rXgel">
           <node concept="3b6qkQ" id="3qu6RY9uMZw" role="o7tYm">
             <property role="$nhwW" value="100.0" />
@@ -1106,16 +1080,46 @@
             <property role="pRxmE" value="JointPositionCtrl" />
           </node>
         </node>
+        <node concept="2MLWoo" id="6gw_H7mUTW_" role="3rXgej">
+          <ref role="2MLWnU" node="6gw_H7mGQTO" resolve="RobotKukaRight" />
+          <ref role="pNcCL" to="d49h:6bIwLn$0JLd" resolve="full_arm" />
+        </node>
+        <node concept="pQWRa" id="6gw_H7mVt4l" role="3rXgek">
+          <property role="pQWR4" value="joint-space" />
+          <node concept="2ShNRf" id="3qu6RY9uMZk" role="pQWPb">
+            <node concept="qghkx" id="3qu6RY9uMZl" role="2ShVmc">
+              <ref role="qghDu" to="sxll:3xBfiZ$w$pA" resolve="JointAngles" />
+              <node concept="3sb0db" id="3qu6RY9uMZm" role="qghDs">
+                <ref role="3sb0da" to="sxll:3xBfiZ$w$pC" resolve="angles" />
+                <node concept="3sb0ea" id="3qu6RY9uMZn" role="3sb6Ac">
+                  <node concept="3b6qkQ" id="3qu6RY9uMZo" role="3sb0e2">
+                    <property role="$nhwW" value="0.3" />
+                  </node>
+                  <node concept="3b6qkQ" id="3qu6RY9uMZp" role="3sb0e2">
+                    <property role="$nhwW" value="0.4" />
+                  </node>
+                  <node concept="3b6qkQ" id="3qu6RY9uMZq" role="3sb0e2">
+                    <property role="$nhwW" value="0.5" />
+                  </node>
+                  <node concept="3b6qkQ" id="3qu6RY9uMZr" role="3sb0e2">
+                    <property role="$nhwW" value="0.1" />
+                  </node>
+                  <node concept="3b6qkQ" id="3qu6RY9uMZs" role="3sb0e2">
+                    <property role="$nhwW" value="0.2" />
+                  </node>
+                  <node concept="3b6qkQ" id="3qu6RY9uMZt" role="3sb0e2">
+                    <property role="$nhwW" value="0.5" />
+                  </node>
+                  <node concept="3b6qkQ" id="3qu6RY9uMZu" role="3sb0e2">
+                    <property role="$nhwW" value="0.1" />
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
       </node>
     </node>
-  </node>
-  <node concept="30yLgp" id="3qu6RY9uIID">
-    <property role="3GE5qa" value="frames" />
-    <property role="TrG5h" value="VF_Traj_tool_left (external)" />
-  </node>
-  <node concept="30yLgp" id="3qu6RY9uIKB">
-    <property role="3GE5qa" value="frames" />
-    <property role="TrG5h" value="VF_Traj_tool_right (external)" />
   </node>
   <node concept="pGqKh" id="3qu6RY9uJbo">
     <property role="3GE5qa" value="situations" />
@@ -1127,11 +1131,11 @@
         <property role="odnW$" value="false" />
         <property role="o89AW" value="#DDDDDD" />
         <property role="TrG5h" value="motion_tracking" />
-        <node concept="30yrw0" id="3qu6RY9uJbr" role="3rXgej">
-          <ref role="30yrEZ" node="5dGsgijUfT7" resolve="lwr_tool_link (left)" />
+        <node concept="30yrw1" id="3qu6RY9uJbr" role="3rXgej">
+          <ref role="30yrF0" node="5dGsgijUfT7" resolve="lwr_tool_link (left)" />
         </node>
-        <node concept="30yrw0" id="3qu6RY9uJbs" role="3rXgek">
-          <ref role="30yrEZ" node="3qu6RY9uIID" resolve="VF_Traj_tool_left (external)" />
+        <node concept="30yrw1" id="3qu6RY9uJbs" role="3rXgek">
+          <ref role="30yrF0" node="3qu6RY9uIID" resolve="VF_Traj_tool_left (external)" />
         </node>
         <node concept="30x8Tr" id="3qu6RY9uJbt" role="3rXgel">
           <node concept="3b6qkQ" id="3qu6RY9uJbu" role="o7tYm">
@@ -1179,8 +1183,8 @@
         <property role="odnW$" value="false" />
         <property role="o89AW" value="#DDDDDD" />
         <property role="TrG5h" value="force_constraint" />
-        <node concept="30yrw0" id="3qu6RY9uJjz" role="3rXgej">
-          <ref role="30yrEZ" node="5dGsgijUfT7" resolve="lwr_tool_link (left)" />
+        <node concept="30yrw1" id="3qu6RY9uJjz" role="3rXgej">
+          <ref role="30yrF0" node="5dGsgijUfT7" resolve="lwr_tool_link (left)" />
         </node>
         <node concept="30w5Ui" id="3qu6RY9uJm$" role="3rXgek">
           <property role="30w4_v" value="world" />
@@ -1236,12 +1240,12 @@
         <property role="odnW$" value="false" />
         <property role="o89AW" value="#DDDDDD" />
         <property role="TrG5h" value="nullspace_tracking" />
-        <node concept="pQWJo" id="3qu6RY9uK9e" role="3rXgej">
-          <ref role="pNcCJ" to="d49h:C_g3bnXz3c" resolve="full_arm" />
+        <node concept="pQWJp" id="3qu6RY9uK9e" role="3rXgej">
+          <ref role="pNcCK" to="d49h:C_g3bnXz3c" resolve="full_arm" />
         </node>
-        <node concept="pQWRa" id="3qu6RY9uKa4" role="3rXgek">
-          <property role="pQWR4" value="joint-space" />
-          <node concept="2ShNRf" id="3qu6RY9uKaw" role="pQWPb">
+        <node concept="pQWRb" id="3qu6RY9uKa4" role="3rXgek">
+          <property role="pQWR5" value="joint-space" />
+          <node concept="2ShNRf" id="3qu6RY9uKaw" role="pQWPc">
             <node concept="qghkx" id="3qu6RY9uKe1" role="2ShVmc">
               <ref role="qghDu" to="sxll:3xBfiZ$w$pA" resolve="JointAngles" />
               <node concept="3sb0db" id="3qu6RY9uKe3" role="qghDs">
@@ -1329,11 +1333,11 @@
         <property role="odnW$" value="false" />
         <property role="o89AW" value="#DDDDDD" />
         <property role="TrG5h" value="motion_tracking" />
-        <node concept="30yrw0" id="3qu6RY9uJbH" role="3rXgej">
-          <ref role="30yrEZ" node="6GuOaLMMS93" resolve="lwr_tool_link (right)" />
+        <node concept="30yrw1" id="3qu6RY9uJbH" role="3rXgej">
+          <ref role="30yrF0" node="6GuOaLMMS93" resolve="lwr_tool_link (right)" />
         </node>
-        <node concept="30yrw0" id="3qu6RY9uJbI" role="3rXgek">
-          <ref role="30yrEZ" node="3qu6RY9uIKB" resolve="VF_Traj_tool_right (external)" />
+        <node concept="30yrw1" id="3qu6RY9uJbI" role="3rXgek">
+          <ref role="30yrF0" node="3qu6RY9uIKB" resolve="VF_Traj_tool_right (external)" />
         </node>
         <node concept="30x8Tr" id="3qu6RY9uJbJ" role="3rXgel">
           <node concept="3b6qkQ" id="3qu6RY9uJbK" role="o7tYm">
@@ -1381,8 +1385,8 @@
         <property role="odnW$" value="false" />
         <property role="o89AW" value="#DDDDDD" />
         <property role="TrG5h" value="force_constraint" />
-        <node concept="30yrw0" id="3qu6RY9uJRi" role="3rXgej">
-          <ref role="30yrEZ" node="6GuOaLMMS93" resolve="lwr_tool_link (right)" />
+        <node concept="30yrw1" id="3qu6RY9uJRi" role="3rXgej">
+          <ref role="30yrF0" node="6GuOaLMMS93" resolve="lwr_tool_link (right)" />
         </node>
         <node concept="30w5Ui" id="3qu6RY9uJDz" role="3rXgek">
           <property role="30w4_v" value="world" />
@@ -1438,12 +1442,12 @@
         <property role="odnW$" value="false" />
         <property role="o89AW" value="#DDDDDD" />
         <property role="TrG5h" value="nullspace_tracking" />
-        <node concept="pQWJo" id="3qu6RY9uM5i" role="3rXgej">
-          <ref role="pNcCJ" to="d49h:C_g3bnXz3c" resolve="full_arm" />
+        <node concept="pQWJp" id="3qu6RY9uM5i" role="3rXgej">
+          <ref role="pNcCK" to="d49h:C_g3bnXz3c" resolve="full_arm" />
         </node>
-        <node concept="pQWRa" id="3qu6RY9uLE_" role="3rXgek">
-          <property role="pQWR4" value="joint-space" />
-          <node concept="2ShNRf" id="3qu6RY9uLEA" role="pQWPb">
+        <node concept="pQWRb" id="3qu6RY9uLE_" role="3rXgek">
+          <property role="pQWR5" value="joint-space" />
+          <node concept="2ShNRf" id="3qu6RY9uLEA" role="pQWPc">
             <node concept="qghkx" id="3qu6RY9uLEB" role="2ShVmc">
               <ref role="qghDu" to="sxll:3xBfiZ$w$pA" resolve="JointAngles" />
               <node concept="3sb0db" id="3qu6RY9uLEC" role="qghDs">
@@ -1535,11 +1539,11 @@
         <property role="odnW$" value="false" />
         <property role="o89AW" value="#DDDDDD" />
         <property role="TrG5h" value="motion_tracking" />
-        <node concept="30yrw0" id="3qu6RY9vtKT" role="3rXgej">
-          <ref role="30yrEZ" node="3qu6RY9vtIV" resolve="VirtualManipulatorFrame" />
+        <node concept="30yrw1" id="3qu6RY9vtKT" role="3rXgej">
+          <ref role="30yrF0" node="3qu6RY9vtIV" resolve="VirtualManipulatorFrame" />
         </node>
-        <node concept="30yrw0" id="3qu6RY9vtN5" role="3rXgek">
-          <ref role="30yrEZ" node="3qu6RY9vtL7" resolve="VF_Traj_tool (external)" />
+        <node concept="30yrw1" id="3qu6RY9vtN5" role="3rXgek">
+          <ref role="30yrF0" node="3qu6RY9vtL7" resolve="VF_Traj_tool (external)" />
         </node>
         <node concept="30x8Tr" id="3qu6RY9uNjH" role="3rXgel">
           <node concept="3b6qkQ" id="3qu6RY9uNjI" role="o7tYm">
@@ -1587,8 +1591,8 @@
         <property role="odnW$" value="false" />
         <property role="o89AW" value="#DDDDDD" />
         <property role="TrG5h" value="force_constraint" />
-        <node concept="30yrw0" id="7dn1noRhpam" role="3rXgej">
-          <ref role="30yrEZ" node="3qu6RY9vtIV" resolve="VirtualManipulatorFrame" />
+        <node concept="30yrw1" id="7dn1noRhpam" role="3rXgej">
+          <ref role="30yrF0" node="3qu6RY9vtIV" resolve="VirtualManipulatorFrame" />
         </node>
         <node concept="30w5Ui" id="3qu6RY9uNjX" role="3rXgek">
           <property role="30w4_v" value="world" />
@@ -1648,9 +1652,9 @@
           <property role="o89AW" value="#DDDDDD" />
           <property role="TrG5h" value="nullspace_tracking" />
           <node concept="2ZU78l" id="3qu6RY9vsJ5" role="3rXgej" />
-          <node concept="pQWRa" id="3qu6RY9uNkf" role="3rXgek">
-            <property role="pQWR4" value="joint-space" />
-            <node concept="2ShNRf" id="3qu6RY9uNkg" role="pQWPb">
+          <node concept="pQWRb" id="3qu6RY9uNkf" role="3rXgek">
+            <property role="pQWR5" value="joint-space" />
+            <node concept="2ShNRf" id="3qu6RY9uNkg" role="pQWPc">
               <node concept="qghkx" id="3qu6RY9uNkh" role="2ShVmc">
                 <ref role="qghDu" to="sxll:3xBfiZ$w$pA" resolve="JointAngles" />
                 <node concept="3sb0db" id="3qu6RY9uNki" role="qghDs">
@@ -1796,13 +1800,43 @@
       </node>
     </node>
   </node>
-  <node concept="30yLgp" id="3qu6RY9vtIV">
-    <property role="3GE5qa" value="frames" />
-    <property role="TrG5h" value="VirtualManipulatorFrame" />
+  <node concept="2M$EOS" id="6gw_H7mGQRQ">
+    <property role="TrG5h" value="RobotKukaLeft" />
+    <property role="3GE5qa" value="robots" />
+    <ref role="2M$EEQ" to="d49h:6bIwLn$0JKW" resolve="Kuka LWR 4+" />
   </node>
-  <node concept="30yLgp" id="3qu6RY9vtL7">
+  <node concept="2M$EOS" id="6gw_H7mGQTO">
+    <property role="TrG5h" value="RobotKukaRight" />
+    <property role="3GE5qa" value="robots" />
+    <ref role="2M$EEQ" to="d49h:6bIwLn$0JKW" resolve="Kuka LWR 4+" />
+  </node>
+  <node concept="30yLgp" id="6gw_H7mNYIE">
+    <property role="3GE5qa" value="frames" />
+    <property role="TrG5h" value="EEF_left_target" />
+  </node>
+  <node concept="30yLgp" id="6gw_H7mO0Gm">
+    <property role="3GE5qa" value="frames" />
+    <property role="TrG5h" value="EEF_right_target" />
+  </node>
+  <node concept="30yLgp" id="6gw_H7mO0Kh">
+    <property role="3GE5qa" value="frames" />
+    <property role="TrG5h" value="VF_BarTarget (external)" />
+  </node>
+  <node concept="30yLgp" id="6gw_H7mO0Oc">
     <property role="3GE5qa" value="frames" />
     <property role="TrG5h" value="VF_Traj_tool (external)" />
+  </node>
+  <node concept="30yLgp" id="6gw_H7mO0S7">
+    <property role="3GE5qa" value="frames" />
+    <property role="TrG5h" value="VF_Traj_tool_left (external)" />
+  </node>
+  <node concept="30yLgp" id="6gw_H7mO0W2">
+    <property role="3GE5qa" value="frames" />
+    <property role="TrG5h" value="VF_Traj_tool_right (external)" />
+  </node>
+  <node concept="30yLgp" id="6gw_H7mO0ZX">
+    <property role="3GE5qa" value="frames" />
+    <property role="TrG5h" value="VirtualManipulatorFrame" />
   </node>
 </model>
 
