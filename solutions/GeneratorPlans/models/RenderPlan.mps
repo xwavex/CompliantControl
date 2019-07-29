@@ -37,6 +37,12 @@
         <property role="2V$B1Q" value="CompliantControlArchitecture" />
       </node>
     </node>
+    <node concept="2VgMA2" id="385B8Brzf3$" role="2VgMA7">
+      <node concept="2V$Bhx" id="385B8Brzf5v" role="1t_9vn">
+        <property role="2V$B1T" value="5f4fc394-20b7-4c7d-bdf3-f79f90436158" />
+        <property role="2V$B1Q" value="CCTaskConfigGen" />
+      </node>
+    </node>
     <node concept="2VgMA2" id="4WbPc0pMfWo" role="2VgMA7">
       <node concept="2V$Bhx" id="4WbPc0pMfXb" role="1t_9vn">
         <property role="2V$B1T" value="bbddeb44-4711-4724-adfd-114eadf306e9" />
