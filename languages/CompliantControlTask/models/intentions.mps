@@ -7,6 +7,7 @@
   </languages>
   <imports>
     <import index="gjk0" ref="r:1ea85bd7-610e-43a5-96d1-544363f43d31(CompliantControlTask.structure)" />
+    <import index="gqxc" ref="r:ce334b97-cfdc-4551-a5ec-98bf9b071729(CompliantControlArchitecture.structure)" implicit="true" />
   </imports>
   <registry>
     <language id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage">
@@ -30,6 +31,7 @@
       <concept id="1070475926800" name="jetbrains.mps.baseLanguage.structure.StringLiteral" flags="nn" index="Xl_RD">
         <property id="1070475926801" name="value" index="Xl_RC" />
       </concept>
+      <concept id="1070534058343" name="jetbrains.mps.baseLanguage.structure.NullLiteral" flags="nn" index="10Nm6u" />
       <concept id="1068498886294" name="jetbrains.mps.baseLanguage.structure.AssignmentExpression" flags="nn" index="37vLTI" />
       <concept id="1068580123155" name="jetbrains.mps.baseLanguage.structure.ExpressionStatement" flags="nn" index="3clFbF">
         <child id="1068580123156" name="expression" index="3clFbG" />
@@ -65,6 +67,10 @@
       </concept>
     </language>
     <language id="7866978e-a0f0-4cc7-81bc-4d213d9375e1" name="jetbrains.mps.lang.smodel">
+      <concept id="1140725362528" name="jetbrains.mps.lang.smodel.structure.Link_SetTargetOperation" flags="nn" index="2oxUTD">
+        <child id="1140725362529" name="linkTarget" index="2oxUTC" />
+      </concept>
+      <concept id="1171999116870" name="jetbrains.mps.lang.smodel.structure.Node_IsNullOperation" flags="nn" index="3w_OXm" />
       <concept id="1172008320231" name="jetbrains.mps.lang.smodel.structure.Node_IsNotNullOperation" flags="nn" index="3x8VRR" />
       <concept id="1180636770613" name="jetbrains.mps.lang.smodel.structure.SNodeCreator" flags="nn" index="3zrR0B">
         <child id="1180636770616" name="createdType" index="3zrR0E" />
@@ -262,6 +268,100 @@
                     <node concept="3CFZ6_" id="6GuOaLNlUUc" role="2OqNvi">
                       <node concept="3CFYIy" id="6GuOaLNlWq7" role="3CFYIz">
                         <ref role="3CFYIx" to="gjk0:6GuOaLNlrDX" resolve="DynamicAnnotation" />
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="2S6QgY" id="2WwgBnYRA9$">
+    <property role="TrG5h" value="ToggleCouplingRelation" />
+    <ref role="2ZfgGC" to="gqxc:2uDla1tgeB_" resolve="ICCAEntry" />
+    <node concept="2S6ZIM" id="2WwgBnYRA9_" role="2ZfVej">
+      <node concept="3clFbS" id="2WwgBnYRA9A" role="2VODD2">
+        <node concept="3clFbJ" id="2WwgBnYRBC6" role="3cqZAp">
+          <node concept="2OqwBi" id="2WwgBnYRCKW" role="3clFbw">
+            <node concept="2OqwBi" id="2WwgBnYRBXK" role="2Oq$k0">
+              <node concept="2Sf5sV" id="2WwgBnYRBL8" role="2Oq$k0" />
+              <node concept="3CFZ6_" id="2WwgBnYRCgk" role="2OqNvi">
+                <node concept="3CFYIy" id="2WwgBnYRCsx" role="3CFYIz">
+                  <ref role="3CFYIx" to="gjk0:2WwgBnYQAHN" resolve="CouplingRelationAnnotation" />
+                </node>
+              </node>
+            </node>
+            <node concept="3w_OXm" id="2WwgBnYRDpv" role="2OqNvi" />
+          </node>
+          <node concept="3clFbS" id="2WwgBnYRBC8" role="3clFbx">
+            <node concept="3cpWs6" id="2WwgBnYRD_R" role="3cqZAp">
+              <node concept="Xl_RD" id="2WwgBnYRDMt" role="3cqZAk">
+                <property role="Xl_RC" value="Add Coupling Relation" />
+              </node>
+            </node>
+          </node>
+          <node concept="9aQIb" id="2WwgBnYRDZd" role="9aQIa">
+            <node concept="3clFbS" id="2WwgBnYRDZe" role="9aQI4">
+              <node concept="3cpWs6" id="2WwgBnYREbU" role="3cqZAp">
+                <node concept="Xl_RD" id="2WwgBnYREow" role="3cqZAk">
+                  <property role="Xl_RC" value="Remove Coupling Relation" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="2Sbjvc" id="2WwgBnYRA9B" role="2ZfgGD">
+      <node concept="3clFbS" id="2WwgBnYRA9C" role="2VODD2">
+        <node concept="3clFbJ" id="2WwgBnYRGxe" role="3cqZAp">
+          <node concept="2OqwBi" id="2WwgBnYRH7z" role="3clFbw">
+            <node concept="2OqwBi" id="2WwgBnYRGEG" role="2Oq$k0">
+              <node concept="2Sf5sV" id="2WwgBnYRGya" role="2Oq$k0" />
+              <node concept="3CFZ6_" id="2WwgBnYRGPa" role="2OqNvi">
+                <node concept="3CFYIy" id="2WwgBnYRGTh" role="3CFYIz">
+                  <ref role="3CFYIx" to="gjk0:2WwgBnYQAHN" resolve="CouplingRelationAnnotation" />
+                </node>
+              </node>
+            </node>
+            <node concept="3w_OXm" id="2WwgBnYRHWg" role="2OqNvi" />
+          </node>
+          <node concept="3clFbS" id="2WwgBnYRGxg" role="3clFbx">
+            <node concept="3clFbF" id="2WwgBnYRI0z" role="3cqZAp">
+              <node concept="2OqwBi" id="2WwgBnYRIxz" role="3clFbG">
+                <node concept="2OqwBi" id="2WwgBnYRI7t" role="2Oq$k0">
+                  <node concept="2Sf5sV" id="2WwgBnYRI0y" role="2Oq$k0" />
+                  <node concept="3CFZ6_" id="2WwgBnYRIiE" role="2OqNvi">
+                    <node concept="3CFYIy" id="2WwgBnYRIl8" role="3CFYIz">
+                      <ref role="3CFYIx" to="gjk0:2WwgBnYQAHN" resolve="CouplingRelationAnnotation" />
+                    </node>
+                  </node>
+                </node>
+                <node concept="2oxUTD" id="2WwgBnYRIPX" role="2OqNvi">
+                  <node concept="2ShNRf" id="2WwgBnYRJdZ" role="2oxUTC">
+                    <node concept="3zrR0B" id="2WwgBnYRKLx" role="2ShVmc">
+                      <node concept="3Tqbb2" id="2WwgBnYRKLz" role="3zrR0E">
+                        <ref role="ehGHo" to="gjk0:2WwgBnYQAHN" resolve="CouplingRelationAnnotation" />
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="9aQIb" id="2WwgBnYRKT1" role="9aQIa">
+            <node concept="3clFbS" id="2WwgBnYRKT2" role="9aQI4">
+              <node concept="3clFbF" id="2WwgBnYRKXZ" role="3cqZAp">
+                <node concept="37vLTI" id="2WwgBnYRM0b" role="3clFbG">
+                  <node concept="10Nm6u" id="2WwgBnYRM6g" role="37vLTx" />
+                  <node concept="2OqwBi" id="2WwgBnYRL4T" role="37vLTJ">
+                    <node concept="2Sf5sV" id="2WwgBnYRKXY" role="2Oq$k0" />
+                    <node concept="3CFZ6_" id="2WwgBnYRLg6" role="2OqNvi">
+                      <node concept="3CFYIy" id="2WwgBnYRLkd" role="3CFYIz">
+                        <ref role="3CFYIx" to="gjk0:2WwgBnYQAHN" resolve="CouplingRelationAnnotation" />
                       </node>
                     </node>
                   </node>

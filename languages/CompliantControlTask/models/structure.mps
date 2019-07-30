@@ -17,6 +17,7 @@
     <import index="cewj" ref="r:cd13618c-02ad-4af8-a3e4-3414c58c4613(Kinematics.structure)" />
     <import index="iobv" ref="r:19496bad-2dd3-478c-9baf-0de95edabf63(Geometry.structure)" />
     <import index="mz1w" ref="r:f0e63708-fe8e-4a7e-94d7-74a74c6e3725(RobotPlatform.structure)" />
+    <import index="gqxc" ref="r:ce334b97-cfdc-4551-a5ec-98bf9b071729(CompliantControlArchitecture.structure)" />
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
   </imports>
   <registry>
@@ -574,6 +575,27 @@
     </node>
     <node concept="PrWs8" id="6gw_H7mTP5H" role="PzmwI">
       <ref role="PrY4T" to="iobv:3qu6RY9oIci" resolve="IKinematicChainLike" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="2WwgBnYQAHN">
+    <property role="EcuMT" value="3395787193591688051" />
+    <property role="TrG5h" value="CouplingRelationAnnotation" />
+    <ref role="1TJDcQ" to="tpck:2ULFgo8_XDk" resolve="NodeAttribute" />
+    <node concept="1TJgyj" id="2WwgBnYQNrp" role="1TKVEi">
+      <property role="IQ2ns" value="3395787193591740121" />
+      <property role="20lmBu" value="reference" />
+      <property role="20kJfa" value="coupling" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="6GuOaLM$LGr" resolve="Coupling" />
+    </node>
+    <node concept="M6xJ_" id="2WwgBnYQALW" role="lGtFl">
+      <property role="Hh88m" value="couplingrelation" />
+      <node concept="trNpa" id="2WwgBnYQM71" role="EQaZv">
+        <ref role="trN6q" to="gqxc:2uDla1tgeB_" resolve="ICCAEntry" />
+      </node>
+      <node concept="tn0Fv" id="2WwgBnYQNrc" role="HhnKV">
+        <property role="tnX3d" value="false" />
+      </node>
     </node>
   </node>
 </model>

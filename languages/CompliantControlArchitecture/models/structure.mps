@@ -272,6 +272,11 @@
     <property role="EcuMT" value="2857908486279694076" />
     <property role="TrG5h" value="CartesianController" />
     <ref role="1TJDcQ" node="2uDla1tg201" resolve="Controller" />
+    <node concept="1TJgyi" id="1_0ru7qJUy" role="1TKVEl">
+      <property role="IQ2nx" value="28430860410355362" />
+      <property role="TrG5h" value="filter" />
+      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+    </node>
     <node concept="1TJgyj" id="5mfFpi9H7Cl" role="1TKVEi">
       <property role="IQ2ns" value="6165337268370569749" />
       <property role="20lmBu" value="aggregation" />
@@ -514,11 +519,6 @@
     <property role="TrG5h" value="MetaDataAnnotation" />
     <property role="3GE5qa" value="annotation" />
     <ref role="1TJDcQ" to="tpck:2ULFgo8_XDk" resolve="NodeAttribute" />
-    <node concept="1TJgyi" id="8pl5m1N2Wz" role="1TKVEl">
-      <property role="IQ2nx" value="151244788720217891" />
-      <property role="TrG5h" value="filter" />
-      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
-    </node>
     <node concept="1TJgyj" id="385B8BrlvsV" role="1TKVEi">
       <property role="IQ2ns" value="3604459192684246843" />
       <property role="20lmBu" value="aggregation" />
@@ -526,13 +526,42 @@
       <property role="20lbJX" value="1" />
       <ref role="20lvS9" to="iobv:3xcS33zIxzH" resolve="IReferenceGeometry" />
     </node>
+    <node concept="1TJgyj" id="2WwgBnZaKwz" role="1TKVEi">
+      <property role="IQ2ns" value="3395787193596971043" />
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="filters" />
+      <property role="20lbJX" value="0..n" />
+      <ref role="20lvS9" to="tpee:f$Xl_Og" resolve="StringLiteral" />
+    </node>
     <node concept="M6xJ_" id="385B8BrkfXl" role="lGtFl">
       <property role="Hh88m" value="CCAMetaDataAnnotation" />
       <node concept="trNpa" id="385B8BrkfXy" role="EQaZv">
         <ref role="trN6q" to="tpck:gw2VY9q" resolve="BaseConcept" />
       </node>
-      <node concept="tn0Fv" id="385B8BrkfXJ" role="HhnKV">
+      <node concept="tn0Fv" id="2WwgBnZaK0e" role="HhnKV">
         <property role="tnX3d" value="false" />
+      </node>
+    </node>
+  </node>
+  <node concept="1TIwiD" id="2WwgBnYUcrO">
+    <property role="EcuMT" value="3395787193592628980" />
+    <property role="3GE5qa" value="annotation" />
+    <property role="TrG5h" value="TaskRelation" />
+    <ref role="1TJDcQ" to="tpck:2ULFgo8_XDk" resolve="NodeAttribute" />
+    <node concept="1TJgyj" id="2WwgBnYUcup" role="1TKVEi">
+      <property role="IQ2ns" value="3395787193592629145" />
+      <property role="20lmBu" value="reference" />
+      <property role="20kJfa" value="task" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="2uDla1tgeB_" resolve="ICCAEntry" />
+    </node>
+    <node concept="M6xJ_" id="2WwgBnYUctM" role="lGtFl">
+      <property role="Hh88m" value="taskrelation" />
+      <node concept="trNpa" id="2WwgBnYUctZ" role="EQaZv">
+        <ref role="trN6q" to="tpck:gw2VY9q" resolve="BaseConcept" />
+      </node>
+      <node concept="tn0Fv" id="2WwgBnYUcuc" role="HhnKV">
+        <property role="tnX3d" value="true" />
       </node>
     </node>
   </node>

@@ -6,6 +6,7 @@
     <use id="b744b93e-0522-4237-a6fd-fa650d0b451a" name="Geometry" version="0" />
     <use id="d6881f78-a85d-4c9e-931e-30879e67afdd" name="Kinematics" version="0" />
     <use id="d6d7f6e1-f407-48f8-a582-7b1489b7163f" name="ProtoBuf" version="0" />
+    <use id="d35899bf-1f8a-4727-b7b5-90d52a21d317" name="CompliantControlTask" version="0" />
   </languages>
   <imports>
     <import index="oet6" ref="r:85b31eb0-6551-4bd7-8659-464e8655dad3(RobotRepository.kinematics)" />
@@ -39,7 +40,15 @@
         <reference id="6165337268368241492" name="link" index="3s7PV0" />
       </concept>
     </language>
+    <language id="d35899bf-1f8a-4727-b7b5-90d52a21d317" name="CompliantControlTask">
+      <concept id="3395787193591688051" name="CompliantControlTask.structure.CouplingRelationAnnotation" flags="ng" index="3hYy$6">
+        <reference id="3395787193591740121" name="coupling" index="3hYRiG" />
+      </concept>
+    </language>
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
+      <concept id="1133920641626" name="jetbrains.mps.lang.core.structure.BaseConcept" flags="ng" index="2VYdi">
+        <child id="5169995583184591170" name="smodelAttribute" index="lGtFl" />
+      </concept>
       <concept id="1169194658468" name="jetbrains.mps.lang.core.structure.INamedConcept" flags="ng" index="TrEIO">
         <property id="1169194664001" name="name" index="TrG5h" />
       </concept>
@@ -80,6 +89,7 @@
         <child id="6165337268391764392" name="frame" index="3vu4KW" />
       </concept>
       <concept id="2857908486279694076" name="CompliantControlArchitecture.structure.CartesianController" flags="ng" index="1UVX9s">
+        <property id="28430860410355362" name="filter" index="273ZWl" />
         <child id="6165337268370569749" name="frame" index="3seXu1" />
       </concept>
       <concept id="2857908486279694373" name="CompliantControlArchitecture.structure.EntryRelation" flags="ng" index="1UVXM5">
@@ -96,7 +106,7 @@
     <property role="TrG5h" value="VF_BarTarget" />
   </node>
   <node concept="1UUkyC" id="3qu6RY9mAsa">
-    <property role="TrG5h" value="RollingTaskArchitecture_SingleRobot_FreeSpace" />
+    <property role="TrG5h" value="Folding_SR_0" />
     <node concept="1UVXM5" id="3qu6RY9mAP5" role="1UUrXR">
       <property role="3_YC1b" value="KUKA_Left" />
       <node concept="1UUrRU" id="3qu6RY9mB0v" role="1UVXK3">
@@ -110,6 +120,9 @@
           </node>
           <node concept="3vtaTr" id="3qu6RY9mB03" role="3vtaj5">
             <property role="25LATQ" value="false" />
+          </node>
+          <node concept="3hYy$6" id="2WwgBnYRZMq" role="lGtFl">
+            <ref role="3hYRiG" to="au3b:3qu6RY9uIGq" resolve="motion_tracking" />
           </node>
         </node>
         <node concept="3ve2oW" id="3qu6RY9mB25" role="1UUn57">
@@ -160,7 +173,7 @@
     <property role="TrG5h" value="VirtualManipulatorFrame" />
   </node>
   <node concept="1UUkyC" id="3qu6RY9mBiR">
-    <property role="TrG5h" value="RollingTaskArchitecture_SingleRobot_PressingGlobalZ" />
+    <property role="TrG5h" value="Folding_SR_1" />
     <node concept="1UVXM5" id="3qu6RY9mBiS" role="1UUrXR">
       <property role="3_YC1b" value="KUKA_Left" />
       <node concept="1UUn3G" id="3qu6RY9mBna" role="1UVXK3">
@@ -169,6 +182,7 @@
         </node>
         <node concept="1UVX9s" id="3qu6RY9mBpG" role="2t5XIu">
           <property role="TrG5h" value="force_constraint" />
+          <property role="273ZWl" value="Filter:Folding_SR_1:KUKA_Left:lwr_tool_link:C" />
           <node concept="30yrG9" id="3qu6RY9uIxR" role="3seXu1">
             <ref role="3s7PV0" to="oet6:C_g3bnWAzK" resolve="lwr_tool_link" />
           </node>
@@ -182,6 +196,7 @@
           </node>
           <node concept="1UVX9s" id="3qu6RY9mBiV" role="1UUn5U">
             <property role="TrG5h" value="motion_tracking" />
+            <property role="273ZWl" value="Filter:Folding_SR_1:KUKA_Left:lwr_tool_link:M" />
             <node concept="30yrG9" id="3qu6RY9uIy5" role="3seXu1">
               <ref role="3s7PV0" to="oet6:C_g3bnWAzK" resolve="lwr_tool_link" />
             </node>
@@ -212,6 +227,7 @@
         </node>
         <node concept="1UVX9s" id="3qu6RY9mBzu" role="2t5XIu">
           <property role="TrG5h" value="force_constraint" />
+          <property role="273ZWl" value="Filter:Folding_SR_1:KUKA_Right:lwr_tool_link:C" />
           <node concept="30yrG9" id="3qu6RY9uIyx" role="3seXu1">
             <ref role="3s7PV0" to="oet6:C_g3bnWAzK" resolve="lwr_tool_link" />
           </node>
@@ -225,6 +241,7 @@
           </node>
           <node concept="1UVX9s" id="3qu6RY9mBzz" role="1UUn5U">
             <property role="TrG5h" value="motion_tracking" />
+            <property role="273ZWl" value="Filter:Folding_SR_1:KUKA_Right:lwr_tool_link:M" />
             <node concept="30yrG9" id="3qu6RY9uIyX" role="3seXu1">
               <ref role="3s7PV0" to="oet6:C_g3bnWAzK" resolve="lwr_tool_link" />
             </node>
@@ -249,15 +266,16 @@
     </node>
   </node>
   <node concept="1UUkyC" id="3qu6RY9mBDN">
-    <property role="TrG5h" value="RollingTaskArchitecture_CombinedRobots_PressingGlobalZandCompliantX" />
+    <property role="TrG5h" value="Folding_CR_2" />
     <node concept="1UVXM5" id="3qu6RY9mBDO" role="1UUrXR">
-      <property role="3_YC1b" value="hierTODO" />
+      <property role="3_YC1b" value="RLeftRight" />
       <node concept="1UUn3G" id="3qu6RY9mBDP" role="1UVXK3">
         <node concept="30yrw0" id="3qu6RY9mBIP" role="3s6PJk">
           <ref role="30yrEZ" node="3qu6RY9mAv1" resolve="VirtualManipulatorFrame" />
         </node>
         <node concept="1UVX9s" id="3qu6RY9mBDR" role="2t5XIu">
           <property role="TrG5h" value="force_constraint" />
+          <property role="273ZWl" value="Filter:Folding_CR_2:RLeftRight:VirtualManipulatorFrame:C" />
           <node concept="30yrw0" id="3qu6RY9mBJ3" role="3seXu1">
             <ref role="30yrEZ" node="3qu6RY9mAv1" resolve="VirtualManipulatorFrame" />
           </node>
@@ -271,6 +289,7 @@
           </node>
           <node concept="1UVX9s" id="3qu6RY9mBDW" role="1UUn5U">
             <property role="TrG5h" value="motion_tracking" />
+            <property role="273ZWl" value="Filter:Folding_CR_2:RLeftRight:VirtualManipulatorFrame:M" />
             <node concept="30yrw0" id="3qu6RY9mBJh" role="3seXu1">
               <ref role="30yrEZ" node="3qu6RY9mAv1" resolve="VirtualManipulatorFrame" />
             </node>
