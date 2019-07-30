@@ -232,6 +232,12 @@
       <property role="20lbJX" value="1" />
       <ref role="20lvS9" to="iobv:5mfFpi9_5x3" resolve="IReferenceFrameRef" />
     </node>
+    <node concept="1TJgyj" id="5l3S79Y0dPg" role="1TKVEi">
+      <property role="IQ2ns" value="6144001099008367952" />
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="filter" />
+      <ref role="20lvS9" node="5l3S79XWRuI" resolve="IFilter" />
+    </node>
     <node concept="PrWs8" id="5mfFpi9$Dp9" role="PzmwI">
       <ref role="PrY4T" to="tpck:3fifI_xCcJN" resolve="ScopeProvider" />
     </node>
@@ -272,6 +278,12 @@
     <property role="EcuMT" value="2857908486279694076" />
     <property role="TrG5h" value="CartesianController" />
     <ref role="1TJDcQ" node="2uDla1tg201" resolve="Controller" />
+    <node concept="1TJgyj" id="5l3S79Y2mjq" role="1TKVEi">
+      <property role="IQ2ns" value="6144001099008926938" />
+      <property role="20lmBu" value="reference" />
+      <property role="20kJfa" value="filterImplementation" />
+      <ref role="20lvS9" node="5l3S79XWRuI" resolve="IFilter" />
+    </node>
     <node concept="1TJgyi" id="1_0ru7qJUy" role="1TKVEl">
       <property role="IQ2nx" value="28430860410355362" />
       <property role="TrG5h" value="filter" />
@@ -533,6 +545,12 @@
       <property role="20lbJX" value="0..n" />
       <ref role="20lvS9" to="tpee:f$Xl_Og" resolve="StringLiteral" />
     </node>
+    <node concept="1TJgyj" id="5l3S79Y1GUV" role="1TKVEi">
+      <property role="IQ2ns" value="6144001099008757435" />
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="filterImplementation" />
+      <ref role="20lvS9" node="5l3S79XWRuI" resolve="IFilter" />
+    </node>
     <node concept="M6xJ_" id="385B8BrkfXl" role="lGtFl">
       <property role="Hh88m" value="CCAMetaDataAnnotation" />
       <node concept="trNpa" id="385B8BrkfXy" role="EQaZv">
@@ -563,6 +581,67 @@
       <node concept="tn0Fv" id="2WwgBnYUcuc" role="HhnKV">
         <property role="tnX3d" value="true" />
       </node>
+    </node>
+  </node>
+  <node concept="1TIwiD" id="5l3S79XWRsK">
+    <property role="EcuMT" value="6144001099007489840" />
+    <property role="TrG5h" value="ConstaintComponentWiseFilter" />
+    <property role="3GE5qa" value="filter" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyi" id="5l3S79Y09kp" role="1TKVEl">
+      <property role="IQ2nx" value="6144001099008349465" />
+      <property role="TrG5h" value="px" />
+      <ref role="AX2Wp" to="tpee:4_5hYVHKxAU" resolve="_FloatNumberValue" />
+    </node>
+    <node concept="1TJgyi" id="5l3S79Y09kA" role="1TKVEl">
+      <property role="IQ2nx" value="6144001099008349478" />
+      <property role="TrG5h" value="py" />
+      <ref role="AX2Wp" to="tpee:4_5hYVHKxAU" resolve="_FloatNumberValue" />
+    </node>
+    <node concept="1TJgyi" id="5l3S79Y09kZ" role="1TKVEl">
+      <property role="IQ2nx" value="6144001099008349503" />
+      <property role="TrG5h" value="pz" />
+      <ref role="AX2Wp" to="tpee:4_5hYVHKxAU" resolve="_FloatNumberValue" />
+    </node>
+    <node concept="1TJgyi" id="5l3S79Y09l$" role="1TKVEl">
+      <property role="IQ2nx" value="6144001099008349540" />
+      <property role="TrG5h" value="rx" />
+      <ref role="AX2Wp" to="tpee:4_5hYVHKxAU" resolve="_FloatNumberValue" />
+    </node>
+    <node concept="1TJgyi" id="5l3S79Y09ml" role="1TKVEl">
+      <property role="IQ2nx" value="6144001099008349589" />
+      <property role="TrG5h" value="ry" />
+      <ref role="AX2Wp" to="tpee:4_5hYVHKxAU" resolve="_FloatNumberValue" />
+    </node>
+    <node concept="1TJgyi" id="5l3S79Y09ni" role="1TKVEl">
+      <property role="IQ2nx" value="6144001099008349650" />
+      <property role="TrG5h" value="rz" />
+      <ref role="AX2Wp" to="tpee:4_5hYVHKxAU" resolve="_FloatNumberValue" />
+    </node>
+    <node concept="PrWs8" id="5l3S79XWRwJ" role="PzmwI">
+      <ref role="PrY4T" node="5l3S79XWRuI" resolve="IFilter" />
+    </node>
+  </node>
+  <node concept="PlHQZ" id="5l3S79XWRuI">
+    <property role="EcuMT" value="6144001099007489966" />
+    <property role="TrG5h" value="IFilter" />
+    <property role="3GE5qa" value="filter" />
+    <node concept="1TJgyi" id="5l3S79Y1vUY" role="1TKVEl">
+      <property role="IQ2nx" value="6144001099008704190" />
+      <property role="TrG5h" value="internalFilterName" />
+      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="5l3S79Y09Ve">
+    <property role="EcuMT" value="6144001099008351950" />
+    <property role="TrG5h" value="ExternalFilter" />
+    <property role="3GE5qa" value="filter" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="PrWs8" id="5l3S79Y09Vl" role="PzmwI">
+      <ref role="PrY4T" node="5l3S79XWRuI" resolve="IFilter" />
+    </node>
+    <node concept="PrWs8" id="5l3S79Y09XG" role="PzmwI">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
     </node>
   </node>
 </model>

@@ -58,6 +58,14 @@
         <child id="2646295839998104470" name="outB" index="2t5XIt" />
         <child id="2646295839998104469" name="outA" index="2t5XIu" />
       </concept>
+      <concept id="6144001099007489840" name="CompliantControlArchitecture.structure.ConstaintComponentWiseFilter" flags="ng" index="CG9t2">
+        <property id="6144001099008349540" name="rx" index="FgRkm" />
+        <property id="6144001099008349503" name="pz" index="FgRld" />
+        <property id="6144001099008349478" name="py" index="FgRlk" />
+        <property id="6144001099008349465" name="px" index="FgRlF" />
+        <property id="6144001099008349650" name="rz" index="FgRmw" />
+        <property id="6144001099008349589" name="ry" index="FgRnB" />
+      </concept>
       <concept id="6165337268399446442" name="CompliantControlArchitecture.structure.INORelation" flags="ng" index="3uSFgY">
         <child id="6165337268399446444" name="outN" index="3uSFgS" />
       </concept>
@@ -74,6 +82,7 @@
         <child id="2857908486279326679" name="ccaentries" index="1UUrXR" />
       </concept>
       <concept id="2857908486279275596" name="CompliantControlArchitecture.structure.MotionForceSubSpaceRelation" flags="ng" index="1UUn3G">
+        <child id="6144001099008367952" name="filter" index="FgNOy" />
         <child id="6165337268368504384" name="frame" index="3s6PJk" />
       </concept>
       <concept id="2857908486279274497" name="CompliantControlArchitecture.structure.Controller" flags="ng" index="1UUnix">
@@ -90,6 +99,7 @@
       </concept>
       <concept id="2857908486279694076" name="CompliantControlArchitecture.structure.CartesianController" flags="ng" index="1UVX9s">
         <property id="28430860410355362" name="filter" index="273ZWl" />
+        <reference id="6144001099008926938" name="filterImplementation" index="FiCiC" />
         <child id="6165337268370569749" name="frame" index="3seXu1" />
       </concept>
       <concept id="2857908486279694373" name="CompliantControlArchitecture.structure.EntryRelation" flags="ng" index="1UVXM5">
@@ -182,7 +192,8 @@
         </node>
         <node concept="1UVX9s" id="3qu6RY9mBpG" role="2t5XIu">
           <property role="TrG5h" value="force_constraint" />
-          <property role="273ZWl" value="Filter:Folding_SR_1:KUKA_Left:lwr_tool_link:C" />
+          <property role="273ZWl" value="Filter:Folding_SR_1:KUKA_Left:lwr_tool_link:C:3935613358947595722" />
+          <ref role="FiCiC" node="5l3S79Y4oUh" />
           <node concept="30yrG9" id="3qu6RY9uIxR" role="3seXu1">
             <ref role="3s7PV0" to="oet6:C_g3bnWAzK" resolve="lwr_tool_link" />
           </node>
@@ -196,7 +207,8 @@
           </node>
           <node concept="1UVX9s" id="3qu6RY9mBiV" role="1UUn5U">
             <property role="TrG5h" value="motion_tracking" />
-            <property role="273ZWl" value="Filter:Folding_SR_1:KUKA_Left:lwr_tool_link:M" />
+            <property role="273ZWl" value="Filter:Folding_SR_1:KUKA_Left:lwr_tool_link:M:3935613358947595722" />
+            <ref role="FiCiC" node="5l3S79Y4oUh" />
             <node concept="30yrG9" id="3qu6RY9uIy5" role="3seXu1">
               <ref role="3s7PV0" to="oet6:C_g3bnWAzK" resolve="lwr_tool_link" />
             </node>
@@ -214,6 +226,14 @@
             </node>
           </node>
         </node>
+        <node concept="CG9t2" id="5l3S79Y4oUh" role="FgNOy">
+          <property role="FgRlF" value="0.0f" />
+          <property role="FgRlk" value="0.0f" />
+          <property role="FgRld" value="1.0f" />
+          <property role="FgRkm" value="0.0f" />
+          <property role="FgRnB" value="0.0f" />
+          <property role="FgRmw" value="0.0f" />
+        </node>
       </node>
       <node concept="pQWJo" id="3qu6RY9uIxf" role="2ZZomq">
         <ref role="pNcCJ" to="d49h:C_g3bnXz3c" resolve="full_arm" />
@@ -227,7 +247,8 @@
         </node>
         <node concept="1UVX9s" id="3qu6RY9mBzu" role="2t5XIu">
           <property role="TrG5h" value="force_constraint" />
-          <property role="273ZWl" value="Filter:Folding_SR_1:KUKA_Right:lwr_tool_link:C" />
+          <property role="273ZWl" value="Filter:Folding_SR_1:KUKA_Right:lwr_tool_link:C:3935613358947596508" />
+          <ref role="FiCiC" node="5l3S79Y4oXJ" />
           <node concept="30yrG9" id="3qu6RY9uIyx" role="3seXu1">
             <ref role="3s7PV0" to="oet6:C_g3bnWAzK" resolve="lwr_tool_link" />
           </node>
@@ -241,7 +262,8 @@
           </node>
           <node concept="1UVX9s" id="3qu6RY9mBzz" role="1UUn5U">
             <property role="TrG5h" value="motion_tracking" />
-            <property role="273ZWl" value="Filter:Folding_SR_1:KUKA_Right:lwr_tool_link:M" />
+            <property role="273ZWl" value="Filter:Folding_SR_1:KUKA_Right:lwr_tool_link:M:3935613358947596508" />
+            <ref role="FiCiC" node="5l3S79Y4oXJ" />
             <node concept="30yrG9" id="3qu6RY9uIyX" role="3seXu1">
               <ref role="3s7PV0" to="oet6:C_g3bnWAzK" resolve="lwr_tool_link" />
             </node>
@@ -259,6 +281,14 @@
             </node>
           </node>
         </node>
+        <node concept="CG9t2" id="5l3S79Y4oXJ" role="FgNOy">
+          <property role="FgRlF" value="0.0f" />
+          <property role="FgRlk" value="0.0f" />
+          <property role="FgRld" value="1.0f" />
+          <property role="FgRkm" value="0.0f" />
+          <property role="FgRnB" value="0.0f" />
+          <property role="FgRmw" value="0.0f" />
+        </node>
       </node>
       <node concept="pQWJo" id="3qu6RY9uIxs" role="2ZZomq">
         <ref role="pNcCJ" to="d49h:C_g3bnXz3c" resolve="full_arm" />
@@ -275,7 +305,8 @@
         </node>
         <node concept="1UVX9s" id="3qu6RY9mBDR" role="2t5XIu">
           <property role="TrG5h" value="force_constraint" />
-          <property role="273ZWl" value="Filter:Folding_CR_2:RLeftRight:VirtualManipulatorFrame:C" />
+          <property role="273ZWl" value="Filter:Folding_CR_2:RLeftRight:VirtualManipulatorFrame:C:3935613358947596917" />
+          <ref role="FiCiC" node="5l3S79Y1sWI" />
           <node concept="30yrw0" id="3qu6RY9mBJ3" role="3seXu1">
             <ref role="30yrEZ" node="3qu6RY9mAv1" resolve="VirtualManipulatorFrame" />
           </node>
@@ -289,7 +320,8 @@
           </node>
           <node concept="1UVX9s" id="3qu6RY9mBDW" role="1UUn5U">
             <property role="TrG5h" value="motion_tracking" />
-            <property role="273ZWl" value="Filter:Folding_CR_2:RLeftRight:VirtualManipulatorFrame:M" />
+            <property role="273ZWl" value="Filter:Folding_CR_2:RLeftRight:VirtualManipulatorFrame:M:3935613358947596917" />
+            <ref role="FiCiC" node="5l3S79Y1sWI" />
             <node concept="30yrw0" id="3qu6RY9mBJh" role="3seXu1">
               <ref role="30yrEZ" node="3qu6RY9mAv1" resolve="VirtualManipulatorFrame" />
             </node>
@@ -315,6 +347,14 @@
               <node concept="2ZU78l" id="1bQsC10G6bM" role="3ve2oX" />
             </node>
           </node>
+        </node>
+        <node concept="CG9t2" id="5l3S79Y1sWI" role="FgNOy">
+          <property role="FgRlF" value="0.0f" />
+          <property role="FgRlk" value="0.0f" />
+          <property role="FgRld" value="1.0f" />
+          <property role="FgRkm" value="0.0f" />
+          <property role="FgRnB" value="0.0f" />
+          <property role="FgRmw" value="0.0f" />
         </node>
       </node>
       <node concept="2ZZAyO" id="3qu6RY9rcr$" role="2ZZomq">
