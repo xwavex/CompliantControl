@@ -50,6 +50,9 @@
       <concept id="1070475926800" name="jetbrains.mps.baseLanguage.structure.StringLiteral" flags="nn" index="Xl_RD">
         <property id="1070475926801" name="value" index="Xl_RC" />
       </concept>
+      <concept id="1081236700937" name="jetbrains.mps.baseLanguage.structure.StaticMethodCall" flags="nn" index="2YIFZM">
+        <reference id="1144433194310" name="classConcept" index="1Pybhc" />
+      </concept>
       <concept id="1070534370425" name="jetbrains.mps.baseLanguage.structure.IntegerType" flags="in" index="10Oyi0" />
       <concept id="1068431474542" name="jetbrains.mps.baseLanguage.structure.VariableDeclaration" flags="ng" index="33uBYm">
         <child id="1068431790190" name="initializer" index="33vP2m" />
@@ -3194,18 +3197,28 @@
                     <node concept="3zFVjK" id="5l3S79XS4j6" role="3zH0cK">
                       <node concept="3clFbS" id="5l3S79XS4j7" role="2VODD2">
                         <node concept="3clFbF" id="5l3S79Y7uus" role="3cqZAp">
-                          <node concept="2OqwBi" id="5l3S79Y7_46" role="3clFbG">
-                            <node concept="2OqwBi" id="5l3S79Y7x$U" role="2Oq$k0">
-                              <node concept="2OqwBi" id="5l3S79Y7uHo" role="2Oq$k0">
-                                <node concept="30H73N" id="5l3S79Y7uur" role="2Oq$k0" />
-                                <node concept="3Tsc0h" id="5l3S79Y7v6_" role="2OqNvi">
-                                  <ref role="3TtcxE" to="gqxc:2WwgBnZaKwz" resolve="filters" />
+                          <node concept="3cpWs3" id="7YMZac6Vs6p" role="3clFbG">
+                            <node concept="Xl_RD" id="7YMZac6Vsbz" role="3uHU7w">
+                              <property role="Xl_RC" value="\&quot;" />
+                            </node>
+                            <node concept="3cpWs3" id="7YMZac6VnOE" role="3uHU7B">
+                              <node concept="Xl_RD" id="7YMZac6VoBz" role="3uHU7B">
+                                <property role="Xl_RC" value="\&quot;" />
+                              </node>
+                              <node concept="2OqwBi" id="5l3S79Y7_46" role="3uHU7w">
+                                <node concept="2OqwBi" id="5l3S79Y7x$U" role="2Oq$k0">
+                                  <node concept="2OqwBi" id="5l3S79Y7uHo" role="2Oq$k0">
+                                    <node concept="30H73N" id="5l3S79Y7uur" role="2Oq$k0" />
+                                    <node concept="3Tsc0h" id="5l3S79Y7v6_" role="2OqNvi">
+                                      <ref role="3TtcxE" to="gqxc:2WwgBnZaKwz" resolve="filters" />
+                                    </node>
+                                  </node>
+                                  <node concept="1uHKPH" id="5l3S79Y7zfS" role="2OqNvi" />
+                                </node>
+                                <node concept="3TrcHB" id="5l3S79Y7_rG" role="2OqNvi">
+                                  <ref role="3TsBF5" to="tpee:f$Xl_Oh" resolve="value" />
                                 </node>
                               </node>
-                              <node concept="1uHKPH" id="5l3S79Y7zfS" role="2OqNvi" />
-                            </node>
-                            <node concept="3TrcHB" id="5l3S79Y7_rG" role="2OqNvi">
-                              <ref role="3TsBF5" to="tpee:f$Xl_Oh" resolve="value" />
                             </node>
                           </node>
                         </node>
@@ -3302,27 +3315,31 @@
                               <node concept="d57v9" id="5l3S79Y80AT" role="3clFbG">
                                 <node concept="3cpWs3" id="5l3S79Y87oB" role="37vLTx">
                                   <node concept="Xl_RD" id="5l3S79Y87PJ" role="3uHU7w">
-                                    <property role="Xl_RC" value=", 0, 0, 0, 0, 0], " />
+                                    <property role="Xl_RC" value=", 0.0, 0.0, 0.0, 0.0, 0.0], " />
                                   </node>
                                   <node concept="3cpWs3" id="5l3S79Y8354" role="3uHU7B">
                                     <node concept="Xl_RD" id="5l3S79Y81sc" role="3uHU7B">
                                       <property role="Xl_RC" value="[" />
                                     </node>
-                                    <node concept="2OqwBi" id="5l3S79Y85SN" role="3uHU7w">
-                                      <node concept="1PxgMI" id="5l3S79Y856t" role="2Oq$k0">
-                                        <property role="1BlNFB" value="true" />
-                                        <node concept="chp4Y" id="5l3S79Y85q4" role="3oSUPX">
-                                          <ref role="cht4Q" to="gqxc:5l3S79XWRsK" resolve="ConstaintComponentWiseFilter" />
-                                        </node>
-                                        <node concept="2OqwBi" id="5l3S79Y83Md" role="1m5AlR">
-                                          <node concept="30H73N" id="5l3S79Y83n2" role="2Oq$k0" />
-                                          <node concept="3TrEf2" id="5l3S79Y84js" role="2OqNvi">
-                                            <ref role="3Tt5mk" to="gqxc:5l3S79Y1GUV" resolve="filterImplementation" />
+                                    <node concept="2YIFZM" id="51xsedHcMcb" role="3uHU7w">
+                                      <ref role="37wK5l" to="wyt6:~Float.parseFloat(java.lang.String):float" resolve="parseFloat" />
+                                      <ref role="1Pybhc" to="wyt6:~Float" resolve="Float" />
+                                      <node concept="2OqwBi" id="5l3S79Y85SN" role="37wK5m">
+                                        <node concept="1PxgMI" id="5l3S79Y856t" role="2Oq$k0">
+                                          <property role="1BlNFB" value="true" />
+                                          <node concept="chp4Y" id="5l3S79Y85q4" role="3oSUPX">
+                                            <ref role="cht4Q" to="gqxc:5l3S79XWRsK" resolve="ConstaintComponentWiseFilter" />
+                                          </node>
+                                          <node concept="2OqwBi" id="5l3S79Y83Md" role="1m5AlR">
+                                            <node concept="30H73N" id="5l3S79Y83n2" role="2Oq$k0" />
+                                            <node concept="3TrEf2" id="5l3S79Y84js" role="2OqNvi">
+                                              <ref role="3Tt5mk" to="gqxc:5l3S79Y1GUV" resolve="filterImplementation" />
+                                            </node>
                                           </node>
                                         </node>
-                                      </node>
-                                      <node concept="3TrcHB" id="5l3S79Y86lq" role="2OqNvi">
-                                        <ref role="3TsBF5" to="gqxc:5l3S79Y09kp" resolve="px" />
+                                        <node concept="3TrcHB" id="5l3S79Y86lq" role="2OqNvi">
+                                          <ref role="3TsBF5" to="gqxc:5l3S79Y09kp" resolve="px" />
+                                        </node>
                                       </node>
                                     </node>
                                   </node>
@@ -3336,27 +3353,31 @@
                               <node concept="d57v9" id="5l3S79Y8f9U" role="3clFbG">
                                 <node concept="3cpWs3" id="5l3S79Y8f9V" role="37vLTx">
                                   <node concept="Xl_RD" id="5l3S79Y8f9W" role="3uHU7w">
-                                    <property role="Xl_RC" value=", 0, 0, 0, 0], " />
+                                    <property role="Xl_RC" value=", 0.0, 0.0, 0.0, 0.0], " />
                                   </node>
                                   <node concept="3cpWs3" id="5l3S79Y8f9X" role="3uHU7B">
                                     <node concept="Xl_RD" id="5l3S79Y8f9Y" role="3uHU7B">
-                                      <property role="Xl_RC" value="[0, " />
+                                      <property role="Xl_RC" value="[0.0, " />
                                     </node>
-                                    <node concept="2OqwBi" id="5l3S79Y8f9Z" role="3uHU7w">
-                                      <node concept="1PxgMI" id="5l3S79Y8fa0" role="2Oq$k0">
-                                        <property role="1BlNFB" value="true" />
-                                        <node concept="chp4Y" id="5l3S79Y8fa1" role="3oSUPX">
-                                          <ref role="cht4Q" to="gqxc:5l3S79XWRsK" resolve="ConstaintComponentWiseFilter" />
-                                        </node>
-                                        <node concept="2OqwBi" id="5l3S79Y8fa2" role="1m5AlR">
-                                          <node concept="30H73N" id="5l3S79Y8fa3" role="2Oq$k0" />
-                                          <node concept="3TrEf2" id="5l3S79Y8fa4" role="2OqNvi">
-                                            <ref role="3Tt5mk" to="gqxc:5l3S79Y1GUV" resolve="filterImplementation" />
+                                    <node concept="2YIFZM" id="51xsedHd8dN" role="3uHU7w">
+                                      <ref role="1Pybhc" to="wyt6:~Float" resolve="Float" />
+                                      <ref role="37wK5l" to="wyt6:~Float.parseFloat(java.lang.String):float" resolve="parseFloat" />
+                                      <node concept="2OqwBi" id="51xsedHd8dO" role="37wK5m">
+                                        <node concept="1PxgMI" id="51xsedHd8dP" role="2Oq$k0">
+                                          <property role="1BlNFB" value="true" />
+                                          <node concept="chp4Y" id="51xsedHd8dQ" role="3oSUPX">
+                                            <ref role="cht4Q" to="gqxc:5l3S79XWRsK" resolve="ConstaintComponentWiseFilter" />
+                                          </node>
+                                          <node concept="2OqwBi" id="51xsedHd8dR" role="1m5AlR">
+                                            <node concept="30H73N" id="51xsedHd8dS" role="2Oq$k0" />
+                                            <node concept="3TrEf2" id="51xsedHd8dT" role="2OqNvi">
+                                              <ref role="3Tt5mk" to="gqxc:5l3S79Y1GUV" resolve="filterImplementation" />
+                                            </node>
                                           </node>
                                         </node>
-                                      </node>
-                                      <node concept="3TrcHB" id="5l3S79Y8mKS" role="2OqNvi">
-                                        <ref role="3TsBF5" to="gqxc:5l3S79Y09kA" resolve="py" />
+                                        <node concept="3TrcHB" id="51xsedHdeP3" role="2OqNvi">
+                                          <ref role="3TsBF5" to="gqxc:5l3S79Y09kA" resolve="py" />
+                                        </node>
                                       </node>
                                     </node>
                                   </node>
@@ -3370,27 +3391,31 @@
                               <node concept="d57v9" id="5l3S79Y8p0a" role="3clFbG">
                                 <node concept="3cpWs3" id="5l3S79Y8p0b" role="37vLTx">
                                   <node concept="Xl_RD" id="5l3S79Y8p0c" role="3uHU7w">
-                                    <property role="Xl_RC" value=", 0, 0, 0], " />
+                                    <property role="Xl_RC" value=", 0.0, 0.0, 0.0], " />
                                   </node>
                                   <node concept="3cpWs3" id="5l3S79Y8p0d" role="3uHU7B">
                                     <node concept="Xl_RD" id="5l3S79Y8p0e" role="3uHU7B">
-                                      <property role="Xl_RC" value="[0, 0, " />
+                                      <property role="Xl_RC" value="[0.0, 0.0, " />
                                     </node>
-                                    <node concept="2OqwBi" id="5l3S79Y8p0f" role="3uHU7w">
-                                      <node concept="1PxgMI" id="5l3S79Y8p0g" role="2Oq$k0">
-                                        <property role="1BlNFB" value="true" />
-                                        <node concept="chp4Y" id="5l3S79Y8p0h" role="3oSUPX">
-                                          <ref role="cht4Q" to="gqxc:5l3S79XWRsK" resolve="ConstaintComponentWiseFilter" />
-                                        </node>
-                                        <node concept="2OqwBi" id="5l3S79Y8p0i" role="1m5AlR">
-                                          <node concept="30H73N" id="5l3S79Y8p0j" role="2Oq$k0" />
-                                          <node concept="3TrEf2" id="5l3S79Y8p0k" role="2OqNvi">
-                                            <ref role="3Tt5mk" to="gqxc:5l3S79Y1GUV" resolve="filterImplementation" />
+                                    <node concept="2YIFZM" id="51xsedHdfJC" role="3uHU7w">
+                                      <ref role="1Pybhc" to="wyt6:~Float" resolve="Float" />
+                                      <ref role="37wK5l" to="wyt6:~Float.parseFloat(java.lang.String):float" resolve="parseFloat" />
+                                      <node concept="2OqwBi" id="51xsedHdfJD" role="37wK5m">
+                                        <node concept="1PxgMI" id="51xsedHdfJE" role="2Oq$k0">
+                                          <property role="1BlNFB" value="true" />
+                                          <node concept="chp4Y" id="51xsedHdfJF" role="3oSUPX">
+                                            <ref role="cht4Q" to="gqxc:5l3S79XWRsK" resolve="ConstaintComponentWiseFilter" />
+                                          </node>
+                                          <node concept="2OqwBi" id="51xsedHdfJG" role="1m5AlR">
+                                            <node concept="30H73N" id="51xsedHdfJH" role="2Oq$k0" />
+                                            <node concept="3TrEf2" id="51xsedHdfJI" role="2OqNvi">
+                                              <ref role="3Tt5mk" to="gqxc:5l3S79Y1GUV" resolve="filterImplementation" />
+                                            </node>
                                           </node>
                                         </node>
-                                      </node>
-                                      <node concept="3TrcHB" id="5l3S79Y8xkO" role="2OqNvi">
-                                        <ref role="3TsBF5" to="gqxc:5l3S79Y09kZ" resolve="pz" />
+                                        <node concept="3TrcHB" id="51xsedHdmnp" role="2OqNvi">
+                                          <ref role="3TsBF5" to="gqxc:5l3S79Y09kZ" resolve="pz" />
+                                        </node>
                                       </node>
                                     </node>
                                   </node>
@@ -3404,27 +3429,31 @@
                               <node concept="d57v9" id="5l3S79Y8y93" role="3clFbG">
                                 <node concept="3cpWs3" id="5l3S79Y8y94" role="37vLTx">
                                   <node concept="Xl_RD" id="5l3S79Y8y95" role="3uHU7w">
-                                    <property role="Xl_RC" value=", 0, 0], " />
+                                    <property role="Xl_RC" value=", 0.0, 0.0], " />
                                   </node>
                                   <node concept="3cpWs3" id="5l3S79Y8y96" role="3uHU7B">
                                     <node concept="Xl_RD" id="5l3S79Y8y97" role="3uHU7B">
-                                      <property role="Xl_RC" value="[0, 0, 0, " />
+                                      <property role="Xl_RC" value="[0.0, 0.0, 0.0, " />
                                     </node>
-                                    <node concept="2OqwBi" id="5l3S79Y8y98" role="3uHU7w">
-                                      <node concept="1PxgMI" id="5l3S79Y8y99" role="2Oq$k0">
-                                        <property role="1BlNFB" value="true" />
-                                        <node concept="chp4Y" id="5l3S79Y8y9a" role="3oSUPX">
-                                          <ref role="cht4Q" to="gqxc:5l3S79XWRsK" resolve="ConstaintComponentWiseFilter" />
-                                        </node>
-                                        <node concept="2OqwBi" id="5l3S79Y8y9b" role="1m5AlR">
-                                          <node concept="30H73N" id="5l3S79Y8y9c" role="2Oq$k0" />
-                                          <node concept="3TrEf2" id="5l3S79Y8y9d" role="2OqNvi">
-                                            <ref role="3Tt5mk" to="gqxc:5l3S79Y1GUV" resolve="filterImplementation" />
+                                    <node concept="2YIFZM" id="51xsedHdmTz" role="3uHU7w">
+                                      <ref role="1Pybhc" to="wyt6:~Float" resolve="Float" />
+                                      <ref role="37wK5l" to="wyt6:~Float.parseFloat(java.lang.String):float" resolve="parseFloat" />
+                                      <node concept="2OqwBi" id="51xsedHdmT$" role="37wK5m">
+                                        <node concept="1PxgMI" id="51xsedHdmT_" role="2Oq$k0">
+                                          <property role="1BlNFB" value="true" />
+                                          <node concept="chp4Y" id="51xsedHdmTA" role="3oSUPX">
+                                            <ref role="cht4Q" to="gqxc:5l3S79XWRsK" resolve="ConstaintComponentWiseFilter" />
+                                          </node>
+                                          <node concept="2OqwBi" id="51xsedHdmTB" role="1m5AlR">
+                                            <node concept="30H73N" id="51xsedHdmTC" role="2Oq$k0" />
+                                            <node concept="3TrEf2" id="51xsedHdmTD" role="2OqNvi">
+                                              <ref role="3Tt5mk" to="gqxc:5l3S79Y1GUV" resolve="filterImplementation" />
+                                            </node>
                                           </node>
                                         </node>
-                                      </node>
-                                      <node concept="3TrcHB" id="5l3S79Y8EhV" role="2OqNvi">
-                                        <ref role="3TsBF5" to="gqxc:5l3S79Y09l$" resolve="rx" />
+                                        <node concept="3TrcHB" id="51xsedHdt96" role="2OqNvi">
+                                          <ref role="3TsBF5" to="gqxc:5l3S79Y09l$" resolve="rx" />
+                                        </node>
                                       </node>
                                     </node>
                                   </node>
@@ -3438,27 +3467,31 @@
                               <node concept="d57v9" id="5l3S79Y8F92" role="3clFbG">
                                 <node concept="3cpWs3" id="5l3S79Y8F93" role="37vLTx">
                                   <node concept="Xl_RD" id="5l3S79Y8F94" role="3uHU7w">
-                                    <property role="Xl_RC" value=", 0], " />
+                                    <property role="Xl_RC" value=", 0.0], " />
                                   </node>
                                   <node concept="3cpWs3" id="5l3S79Y8F95" role="3uHU7B">
                                     <node concept="Xl_RD" id="5l3S79Y8F96" role="3uHU7B">
-                                      <property role="Xl_RC" value="[0, 0, 0, 0, " />
+                                      <property role="Xl_RC" value="[0.0, 0.0, 0.0, 0.0, " />
                                     </node>
-                                    <node concept="2OqwBi" id="5l3S79Y8F97" role="3uHU7w">
-                                      <node concept="1PxgMI" id="5l3S79Y8F98" role="2Oq$k0">
-                                        <property role="1BlNFB" value="true" />
-                                        <node concept="chp4Y" id="5l3S79Y8F99" role="3oSUPX">
-                                          <ref role="cht4Q" to="gqxc:5l3S79XWRsK" resolve="ConstaintComponentWiseFilter" />
-                                        </node>
-                                        <node concept="2OqwBi" id="5l3S79Y8F9a" role="1m5AlR">
-                                          <node concept="30H73N" id="5l3S79Y8F9b" role="2Oq$k0" />
-                                          <node concept="3TrEf2" id="5l3S79Y8F9c" role="2OqNvi">
-                                            <ref role="3Tt5mk" to="gqxc:5l3S79Y1GUV" resolve="filterImplementation" />
+                                    <node concept="2YIFZM" id="51xsedHdtFn" role="3uHU7w">
+                                      <ref role="1Pybhc" to="wyt6:~Float" resolve="Float" />
+                                      <ref role="37wK5l" to="wyt6:~Float.parseFloat(java.lang.String):float" resolve="parseFloat" />
+                                      <node concept="2OqwBi" id="51xsedHdtFo" role="37wK5m">
+                                        <node concept="1PxgMI" id="51xsedHdtFp" role="2Oq$k0">
+                                          <property role="1BlNFB" value="true" />
+                                          <node concept="chp4Y" id="51xsedHdtFq" role="3oSUPX">
+                                            <ref role="cht4Q" to="gqxc:5l3S79XWRsK" resolve="ConstaintComponentWiseFilter" />
+                                          </node>
+                                          <node concept="2OqwBi" id="51xsedHdtFr" role="1m5AlR">
+                                            <node concept="30H73N" id="51xsedHdtFs" role="2Oq$k0" />
+                                            <node concept="3TrEf2" id="51xsedHdtFt" role="2OqNvi">
+                                              <ref role="3Tt5mk" to="gqxc:5l3S79Y1GUV" resolve="filterImplementation" />
+                                            </node>
                                           </node>
                                         </node>
-                                      </node>
-                                      <node concept="3TrcHB" id="5l3S79Y8Nqw" role="2OqNvi">
-                                        <ref role="3TsBF5" to="gqxc:5l3S79Y09ml" resolve="ry" />
+                                        <node concept="3TrcHB" id="51xsedHd$QA" role="2OqNvi">
+                                          <ref role="3TsBF5" to="gqxc:5l3S79Y09ml" resolve="ry" />
+                                        </node>
                                       </node>
                                     </node>
                                   </node>
@@ -3476,23 +3509,27 @@
                                   </node>
                                   <node concept="3cpWs3" id="5l3S79Y8Oky" role="3uHU7B">
                                     <node concept="Xl_RD" id="5l3S79Y8Okz" role="3uHU7B">
-                                      <property role="Xl_RC" value="[0, 0, 0, 0, 0, " />
+                                      <property role="Xl_RC" value="[0.0, 0.0, 0.0, 0.0, 0.0, " />
                                     </node>
-                                    <node concept="2OqwBi" id="5l3S79Y8Ok$" role="3uHU7w">
-                                      <node concept="1PxgMI" id="5l3S79Y8Ok_" role="2Oq$k0">
-                                        <property role="1BlNFB" value="true" />
-                                        <node concept="chp4Y" id="5l3S79Y8OkA" role="3oSUPX">
-                                          <ref role="cht4Q" to="gqxc:5l3S79XWRsK" resolve="ConstaintComponentWiseFilter" />
-                                        </node>
-                                        <node concept="2OqwBi" id="5l3S79Y8OkB" role="1m5AlR">
-                                          <node concept="30H73N" id="5l3S79Y8OkC" role="2Oq$k0" />
-                                          <node concept="3TrEf2" id="5l3S79Y8OkD" role="2OqNvi">
-                                            <ref role="3Tt5mk" to="gqxc:5l3S79Y1GUV" resolve="filterImplementation" />
+                                    <node concept="2YIFZM" id="51xsedHd_LM" role="3uHU7w">
+                                      <ref role="1Pybhc" to="wyt6:~Float" resolve="Float" />
+                                      <ref role="37wK5l" to="wyt6:~Float.parseFloat(java.lang.String):float" resolve="parseFloat" />
+                                      <node concept="2OqwBi" id="51xsedHd_LN" role="37wK5m">
+                                        <node concept="1PxgMI" id="51xsedHd_LO" role="2Oq$k0">
+                                          <property role="1BlNFB" value="true" />
+                                          <node concept="chp4Y" id="51xsedHd_LP" role="3oSUPX">
+                                            <ref role="cht4Q" to="gqxc:5l3S79XWRsK" resolve="ConstaintComponentWiseFilter" />
+                                          </node>
+                                          <node concept="2OqwBi" id="51xsedHd_LQ" role="1m5AlR">
+                                            <node concept="30H73N" id="51xsedHd_LR" role="2Oq$k0" />
+                                            <node concept="3TrEf2" id="51xsedHd_LS" role="2OqNvi">
+                                              <ref role="3Tt5mk" to="gqxc:5l3S79Y1GUV" resolve="filterImplementation" />
+                                            </node>
                                           </node>
                                         </node>
-                                      </node>
-                                      <node concept="3TrcHB" id="5l3S79Y8OkE" role="2OqNvi">
-                                        <ref role="3TsBF5" to="gqxc:5l3S79Y09ml" resolve="ry" />
+                                        <node concept="3TrcHB" id="51xsedHdHJk" role="2OqNvi">
+                                          <ref role="3TsBF5" to="gqxc:5l3S79Y09ni" resolve="rz" />
+                                        </node>
                                       </node>
                                     </node>
                                   </node>

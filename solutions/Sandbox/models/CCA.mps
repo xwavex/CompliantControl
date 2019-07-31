@@ -82,7 +82,8 @@
         <child id="2857908486279326679" name="ccaentries" index="1UUrXR" />
       </concept>
       <concept id="2857908486279275596" name="CompliantControlArchitecture.structure.MotionForceSubSpaceRelation" flags="ng" index="1UUn3G">
-        <child id="6144001099008367952" name="filter" index="FgNOy" />
+        <child id="6512658735654880870" name="filterM" index="8r5FV" />
+        <child id="6144001099008367952" name="filterC" index="FgNOy" />
         <child id="6165337268368504384" name="frame" index="3s6PJk" />
       </concept>
       <concept id="2857908486279274497" name="CompliantControlArchitecture.structure.Controller" flags="ng" index="1UUnix">
@@ -208,7 +209,7 @@
           <node concept="1UVX9s" id="3qu6RY9mBiV" role="1UUn5U">
             <property role="TrG5h" value="motion_tracking" />
             <property role="273ZWl" value="Filter:Folding_SR_1:KUKA_Left:lwr_tool_link:M:3935613358947595722" />
-            <ref role="FiCiC" node="5l3S79Y4oUh" />
+            <ref role="FiCiC" node="51xsedH8uji" />
             <node concept="30yrG9" id="3qu6RY9uIy5" role="3seXu1">
               <ref role="3s7PV0" to="oet6:C_g3bnWAzK" resolve="lwr_tool_link" />
             </node>
@@ -233,6 +234,14 @@
           <property role="FgRkm" value="0.0f" />
           <property role="FgRnB" value="0.0f" />
           <property role="FgRmw" value="0.0f" />
+        </node>
+        <node concept="CG9t2" id="51xsedH8uji" role="8r5FV">
+          <property role="FgRlF" value="1.0f" />
+          <property role="FgRlk" value="1.0f" />
+          <property role="FgRld" value="0.0f" />
+          <property role="FgRkm" value="1.0f" />
+          <property role="FgRnB" value="1.0f" />
+          <property role="FgRmw" value="1.0f" />
         </node>
       </node>
       <node concept="pQWJo" id="3qu6RY9uIxf" role="2ZZomq">
@@ -263,7 +272,7 @@
           <node concept="1UVX9s" id="3qu6RY9mBzz" role="1UUn5U">
             <property role="TrG5h" value="motion_tracking" />
             <property role="273ZWl" value="Filter:Folding_SR_1:KUKA_Right:lwr_tool_link:M:3935613358947596508" />
-            <ref role="FiCiC" node="5l3S79Y4oXJ" />
+            <ref role="FiCiC" node="51xsedH8ujv" />
             <node concept="30yrG9" id="3qu6RY9uIyX" role="3seXu1">
               <ref role="3s7PV0" to="oet6:C_g3bnWAzK" resolve="lwr_tool_link" />
             </node>
@@ -288,6 +297,14 @@
           <property role="FgRkm" value="0.0f" />
           <property role="FgRnB" value="0.0f" />
           <property role="FgRmw" value="0.0f" />
+        </node>
+        <node concept="CG9t2" id="51xsedH8ujv" role="8r5FV">
+          <property role="FgRlF" value="1.0f" />
+          <property role="FgRlk" value="1.0f" />
+          <property role="FgRld" value="0.0f" />
+          <property role="FgRkm" value="1.0f" />
+          <property role="FgRnB" value="1.0f" />
+          <property role="FgRmw" value="1.0f" />
         </node>
       </node>
       <node concept="pQWJo" id="3qu6RY9uIxs" role="2ZZomq">
@@ -321,7 +338,7 @@
           <node concept="1UVX9s" id="3qu6RY9mBDW" role="1UUn5U">
             <property role="TrG5h" value="motion_tracking" />
             <property role="273ZWl" value="Filter:Folding_CR_2:RLeftRight:VirtualManipulatorFrame:M:3935613358947596917" />
-            <ref role="FiCiC" node="5l3S79Y1sWI" />
+            <ref role="FiCiC" node="51xsedH8ujG" />
             <node concept="30yrw0" id="3qu6RY9mBJh" role="3seXu1">
               <ref role="30yrEZ" node="3qu6RY9mAv1" resolve="VirtualManipulatorFrame" />
             </node>
@@ -355,6 +372,14 @@
           <property role="FgRkm" value="0.0f" />
           <property role="FgRnB" value="0.0f" />
           <property role="FgRmw" value="0.0f" />
+        </node>
+        <node concept="CG9t2" id="51xsedH8ujG" role="8r5FV">
+          <property role="FgRlF" value="1.0f" />
+          <property role="FgRlk" value="1.0f" />
+          <property role="FgRld" value="0.0f" />
+          <property role="FgRkm" value="1.0f" />
+          <property role="FgRnB" value="1.0f" />
+          <property role="FgRmw" value="1.0f" />
         </node>
       </node>
       <node concept="2ZZAyO" id="3qu6RY9rcr$" role="2ZZomq">

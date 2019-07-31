@@ -235,7 +235,14 @@
     <node concept="1TJgyj" id="5l3S79Y0dPg" role="1TKVEi">
       <property role="IQ2ns" value="6144001099008367952" />
       <property role="20lmBu" value="aggregation" />
-      <property role="20kJfa" value="filter" />
+      <property role="20kJfa" value="filterC" />
+      <property role="20lbJX" value="0..1" />
+      <ref role="20lvS9" node="5l3S79XWRuI" resolve="IFilter" />
+    </node>
+    <node concept="1TJgyj" id="5DxB9Pi3spA" role="1TKVEi">
+      <property role="IQ2ns" value="6512658735654880870" />
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="filterM" />
       <ref role="20lvS9" node="5l3S79XWRuI" resolve="IFilter" />
     </node>
     <node concept="PrWs8" id="5mfFpi9$Dp9" role="PzmwI">

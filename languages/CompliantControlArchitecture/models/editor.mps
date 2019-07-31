@@ -65,6 +65,7 @@
       <concept id="1237308012275" name="jetbrains.mps.lang.editor.structure.IndentLayoutNewLineStyleClassItem" flags="ln" index="ljvvj" />
       <concept id="1142886221719" name="jetbrains.mps.lang.editor.structure.QueryFunction_NodeCondition" flags="in" index="pkWqt" />
       <concept id="1142886811589" name="jetbrains.mps.lang.editor.structure.ConceptFunctionParameter_node" flags="nn" index="pncrf" />
+      <concept id="1237385578942" name="jetbrains.mps.lang.editor.structure.IndentLayoutOnNewLineStyleClassItem" flags="ln" index="pVoyu" />
       <concept id="1080736578640" name="jetbrains.mps.lang.editor.structure.BaseEditorComponent" flags="ig" index="2wURMF">
         <child id="1080736633877" name="cellModel" index="2wV5jI" />
       </concept>
@@ -1376,10 +1377,19 @@
     <node concept="3EZMnI" id="5l3S79Y0bm4" role="6VMZX">
       <node concept="l2Vlx" id="5l3S79Y0bm5" role="2iSdaV" />
       <node concept="3F0ifn" id="5l3S79Y0dOE" role="3EZMnx">
-        <property role="3F0ifm" value="Filter:" />
+        <property role="3F0ifm" value="Filter C:" />
       </node>
       <node concept="3F1sOY" id="5l3S79Y0dWm" role="3EZMnx">
-        <ref role="1NtTu8" to="gqxc:5l3S79Y0dPg" resolve="filter" />
+        <ref role="1NtTu8" to="gqxc:5l3S79Y0dPg" resolve="filterC" />
+      </node>
+      <node concept="3F0ifn" id="5DxB9Pi3uT_" role="3EZMnx">
+        <property role="3F0ifm" value="Filter M:" />
+        <node concept="pVoyu" id="5DxB9Pi3uX6" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="3F1sOY" id="5DxB9Pi3uUW" role="3EZMnx">
+        <ref role="1NtTu8" to="gqxc:5DxB9Pi3spA" resolve="filterM" />
       </node>
     </node>
   </node>
