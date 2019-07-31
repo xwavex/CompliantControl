@@ -10,6 +10,7 @@
     <import index="iobv" ref="r:19496bad-2dd3-478c-9baf-0de95edabf63(Geometry.structure)" />
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" />
     <import index="tpee" ref="r:00000000-0000-4000-0000-011c895902ca(jetbrains.mps.baseLanguage.structure)" />
+    <import index="l1zz" ref="r:7dde0f85-b752-4c1f-8bd0-8361dd2efaa4(Component.structure)" />
   </imports>
   <registry>
     <language id="c72da2b9-7cce-4447-8389-f407dc1158b7" name="jetbrains.mps.lang.structure">
@@ -60,6 +61,13 @@
       </concept>
       <concept id="1169194658468" name="jetbrains.mps.lang.core.structure.INamedConcept" flags="ng" index="TrEIO">
         <property id="1169194664001" name="name" index="TrG5h" />
+      </concept>
+      <concept id="709746936026466394" name="jetbrains.mps.lang.core.structure.ChildAttribute" flags="ng" index="3VBwX9">
+        <property id="709746936026609031" name="linkId" index="3V$3ak" />
+        <property id="709746936026609029" name="linkRole" index="3V$3am" />
+      </concept>
+      <concept id="4452961908202556907" name="jetbrains.mps.lang.core.structure.BaseCommentAttribute" flags="ng" index="1X3_iC">
+        <child id="3078666699043039389" name="commentedNode" index="8Wnug" />
       </concept>
     </language>
   </registry>
@@ -370,6 +378,13 @@
     <property role="EcuMT" value="6165337268391969197" />
     <property role="TrG5h" value="IControllerFormalism" />
     <property role="3GE5qa" value="controlformalism" />
+    <node concept="1TJgyj" id="1Brl3p$Q3UK" role="1TKVEi">
+      <property role="IQ2ns" value="1863175463444692656" />
+      <property role="20lmBu" value="reference" />
+      <property role="20kJfa" value="realization" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" to="l1zz:1u89nBaZcNq" resolve="Component" />
+    </node>
     <node concept="1TJgyi" id="37XPM2OeV_m" role="1TKVEl">
       <property role="IQ2nx" value="3602271812429003094" />
       <property role="TrG5h" value="external" />
@@ -573,12 +588,23 @@
     <property role="3GE5qa" value="annotation" />
     <property role="TrG5h" value="TaskRelation" />
     <ref role="1TJDcQ" to="tpck:2ULFgo8_XDk" resolve="NodeAttribute" />
-    <node concept="1TJgyj" id="2WwgBnYUcup" role="1TKVEi">
-      <property role="IQ2ns" value="3395787193592629145" />
-      <property role="20lmBu" value="reference" />
-      <property role="20kJfa" value="task" />
+    <node concept="1TJgyj" id="R1CGQl0wp$" role="1TKVEi">
+      <property role="IQ2ns" value="991252396850153060" />
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="taskCopy" />
       <property role="20lbJX" value="1" />
       <ref role="20lvS9" node="2uDla1tgeB_" resolve="ICCAEntry" />
+    </node>
+    <node concept="1X3_iC" id="R1CGQl0whk" role="lGtFl">
+      <property role="3V$3am" value="linkDeclaration" />
+      <property role="3V$3ak" value="c72da2b9-7cce-4447-8389-f407dc1158b7/1169125787135/1071489727083" />
+      <node concept="1TJgyj" id="2WwgBnYUcup" role="8Wnug">
+        <property role="IQ2ns" value="3395787193592629145" />
+        <property role="20lmBu" value="reference" />
+        <property role="20kJfa" value="task" />
+        <property role="20lbJX" value="1" />
+        <ref role="20lvS9" node="2uDla1tgeB_" resolve="ICCAEntry" />
+      </node>
     </node>
     <node concept="M6xJ_" id="2WwgBnYUctM" role="lGtFl">
       <property role="Hh88m" value="taskrelation" />

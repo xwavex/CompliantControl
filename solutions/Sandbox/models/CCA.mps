@@ -7,6 +7,7 @@
     <use id="d6881f78-a85d-4c9e-931e-30879e67afdd" name="Kinematics" version="0" />
     <use id="d6d7f6e1-f407-48f8-a582-7b1489b7163f" name="ProtoBuf" version="0" />
     <use id="d35899bf-1f8a-4727-b7b5-90d52a21d317" name="CompliantControlTask" version="0" />
+    <use id="218e40b4-75d4-4de8-83e6-b31e4da8bcee" name="Component" version="0" />
   </languages>
   <imports>
     <import index="oet6" ref="r:85b31eb0-6551-4bd7-8659-464e8655dad3(RobotRepository.kinematics)" />
@@ -16,6 +17,7 @@
     <import index="sxll" ref="r:b16aad8a-7e70-4535-bb6a-8f44c10f77e2(RSTRTa.stable)" />
     <import index="lrob" ref="r:d01e7c48-4315-4a97-a560-4b91cd1fec15(RobotRepository.interfaces)" />
     <import index="zjdh" ref="r:f6e730f9-585c-42db-a364-856fcf8bb498(GeneratorPlans.RenderPlan)" />
+    <import index="73wf" ref="r:fdd4b105-d753-40e0-b7ab-80ffcd19a165(CCL.ProjectedDynamics)" />
   </imports>
   <registry>
     <language id="b744b93e-0522-4237-a6fd-fa650d0b451a" name="Geometry">
@@ -38,6 +40,24 @@
       <concept id="6011303867107887907" name="Geometry.structure.Frame" flags="ng" index="30yrCB" />
       <concept id="6011303867107887629" name="Geometry.structure.LinkRef" flags="ng" index="30yrG9">
         <reference id="6165337268368241492" name="link" index="3s7PV0" />
+      </concept>
+    </language>
+    <language id="218e40b4-75d4-4de8-83e6-b31e4da8bcee" name="Component">
+      <concept id="3475673830596210328" name="Component.structure.IPortRef" flags="ng" index="FWJLR">
+        <reference id="3475673830596210329" name="port" index="FWJLQ" />
+      </concept>
+      <concept id="6055303931581434606" name="Component.structure.IComponentInst" flags="ng" index="2WYcwT">
+        <reference id="6055303931581444256" name="componentDescription" index="2WYf9R" />
+        <child id="494146162517828036" name="refPorts" index="l9eUl" />
+      </concept>
+      <concept id="6055303931581434605" name="Component.structure.ComponentInst" flags="ng" index="2WYcwU">
+        <child id="6055303931581444254" name="mutableProperties" index="2WYf99" />
+      </concept>
+      <concept id="6055303931581436421" name="Component.structure.PropertyTarget" flags="ng" index="2WYd3i">
+        <reference id="6055303931581436424" name="property" index="2WYd3v" />
+      </concept>
+      <concept id="1695646464731827419" name="Component.structure.System" flags="ng" index="3tteAy">
+        <child id="1695646464731852539" name="components" index="3ttgI2" />
       </concept>
     </language>
     <language id="d35899bf-1f8a-4727-b7b5-90d52a21d317" name="CompliantControlTask">
@@ -75,6 +95,7 @@
       <concept id="6165337268391969870" name="CompliantControlArchitecture.structure.JointMassSpringDamperController" flags="ng" index="3vtaBq" />
       <concept id="6165337268391969197" name="CompliantControlArchitecture.structure.IControllerFormalism" flags="ng" index="3vtaKT">
         <property id="3602271812429003094" name="external" index="25LATQ" />
+        <reference id="1863175463444692656" name="realization" index="1X0QE6" />
       </concept>
       <concept id="6165337268391969743" name="CompliantControlArchitecture.structure.CartesianMassSpringDamperController" flags="ng" index="3vtaTr" />
       <concept id="6165337268391969336" name="CompliantControlArchitecture.structure.CartesianConstraintController" flags="ng" index="3vtaYG" />
@@ -131,6 +152,7 @@
           </node>
           <node concept="3vtaTr" id="3qu6RY9mB03" role="3vtaj5">
             <property role="25LATQ" value="false" />
+            <ref role="1X0QE6" to="73wf:3keJr8m8xMo" resolve="PositionController" />
           </node>
           <node concept="3hYy$6" id="2WwgBnYRZMq" role="lGtFl">
             <ref role="3hYRiG" to="au3b:3qu6RY9uIGq" resolve="motion_tracking" />
@@ -140,6 +162,7 @@
           <property role="TrG5h" value="nullspace_tracking" />
           <node concept="3vtaBq" id="3qu6RY9mB27" role="3vtaj5">
             <property role="25LATQ" value="false" />
+            <ref role="1X0QE6" to="73wf:3keJr8m8xI7" resolve="JointPositionCtrl" />
           </node>
           <node concept="pQWJo" id="3qu6RY9uIx1" role="3ve2oX">
             <ref role="pNcCJ" to="d49h:C_g3bnXz3c" resolve="full_arm" />
@@ -163,12 +186,14 @@
           </node>
           <node concept="3vtaTr" id="3qu6RY9mBCf" role="3vtaj5">
             <property role="25LATQ" value="false" />
+            <ref role="1X0QE6" to="73wf:3keJr8m8xMo" resolve="PositionController" />
           </node>
         </node>
         <node concept="3ve2oW" id="3qu6RY9mBCg" role="1UUn57">
           <property role="TrG5h" value="nullspace_tracking" />
           <node concept="3vtaBq" id="3qu6RY9mBCh" role="3vtaj5">
             <property role="25LATQ" value="false" />
+            <ref role="1X0QE6" to="73wf:3keJr8m8xI7" resolve="JointPositionCtrl" />
           </node>
           <node concept="pQWJo" id="3qu6RY9mBCi" role="3ve2oX">
             <ref role="pNcCJ" to="d49h:C_g3bnXz3c" resolve="full_arm" />
@@ -200,6 +225,7 @@
           </node>
           <node concept="3vtaYG" id="3qu6RY9mBqk" role="3vtaj5">
             <property role="25LATQ" value="false" />
+            <ref role="1X0QE6" to="73wf:3keJr8m8xQx" resolve="SimpleTaskController" />
           </node>
         </node>
         <node concept="1UUrRU" id="3qu6RY9mBiT" role="2t5XIt">
@@ -215,12 +241,14 @@
             </node>
             <node concept="3vtaTr" id="3qu6RY9mBiX" role="3vtaj5">
               <property role="25LATQ" value="false" />
+              <ref role="1X0QE6" to="73wf:3keJr8m8xMo" resolve="PositionController" />
             </node>
           </node>
           <node concept="3ve2oW" id="3qu6RY9mBiY" role="1UUn57">
             <property role="TrG5h" value="nullspace_tracking" />
             <node concept="3vtaBq" id="3qu6RY9mBiZ" role="3vtaj5">
               <property role="25LATQ" value="false" />
+              <ref role="1X0QE6" to="73wf:3keJr8m8xI7" resolve="JointPositionCtrl" />
             </node>
             <node concept="pQWJo" id="3qu6RY9mBj0" role="3ve2oX">
               <ref role="pNcCJ" to="d49h:C_g3bnXz3c" resolve="full_arm" />
@@ -263,6 +291,7 @@
           </node>
           <node concept="3vtaYG" id="3qu6RY9mBzw" role="3vtaj5">
             <property role="25LATQ" value="false" />
+            <ref role="1X0QE6" to="73wf:3keJr8m8xQx" resolve="SimpleTaskController" />
           </node>
         </node>
         <node concept="1UUrRU" id="3qu6RY9mBzx" role="2t5XIt">
@@ -278,12 +307,14 @@
             </node>
             <node concept="3vtaTr" id="3qu6RY9mBz_" role="3vtaj5">
               <property role="25LATQ" value="false" />
+              <ref role="1X0QE6" to="73wf:3keJr8m8xMo" resolve="PositionController" />
             </node>
           </node>
           <node concept="3ve2oW" id="3qu6RY9mBzA" role="1UUn57">
             <property role="TrG5h" value="nullspace_tracking" />
             <node concept="3vtaBq" id="3qu6RY9mBzB" role="3vtaj5">
               <property role="25LATQ" value="false" />
+              <ref role="1X0QE6" to="73wf:3keJr8m8xI7" resolve="JointPositionCtrl" />
             </node>
             <node concept="pQWJo" id="3qu6RY9mBzC" role="3ve2oX">
               <ref role="pNcCJ" to="d49h:C_g3bnXz3c" resolve="full_arm" />
@@ -329,6 +360,7 @@
           </node>
           <node concept="3vtaYG" id="3qu6RY9mBDT" role="3vtaj5">
             <property role="25LATQ" value="false" />
+            <ref role="1X0QE6" to="73wf:3keJr8m8xQx" resolve="SimpleTaskController" />
           </node>
         </node>
         <node concept="1UUrRU" id="3qu6RY9mBDU" role="2t5XIt">
@@ -344,6 +376,7 @@
             </node>
             <node concept="3vtaTr" id="3qu6RY9mBDY" role="3vtaj5">
               <property role="25LATQ" value="false" />
+              <ref role="1X0QE6" to="73wf:3keJr8m8xMo" resolve="PositionController" />
             </node>
           </node>
           <node concept="1UUrLJ" id="1bQsC10G6bz" role="1UUn57">
@@ -352,6 +385,7 @@
               <property role="3uXTQG" value="0.5f" />
               <node concept="3vtaBq" id="3qu6RY9mBE0" role="3vtaj5">
                 <property role="25LATQ" value="false" />
+                <ref role="1X0QE6" to="73wf:3keJr8m8xI7" resolve="JointPositionCtrl" />
               </node>
               <node concept="2ZU78l" id="3qu6RY9uv$h" role="3ve2oX" />
             </node>
@@ -360,6 +394,7 @@
               <property role="3uXTQG" value="0.5f" />
               <node concept="3vtaBq" id="1bQsC10G6bL" role="3vtaj5">
                 <property role="25LATQ" value="false" />
+                <ref role="1X0QE6" to="73wf:3keJr8m8xI7" resolve="JointPositionCtrl" />
               </node>
               <node concept="2ZU78l" id="1bQsC10G6bM" role="3ve2oX" />
             </node>
@@ -400,6 +435,371 @@
     </node>
     <node concept="pQWJo" id="3qu6RY9o7eX" role="3s38FB">
       <ref role="pNcCJ" to="d49h:C_g3bnXz3c" resolve="full_arm" />
+    </node>
+  </node>
+  <node concept="3tteAy" id="5c5FD0yw0qj">
+    <property role="TrG5h" value="GlobalArtificalGraphSet" />
+    <node concept="2WYcwU" id="5c5FD0yw0qk" role="3ttgI2">
+      <property role="TrG5h" value="RLeftRight_force_constraint" />
+      <ref role="2WYf9R" to="73wf:3keJr8m8xQx" resolve="SimpleTaskController" />
+      <node concept="FWJLR" id="5c5FD0ywo1j" role="l9eUl">
+        <ref role="FWJLQ" to="73wf:3GmkSgQd5sx" resolve="in_force_port" />
+      </node>
+      <node concept="FWJLR" id="5c5FD0ywo1k" role="l9eUl">
+        <ref role="FWJLQ" to="73wf:3GmkSgQd5vu" resolve="in_direction_port" />
+      </node>
+      <node concept="FWJLR" id="5c5FD0ywo1l" role="l9eUl">
+        <ref role="FWJLQ" to="73wf:4SN5UBHm5Xx" resolve="in_jacobian_port" />
+      </node>
+      <node concept="FWJLR" id="5c5FD0ywo1m" role="l9eUl">
+        <ref role="FWJLQ" to="73wf:4SN5UBHm40w" resolve="out_torques_port" />
+      </node>
+      <node concept="FWJLR" id="5c5FD0ywo1n" role="l9eUl">
+        <ref role="FWJLQ" to="73wf:3GmkSgQd5zf" resolve="out_force_port" />
+      </node>
+    </node>
+    <node concept="2WYcwU" id="5c5FD0yw0ql" role="3ttgI2">
+      <property role="TrG5h" value="RLeftRight_motion_tracking" />
+      <ref role="2WYf9R" to="73wf:3keJr8m8xMo" resolve="PositionController" />
+      <node concept="2WYd3i" id="5c5FD0ywo2k" role="2WYf99">
+        <ref role="2WYd3v" to="73wf:3GmkSgQd4EM" resolve="impedanceCTRL" />
+      </node>
+      <node concept="2WYd3i" id="5c5FD0ywo2l" role="2WYf99">
+        <ref role="2WYd3v" to="73wf:42NqMk2OoWP" resolve="velocityLimit" />
+      </node>
+      <node concept="2WYd3i" id="5c5FD0ywo2m" role="2WYf99">
+        <ref role="2WYd3v" to="73wf:42NqMk2OoXA" resolve="performVelocitySaturation" />
+      </node>
+      <node concept="FWJLR" id="5c5FD0ywo2n" role="l9eUl">
+        <ref role="FWJLQ" to="73wf:4SN5UBHm3LP" resolve="in_desiredTaskSpacePosition_port" />
+      </node>
+      <node concept="FWJLR" id="5c5FD0ywo2o" role="l9eUl">
+        <ref role="FWJLQ" to="73wf:4SN5UBHm3MJ" resolve="in_desiredTaskSpaceVelocity_port" />
+      </node>
+      <node concept="FWJLR" id="5c5FD0ywo2p" role="l9eUl">
+        <ref role="FWJLQ" to="73wf:4SN5UBHm3On" resolve="in_desiredTaskSpaceAcceleration_port" />
+      </node>
+      <node concept="FWJLR" id="5c5FD0ywo2q" role="l9eUl">
+        <ref role="FWJLQ" to="73wf:4SN5UBHm52P" resolve="in_jacobian_port" />
+      </node>
+      <node concept="FWJLR" id="5c5FD0ywo2r" role="l9eUl">
+        <ref role="FWJLQ" to="73wf:4SN5UBHm56x" resolve="in_jacobianDot_port" />
+      </node>
+      <node concept="FWJLR" id="5c5FD0ywo2s" role="l9eUl">
+        <ref role="FWJLQ" to="73wf:4SN5UBHm5aT" resolve="in_currentTaskSpacePosition_port" />
+      </node>
+      <node concept="FWJLR" id="5c5FD0ywo2t" role="l9eUl">
+        <ref role="FWJLQ" to="73wf:4SN5UBHm5fX" resolve="in_currentTaskSpaceVelocity_port" />
+      </node>
+      <node concept="FWJLR" id="5c5FD0ywo2u" role="l9eUl">
+        <ref role="FWJLQ" to="73wf:4SN5UBHm5lH" resolve="in_robotstatus_port" />
+      </node>
+      <node concept="FWJLR" id="5c5FD0ywo2v" role="l9eUl">
+        <ref role="FWJLQ" to="73wf:4SN5UBHm5s9" resolve="in_h_port" />
+      </node>
+      <node concept="FWJLR" id="5c5FD0ywo2w" role="l9eUl">
+        <ref role="FWJLQ" to="73wf:4SN5UBHm5zh" resolve="in_constraintM_port" />
+      </node>
+      <node concept="FWJLR" id="5c5FD0ywo2x" role="l9eUl">
+        <ref role="FWJLQ" to="73wf:4SN5UBHm5F5" resolve="in_projection_port" />
+      </node>
+      <node concept="FWJLR" id="5c5FD0ywo2y" role="l9eUl">
+        <ref role="FWJLQ" to="73wf:42NqMk2NUXQ" resolve="in_inertiaInv_port" />
+      </node>
+      <node concept="FWJLR" id="5c5FD0ywo2z" role="l9eUl">
+        <ref role="FWJLQ" to="73wf:4SN5UBHm5N_" resolve="in_projectionDot_port" />
+      </node>
+      <node concept="FWJLR" id="5c5FD0ywo2$" role="l9eUl">
+        <ref role="FWJLQ" to="73wf:5dAl56bMTGi" resolve="in_constraintMinvP_port" />
+      </node>
+      <node concept="FWJLR" id="5c5FD0ywo2_" role="l9eUl">
+        <ref role="FWJLQ" to="73wf:4SN5UBHm3Rx" resolve="out_torques_port" />
+      </node>
+      <node concept="FWJLR" id="5c5FD0ywo2A" role="l9eUl">
+        <ref role="FWJLQ" to="73wf:3GmkSgQd4Ln" resolve="out_force_port" />
+      </node>
+    </node>
+    <node concept="2WYcwU" id="5c5FD0yw0qm" role="3ttgI2">
+      <property role="TrG5h" value="RLeftRight_nullspace_tracking1" />
+      <ref role="2WYf9R" to="73wf:3keJr8m8xI7" resolve="JointPositionCtrl" />
+      <node concept="2WYd3i" id="5c5FD0ywnLE" role="2WYf99">
+        <ref role="2WYd3v" to="73wf:42NqMk2OoA3" resolve="jointVelocityLimit" />
+      </node>
+      <node concept="2WYd3i" id="5c5FD0ywnLF" role="2WYf99">
+        <ref role="2WYd3v" to="73wf:42NqMk2OoAy" resolve="performVelocitySaturation" />
+      </node>
+      <node concept="FWJLR" id="5c5FD0ywnLG" role="l9eUl">
+        <ref role="FWJLQ" to="73wf:4SN5UBHm6HP" resolve="in_robotstatus_port" />
+      </node>
+      <node concept="FWJLR" id="5c5FD0ywnLH" role="l9eUl">
+        <ref role="FWJLQ" to="73wf:4SN5UBHm6IJ" resolve="in_coriolisAndGravity_port" />
+      </node>
+      <node concept="FWJLR" id="5c5FD0ywnLI" role="l9eUl">
+        <ref role="FWJLQ" to="73wf:4SN5UBHm6Kn" resolve="out_torques_port" />
+      </node>
+    </node>
+    <node concept="2WYcwU" id="5c5FD0yw0qn" role="3ttgI2">
+      <property role="TrG5h" value="RLeftRight_nullspace_tracking2" />
+      <ref role="2WYf9R" to="73wf:3keJr8m8xI7" resolve="JointPositionCtrl" />
+      <node concept="2WYd3i" id="5c5FD0ywnS$" role="2WYf99">
+        <ref role="2WYd3v" to="73wf:42NqMk2OoA3" resolve="jointVelocityLimit" />
+      </node>
+      <node concept="2WYd3i" id="5c5FD0ywnS_" role="2WYf99">
+        <ref role="2WYd3v" to="73wf:42NqMk2OoAy" resolve="performVelocitySaturation" />
+      </node>
+      <node concept="FWJLR" id="5c5FD0ywnSA" role="l9eUl">
+        <ref role="FWJLQ" to="73wf:4SN5UBHm6HP" resolve="in_robotstatus_port" />
+      </node>
+      <node concept="FWJLR" id="5c5FD0ywnSB" role="l9eUl">
+        <ref role="FWJLQ" to="73wf:4SN5UBHm6IJ" resolve="in_coriolisAndGravity_port" />
+      </node>
+      <node concept="FWJLR" id="5c5FD0ywnSC" role="l9eUl">
+        <ref role="FWJLQ" to="73wf:4SN5UBHm6Kn" resolve="out_torques_port" />
+      </node>
+    </node>
+    <node concept="2WYcwU" id="5c5FD0yw0qo" role="3ttgI2">
+      <property role="TrG5h" value="KUKA_Right_motion_tracking" />
+      <ref role="2WYf9R" to="73wf:3keJr8m8xMo" resolve="PositionController" />
+      <node concept="2WYd3i" id="5c5FD0ywnT_" role="2WYf99">
+        <ref role="2WYd3v" to="73wf:3GmkSgQd4EM" resolve="impedanceCTRL" />
+      </node>
+      <node concept="2WYd3i" id="5c5FD0ywnTA" role="2WYf99">
+        <ref role="2WYd3v" to="73wf:42NqMk2OoWP" resolve="velocityLimit" />
+      </node>
+      <node concept="2WYd3i" id="5c5FD0ywnTB" role="2WYf99">
+        <ref role="2WYd3v" to="73wf:42NqMk2OoXA" resolve="performVelocitySaturation" />
+      </node>
+      <node concept="FWJLR" id="5c5FD0ywnTC" role="l9eUl">
+        <ref role="FWJLQ" to="73wf:4SN5UBHm3LP" resolve="in_desiredTaskSpacePosition_port" />
+      </node>
+      <node concept="FWJLR" id="5c5FD0ywnTD" role="l9eUl">
+        <ref role="FWJLQ" to="73wf:4SN5UBHm3MJ" resolve="in_desiredTaskSpaceVelocity_port" />
+      </node>
+      <node concept="FWJLR" id="5c5FD0ywnTE" role="l9eUl">
+        <ref role="FWJLQ" to="73wf:4SN5UBHm3On" resolve="in_desiredTaskSpaceAcceleration_port" />
+      </node>
+      <node concept="FWJLR" id="5c5FD0ywnTF" role="l9eUl">
+        <ref role="FWJLQ" to="73wf:4SN5UBHm52P" resolve="in_jacobian_port" />
+      </node>
+      <node concept="FWJLR" id="5c5FD0ywnTG" role="l9eUl">
+        <ref role="FWJLQ" to="73wf:4SN5UBHm56x" resolve="in_jacobianDot_port" />
+      </node>
+      <node concept="FWJLR" id="5c5FD0ywnTH" role="l9eUl">
+        <ref role="FWJLQ" to="73wf:4SN5UBHm5aT" resolve="in_currentTaskSpacePosition_port" />
+      </node>
+      <node concept="FWJLR" id="5c5FD0ywnTI" role="l9eUl">
+        <ref role="FWJLQ" to="73wf:4SN5UBHm5fX" resolve="in_currentTaskSpaceVelocity_port" />
+      </node>
+      <node concept="FWJLR" id="5c5FD0ywnTJ" role="l9eUl">
+        <ref role="FWJLQ" to="73wf:4SN5UBHm5lH" resolve="in_robotstatus_port" />
+      </node>
+      <node concept="FWJLR" id="5c5FD0ywnTK" role="l9eUl">
+        <ref role="FWJLQ" to="73wf:4SN5UBHm5s9" resolve="in_h_port" />
+      </node>
+      <node concept="FWJLR" id="5c5FD0ywnTL" role="l9eUl">
+        <ref role="FWJLQ" to="73wf:4SN5UBHm5zh" resolve="in_constraintM_port" />
+      </node>
+      <node concept="FWJLR" id="5c5FD0ywnTM" role="l9eUl">
+        <ref role="FWJLQ" to="73wf:4SN5UBHm5F5" resolve="in_projection_port" />
+      </node>
+      <node concept="FWJLR" id="5c5FD0ywnTN" role="l9eUl">
+        <ref role="FWJLQ" to="73wf:42NqMk2NUXQ" resolve="in_inertiaInv_port" />
+      </node>
+      <node concept="FWJLR" id="5c5FD0ywnTO" role="l9eUl">
+        <ref role="FWJLQ" to="73wf:4SN5UBHm5N_" resolve="in_projectionDot_port" />
+      </node>
+      <node concept="FWJLR" id="5c5FD0ywnTP" role="l9eUl">
+        <ref role="FWJLQ" to="73wf:5dAl56bMTGi" resolve="in_constraintMinvP_port" />
+      </node>
+      <node concept="FWJLR" id="5c5FD0ywnTQ" role="l9eUl">
+        <ref role="FWJLQ" to="73wf:4SN5UBHm3Rx" resolve="out_torques_port" />
+      </node>
+      <node concept="FWJLR" id="5c5FD0ywnTR" role="l9eUl">
+        <ref role="FWJLQ" to="73wf:3GmkSgQd4Ln" resolve="out_force_port" />
+      </node>
+    </node>
+    <node concept="2WYcwU" id="5c5FD0yw0qp" role="3ttgI2">
+      <property role="TrG5h" value="KUKA_Right_nullspace_tracking" />
+      <ref role="2WYf9R" to="73wf:3keJr8m8xI7" resolve="JointPositionCtrl" />
+      <node concept="2WYd3i" id="5c5FD0ywnRz" role="2WYf99">
+        <ref role="2WYd3v" to="73wf:42NqMk2OoA3" resolve="jointVelocityLimit" />
+      </node>
+      <node concept="2WYd3i" id="5c5FD0ywnR$" role="2WYf99">
+        <ref role="2WYd3v" to="73wf:42NqMk2OoAy" resolve="performVelocitySaturation" />
+      </node>
+      <node concept="FWJLR" id="5c5FD0ywnR_" role="l9eUl">
+        <ref role="FWJLQ" to="73wf:4SN5UBHm6HP" resolve="in_robotstatus_port" />
+      </node>
+      <node concept="FWJLR" id="5c5FD0ywnRA" role="l9eUl">
+        <ref role="FWJLQ" to="73wf:4SN5UBHm6IJ" resolve="in_coriolisAndGravity_port" />
+      </node>
+      <node concept="FWJLR" id="5c5FD0ywnRB" role="l9eUl">
+        <ref role="FWJLQ" to="73wf:4SN5UBHm6Kn" resolve="out_torques_port" />
+      </node>
+    </node>
+    <node concept="2WYcwU" id="5c5FD0yw0qq" role="3ttgI2">
+      <property role="TrG5h" value="KUKA_Right_force_constraint" />
+      <ref role="2WYf9R" to="73wf:3keJr8m8xQx" resolve="SimpleTaskController" />
+      <node concept="FWJLR" id="5c5FD0ywnQy" role="l9eUl">
+        <ref role="FWJLQ" to="73wf:3GmkSgQd5sx" resolve="in_force_port" />
+      </node>
+      <node concept="FWJLR" id="5c5FD0ywnQz" role="l9eUl">
+        <ref role="FWJLQ" to="73wf:3GmkSgQd5vu" resolve="in_direction_port" />
+      </node>
+      <node concept="FWJLR" id="5c5FD0ywnQ$" role="l9eUl">
+        <ref role="FWJLQ" to="73wf:4SN5UBHm5Xx" resolve="in_jacobian_port" />
+      </node>
+      <node concept="FWJLR" id="5c5FD0ywnQ_" role="l9eUl">
+        <ref role="FWJLQ" to="73wf:4SN5UBHm40w" resolve="out_torques_port" />
+      </node>
+      <node concept="FWJLR" id="5c5FD0ywnQA" role="l9eUl">
+        <ref role="FWJLQ" to="73wf:3GmkSgQd5zf" resolve="out_force_port" />
+      </node>
+    </node>
+    <node concept="2WYcwU" id="5c5FD0yw0qr" role="3ttgI2">
+      <property role="TrG5h" value="KUKA_Left_motion_tracking" />
+      <ref role="2WYf9R" to="73wf:3keJr8m8xMo" resolve="PositionController" />
+      <node concept="2WYd3i" id="5c5FD0ywnMF" role="2WYf99">
+        <ref role="2WYd3v" to="73wf:3GmkSgQd4EM" resolve="impedanceCTRL" />
+      </node>
+      <node concept="2WYd3i" id="5c5FD0ywnMG" role="2WYf99">
+        <ref role="2WYd3v" to="73wf:42NqMk2OoWP" resolve="velocityLimit" />
+      </node>
+      <node concept="2WYd3i" id="5c5FD0ywnMH" role="2WYf99">
+        <ref role="2WYd3v" to="73wf:42NqMk2OoXA" resolve="performVelocitySaturation" />
+      </node>
+      <node concept="FWJLR" id="5c5FD0ywnMI" role="l9eUl">
+        <ref role="FWJLQ" to="73wf:4SN5UBHm3LP" resolve="in_desiredTaskSpacePosition_port" />
+      </node>
+      <node concept="FWJLR" id="5c5FD0ywnMJ" role="l9eUl">
+        <ref role="FWJLQ" to="73wf:4SN5UBHm3MJ" resolve="in_desiredTaskSpaceVelocity_port" />
+      </node>
+      <node concept="FWJLR" id="5c5FD0ywnMK" role="l9eUl">
+        <ref role="FWJLQ" to="73wf:4SN5UBHm3On" resolve="in_desiredTaskSpaceAcceleration_port" />
+      </node>
+      <node concept="FWJLR" id="5c5FD0ywnML" role="l9eUl">
+        <ref role="FWJLQ" to="73wf:4SN5UBHm52P" resolve="in_jacobian_port" />
+      </node>
+      <node concept="FWJLR" id="5c5FD0ywnMM" role="l9eUl">
+        <ref role="FWJLQ" to="73wf:4SN5UBHm56x" resolve="in_jacobianDot_port" />
+      </node>
+      <node concept="FWJLR" id="5c5FD0ywnMN" role="l9eUl">
+        <ref role="FWJLQ" to="73wf:4SN5UBHm5aT" resolve="in_currentTaskSpacePosition_port" />
+      </node>
+      <node concept="FWJLR" id="5c5FD0ywnMO" role="l9eUl">
+        <ref role="FWJLQ" to="73wf:4SN5UBHm5fX" resolve="in_currentTaskSpaceVelocity_port" />
+      </node>
+      <node concept="FWJLR" id="5c5FD0ywnMP" role="l9eUl">
+        <ref role="FWJLQ" to="73wf:4SN5UBHm5lH" resolve="in_robotstatus_port" />
+      </node>
+      <node concept="FWJLR" id="5c5FD0ywnMQ" role="l9eUl">
+        <ref role="FWJLQ" to="73wf:4SN5UBHm5s9" resolve="in_h_port" />
+      </node>
+      <node concept="FWJLR" id="5c5FD0ywnMR" role="l9eUl">
+        <ref role="FWJLQ" to="73wf:4SN5UBHm5zh" resolve="in_constraintM_port" />
+      </node>
+      <node concept="FWJLR" id="5c5FD0ywnMS" role="l9eUl">
+        <ref role="FWJLQ" to="73wf:4SN5UBHm5F5" resolve="in_projection_port" />
+      </node>
+      <node concept="FWJLR" id="5c5FD0ywnMT" role="l9eUl">
+        <ref role="FWJLQ" to="73wf:42NqMk2NUXQ" resolve="in_inertiaInv_port" />
+      </node>
+      <node concept="FWJLR" id="5c5FD0ywnMU" role="l9eUl">
+        <ref role="FWJLQ" to="73wf:4SN5UBHm5N_" resolve="in_projectionDot_port" />
+      </node>
+      <node concept="FWJLR" id="5c5FD0ywnMV" role="l9eUl">
+        <ref role="FWJLQ" to="73wf:5dAl56bMTGi" resolve="in_constraintMinvP_port" />
+      </node>
+      <node concept="FWJLR" id="5c5FD0ywnMW" role="l9eUl">
+        <ref role="FWJLQ" to="73wf:4SN5UBHm3Rx" resolve="out_torques_port" />
+      </node>
+      <node concept="FWJLR" id="5c5FD0ywnMX" role="l9eUl">
+        <ref role="FWJLQ" to="73wf:3GmkSgQd4Ln" resolve="out_force_port" />
+      </node>
+    </node>
+    <node concept="2WYcwU" id="5c5FD0yw0qs" role="3ttgI2">
+      <property role="TrG5h" value="KUKA_Left_nullspace_tracking" />
+      <ref role="2WYf9R" to="73wf:3keJr8m8xI7" resolve="JointPositionCtrl" />
+      <node concept="2WYd3i" id="5c5FD0ywo6b" role="2WYf99">
+        <ref role="2WYd3v" to="73wf:42NqMk2OoA3" resolve="jointVelocityLimit" />
+      </node>
+      <node concept="2WYd3i" id="5c5FD0ywo6c" role="2WYf99">
+        <ref role="2WYd3v" to="73wf:42NqMk2OoAy" resolve="performVelocitySaturation" />
+      </node>
+      <node concept="FWJLR" id="5c5FD0ywo6d" role="l9eUl">
+        <ref role="FWJLQ" to="73wf:4SN5UBHm6HP" resolve="in_robotstatus_port" />
+      </node>
+      <node concept="FWJLR" id="5c5FD0ywo6e" role="l9eUl">
+        <ref role="FWJLQ" to="73wf:4SN5UBHm6IJ" resolve="in_coriolisAndGravity_port" />
+      </node>
+      <node concept="FWJLR" id="5c5FD0ywo6f" role="l9eUl">
+        <ref role="FWJLQ" to="73wf:4SN5UBHm6Kn" resolve="out_torques_port" />
+      </node>
+    </node>
+    <node concept="2WYcwU" id="5c5FD0yw0qt" role="3ttgI2">
+      <property role="TrG5h" value="KUKA_Left_force_constraint" />
+      <ref role="2WYf9R" to="73wf:3keJr8m8xQx" resolve="SimpleTaskController" />
+      <node concept="FWJLR" id="5c5FD0ywnXs" role="l9eUl">
+        <ref role="FWJLQ" to="73wf:3GmkSgQd5sx" resolve="in_force_port" />
+      </node>
+      <node concept="FWJLR" id="5c5FD0ywnXt" role="l9eUl">
+        <ref role="FWJLQ" to="73wf:3GmkSgQd5vu" resolve="in_direction_port" />
+      </node>
+      <node concept="FWJLR" id="5c5FD0ywnXu" role="l9eUl">
+        <ref role="FWJLQ" to="73wf:4SN5UBHm5Xx" resolve="in_jacobian_port" />
+      </node>
+      <node concept="FWJLR" id="5c5FD0ywnXv" role="l9eUl">
+        <ref role="FWJLQ" to="73wf:4SN5UBHm40w" resolve="out_torques_port" />
+      </node>
+      <node concept="FWJLR" id="5c5FD0ywnXw" role="l9eUl">
+        <ref role="FWJLQ" to="73wf:3GmkSgQd5zf" resolve="out_force_port" />
+      </node>
+    </node>
+    <node concept="2WYcwU" id="5c5FD0yw0qu" role="3ttgI2">
+      <property role="TrG5h" value="Prioritization" />
+      <ref role="2WYf9R" to="73wf:3keJr8m8xTM" resolve="ProjectionCombiner" />
+      <node concept="FWJLR" id="5c5FD0ywnYt" role="l9eUl">
+        <ref role="FWJLQ" to="73wf:4SN5UBHm3Tf" resolve="in_torquesA_port" />
+      </node>
+      <node concept="FWJLR" id="5c5FD0ywnYu" role="l9eUl">
+        <ref role="FWJLQ" to="73wf:4SN5UBHm3U9" resolve="in_torquesB_port" />
+      </node>
+      <node concept="FWJLR" id="5c5FD0ywnYv" role="l9eUl">
+        <ref role="FWJLQ" to="73wf:4SN5UBHm3VL" resolve="in_torquesC_port" />
+      </node>
+      <node concept="FWJLR" id="5c5FD0ywnYw" role="l9eUl">
+        <ref role="FWJLQ" to="73wf:4SN5UBHm62r" resolve="in_robotstatus_port" />
+      </node>
+      <node concept="FWJLR" id="5c5FD0ywnYx" role="l9eUl">
+        <ref role="FWJLQ" to="73wf:4SN5UBHm65r" resolve="in_projection_port" />
+      </node>
+      <node concept="FWJLR" id="5c5FD0ywnYy" role="l9eUl">
+        <ref role="FWJLQ" to="73wf:4SN5UBHm697" resolve="in_inertia_port" />
+      </node>
+      <node concept="FWJLR" id="5c5FD0ywnYz" role="l9eUl">
+        <ref role="FWJLQ" to="73wf:4SN5UBHm6dv" resolve="in_inertia_c_port" />
+      </node>
+      <node concept="FWJLR" id="5c5FD0ywnY$" role="l9eUl">
+        <ref role="FWJLQ" to="73wf:4SN5UBHm6iz" resolve="in_h_port" />
+      </node>
+      <node concept="FWJLR" id="5c5FD0ywnY_" role="l9eUl">
+        <ref role="FWJLQ" to="73wf:4SN5UBHm6oj" resolve="in_Pdot_port" />
+      </node>
+      <node concept="FWJLR" id="5c5FD0ywnYA" role="l9eUl">
+        <ref role="FWJLQ" to="73wf:4SN5UBHm6uJ" resolve="in_torquesTask_port" />
+      </node>
+      <node concept="FWJLR" id="5c5FD0ywnYB" role="l9eUl">
+        <ref role="FWJLQ" to="73wf:5dAl56bMU51" resolve="in_torquesCstr_port" />
+      </node>
+      <node concept="FWJLR" id="5c5FD0ywnYC" role="l9eUl">
+        <ref role="FWJLQ" to="73wf:4SN5UBHm6_R" resolve="out_torques_port" />
+      </node>
+      <node concept="FWJLR" id="5c5FD0ywnYD" role="l9eUl">
+        <ref role="FWJLQ" to="73wf:3GmkSgQd561" resolve="out_torquesMotion_port" />
+      </node>
+      <node concept="FWJLR" id="5c5FD0ywnYE" role="l9eUl">
+        <ref role="FWJLQ" to="73wf:3GmkSgQd5hb" resolve="out_torquesForce_port" />
+      </node>
     </node>
   </node>
 </model>

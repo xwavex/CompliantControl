@@ -14,10 +14,13 @@
     <dependency reexport="false">864bc811-810b-4e2f-97d7-4ee5ae8cdcfe(RobotRepository)</dependency>
     <dependency reexport="false">3385964e-5b3d-433b-a45e-c97c2abf2862(RSTRTa)</dependency>
     <dependency reexport="false">f9491b51-fad9-4ade-b5db-36db060ccb6d(GeneratorPlans)</dependency>
+    <dependency reexport="false">6d4f5997-0eeb-4a8a-86c2-d4b3ba19dd87(CCL)</dependency>
   </dependencies>
   <languageVersions>
+    <language slang="l:4cc07462-84b3-4d01-8adb-629ddd3cebd4:Capabilities" version="0" />
     <language slang="l:708de3ab-d65c-48c9-a632-40656bd206af:CompliantControlArchitecture" version="0" />
     <language slang="l:d35899bf-1f8a-4727-b7b5-90d52a21d317:CompliantControlTask" version="0" />
+    <language slang="l:218e40b4-75d4-4de8-83e6-b31e4da8bcee:Component" version="0" />
     <language slang="l:b744b93e-0522-4237-a6fd-fa650d0b451a:Geometry" version="0" />
     <language slang="l:d6881f78-a85d-4c9e-931e-30879e67afdd:Kinematics" version="0" />
     <language slang="l:d6d7f6e1-f407-48f8-a582-7b1489b7163f:ProtoBuf" version="0" />
@@ -29,6 +32,7 @@
   </languageVersions>
   <dependencyVersions>
     <module reference="3f233e7f-b8a6-46d2-a57f-795d56775243(Annotations)" version="0" />
+    <module reference="6d4f5997-0eeb-4a8a-86c2-d4b3ba19dd87(CCL)" version="0" />
     <module reference="f9491b51-fad9-4ade-b5db-36db060ccb6d(GeneratorPlans)" version="0" />
     <module reference="6354ebe7-c22a-4a0f-ac54-50b52ab9b065(JDK)" version="0" />
     <module reference="d6881f78-a85d-4c9e-931e-30879e67afdd(Kinematics)" version="0" />

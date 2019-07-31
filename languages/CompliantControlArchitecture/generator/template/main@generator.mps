@@ -353,12 +353,12 @@
       <node concept="2b32R4" id="3JOwuCCPw8M" role="lGtFl">
         <node concept="3JmXsc" id="3JOwuCCPw8P" role="2P8S$">
           <node concept="3clFbS" id="3JOwuCCPw8Q" role="2VODD2">
-            <node concept="3clFbF" id="3JOwuCCPw8W" role="3cqZAp">
-              <node concept="2OqwBi" id="3JOwuCCPw8R" role="3clFbG">
-                <node concept="3Tsc0h" id="3JOwuCCPw8U" role="2OqNvi">
+            <node concept="3cpWs6" id="R1CGQkWuB1" role="3cqZAp">
+              <node concept="2OqwBi" id="R1CGQkWuV4" role="3cqZAk">
+                <node concept="30H73N" id="R1CGQkWuJ2" role="2Oq$k0" />
+                <node concept="3Tsc0h" id="R1CGQkWva4" role="2OqNvi">
                   <ref role="3TtcxE" to="gqxc:2uDla1tgeJn" resolve="ccaentries" />
                 </node>
-                <node concept="30H73N" id="3JOwuCCPw8V" role="2Oq$k0" />
               </node>
             </node>
           </node>
@@ -2475,10 +2475,13 @@
                           <node concept="2pJPED" id="2WwgBnYXkCT" role="2pJPEn">
                             <ref role="2pJxaS" to="gqxc:2WwgBnYUcrO" resolve="TaskRelation" />
                             <node concept="2pIpSj" id="2WwgBnYXlB1" role="2pJxcM">
-                              <ref role="2pIpSl" to="gqxc:2WwgBnYUcup" resolve="task" />
+                              <ref role="2pIpSl" to="gqxc:R1CGQl0wp$" resolve="taskCopy" />
                               <node concept="36biLy" id="2WwgBnYXmdQ" role="2pJxcZ">
-                                <node concept="37vLTw" id="2WwgBnYXmDA" role="36biLW">
-                                  <ref role="3cqZAo" node="BCCyAWJB8z" resolve="candidate" />
+                                <node concept="2OqwBi" id="R1CGQl16yZ" role="36biLW">
+                                  <node concept="37vLTw" id="2WwgBnYXmDA" role="2Oq$k0">
+                                    <ref role="3cqZAo" node="BCCyAWJB8z" resolve="candidate" />
+                                  </node>
+                                  <node concept="1$rogu" id="R1CGQl17bL" role="2OqNvi" />
                                 </node>
                               </node>
                             </node>

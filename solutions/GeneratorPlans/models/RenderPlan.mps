@@ -61,6 +61,12 @@
     <node concept="19BiC4" id="4WbPc0pQeWB" role="2VgMA7">
       <property role="TrG5h" value="GenStep_Dot" />
     </node>
+    <node concept="2VgMA2" id="1xM4FBSLOy1" role="2VgMA7">
+      <node concept="2V$Bhx" id="1xM4FBSLPRs" role="1t_9vn">
+        <property role="2V$B1T" value="247ba1ff-168c-4254-b74e-978769c83933" />
+        <property role="2V$B1Q" value="ControlSystemGen" />
+      </node>
+    </node>
   </node>
 </model>
 
