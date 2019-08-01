@@ -20,6 +20,7 @@
         <dependency reexport="false">708de3ab-d65c-48c9-a632-40656bd206af(CompliantControlArchitecture)</dependency>
         <dependency reexport="false">99abc364-3965-4ead-ab2d-0b272a528a90(RobotPlatform)</dependency>
         <dependency reexport="false">b744b93e-0522-4237-a6fd-fa650d0b451a(Geometry)</dependency>
+        <dependency reexport="false">dfed0f13-ca0e-4e6d-b469-ef760982a8ea(EigenTypekit)</dependency>
       </dependencies>
       <languageVersions>
         <language slang="l:4cc07462-84b3-4d01-8adb-629ddd3cebd4:Capabilities" version="0" />
@@ -48,6 +49,7 @@
         <module reference="218e40b4-75d4-4de8-83e6-b31e4da8bcee(Component)" version="0" />
         <module reference="247ba1ff-168c-4254-b74e-978769c83933(ControlSystemGen)" version="0" />
         <module reference="437b18a5-62cd-4b53-9ae1-20cd2fba73be(ControlSystemGen#1761490994203271899)" version="0" />
+        <module reference="dfed0f13-ca0e-4e6d-b469-ef760982a8ea(EigenTypekit)" version="0" />
         <module reference="b744b93e-0522-4237-a6fd-fa650d0b451a(Geometry)" version="0" />
         <module reference="6354ebe7-c22a-4a0f-ac54-50b52ab9b065(JDK)" version="0" />
         <module reference="d6881f78-a85d-4c9e-931e-30879e67afdd(Kinematics)" version="0" />
