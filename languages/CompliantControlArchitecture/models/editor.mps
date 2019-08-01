@@ -779,8 +779,14 @@
             </node>
           </node>
         </node>
-        <node concept="3F0A7n" id="1S9dQRVWYo2" role="3EZMnx">
-          <ref role="1NtTu8" to="gqxc:1S9dQRVWVsA" resolve="robotName" />
+        <node concept="1iCGBv" id="71eMqXFWroJ" role="3EZMnx">
+          <ref role="1NtTu8" to="gqxc:71eMqXFWr6F" resolve="robotInstance" />
+          <node concept="1sVBvm" id="71eMqXFWroL" role="1sWHZn">
+            <node concept="3F0A7n" id="71eMqXFWrxY" role="2wV5jI">
+              <property role="1Intyy" value="true" />
+              <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+            </node>
+          </node>
         </node>
         <node concept="gc7cB" id="2UiBD4$UY7H" role="3EZMnx">
           <node concept="3VJUX4" id="2UiBD4$UY7J" role="3YsKMw">

@@ -381,12 +381,17 @@
                 <property role="Xl_RC" value=":" />
               </node>
             </node>
-            <node concept="2OqwBi" id="1_0ru7sLGb" role="3uHU7w">
-              <node concept="37vLTw" id="1_0ru7sLtS" role="2Oq$k0">
-                <ref role="3cqZAo" node="1_0ru7sAY4" resolve="entry" />
+            <node concept="2OqwBi" id="71eMqXG2kfh" role="3uHU7w">
+              <node concept="2OqwBi" id="1_0ru7sLGb" role="2Oq$k0">
+                <node concept="37vLTw" id="1_0ru7sLtS" role="2Oq$k0">
+                  <ref role="3cqZAo" node="1_0ru7sAY4" resolve="entry" />
+                </node>
+                <node concept="3TrEf2" id="71eMqXG2jF3" role="2OqNvi">
+                  <ref role="3Tt5mk" to="gqxc:71eMqXFWr6F" resolve="robotInstance" />
+                </node>
               </node>
-              <node concept="3TrcHB" id="1_0ru7sLV2" role="2OqNvi">
-                <ref role="3TsBF5" to="gqxc:1S9dQRVWVsA" resolve="robotName" />
+              <node concept="3TrcHB" id="71eMqXG2kJo" role="2OqNvi">
+                <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
               </node>
             </node>
           </node>
@@ -415,12 +420,17 @@
                 <property role="Xl_RC" value=":" />
               </node>
             </node>
-            <node concept="2OqwBi" id="2L3KICxVwJY" role="3uHU7w">
-              <node concept="37vLTw" id="2L3KICxVwJZ" role="2Oq$k0">
-                <ref role="3cqZAo" node="1_0ru7sAY4" resolve="entry" />
+            <node concept="2OqwBi" id="71eMqXG2lM_" role="3uHU7w">
+              <node concept="2OqwBi" id="2L3KICxVwJY" role="2Oq$k0">
+                <node concept="37vLTw" id="2L3KICxVwJZ" role="2Oq$k0">
+                  <ref role="3cqZAo" node="1_0ru7sAY4" resolve="entry" />
+                </node>
+                <node concept="3TrEf2" id="71eMqXG2len" role="2OqNvi">
+                  <ref role="3Tt5mk" to="gqxc:71eMqXFWr6F" resolve="robotInstance" />
+                </node>
               </node>
-              <node concept="3TrcHB" id="2L3KICxVwK0" role="2OqNvi">
-                <ref role="3TsBF5" to="gqxc:1S9dQRVWVsA" resolve="robotName" />
+              <node concept="3TrcHB" id="71eMqXG2miG" role="2OqNvi">
+                <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
               </node>
             </node>
           </node>

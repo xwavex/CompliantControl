@@ -11,6 +11,7 @@
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" />
     <import index="tpee" ref="r:00000000-0000-4000-0000-011c895902ca(jetbrains.mps.baseLanguage.structure)" />
     <import index="l1zz" ref="r:7dde0f85-b752-4c1f-8bd0-8361dd2efaa4(Component.structure)" />
+    <import index="mz1w" ref="r:f0e63708-fe8e-4a7e-94d7-74a74c6e3725(RobotPlatform.structure)" />
   </imports>
   <registry>
     <language id="c72da2b9-7cce-4447-8389-f407dc1158b7" name="jetbrains.mps.lang.structure">
@@ -328,10 +329,12 @@
     <property role="3GE5qa" value="relations" />
     <property role="TrG5h" value="EntryRelation" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
-    <node concept="1TJgyi" id="1S9dQRVWVsA" role="1TKVEl">
-      <property role="IQ2nx" value="2164322041446250278" />
-      <property role="TrG5h" value="robotName" />
-      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+    <node concept="1TJgyj" id="71eMqXFWr6F" role="1TKVEi">
+      <property role="IQ2ns" value="8092627335698821547" />
+      <property role="20lmBu" value="reference" />
+      <property role="20kJfa" value="robotInstance" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" to="mz1w:71eMqXG9gIx" resolve="IRobotInstance" />
     </node>
     <node concept="1TJgyj" id="2uDla1thCyz" role="1TKVEi">
       <property role="IQ2ns" value="2857908486279694499" />
@@ -675,6 +678,38 @@
     </node>
     <node concept="PrWs8" id="5l3S79Y09XG" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="71eMqXFD71Y">
+    <property role="EcuMT" value="8092627335693758590" />
+    <property role="3GE5qa" value="annotation" />
+    <property role="TrG5h" value="CCAGraphMetaAnnotation" />
+    <ref role="1TJDcQ" to="tpck:2ULFgo8_XDk" resolve="NodeAttribute" />
+    <node concept="M6xJ_" id="71eMqXFD73W" role="lGtFl">
+      <property role="Hh88m" value="CCAGraphMeta" />
+      <node concept="trNpa" id="71eMqXFD749" role="EQaZv">
+        <ref role="trN6q" to="tpck:gw2VY9q" resolve="BaseConcept" />
+      </node>
+      <node concept="tn0Fv" id="71eMqXFD74m" role="HhnKV">
+        <property role="tnX3d" value="false" />
+      </node>
+    </node>
+    <node concept="1TJgyi" id="71eMqXFDrMA" role="1TKVEl">
+      <property role="IQ2nx" value="8092627335693843622" />
+      <property role="TrG5h" value="robotName" />
+      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+    </node>
+    <node concept="1TJgyi" id="71eMqXFDsPY" role="1TKVEl">
+      <property role="IQ2nx" value="8092627335693847934" />
+      <property role="TrG5h" value="contactsituationName" />
+      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+    </node>
+    <node concept="1TJgyj" id="4rX5_MQrqjQ" role="1TKVEi">
+      <property role="IQ2ns" value="5115269339216192758" />
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="robotInstanceCopy" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" to="mz1w:71eMqXG9gIx" resolve="IRobotInstance" />
     </node>
   </node>
 </model>

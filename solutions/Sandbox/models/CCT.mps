@@ -8,6 +8,7 @@
     <use id="d6d7f6e1-f407-48f8-a582-7b1489b7163f" name="ProtoBuf" version="0" />
     <use id="d6881f78-a85d-4c9e-931e-30879e67afdd" name="Kinematics" version="0" />
     <use id="b744b93e-0522-4237-a6fd-fa650d0b451a" name="Geometry" version="0" />
+    <use id="99abc364-3965-4ead-ab2d-0b272a528a90" name="RobotPlatform" version="0" />
   </languages>
   <imports>
     <import index="oet6" ref="r:85b31eb0-6551-4bd7-8659-464e8655dad3(RobotRepository.kinematics)" />
@@ -15,6 +16,7 @@
     <import index="lrob" ref="r:d01e7c48-4315-4a97-a560-4b91cd1fec15(RobotRepository.interfaces)" />
     <import index="yzc3" ref="r:fb46aa12-7f49-4ac6-ac4c-bc9fd1f3fb28(RSTRTa.sandbox)" />
     <import index="sxll" ref="r:b16aad8a-7e70-4535-bb6a-8f44c10f77e2(RSTRTa.stable)" />
+    <import index="au3b" ref="r:6e797eca-4e7c-4a4c-8586-c56689f90337(Sandbox.CCT)" />
   </imports>
   <registry>
     <language id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage">
@@ -39,6 +41,14 @@
       </concept>
     </language>
     <language id="b744b93e-0522-4237-a6fd-fa650d0b451a" name="Geometry">
+      <concept id="7718836250438026365" name="Geometry.structure.VirtualManipulator" flags="ng" index="pQDjh">
+        <reference id="7214932431041788247" name="robotRight" index="2M$6Y6" />
+        <reference id="7214932431041788186" name="robotLeft" index="2M$6Zb" />
+        <child id="7718836250438557637" name="anchorLeft" index="pOCXD" />
+        <child id="7718836250438557650" name="anchorRight" index="pOCXY" />
+        <child id="6165337268367337246" name="chainLeft" index="3s38Ea" />
+        <child id="6165337268367337331" name="chainRight" index="3s38FB" />
+      </concept>
       <concept id="7718836250438081396" name="Geometry.structure.KinematicChainRef" flags="ng" index="pQWJo">
         <reference id="7718836250438933123" name="chain" index="pNcCJ" />
       </concept>
@@ -53,6 +63,11 @@
         <reference id="6165337268368241492" name="link" index="3s7PV0" />
       </concept>
       <concept id="6011303867107992861" name="Geometry.structure.VirtualFrame" flags="ng" index="30yLgp" />
+    </language>
+    <language id="99abc364-3965-4ead-ab2d-0b272a528a90" name="RobotPlatform">
+      <concept id="7214932431041870825" name="RobotPlatform.structure.RobotInstance" flags="ng" index="2M$EOS">
+        <reference id="7214932431041870951" name="robotPlatform" index="2M$EEQ" />
+      </concept>
     </language>
     <language id="d35899bf-1f8a-4727-b7b5-90d52a21d317" name="CompliantControlTask">
       <concept id="7718836250447559293" name="CompliantControlTask.structure.DynamicAnnotation" flags="ng" index="oiQFh" />
@@ -73,14 +88,6 @@
       <concept id="7718836250436665222" name="CompliantControlTask.structure.ContactSituationReference" flags="ng" index="pGqWE">
         <reference id="7718836250436665223" name="contactSituation" index="pGqWF" />
       </concept>
-      <concept id="7718836250438026365" name="CompliantControlTask.structure.VirtualManipulator" flags="ng" index="pQDjh">
-        <reference id="7214932431041788247" name="robotRight" index="2M$6Y6" />
-        <reference id="7214932431041788186" name="robotLeft" index="2M$6Zb" />
-        <child id="7718836250438557637" name="anchorLeft" index="pOCXD" />
-        <child id="7718836250438557650" name="anchorRight" index="pOCXY" />
-        <child id="6165337268367337246" name="chainLeft" index="3s38Ea" />
-        <child id="6165337268367337331" name="chainRight" index="3s38FB" />
-      </concept>
       <concept id="7718836250438081396" name="CompliantControlTask.structure.KinematicChainRef" flags="ng" index="pQWJp">
         <reference id="7718836250438933123" name="chain" index="pNcCK" />
       </concept>
@@ -90,9 +97,6 @@
       </concept>
       <concept id="7718836250437797000" name="CompliantControlTask.structure.Realization" flags="ng" index="pRxg$">
         <property id="7718836250437797126" name="refToComponent" index="pRxmE" />
-      </concept>
-      <concept id="7214932431041870825" name="CompliantControlTask.structure.RobotInstance" flags="ng" index="2M$EOS">
-        <reference id="7214932431041870951" name="robotPlatform" index="2M$EEQ" />
       </concept>
       <concept id="7214932431045349577" name="CompliantControlTask.structure.RobotInstKinematicChainRef" flags="ng" index="2MLWoo">
         <reference id="7718836250438933123" name="chain" index="pNcCL" />
@@ -597,24 +601,6 @@
       </node>
     </node>
   </node>
-  <node concept="pQDjh" id="6GuOaLMNzk$">
-    <property role="TrG5h" value="BarManipulatorFrame" />
-    <property role="3GE5qa" value="manipulators" />
-    <ref role="2M$6Zb" node="6gw_H7mGQRQ" resolve="RobotKukaLeft" />
-    <ref role="2M$6Y6" node="6gw_H7mGQTO" resolve="RobotKukaRight" />
-    <node concept="30yrG9" id="6gw_H7mNsQM" role="pOCXD">
-      <ref role="3s7PV0" to="oet6:2jRhxvsk02Z" resolve="lwr_arm_7_link" />
-    </node>
-    <node concept="30yrG9" id="6gw_H7mNsR0" role="pOCXY">
-      <ref role="3s7PV0" to="oet6:2jRhxvsk02Z" resolve="lwr_arm_7_link" />
-    </node>
-    <node concept="pQWJo" id="6gw_H7mMnwq" role="3s38Ea">
-      <ref role="pNcCJ" to="d49h:6bIwLn$0JLd" resolve="full_arm" />
-    </node>
-    <node concept="pQWJo" id="6gw_H7mMo1N" role="3s38FB">
-      <ref role="pNcCJ" to="d49h:6bIwLn$0JLd" resolve="full_arm" />
-    </node>
-  </node>
   <node concept="pGqKh" id="6GuOaLMNLLr">
     <property role="TrG5h" value="VirtualBarTracking" />
     <property role="3GE5qa" value="situations" />
@@ -864,8 +850,8 @@
           </node>
         </node>
         <node concept="2MZ0rA" id="6gw_H7mTMQu" role="3rXgej">
-          <ref role="2MZ0p$" node="6gw_H7mGQRQ" resolve="RobotKukaLeft" />
           <ref role="2MK7hP" to="oet6:2jRhxvsk02Z" resolve="lwr_arm_7_link" />
+          <ref role="2MZ0p$" node="71eMqXFWqsD" resolve="RobotKukaLeft" />
         </node>
         <node concept="30yrw0" id="6gw_H7mTMQT" role="3rXgek">
           <ref role="30yrEZ" node="6gw_H7mO0S7" resolve="VF_Traj_tool_left (external)" />
@@ -928,8 +914,8 @@
           </node>
         </node>
         <node concept="2MLWoo" id="6gw_H7mUAFW" role="3rXgej">
-          <ref role="2MLWnU" node="6gw_H7mGQRQ" resolve="RobotKukaLeft" />
           <ref role="pNcCL" to="d49h:6bIwLn$0JLd" resolve="full_arm" />
+          <ref role="2MLWnU" node="71eMqXFWqsD" resolve="RobotKukaLeft" />
         </node>
         <node concept="pQWRa" id="6gw_H7mVsTl" role="3rXgek">
           <property role="pQWR4" value="joint-space" />
@@ -1017,8 +1003,8 @@
           </node>
         </node>
         <node concept="2MZ0rA" id="6gw_H7mTMRk" role="3rXgej">
-          <ref role="2MZ0p$" node="6gw_H7mGQTO" resolve="RobotKukaRight" />
           <ref role="2MK7hP" to="oet6:2jRhxvsk02Z" resolve="lwr_arm_7_link" />
+          <ref role="2MZ0p$" node="71eMqXFWqgJ" resolve="RobotKukaRight" />
         </node>
         <node concept="30yrw0" id="6gw_H7mTMRJ" role="3rXgek">
           <ref role="30yrEZ" node="6gw_H7mO0W2" resolve="VF_Traj_tool_right (external)" />
@@ -1081,8 +1067,8 @@
           </node>
         </node>
         <node concept="2MLWoo" id="6gw_H7mUTW_" role="3rXgej">
-          <ref role="2MLWnU" node="6gw_H7mGQTO" resolve="RobotKukaRight" />
           <ref role="pNcCL" to="d49h:6bIwLn$0JLd" resolve="full_arm" />
+          <ref role="2MLWnU" node="71eMqXFWqgJ" resolve="RobotKukaRight" />
         </node>
         <node concept="pQWRa" id="6gw_H7mVt4l" role="3rXgek">
           <property role="pQWR4" value="joint-space" />
@@ -1131,12 +1117,8 @@
         <property role="odnW$" value="false" />
         <property role="o89AW" value="#DDDDDD" />
         <property role="TrG5h" value="motion_tracking" />
-        <node concept="30yrw1" id="3qu6RY9uJbr" role="3rXgej">
-          <ref role="30yrF0" node="5dGsgijUfT7" resolve="lwr_tool_link (left)" />
-        </node>
-        <node concept="30yrw1" id="3qu6RY9uJbs" role="3rXgek">
-          <ref role="30yrF0" node="3qu6RY9uIID" resolve="VF_Traj_tool_left (external)" />
-        </node>
+        <node concept="30yrw1" id="3qu6RY9uJbr" role="3rXgej" />
+        <node concept="30yrw1" id="3qu6RY9uJbs" role="3rXgek" />
         <node concept="30x8Tr" id="3qu6RY9uJbt" role="3rXgel">
           <node concept="3b6qkQ" id="3qu6RY9uJbu" role="o7tYm">
             <property role="$nhwW" value="30.0" />
@@ -1183,30 +1165,8 @@
         <property role="odnW$" value="false" />
         <property role="o89AW" value="#DDDDDD" />
         <property role="TrG5h" value="force_constraint" />
-        <node concept="30yrw1" id="3qu6RY9uJjz" role="3rXgej">
-          <ref role="30yrF0" node="5dGsgijUfT7" resolve="lwr_tool_link (left)" />
-        </node>
-        <node concept="30w5Ui" id="3qu6RY9uJm$" role="3rXgek">
-          <property role="30w4_v" value="world" />
-          <node concept="3b6qkQ" id="3qu6RY9uJm_" role="pXyqr">
-            <property role="$nhwW" value="0.0" />
-          </node>
-          <node concept="3b6qkQ" id="3qu6RY9uJmA" role="pXyrL">
-            <property role="$nhwW" value="0.0" />
-          </node>
-          <node concept="3b6qkQ" id="3qu6RY9uJmB" role="pW_3b">
-            <property role="$nhwW" value="1.0" />
-          </node>
-          <node concept="3b6qkQ" id="3qu6RY9uJmC" role="pXyvC">
-            <property role="$nhwW" value="0.0" />
-          </node>
-          <node concept="3b6qkQ" id="3qu6RY9uJmD" role="pW_10">
-            <property role="$nhwW" value="0.0" />
-          </node>
-          <node concept="3b6qkQ" id="3qu6RY9uJmE" role="pW_7H">
-            <property role="$nhwW" value="0.0" />
-          </node>
-        </node>
+        <node concept="30yrw1" id="3qu6RY9uJjz" role="3rXgej" />
+        <node concept="30w5Ui" id="3qu6RY9uJm$" role="3rXgek" />
         <node concept="30xIwC" id="3qu6RY9uJoD" role="3rXgel">
           <node concept="3b6qkQ" id="3qu6RY9uJoE" role="okz7O">
             <property role="$nhwW" value="0.0" />
@@ -1591,30 +1551,8 @@
         <property role="odnW$" value="false" />
         <property role="o89AW" value="#DDDDDD" />
         <property role="TrG5h" value="force_constraint" />
-        <node concept="30yrw1" id="7dn1noRhpam" role="3rXgej">
-          <ref role="30yrF0" node="3qu6RY9vtIV" resolve="VirtualManipulatorFrame" />
-        </node>
-        <node concept="30w5Ui" id="3qu6RY9uNjX" role="3rXgek">
-          <property role="30w4_v" value="world" />
-          <node concept="3b6qkQ" id="3qu6RY9uNjY" role="pXyqr">
-            <property role="$nhwW" value="1.0" />
-          </node>
-          <node concept="3b6qkQ" id="3qu6RY9uNjZ" role="pXyrL">
-            <property role="$nhwW" value="0.0" />
-          </node>
-          <node concept="3b6qkQ" id="3qu6RY9uNk0" role="pW_3b">
-            <property role="$nhwW" value="1.0" />
-          </node>
-          <node concept="3b6qkQ" id="3qu6RY9uNk1" role="pXyvC">
-            <property role="$nhwW" value="0.0" />
-          </node>
-          <node concept="3b6qkQ" id="3qu6RY9uNk2" role="pW_10">
-            <property role="$nhwW" value="0.0" />
-          </node>
-          <node concept="3b6qkQ" id="3qu6RY9uNk3" role="pW_7H">
-            <property role="$nhwW" value="0.0" />
-          </node>
-        </node>
+        <node concept="30yrw1" id="7dn1noRhpam" role="3rXgej" />
+        <node concept="30w5Ui" id="3qu6RY9uNjX" role="3rXgek" />
         <node concept="30xIwC" id="3qu6RY9uNk4" role="3rXgel">
           <node concept="3b6qkQ" id="3qu6RY9uNk5" role="okz7O">
             <property role="$nhwW" value="0.0" />
@@ -1800,16 +1738,6 @@
       </node>
     </node>
   </node>
-  <node concept="2M$EOS" id="6gw_H7mGQRQ">
-    <property role="TrG5h" value="RobotKukaLeft" />
-    <property role="3GE5qa" value="robots" />
-    <ref role="2M$EEQ" to="d49h:6bIwLn$0JKW" resolve="Kuka LWR 4+" />
-  </node>
-  <node concept="2M$EOS" id="6gw_H7mGQTO">
-    <property role="TrG5h" value="RobotKukaRight" />
-    <property role="3GE5qa" value="robots" />
-    <ref role="2M$EEQ" to="d49h:6bIwLn$0JKW" resolve="Kuka LWR 4+" />
-  </node>
   <node concept="30yLgp" id="6gw_H7mNYIE">
     <property role="3GE5qa" value="frames" />
     <property role="TrG5h" value="EEF_left_target" />
@@ -1837,6 +1765,34 @@
   <node concept="30yLgp" id="6gw_H7mO0ZX">
     <property role="3GE5qa" value="frames" />
     <property role="TrG5h" value="VirtualManipulatorFrame" />
+  </node>
+  <node concept="2M$EOS" id="71eMqXFWqgJ">
+    <property role="3GE5qa" value="robots" />
+    <property role="TrG5h" value="RobotKukaRight" />
+    <ref role="2M$EEQ" to="d49h:6bIwLn$0JKW" resolve="Kuka LWR 4+" />
+  </node>
+  <node concept="2M$EOS" id="71eMqXFWqsD">
+    <property role="3GE5qa" value="robots" />
+    <property role="TrG5h" value="RobotKukaLeft" />
+    <ref role="2M$EEQ" to="d49h:6bIwLn$0JKW" resolve="Kuka LWR 4+" />
+  </node>
+  <node concept="pQDjh" id="71eMqXGo4ii">
+    <property role="3GE5qa" value="manipulators" />
+    <property role="TrG5h" value="BarManipulator" />
+    <ref role="2M$6Zb" node="71eMqXFWqsD" resolve="RobotKukaLeft" />
+    <ref role="2M$6Y6" node="71eMqXFWqgJ" resolve="RobotKukaRight" />
+    <node concept="30yrG9" id="71eMqXGo6bp" role="pOCXD">
+      <ref role="3s7PV0" to="oet6:2jRhxvsk02Z" resolve="lwr_arm_7_link" />
+    </node>
+    <node concept="pQWJo" id="71eMqXGo6bb" role="3s38Ea">
+      <ref role="pNcCJ" to="d49h:6bIwLn$0JLd" resolve="full_arm" />
+    </node>
+    <node concept="30yrG9" id="71eMqXGo6bB" role="pOCXY">
+      <ref role="3s7PV0" to="oet6:2jRhxvsk02Z" resolve="lwr_arm_7_link" />
+    </node>
+    <node concept="pQWJo" id="71eMqXGo6aX" role="3s38FB">
+      <ref role="pNcCJ" to="d49h:6bIwLn$0JLd" resolve="full_arm" />
+    </node>
   </node>
 </model>
 

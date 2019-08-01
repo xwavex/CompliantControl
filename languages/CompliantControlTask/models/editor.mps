@@ -15,7 +15,6 @@
     <import index="gjk0" ref="r:1ea85bd7-610e-43a5-96d1-544363f43d31(CompliantControlTask.structure)" implicit="true" />
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
     <import index="tpco" ref="r:00000000-0000-4000-0000-011c89590284(jetbrains.mps.lang.core.editor)" implicit="true" />
-    <import index="iobv" ref="r:19496bad-2dd3-478c-9baf-0de95edabf63(Geometry.structure)" implicit="true" />
     <import index="wyt6" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.lang(JDK/)" implicit="true" />
   </imports>
   <registry>
@@ -867,88 +866,6 @@
       <node concept="l2Vlx" id="6GuOaLMKcml" role="2iSdaV" />
     </node>
   </node>
-  <node concept="24kQdi" id="6GuOaLMN604">
-    <ref role="1XX52x" to="gjk0:6GuOaLML4hX" resolve="VirtualManipulator" />
-    <node concept="3EZMnI" id="6GuOaLMN623" role="2wV5jI">
-      <node concept="3F0ifn" id="6GuOaLMN62F" role="3EZMnx">
-        <property role="3F0ifm" value="VA" />
-      </node>
-      <node concept="3F0A7n" id="6GuOaLMN63G" role="3EZMnx">
-        <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
-      </node>
-      <node concept="3F0ifn" id="6GuOaLMN64F" role="3EZMnx">
-        <property role="3F0ifm" value=":" />
-      </node>
-      <node concept="3F1sOY" id="6GuOaLMN662" role="3EZMnx">
-        <ref role="1NtTu8" to="gjk0:6GuOaLMN5Z5" resolve="anchorLeft" />
-      </node>
-      <node concept="3F0ifn" id="5mfFpi9wMwi" role="3EZMnx">
-        <property role="3F0ifm" value="from" />
-      </node>
-      <node concept="1iCGBv" id="5mfFpi9wMBw" role="3EZMnx">
-        <ref role="1NtTu8" to="gjk0:5mfFpi9wMsu" resolve="chainLeft" />
-        <node concept="1sVBvm" id="5mfFpi9wMBy" role="1sWHZn">
-          <node concept="1iCGBv" id="5mfFpi9wMDu" role="2wV5jI">
-            <ref role="1NtTu8" to="iobv:6GuOaLMOxE3" resolve="chain" />
-            <node concept="1sVBvm" id="5mfFpi9wMDw" role="1sWHZn">
-              <node concept="3F0A7n" id="5mfFpi9wME8" role="2wV5jI">
-                <property role="1Intyy" value="true" />
-                <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
-              </node>
-            </node>
-          </node>
-        </node>
-      </node>
-      <node concept="3F0ifn" id="6gw_H7mGfE5" role="3EZMnx">
-        <property role="3F0ifm" value="of" />
-      </node>
-      <node concept="1iCGBv" id="6gw_H7mGfLs" role="3EZMnx">
-        <ref role="1NtTu8" to="gjk0:6gw_H7mGf$q" resolve="robotLeft" />
-        <node concept="1sVBvm" id="6gw_H7mGfLu" role="1sWHZn">
-          <node concept="3F0A7n" id="6gw_H7mGfPE" role="2wV5jI">
-            <property role="1Intyy" value="true" />
-            <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
-          </node>
-        </node>
-      </node>
-      <node concept="3F0ifn" id="6GuOaLMN67L" role="3EZMnx">
-        <property role="3F0ifm" value="--" />
-      </node>
-      <node concept="3F1sOY" id="6GuOaLMN69S" role="3EZMnx">
-        <ref role="1NtTu8" to="gjk0:6GuOaLMN5Zi" resolve="anchorRight" />
-      </node>
-      <node concept="3F0ifn" id="5mfFpi9wMGN" role="3EZMnx">
-        <property role="3F0ifm" value="from" />
-      </node>
-      <node concept="1iCGBv" id="5mfFpi9wMLU" role="3EZMnx">
-        <ref role="1NtTu8" to="gjk0:5mfFpi9wMtN" resolve="chainRight" />
-        <node concept="1sVBvm" id="5mfFpi9wMLW" role="1sWHZn">
-          <node concept="1iCGBv" id="5mfFpi9wMP0" role="2wV5jI">
-            <ref role="1NtTu8" to="iobv:6GuOaLMOxE3" resolve="chain" />
-            <node concept="1sVBvm" id="5mfFpi9wMP2" role="1sWHZn">
-              <node concept="3F0A7n" id="5mfFpi9wMPE" role="2wV5jI">
-                <property role="1Intyy" value="true" />
-                <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
-              </node>
-            </node>
-          </node>
-        </node>
-      </node>
-      <node concept="l2Vlx" id="6GuOaLMN626" role="2iSdaV" />
-      <node concept="3F0ifn" id="6gw_H7mGfUd" role="3EZMnx">
-        <property role="3F0ifm" value="of" />
-      </node>
-      <node concept="1iCGBv" id="6gw_H7mGg34" role="3EZMnx">
-        <ref role="1NtTu8" to="gjk0:6gw_H7mGf_n" resolve="robotRight" />
-        <node concept="1sVBvm" id="6gw_H7mGg36" role="1sWHZn">
-          <node concept="3F0A7n" id="6gw_H7mGg82" role="2wV5jI">
-            <property role="1Intyy" value="true" />
-            <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
-          </node>
-        </node>
-      </node>
-    </node>
-  </node>
   <node concept="24kQdi" id="6GuOaLMNLY7">
     <ref role="1XX52x" to="gjk0:6GuOaLMFRRA" resolve="CompliantControlTask" />
     <node concept="3EZMnI" id="6GuOaLMNM06" role="2wV5jI">
@@ -1493,30 +1410,6 @@
       <node concept="l2Vlx" id="6GuOaLNmpn0" role="2iSdaV" />
     </node>
   </node>
-  <node concept="24kQdi" id="6gw_H7mGzMq">
-    <ref role="1XX52x" to="gjk0:6gw_H7mGzJD" resolve="RobotInstance" />
-    <node concept="3EZMnI" id="6gw_H7mGzOp" role="2wV5jI">
-      <node concept="3F0ifn" id="6gw_H7mGzP1" role="3EZMnx">
-        <property role="3F0ifm" value="Robot Instance" />
-      </node>
-      <node concept="3F0A7n" id="6gw_H7mGzPC" role="3EZMnx">
-        <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
-      </node>
-      <node concept="3F0ifn" id="6gw_H7mGzQB" role="3EZMnx">
-        <property role="3F0ifm" value="based on" />
-      </node>
-      <node concept="1iCGBv" id="6gw_H7mGzRY" role="3EZMnx">
-        <ref role="1NtTu8" to="gjk0:6gw_H7mGzLB" resolve="robotPlatform" />
-        <node concept="1sVBvm" id="6gw_H7mGzS0" role="1sWHZn">
-          <node concept="3F0A7n" id="6gw_H7mGzTc" role="2wV5jI">
-            <property role="1Intyy" value="true" />
-            <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
-          </node>
-        </node>
-      </node>
-      <node concept="l2Vlx" id="6gw_H7mGzOs" role="2iSdaV" />
-    </node>
-  </node>
   <node concept="24kQdi" id="6gw_H7mR940">
     <ref role="1XX52x" to="gjk0:6gw_H7mR90R" resolve="RobotInstLinkRef" />
     <node concept="3EZMnI" id="6gw_H7mR95Z" role="2wV5jI">
@@ -1598,10 +1491,9 @@
       <node concept="1iCGBv" id="6gw_H7mTPd4" role="3EZMnx">
         <ref role="1NtTu8" to="gjk0:6gw_H7mTPcF" resolve="robotInst" />
         <node concept="1sVBvm" id="6gw_H7mTPd6" role="1sWHZn">
-          <node concept="3F0A7n" id="6gw_H7mTPeu" role="2wV5jI">
+          <node concept="3F0A7n" id="71eMqXFV8Co" role="2wV5jI">
             <property role="1Intyy" value="true" />
             <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
-            <node concept="Vb9p2" id="6gw_H7mTPlz" role="3F10Kt" />
           </node>
         </node>
       </node>

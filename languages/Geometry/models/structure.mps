@@ -8,6 +8,7 @@
   <imports>
     <import index="cewj" ref="r:cd13618c-02ad-4af8-a3e4-3414c58c4613(Kinematics.structure)" />
     <import index="tpee" ref="r:00000000-0000-4000-0000-011c895902ca(jetbrains.mps.baseLanguage.structure)" />
+    <import index="mz1w" ref="r:f0e63708-fe8e-4a7e-94d7-74a74c6e3725(RobotPlatform.structure)" />
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
   </imports>
   <registry>
@@ -299,6 +300,20 @@
     <property role="R4oN_" value="End points could be virtrual but at both ends of the sequence there need to be a non-virtual one!" />
     <property role="19KtqR" value="true" />
     <ref role="1TJDcQ" node="5dGsgijTsGz" resolve="Frame" />
+    <node concept="1TJgyj" id="6gw_H7mGf$q" role="1TKVEi">
+      <property role="IQ2ns" value="7214932431041788186" />
+      <property role="20lmBu" value="reference" />
+      <property role="20kJfa" value="robotLeft" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" to="mz1w:6gw_H7mGzJD" resolve="RobotInstance" />
+    </node>
+    <node concept="1TJgyj" id="6gw_H7mGf_n" role="1TKVEi">
+      <property role="IQ2ns" value="7214932431041788247" />
+      <property role="20lmBu" value="reference" />
+      <property role="20kJfa" value="robotRight" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" to="mz1w:6gw_H7mGzJD" resolve="RobotInstance" />
+    </node>
     <node concept="1TJgyj" id="6GuOaLMN5Z5" role="1TKVEi">
       <property role="IQ2ns" value="7718836250438557637" />
       <property role="20lmBu" value="aggregation" />
@@ -329,6 +344,9 @@
     </node>
     <node concept="PrWs8" id="3qu6RY9mCG1" role="PzmwI">
       <ref role="PrY4T" to="tpck:3fifI_xCcJN" resolve="ScopeProvider" />
+    </node>
+    <node concept="PrWs8" id="71eMqXGmZlF" role="PzmwI">
+      <ref role="PrY4T" to="mz1w:71eMqXG9gIx" resolve="IRobotInstance" />
     </node>
   </node>
   <node concept="1TIwiD" id="1k4mFkMuO7D">

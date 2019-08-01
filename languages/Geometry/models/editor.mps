@@ -6,7 +6,7 @@
     <devkit ref="2677cb18-f558-4e33-bc38-a5139cee06dc(jetbrains.mps.devkit.language-design)" />
   </languages>
   <imports>
-    <import index="iobv" ref="r:19496bad-2dd3-478c-9baf-0de95edabf63(Geometry.structure)" implicit="true" />
+    <import index="iobv" ref="r:19496bad-2dd3-478c-9baf-0de95edabf63(Geometry.structure)" />
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
   </imports>
   <registry>
@@ -263,6 +263,18 @@
           </node>
         </node>
       </node>
+      <node concept="3F0ifn" id="6gw_H7mGfE5" role="3EZMnx">
+        <property role="3F0ifm" value="of" />
+      </node>
+      <node concept="1iCGBv" id="6gw_H7mGfLs" role="3EZMnx">
+        <ref role="1NtTu8" to="iobv:6gw_H7mGf$q" resolve="robotLeft" />
+        <node concept="1sVBvm" id="6gw_H7mGfLu" role="1sWHZn">
+          <node concept="3F0A7n" id="71eMqXFV8CA" role="2wV5jI">
+            <property role="1Intyy" value="true" />
+            <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+          </node>
+        </node>
+      </node>
       <node concept="3F0ifn" id="6GuOaLMN67L" role="3EZMnx">
         <property role="3F0ifm" value="--" />
       </node>
@@ -287,6 +299,18 @@
         </node>
       </node>
       <node concept="l2Vlx" id="6GuOaLMN626" role="2iSdaV" />
+      <node concept="3F0ifn" id="6gw_H7mGfUd" role="3EZMnx">
+        <property role="3F0ifm" value="of" />
+      </node>
+      <node concept="1iCGBv" id="6gw_H7mGg34" role="3EZMnx">
+        <ref role="1NtTu8" to="iobv:6gw_H7mGf_n" resolve="robotRight" />
+        <node concept="1sVBvm" id="6gw_H7mGg36" role="1sWHZn">
+          <node concept="3F0A7n" id="71eMqXFV8CN" role="2wV5jI">
+            <property role="1Intyy" value="true" />
+            <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+          </node>
+        </node>
+      </node>
     </node>
   </node>
   <node concept="24kQdi" id="1k4mFkMuO9Q">

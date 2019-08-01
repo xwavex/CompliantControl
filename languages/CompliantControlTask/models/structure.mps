@@ -393,58 +393,6 @@
       <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
     </node>
   </node>
-  <node concept="1TIwiD" id="6GuOaLML4hX">
-    <property role="EcuMT" value="7718836250438026365" />
-    <property role="TrG5h" value="VirtualManipulator" />
-    <property role="R4oN_" value="End points could be virtual but at both ends of the sequence there need to be a non-virtual one!" />
-    <property role="19KtqR" value="true" />
-    <ref role="1TJDcQ" to="iobv:5dGsgijTsGz" resolve="Frame" />
-    <node concept="1TJgyj" id="6gw_H7mGf$q" role="1TKVEi">
-      <property role="IQ2ns" value="7214932431041788186" />
-      <property role="20lmBu" value="reference" />
-      <property role="20kJfa" value="robotLeft" />
-      <property role="20lbJX" value="1" />
-      <ref role="20lvS9" node="6gw_H7mGzJD" resolve="RobotInstance" />
-    </node>
-    <node concept="1TJgyj" id="6gw_H7mGf_n" role="1TKVEi">
-      <property role="IQ2ns" value="7214932431041788247" />
-      <property role="20lmBu" value="reference" />
-      <property role="20kJfa" value="robotRight" />
-      <property role="20lbJX" value="1" />
-      <ref role="20lvS9" node="6gw_H7mGzJD" resolve="RobotInstance" />
-    </node>
-    <node concept="1TJgyj" id="6GuOaLMN5Z5" role="1TKVEi">
-      <property role="IQ2ns" value="7718836250438557637" />
-      <property role="20lmBu" value="aggregation" />
-      <property role="20kJfa" value="anchorLeft" />
-      <property role="20lbJX" value="1" />
-      <ref role="20lvS9" to="iobv:5dGsgijTsCd" resolve="LinkRef" />
-    </node>
-    <node concept="1TJgyj" id="5mfFpi9wMsu" role="1TKVEi">
-      <property role="IQ2ns" value="6165337268367337246" />
-      <property role="20lmBu" value="aggregation" />
-      <property role="20kJfa" value="chainLeft" />
-      <property role="20lbJX" value="1" />
-      <ref role="20lvS9" to="iobv:6GuOaLMLhHO" resolve="KinematicChainRef" />
-    </node>
-    <node concept="1TJgyj" id="6GuOaLMN5Zi" role="1TKVEi">
-      <property role="IQ2ns" value="7718836250438557650" />
-      <property role="20lmBu" value="aggregation" />
-      <property role="20kJfa" value="anchorRight" />
-      <property role="20lbJX" value="1" />
-      <ref role="20lvS9" to="iobv:5dGsgijTsCd" resolve="LinkRef" />
-    </node>
-    <node concept="1TJgyj" id="5mfFpi9wMtN" role="1TKVEi">
-      <property role="IQ2ns" value="6165337268367337331" />
-      <property role="20lmBu" value="aggregation" />
-      <property role="20kJfa" value="chainRight" />
-      <property role="20lbJX" value="1" />
-      <ref role="20lvS9" to="iobv:6GuOaLMLhHO" resolve="KinematicChainRef" />
-    </node>
-    <node concept="PrWs8" id="6gw_H7mFwSR" role="PzmwI">
-      <ref role="PrY4T" to="tpck:3fifI_xCcJN" resolve="ScopeProvider" />
-    </node>
-  </node>
   <node concept="1TIwiD" id="6GuOaLMMSm3">
     <property role="EcuMT" value="7718836250438501763" />
     <property role="TrG5h" value="VirtualKinematicChainStack" />
@@ -514,22 +462,6 @@
       </node>
     </node>
   </node>
-  <node concept="1TIwiD" id="6gw_H7mGzJD">
-    <property role="EcuMT" value="7214932431041870825" />
-    <property role="19KtqR" value="true" />
-    <property role="TrG5h" value="RobotInstance" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
-    <node concept="1TJgyj" id="6gw_H7mGzLB" role="1TKVEi">
-      <property role="IQ2ns" value="7214932431041870951" />
-      <property role="20lmBu" value="reference" />
-      <property role="20kJfa" value="robotPlatform" />
-      <property role="20lbJX" value="1" />
-      <ref role="20lvS9" to="mz1w:10opGg0hjch" resolve="RobotPlatform" />
-    </node>
-    <node concept="PrWs8" id="6gw_H7mGzLO" role="PzmwI">
-      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
-    </node>
-  </node>
   <node concept="1TIwiD" id="6gw_H7mR90R">
     <property role="EcuMT" value="7214932431044644919" />
     <property role="TrG5h" value="RobotInstLinkRef" />
@@ -539,7 +471,7 @@
       <property role="20lmBu" value="reference" />
       <property role="20kJfa" value="robotInst" />
       <property role="20lbJX" value="1" />
-      <ref role="20lvS9" node="6gw_H7mGzJD" resolve="RobotInstance" />
+      <ref role="20lvS9" to="mz1w:6gw_H7mGzJD" resolve="RobotInstance" />
     </node>
     <node concept="1TJgyj" id="6gw_H7mSea$" role="1TKVEi">
       <property role="IQ2ns" value="7214932431044928164" />
@@ -561,7 +493,7 @@
       <property role="20lmBu" value="reference" />
       <property role="20kJfa" value="robotInst" />
       <property role="20lbJX" value="1" />
-      <ref role="20lvS9" node="6gw_H7mGzJD" resolve="RobotInstance" />
+      <ref role="20lvS9" to="mz1w:6gw_H7mGzJD" resolve="RobotInstance" />
     </node>
     <node concept="1TJgyj" id="6GuOaLMOxE3" role="1TKVEi">
       <property role="IQ2ns" value="7718836250438933123" />

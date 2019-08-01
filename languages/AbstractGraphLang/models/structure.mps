@@ -46,21 +46,6 @@
     <property role="TrG5h" value="Graph" />
     <property role="19KtqR" value="true" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
-    <node concept="1TJgyi" id="385B8BrfDmE" role="1TKVEl">
-      <property role="IQ2nx" value="3604459192682714538" />
-      <property role="TrG5h" value="metadata" />
-      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
-    </node>
-    <node concept="1TJgyi" id="3uBZ3zATSN4" role="1TKVEl">
-      <property role="IQ2nx" value="4010451314519018692" />
-      <property role="TrG5h" value="metadata2" />
-      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
-    </node>
-    <node concept="1TJgyi" id="3uBZ3zATSNt" role="1TKVEl">
-      <property role="IQ2nx" value="4010451314519018717" />
-      <property role="TrG5h" value="metadata3" />
-      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
-    </node>
     <node concept="1TJgyj" id="3JOwuCCOIzh" role="1TKVEi">
       <property role="IQ2ns" value="4320220785262389457" />
       <property role="20lmBu" value="aggregation" />

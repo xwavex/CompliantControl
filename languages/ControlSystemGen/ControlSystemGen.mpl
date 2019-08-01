@@ -18,6 +18,8 @@
         <dependency reexport="false">fba86641-77f1-40ef-ac2c-4d7904eb6f63(AbstractGraphLang)</dependency>
         <dependency reexport="false">218e40b4-75d4-4de8-83e6-b31e4da8bcee(Component)</dependency>
         <dependency reexport="false">708de3ab-d65c-48c9-a632-40656bd206af(CompliantControlArchitecture)</dependency>
+        <dependency reexport="false">99abc364-3965-4ead-ab2d-0b272a528a90(RobotPlatform)</dependency>
+        <dependency reexport="false">b744b93e-0522-4237-a6fd-fa650d0b451a(Geometry)</dependency>
       </dependencies>
       <languageVersions>
         <language slang="l:4cc07462-84b3-4d01-8adb-629ddd3cebd4:Capabilities" version="0" />
@@ -46,12 +48,15 @@
         <module reference="218e40b4-75d4-4de8-83e6-b31e4da8bcee(Component)" version="0" />
         <module reference="247ba1ff-168c-4254-b74e-978769c83933(ControlSystemGen)" version="0" />
         <module reference="437b18a5-62cd-4b53-9ae1-20cd2fba73be(ControlSystemGen#1761490994203271899)" version="0" />
+        <module reference="b744b93e-0522-4237-a6fd-fa650d0b451a(Geometry)" version="0" />
         <module reference="6354ebe7-c22a-4a0f-ac54-50b52ab9b065(JDK)" version="0" />
+        <module reference="d6881f78-a85d-4c9e-931e-30879e67afdd(Kinematics)" version="0" />
         <module reference="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea(MPS.Core)" version="0" />
         <module reference="1ed103c3-3aa6-49b7-9c21-6765ee11f224(MPS.Editor)" version="0" />
         <module reference="498d89d2-c2e9-11e2-ad49-6cf049e62fe5(MPS.IDEA)" version="0" />
         <module reference="8865b7a8-5271-43d3-884c-6fd1d9cfdd34(MPS.OpenAPI)" version="0" />
         <module reference="742f6602-5a2f-4313-aa6e-ae1cd4ffdc61(MPS.Platform)" version="0" />
+        <module reference="99abc364-3965-4ead-ab2d-0b272a528a90(RobotPlatform)" version="0" />
         <module reference="f3061a53-9226-4cc5-a443-f952ceaf5816(jetbrains.mps.baseLanguage)" version="0" />
         <module reference="e39e4a59-8cb6-498e-860e-8fa8361c0d90(jetbrains.mps.baseLanguage.scopes)" version="0" />
         <module reference="2d3c70e9-aab2-4870-8d8d-6036800e4103(jetbrains.mps.kernel)" version="0" />
