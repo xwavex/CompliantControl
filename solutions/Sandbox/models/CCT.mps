@@ -1818,7 +1818,7 @@
   <node concept="2M$EOS" id="71eMqXFWqsD">
     <property role="3GE5qa" value="robots" />
     <property role="TrG5h" value="RobotKukaLeft" />
-    <ref role="2M$EEQ" to="d49h:6bIwLn$0JKW" resolve="Kuka LWR 4+" />
+    <ref role="2M$EEQ" to="d49h:C_g3bnXz3b" resolve="Kuka LWR 4+ (Sponge)" />
   </node>
   <node concept="pQDjh" id="71eMqXGo4ii">
     <property role="3GE5qa" value="manipulators" />

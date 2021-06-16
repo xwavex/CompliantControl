@@ -103,6 +103,7 @@
       <concept id="1079359253375" name="jetbrains.mps.baseLanguage.structure.ParenthesizedExpression" flags="nn" index="1eOMI4">
         <child id="1079359253376" name="expression" index="1eOMHV" />
       </concept>
+      <concept id="1081506773034" name="jetbrains.mps.baseLanguage.structure.LessThanExpression" flags="nn" index="3eOVzh" />
       <concept id="1081516740877" name="jetbrains.mps.baseLanguage.structure.NotExpression" flags="nn" index="3fqX7Q">
         <child id="1081516765348" name="expression" index="3fr31v" />
       </concept>
@@ -190,6 +191,14 @@
         <child id="1199569906740" name="parameter" index="1bW2Oz" />
         <child id="1199569916463" name="body" index="1bW5cS" />
       </concept>
+    </language>
+    <language id="d7706f63-9be2-479c-a3da-ae92af1e64d5" name="jetbrains.mps.lang.generator.generationContext">
+      <concept id="1217960179967" name="jetbrains.mps.lang.generator.generationContext.structure.GenerationContextOp_ShowErrorMessage" flags="nn" index="2k5nB$" />
+      <concept id="1217960314443" name="jetbrains.mps.lang.generator.generationContext.structure.GenerationContextOp_ShowMessageBase" flags="nn" index="2k5Stg">
+        <child id="1217960314448" name="messageText" index="2k5Stb" />
+      </concept>
+      <concept id="1217970068025" name="jetbrains.mps.lang.generator.generationContext.structure.GenerationContextOp_ShowInfoMessage" flags="nn" index="2kF5Gy" />
+      <concept id="1216860049635" name="jetbrains.mps.lang.generator.generationContext.structure.TemplateFunctionParameter_generationContext" flags="nn" index="1iwH7S" />
     </language>
     <language id="3a13115c-633c-4c5c-bbcc-75c4219e9555" name="jetbrains.mps.lang.quotation">
       <concept id="5455284157994012186" name="jetbrains.mps.lang.quotation.structure.NodeBuilderInitLink" flags="ng" index="2pIpSj">
@@ -2594,11 +2603,60 @@
     <property role="TrG5h" value="script_arrange_by_robot" />
     <node concept="1pplIY" id="BCCyAXbDyM" role="1pqMTA">
       <node concept="3clFbS" id="BCCyAXbDyN" role="2VODD2">
+        <node concept="2xdQw9" id="499ZTMP6ycO" role="3cqZAp">
+          <property role="2xdLsb" value="fatal" />
+          <node concept="3cpWs3" id="499ZTMPjpt8" role="9lYJi">
+            <node concept="Xl_RD" id="499ZTMP6ycQ" role="3uHU7B">
+              <property role="Xl_RC" value="[CCAGen] BEGIN! " />
+            </node>
+            <node concept="2OqwBi" id="499ZTMPjpu3" role="3uHU7w">
+              <node concept="2OqwBi" id="499ZTMPjpu4" role="2Oq$k0">
+                <node concept="1Q6Npb" id="499ZTMPjpu5" role="2Oq$k0" />
+                <node concept="2SmgA7" id="499ZTMPjpu6" role="2OqNvi">
+                  <node concept="chp4Y" id="499ZTMPjpu7" role="1dBWTz">
+                    <ref role="cht4Q" to="1ccf:3JOwuCCOEMz" resolve="Graph" />
+                  </node>
+                </node>
+              </node>
+              <node concept="34oBXx" id="499ZTMPjpu8" role="2OqNvi" />
+            </node>
+          </node>
+        </node>
+        <node concept="2xdQw9" id="499ZTMPjshy" role="3cqZAp">
+          <property role="2xdLsb" value="fatal" />
+          <node concept="3cpWs3" id="499ZTMPjshz" role="9lYJi">
+            <node concept="Xl_RD" id="499ZTMPjsh$" role="3uHU7B">
+              <property role="Xl_RC" value="[CCAGen] BEGIN2! " />
+            </node>
+            <node concept="2OqwBi" id="499ZTMPjsh_" role="3uHU7w">
+              <node concept="2OqwBi" id="499ZTMPjshA" role="2Oq$k0">
+                <node concept="1Q6Npb" id="499ZTMPjshB" role="2Oq$k0" />
+                <node concept="2SmgA7" id="499ZTMPjshC" role="2OqNvi">
+                  <node concept="chp4Y" id="499ZTMPjv6P" role="1dBWTz">
+                    <ref role="cht4Q" to="1ccf:3JOwuCCPgG3" resolve="GraphSet" />
+                  </node>
+                </node>
+              </node>
+              <node concept="34oBXx" id="499ZTMPjshE" role="2OqNvi" />
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbH" id="499ZTMPjpEp" role="3cqZAp" />
         <node concept="3clFbJ" id="BCCyAXbDyO" role="3cqZAp">
           <node concept="3clFbS" id="BCCyAXbDyP" role="3clFbx">
+            <node concept="3clFbF" id="499ZTMOOGJ5" role="3cqZAp">
+              <node concept="2OqwBi" id="499ZTMOOGQM" role="3clFbG">
+                <node concept="1iwH7S" id="499ZTMOOGJ3" role="2Oq$k0" />
+                <node concept="2k5nB$" id="499ZTMOOGWk" role="2OqNvi">
+                  <node concept="Xl_RD" id="499ZTMOOGX6" role="2k5Stb">
+                    <property role="Xl_RC" value="[CCAGen] No Graphs found after generation!" />
+                  </node>
+                </node>
+              </node>
+            </node>
             <node concept="3cpWs6" id="BCCyAXbDyQ" role="3cqZAp" />
           </node>
-          <node concept="2dkUwp" id="BCCyAXbDyR" role="3clFbw">
+          <node concept="3eOVzh" id="499ZTMPcWlb" role="3clFbw">
             <node concept="2OqwBi" id="BCCyAXbDyS" role="3uHU7B">
               <node concept="2OqwBi" id="BCCyAXbDyT" role="2Oq$k0">
                 <node concept="1Q6Npb" id="BCCyAXbDyU" role="2Oq$k0" />
@@ -2612,6 +2670,33 @@
             </node>
             <node concept="3cmrfG" id="BCCyAXbDyY" role="3uHU7w">
               <property role="3cmrfH" value="1" />
+            </node>
+          </node>
+          <node concept="9aQIb" id="499ZTMP6pKI" role="9aQIa">
+            <node concept="3clFbS" id="499ZTMP6pKJ" role="9aQI4">
+              <node concept="3clFbF" id="499ZTMPjmYY" role="3cqZAp">
+                <node concept="2OqwBi" id="499ZTMPjmYZ" role="3clFbG">
+                  <node concept="1iwH7S" id="499ZTMPjmZ0" role="2Oq$k0" />
+                  <node concept="2kF5Gy" id="499ZTMPjn67" role="2OqNvi">
+                    <node concept="3cpWs3" id="499ZTMPjn6V" role="2k5Stb">
+                      <node concept="2OqwBi" id="499ZTMPjn6W" role="3uHU7w">
+                        <node concept="2OqwBi" id="499ZTMPjn6X" role="2Oq$k0">
+                          <node concept="1Q6Npb" id="499ZTMPjn6Y" role="2Oq$k0" />
+                          <node concept="2SmgA7" id="499ZTMPjn6Z" role="2OqNvi">
+                            <node concept="chp4Y" id="499ZTMPjn70" role="1dBWTz">
+                              <ref role="cht4Q" to="1ccf:3JOwuCCOEMz" resolve="Graph" />
+                            </node>
+                          </node>
+                        </node>
+                        <node concept="34oBXx" id="499ZTMPjn71" role="2OqNvi" />
+                      </node>
+                      <node concept="Xl_RD" id="499ZTMPjn72" role="3uHU7B">
+                        <property role="Xl_RC" value="[CCAGen] Graphs found " />
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
             </node>
           </node>
         </node>
@@ -2638,6 +2723,26 @@
             <property role="TrG5h" value="gg" />
           </node>
           <node concept="3clFbS" id="BCCyAXbDza" role="2LFqv$">
+            <node concept="3clFbF" id="499ZTMPjnr3" role="3cqZAp">
+              <node concept="2OqwBi" id="499ZTMPjnr4" role="3clFbG">
+                <node concept="1iwH7S" id="499ZTMPjnr5" role="2Oq$k0" />
+                <node concept="2kF5Gy" id="499ZTMPjnr6" role="2OqNvi">
+                  <node concept="3cpWs3" id="499ZTMOZQ0K" role="2k5Stb">
+                    <node concept="2OqwBi" id="499ZTMOZQe4" role="3uHU7w">
+                      <node concept="2GrUjf" id="499ZTMOZQ22" role="2Oq$k0">
+                        <ref role="2Gs0qQ" node="BCCyAXbDz9" resolve="gg" />
+                      </node>
+                      <node concept="3TrcHB" id="499ZTMOZQyA" role="2OqNvi">
+                        <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
+                      </node>
+                    </node>
+                    <node concept="Xl_RD" id="499ZTMOZOlh" role="3uHU7B">
+                      <property role="Xl_RC" value="[CCAGen] Store robot name " />
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
             <node concept="3clFbF" id="BCCyAXbDzb" role="3cqZAp">
               <node concept="2OqwBi" id="BCCyAXbDzc" role="3clFbG">
                 <node concept="37vLTw" id="BCCyAXbDzd" role="2Oq$k0">
@@ -3211,6 +3316,23 @@
                     </node>
                   </node>
                   <node concept="3clFbS" id="4WbPc0oXUtl" role="2LFqv$">
+                    <node concept="2xdQw9" id="499ZTMOZR21" role="3cqZAp">
+                      <property role="2xdLsb" value="error" />
+                      <node concept="3cpWs3" id="499ZTMOZTfr" role="9lYJi">
+                        <node concept="2OqwBi" id="499ZTMOZTsa" role="3uHU7w">
+                          <node concept="2GrUjf" id="499ZTMOZTgm" role="2Oq$k0">
+                            <ref role="2Gs0qQ" node="4WbPc0oXUth" resolve="e" />
+                          </node>
+                          <node concept="3TrcHB" id="499ZTMOZTPX" role="2OqNvi">
+                            <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
+                          </node>
+                        </node>
+                        <node concept="Xl_RD" id="499ZTMOZR26" role="3uHU7B">
+                          <property role="Xl_RC" value="[CCAGen] For edge " />
+                        </node>
+                      </node>
+                    </node>
+                    <node concept="3clFbH" id="499ZTMOZQE6" role="3cqZAp" />
                     <node concept="3clFbJ" id="4WbPc0oY2$u" role="3cqZAp">
                       <node concept="2OqwBi" id="4WbPc0p0mgH" role="3clFbw">
                         <node concept="2OqwBi" id="4WbPc0oY4OD" role="2Oq$k0">

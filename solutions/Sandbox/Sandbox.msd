@@ -6,7 +6,7 @@
     </modelRoot>
   </models>
   <facets>
-    <facet planModel="r:f6e730f9-585c-42db-a364-856fcf8bb498(GeneratorPlans.RenderPlan)" type="generator" />
+    <facet planModel="r:e9b9093d-bd22-4e33-9bd6-22557dc081e8(GeneratorPlans.RenderPlan_small)" type="generator" />
   </facets>
   <sourcePath />
   <dependencies>
