@@ -399,7 +399,7 @@
   </node>
   <node concept="1TIwiD" id="5mfFpiaYK8S">
     <property role="EcuMT" value="6165337268391969336" />
-    <property role="TrG5h" value="CartesianConstraintController" />
+    <property role="TrG5h" value="CartesianForceController" />
     <property role="3GE5qa" value="controlformalism" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="PrWs8" id="5mfFpiaYKd2" role="PzmwI">
@@ -710,6 +710,15 @@
       <property role="20kJfa" value="robotInstanceCopy" />
       <property role="20lbJX" value="1" />
       <ref role="20lvS9" to="mz1w:71eMqXG9gIx" resolve="IRobotInstance" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="FwQJuAOkB_">
+    <property role="EcuMT" value="783867092352977381" />
+    <property role="TrG5h" value="CartesianConstraintController" />
+    <property role="3GE5qa" value="controlformalism" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="PrWs8" id="FwQJuAOkBA" role="PzmwI">
+      <ref role="PrY4T" node="5mfFpiaYKb3" resolve="ICartesianControllerFormalism" />
     </node>
   </node>
 </model>

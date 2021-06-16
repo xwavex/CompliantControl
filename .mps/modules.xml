@@ -10,6 +10,7 @@
       <modulePath path="$PROJECT_DIR$/languages/ControlSystemGen/ControlSystemGen.mpl" folder="" />
       <modulePath path="$PROJECT_DIR$/languages/Geometry/Geometry.mpl" folder="" />
       <modulePath path="$PROJECT_DIR$/languages/GraphToRenderingGen/GraphToRenderingGen.mpl" folder="" />
+      <modulePath path="$PROJECT_DIR$/solutions/Deleteme/Arch.msd" folder="" />
       <modulePath path="$PROJECT_DIR$/solutions/GeneratorPlans/GeneratorPlans.msd" folder="" />
       <modulePath path="$PROJECT_DIR$/solutions/Sandbox/Sandbox.msd" folder="" />
     </projectModules>

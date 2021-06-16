@@ -32,6 +32,7 @@
         <property id="3602271812429003094" name="external" index="25LATQ" />
         <reference id="1863175463444692656" name="realization" index="1X0QE6" />
       </concept>
+      <concept id="6165337268391969743" name="CompliantControlArchitecture.structure.CartesianMassSpringDamperController" flags="ng" index="3vtaTr" />
       <concept id="6165337268391969336" name="CompliantControlArchitecture.structure.CartesianConstraintController" flags="ng" index="3vtaYG" />
       <concept id="2857908486279273480" name="CompliantControlArchitecture.structure.CompliantControlArchitecture" flags="ng" index="1UUkyC">
         <child id="2857908486279326679" name="ccaentries" index="1UUrXR" />
@@ -79,7 +80,10 @@
           <node concept="30yrw0" id="6ZiwyoQIQGG" role="3seXu1">
             <ref role="30yrEZ" to="zh5x:2Yj7ZZY3EOa" resolve="VF_BarTarget" />
           </node>
-          <node concept="3vtaKT" id="6ZiwyoQIQFA" role="3vtaj5" />
+          <node concept="3vtaTr" id="2ckx$ExebT3" role="3vtaj5">
+            <property role="25LATQ" value="false" />
+            <ref role="1X0QE6" to="73wf:42NqMk2O7kC" resolve="PoseController" />
+          </node>
         </node>
       </node>
       <node concept="2ZZAyO" id="6ZiwyoQIQDK" role="2ZZomq">

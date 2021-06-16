@@ -56,15 +56,29 @@
         <property id="7718836250438081896" name="space" index="pQWR4" />
         <child id="7718836250438082023" name="value" index="pQWPb" />
       </concept>
+      <concept id="6011303867108306838" name="Geometry.structure.RelativeFrame" flags="ng" index="30w5Ui">
+        <property id="6011303867108309083" name="space" index="30w4_v" />
+        <child id="7718836250440663276" name="rp" index="pW_10" />
+        <child id="7718836250440663143" name="z" index="pW_3b" />
+        <child id="7718836250440663361" name="ry" index="pW_7H" />
+        <child id="7718836250440431159" name="x" index="pXyqr" />
+        <child id="7718836250440431197" name="y" index="pXyrL" />
+        <child id="7718836250440431428" name="rr" index="pXyvC" />
+      </concept>
       <concept id="6011303867107887364" name="Geometry.structure.FrameRef" flags="ng" index="30yrw0">
         <reference id="6011303867107888059" name="ref" index="30yrEZ" />
       </concept>
+      <concept id="6011303867107887907" name="Geometry.structure.Frame" flags="ng" index="30yrCB" />
       <concept id="6011303867107887629" name="Geometry.structure.LinkRef" flags="ng" index="30yrG9">
         <reference id="6165337268368241492" name="link" index="3s7PV0" />
       </concept>
       <concept id="6011303867107992861" name="Geometry.structure.VirtualFrame" flags="ng" index="30yLgp" />
     </language>
     <language id="99abc364-3965-4ead-ab2d-0b272a528a90" name="RobotPlatform">
+      <concept id="1159789896052060945" name="RobotPlatform.structure.RobotPlatform" flags="ng" index="gnlnl">
+        <reference id="1159789896052086159" name="kinematicDescription" index="gnvdb" />
+        <child id="1159789896052095424" name="kinematicChains" index="gntW4" />
+      </concept>
       <concept id="7214932431041870825" name="RobotPlatform.structure.RobotInstance" flags="ng" index="2M$EOS">
         <reference id="7214932431041870951" name="robotPlatform" index="2M$EEQ" />
       </concept>
@@ -107,14 +121,14 @@
         <reference id="7214932431044645045" name="robotInst" index="2MZ0p$" />
       </concept>
       <concept id="3935613358949427562" name="CompliantControlTask.structure.VirtuallyCombinedJoints" flags="ng" index="2ZU78l" />
-      <concept id="6011303867108306838" name="CompliantControlTask.structure.RelativeFrame" flags="ng" index="30w5Ui">
-        <property id="6011303867108309083" name="space" index="30w4_v" />
-        <child id="7718836250440663276" name="rp" index="pW_10" />
-        <child id="7718836250440663143" name="z" index="pW_3b" />
-        <child id="7718836250440663361" name="ry" index="pW_7H" />
-        <child id="7718836250440431159" name="x" index="pXyqr" />
-        <child id="7718836250440431197" name="y" index="pXyrL" />
-        <child id="7718836250440431428" name="rr" index="pXyvC" />
+      <concept id="6011303867108306838" name="CompliantControlTask.structure.RelativeFrame" flags="ng" index="30w5Uj">
+        <property id="6011303867108309083" name="space" index="30w4_w" />
+        <child id="7718836250440663276" name="rp" index="pW_11" />
+        <child id="7718836250440663143" name="z" index="pW_3c" />
+        <child id="7718836250440663361" name="ry" index="pW_7I" />
+        <child id="7718836250440431159" name="x" index="pXyqs" />
+        <child id="7718836250440431197" name="y" index="pXyrM" />
+        <child id="7718836250440431428" name="rr" index="pXyvD" />
       </concept>
       <concept id="6011303867108097887" name="CompliantControlTask.structure.MassSpringDamper" flags="ng" index="30x8Tr">
         <child id="7718836250442232059" name="damping" index="o6E1n" />
@@ -151,6 +165,12 @@
       </concept>
       <concept id="4452961908202556907" name="jetbrains.mps.lang.core.structure.BaseCommentAttribute" flags="ng" index="1X3_iC">
         <child id="3078666699043039389" name="commentedNode" index="8Wnug" />
+      </concept>
+    </language>
+    <language id="d6881f78-a85d-4c9e-931e-30879e67afdd" name="Kinematics">
+      <concept id="1159789896052096669" name="Kinematics.structure.ControlMode_SmartChild" flags="ng" index="gntxp" />
+      <concept id="4545946235936327391" name="Kinematics.structure.KinematicChain" flags="ng" index="u53jr">
+        <child id="1159789896052096620" name="availableControlModes" index="gntyC" />
       </concept>
     </language>
   </registry>
@@ -661,24 +681,24 @@
         <node concept="30yrw1" id="6GuOaLMNLQ6" role="3rXgej">
           <ref role="30yrF0" node="6GuOaLMNzk$" resolve="BarManipulatorFrame" />
         </node>
-        <node concept="30w5Ui" id="6GuOaLMVqDg" role="3rXgek">
-          <property role="30w4_v" value="space" />
-          <node concept="3b6qkQ" id="6GuOaLMVqDi" role="pXyqr">
+        <node concept="30w5Uj" id="6GuOaLMVqDg" role="3rXgek">
+          <property role="30w4_w" value="space" />
+          <node concept="3b6qkQ" id="6GuOaLMVqDi" role="pXyqs">
             <property role="$nhwW" value="0.0" />
           </node>
-          <node concept="3b6qkQ" id="6GuOaLMVqDk" role="pXyrL">
+          <node concept="3b6qkQ" id="6GuOaLMVqDk" role="pXyrM">
             <property role="$nhwW" value="0.0" />
           </node>
-          <node concept="3b6qkQ" id="6GuOaLMVqDm" role="pW_3b">
+          <node concept="3b6qkQ" id="6GuOaLMVqDm" role="pW_3c">
             <property role="$nhwW" value="1.0" />
           </node>
-          <node concept="3b6qkQ" id="6GuOaLMVqDo" role="pXyvC">
+          <node concept="3b6qkQ" id="6GuOaLMVqDo" role="pXyvD">
             <property role="$nhwW" value="0.0" />
           </node>
-          <node concept="3b6qkQ" id="6GuOaLMVqDq" role="pW_10">
+          <node concept="3b6qkQ" id="6GuOaLMVqDq" role="pW_11">
             <property role="$nhwW" value="0.0" />
           </node>
-          <node concept="3b6qkQ" id="6GuOaLMVqDs" role="pW_7H">
+          <node concept="3b6qkQ" id="6GuOaLMVqDs" role="pW_7I">
             <property role="$nhwW" value="0.0" />
           </node>
         </node>
@@ -1166,7 +1186,7 @@
         <property role="o89AW" value="#DDDDDD" />
         <property role="TrG5h" value="force_constraint" />
         <node concept="30yrw1" id="3qu6RY9uJjz" role="3rXgej" />
-        <node concept="30w5Ui" id="3qu6RY9uJm$" role="3rXgek" />
+        <node concept="30w5Uj" id="3qu6RY9uJm$" role="3rXgek" />
         <node concept="30xIwC" id="3qu6RY9uJoD" role="3rXgel">
           <node concept="3b6qkQ" id="3qu6RY9uJoE" role="okz7O">
             <property role="$nhwW" value="0.0" />
@@ -1348,24 +1368,24 @@
         <node concept="30yrw1" id="3qu6RY9uJRi" role="3rXgej">
           <ref role="30yrF0" node="6GuOaLMMS93" resolve="lwr_tool_link (right)" />
         </node>
-        <node concept="30w5Ui" id="3qu6RY9uJDz" role="3rXgek">
-          <property role="30w4_v" value="world" />
-          <node concept="3b6qkQ" id="3qu6RY9uJD$" role="pXyqr">
+        <node concept="30w5Uj" id="3qu6RY9uJDz" role="3rXgek">
+          <property role="30w4_w" value="world" />
+          <node concept="3b6qkQ" id="3qu6RY9uJD$" role="pXyqs">
             <property role="$nhwW" value="0.0" />
           </node>
-          <node concept="3b6qkQ" id="3qu6RY9uJD_" role="pXyrL">
+          <node concept="3b6qkQ" id="3qu6RY9uJD_" role="pXyrM">
             <property role="$nhwW" value="0.0" />
           </node>
-          <node concept="3b6qkQ" id="3qu6RY9uJDA" role="pW_3b">
+          <node concept="3b6qkQ" id="3qu6RY9uJDA" role="pW_3c">
             <property role="$nhwW" value="1.0" />
           </node>
-          <node concept="3b6qkQ" id="3qu6RY9uJDB" role="pXyvC">
+          <node concept="3b6qkQ" id="3qu6RY9uJDB" role="pXyvD">
             <property role="$nhwW" value="0.0" />
           </node>
-          <node concept="3b6qkQ" id="3qu6RY9uJDC" role="pW_10">
+          <node concept="3b6qkQ" id="3qu6RY9uJDC" role="pW_11">
             <property role="$nhwW" value="0.0" />
           </node>
-          <node concept="3b6qkQ" id="3qu6RY9uJDD" role="pW_7H">
+          <node concept="3b6qkQ" id="3qu6RY9uJDD" role="pW_7I">
             <property role="$nhwW" value="0.0" />
           </node>
         </node>
@@ -1493,18 +1513,14 @@
     <property role="3GE5qa" value="situations" />
     <property role="TrG5h" value="RollingTask_Squeezing_Compliance_Joint" />
     <node concept="30yr_X" id="3qu6RY9uNjD" role="pFT7q">
-      <property role="TrG5h" value="Virtual_Motion_Trajectory" />
+      <property role="TrG5h" value="Virtual_Motion" />
       <property role="o4zO8" value="0" />
+      <property role="30wYnu" value="true" />
       <node concept="30B06x" id="3qu6RY9uNjE" role="30yrBN">
         <property role="odnW$" value="false" />
         <property role="o89AW" value="#DDDDDD" />
         <property role="TrG5h" value="motion_tracking" />
-        <node concept="30yrw1" id="3qu6RY9vtKT" role="3rXgej">
-          <ref role="30yrF0" node="3qu6RY9vtIV" resolve="VirtualManipulatorFrame" />
-        </node>
-        <node concept="30yrw1" id="3qu6RY9vtN5" role="3rXgek">
-          <ref role="30yrF0" node="3qu6RY9vtL7" resolve="VF_Traj_tool (external)" />
-        </node>
+        <property role="3rXgeJ" value="active" />
         <node concept="30x8Tr" id="3qu6RY9uNjH" role="3rXgel">
           <node concept="3b6qkQ" id="3qu6RY9uNjI" role="o7tYm">
             <property role="$nhwW" value="30.0" />
@@ -1543,16 +1559,20 @@
             <property role="$nhwW" value="10.0" />
           </node>
           <node concept="pRxg$" id="3qu6RY9uNjU" role="pRxln">
-            <property role="pRxmE" value="PositionController" />
+            <property role="pRxmE" value="PositionPDController" />
           </node>
+        </node>
+        <node concept="30yrw0" id="LP$YdYbmwt" role="3rXgek">
+          <ref role="30yrEZ" node="6gw_H7mO0Kh" resolve="VF_MatTarget (external)" />
+        </node>
+        <node concept="30yrw0" id="LP$YdYbmwe" role="3rXgej">
+          <ref role="30yrEZ" node="6gw_H7mO0ZX" resolve="VirtualManipulatorFrame" />
         </node>
       </node>
       <node concept="30B06x" id="3qu6RY9uNjV" role="30yrBN">
         <property role="odnW$" value="false" />
         <property role="o89AW" value="#DDDDDD" />
         <property role="TrG5h" value="force_constraint" />
-        <node concept="30yrw1" id="7dn1noRhpam" role="3rXgej" />
-        <node concept="30w5Ui" id="3qu6RY9uNjX" role="3rXgek" />
         <node concept="30xIwC" id="3qu6RY9uNk4" role="3rXgel">
           <node concept="3b6qkQ" id="3qu6RY9uNk5" role="okz7O">
             <property role="$nhwW" value="0.0" />
@@ -1573,7 +1593,31 @@
             <property role="$nhwW" value="0.0" />
           </node>
           <node concept="pRxg$" id="3qu6RY9uNkb" role="pRxln">
-            <property role="pRxmE" value="SimpleTaskController" />
+            <property role="pRxmE" value="ForceController" />
+          </node>
+        </node>
+        <node concept="30yrw0" id="LP$YdYbmx8" role="3rXgej">
+          <ref role="30yrEZ" node="6gw_H7mO0ZX" resolve="VirtualManipulatorFrame" />
+        </node>
+        <node concept="30w5Ui" id="LP$YdYbmxn" role="3rXgek">
+          <property role="30w4_v" value="world" />
+          <node concept="3b6qkQ" id="LP$YdYbmxp" role="pXyqr">
+            <property role="$nhwW" value="0.0" />
+          </node>
+          <node concept="3b6qkQ" id="LP$YdYbmxr" role="pXyrL">
+            <property role="$nhwW" value="0.0" />
+          </node>
+          <node concept="3b6qkQ" id="LP$YdYbmxt" role="pW_3b">
+            <property role="$nhwW" value="1.0" />
+          </node>
+          <node concept="3b6qkQ" id="LP$YdYbmxv" role="pXyvC">
+            <property role="$nhwW" value="0.0" />
+          </node>
+          <node concept="3b6qkQ" id="LP$YdYbmxx" role="pW_10">
+            <property role="$nhwW" value="0.0" />
+          </node>
+          <node concept="3b6qkQ" id="LP$YdYbmxz" role="pW_7H">
+            <property role="$nhwW" value="0.0" />
           </node>
         </node>
       </node>
@@ -1748,7 +1792,7 @@
   </node>
   <node concept="30yLgp" id="6gw_H7mO0Kh">
     <property role="3GE5qa" value="frames" />
-    <property role="TrG5h" value="VF_BarTarget (external)" />
+    <property role="TrG5h" value="VF_MatTarget (external)" />
   </node>
   <node concept="30yLgp" id="6gw_H7mO0Oc">
     <property role="3GE5qa" value="frames" />
@@ -1778,7 +1822,7 @@
   </node>
   <node concept="pQDjh" id="71eMqXGo4ii">
     <property role="3GE5qa" value="manipulators" />
-    <property role="TrG5h" value="BarManipulator" />
+    <property role="TrG5h" value="Cylinder_Manipulator" />
     <ref role="2M$6Zb" node="71eMqXFWqsD" resolve="RobotKukaLeft" />
     <ref role="2M$6Y6" node="71eMqXFWqgJ" resolve="RobotKukaRight" />
     <node concept="30yrG9" id="71eMqXGo6bp" role="pOCXD">
@@ -1793,6 +1837,94 @@
     <node concept="pQWJo" id="71eMqXGo6aX" role="3s38FB">
       <ref role="pNcCJ" to="d49h:6bIwLn$0JLd" resolve="full_arm" />
     </node>
+  </node>
+  <node concept="2M$EOS" id="2ckx$Exe79P">
+    <property role="3GE5qa" value="robots" />
+    <property role="TrG5h" value="Coman" />
+    <ref role="2M$EEQ" node="2ckx$Exe7a9" resolve="ComanTmp" />
+  </node>
+  <node concept="gnlnl" id="2ckx$Exe7a9">
+    <property role="3GE5qa" value="robots" />
+    <property role="TrG5h" value="ComanTmp" />
+    <ref role="gnvdb" to="oet6:3XZE$oGsNW_" resolve="iit-coman" />
+    <node concept="u53jr" id="2ckx$Exe7ae" role="gntW4">
+      <property role="TrG5h" value="full" />
+      <node concept="gntxp" id="2ckx$Exe7af" role="gntyC" />
+    </node>
+  </node>
+  <node concept="30yrCB" id="2ckx$Exe7gG">
+    <property role="3GE5qa" value="coman_frames" />
+    <property role="TrG5h" value="left_hand" />
+  </node>
+  <node concept="30yrCB" id="2ckx$Exe7gL">
+    <property role="3GE5qa" value="coman_frames" />
+    <property role="TrG5h" value="right_hand" />
+  </node>
+  <node concept="30yrCB" id="2ckx$Exe7gQ">
+    <property role="3GE5qa" value="coman_frames" />
+    <property role="TrG5h" value="left_foot" />
+  </node>
+  <node concept="30yrCB" id="2ckx$Exe7gV">
+    <property role="3GE5qa" value="coman_frames" />
+    <property role="TrG5h" value="right_foot" />
+  </node>
+  <node concept="30yrCB" id="2ckx$Exe7jw">
+    <property role="3GE5qa" value="coman_frames" />
+    <property role="TrG5h" value="torso" />
+  </node>
+  <node concept="30yLgp" id="FwQJuAOkAC">
+    <property role="3GE5qa" value="frames" />
+    <property role="TrG5h" value="frame_c" />
+  </node>
+  <node concept="pQDjh" id="FwQJuAReor">
+    <property role="3GE5qa" value="manipulators" />
+    <property role="TrG5h" value="vm1" />
+    <ref role="2M$6Zb" node="71eMqXFWqsD" resolve="RobotKukaLeft" />
+    <ref role="2M$6Y6" node="71eMqXFWqgJ" resolve="RobotKukaRight" />
+    <node concept="30yrG9" id="FwQJuAReos" role="pOCXD">
+      <ref role="3s7PV0" to="oet6:2jRhxvsk02Z" resolve="lwr_arm_7_link" />
+    </node>
+    <node concept="pQWJo" id="FwQJuAReot" role="3s38Ea">
+      <ref role="pNcCJ" to="d49h:6bIwLn$0JLd" resolve="full_arm" />
+    </node>
+    <node concept="30yrG9" id="FwQJuAReou" role="pOCXY">
+      <ref role="3s7PV0" to="oet6:2jRhxvsk02Z" resolve="lwr_arm_7_link" />
+    </node>
+    <node concept="pQWJo" id="FwQJuAReov" role="3s38FB">
+      <ref role="pNcCJ" to="d49h:6bIwLn$0JLd" resolve="full_arm" />
+    </node>
+  </node>
+  <node concept="30yrCB" id="1w8$jIZtj_S">
+    <property role="3GE5qa" value="coman_frames" />
+    <property role="TrG5h" value="left_elbow" />
+  </node>
+  <node concept="30yrCB" id="1w8$jIZtj_T">
+    <property role="3GE5qa" value="coman_frames" />
+    <property role="TrG5h" value="right_elbow" />
+  </node>
+  <node concept="30yrCB" id="1w8$jIZtjFg">
+    <property role="3GE5qa" value="coman_frames" />
+    <property role="TrG5h" value="left_hand + right_hand + left_elbow + right_elbow" />
+  </node>
+  <node concept="2M$EOS" id="6FYcTd4JELX">
+    <property role="3GE5qa" value="robots" />
+    <property role="TrG5h" value="robot1" />
+    <ref role="2M$EEQ" to="d49h:6bIwLn$0JKW" resolve="Kuka LWR 4+" />
+  </node>
+  <node concept="2M$EOS" id="6FYcTd4JEMc">
+    <property role="3GE5qa" value="robots" />
+    <property role="TrG5h" value="robot2" />
+    <ref role="2M$EEQ" to="d49h:6bIwLn$0JKW" resolve="Kuka LWR 4+" />
+  </node>
+  <node concept="2M$EOS" id="6FYcTd4JEMr">
+    <property role="3GE5qa" value="robots" />
+    <property role="TrG5h" value="RobotKuka3" />
+    <ref role="2M$EEQ" to="d49h:6bIwLn$0JKW" resolve="Kuka LWR 4+" />
+  </node>
+  <node concept="2M$EOS" id="6FYcTd4JEME">
+    <property role="3GE5qa" value="robots" />
+    <property role="TrG5h" value="RobotKuka4" />
+    <ref role="2M$EEQ" to="d49h:6bIwLn$0JKW" resolve="Kuka LWR 4+" />
   </node>
 </model>
 

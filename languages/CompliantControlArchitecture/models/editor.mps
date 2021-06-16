@@ -886,25 +886,46 @@
         </node>
         <node concept="pkWqt" id="5mfFpibu3dL" role="3e4ffs">
           <node concept="3clFbS" id="5mfFpibu3dN" role="2VODD2">
-            <node concept="3clFbF" id="5mfFpibu3vK" role="3cqZAp">
-              <node concept="1Wc70l" id="5mfFpibu5RK" role="3clFbG">
-                <node concept="2OqwBi" id="5mfFpibu7pv" role="3uHU7w">
-                  <node concept="2OqwBi" id="5mfFpibu6jL" role="2Oq$k0">
-                    <node concept="pncrf" id="5mfFpibu63s" role="2Oq$k0" />
-                    <node concept="1mfA1w" id="5mfFpibu6QV" role="2OqNvi" />
-                  </node>
-                  <node concept="1mIQ4w" id="5mfFpibu7TW" role="2OqNvi">
-                    <node concept="chp4Y" id="5mfFpibu8bq" role="cj9EA">
-                      <ref role="cht4Q" to="gqxc:2uDla1tgezf" resolve="WeightedSumRelation" />
+            <node concept="1X3_iC" id="1w8$jIZtmi4" role="lGtFl">
+              <property role="3V$3am" value="statement" />
+              <property role="3V$3ak" value="f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123136/1068581517665" />
+              <node concept="3clFbF" id="5mfFpibu3vK" role="8Wnug">
+                <node concept="1Wc70l" id="5mfFpibu5RK" role="3clFbG">
+                  <node concept="2OqwBi" id="5mfFpibu7pv" role="3uHU7w">
+                    <node concept="2OqwBi" id="5mfFpibu6jL" role="2Oq$k0">
+                      <node concept="pncrf" id="5mfFpibu63s" role="2Oq$k0" />
+                      <node concept="1mfA1w" id="5mfFpibu6QV" role="2OqNvi" />
+                    </node>
+                    <node concept="1mIQ4w" id="5mfFpibu7TW" role="2OqNvi">
+                      <node concept="chp4Y" id="5mfFpibu8bq" role="cj9EA">
+                        <ref role="cht4Q" to="gqxc:2uDla1tgezf" resolve="WeightedSumRelation" />
+                      </node>
                     </node>
                   </node>
-                </node>
-                <node concept="2OqwBi" id="5mfFpibu4SQ" role="3uHU7B">
-                  <node concept="2OqwBi" id="5mfFpibu3JP" role="2Oq$k0">
-                    <node concept="pncrf" id="5mfFpibu3vJ" role="2Oq$k0" />
-                    <node concept="1mfA1w" id="5mfFpibu4hl" role="2OqNvi" />
+                  <node concept="2OqwBi" id="5mfFpibu4SQ" role="3uHU7B">
+                    <node concept="2OqwBi" id="5mfFpibu3JP" role="2Oq$k0">
+                      <node concept="pncrf" id="5mfFpibu3vJ" role="2Oq$k0" />
+                      <node concept="1mfA1w" id="5mfFpibu4hl" role="2OqNvi" />
+                    </node>
+                    <node concept="3x8VRR" id="5mfFpibu5ls" role="2OqNvi" />
                   </node>
-                  <node concept="3x8VRR" id="5mfFpibu5ls" role="2OqNvi" />
+                </node>
+              </node>
+            </node>
+            <node concept="3clFbH" id="1w8$jIZtmuD" role="3cqZAp" />
+            <node concept="3cpWs6" id="1w8$jIZvrqb" role="3cqZAp">
+              <node concept="2OqwBi" id="1w8$jIZvtdc" role="3cqZAk">
+                <node concept="2OqwBi" id="1w8$jIZvrMa" role="2Oq$k0">
+                  <node concept="pncrf" id="1w8$jIZvry3" role="2Oq$k0" />
+                  <node concept="3TrcHB" id="1w8$jIZvst2" role="2OqNvi">
+                    <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
+                  </node>
+                </node>
+                <node concept="liA8E" id="1w8$jIZvu4T" role="2OqNvi">
+                  <ref role="37wK5l" to="wyt6:~String.endsWith(java.lang.String):boolean" resolve="endsWith" />
+                  <node concept="Xl_RD" id="1w8$jIZvujb" role="37wK5m">
+                    <property role="Xl_RC" value="h" />
+                  </node>
                 </node>
               </node>
             </node>
@@ -8764,9 +8785,9 @@
   </node>
   <node concept="24kQdi" id="5mfFpiaYKjr">
     <property role="3GE5qa" value="controlformalism" />
-    <ref role="1XX52x" to="gqxc:5mfFpiaYK8S" resolve="CartesianConstraintController" />
+    <ref role="1XX52x" to="gqxc:5mfFpiaYK8S" resolve="CartesianForceController" />
     <node concept="3F0ifn" id="5mfFpiaYKlP" role="2wV5jI">
-      <property role="3F0ifm" value="Constraint" />
+      <property role="3F0ifm" value="Force" />
     </node>
     <node concept="PMmxH" id="1Brl3p$QPNc" role="6VMZX">
       <ref role="PMmxG" node="1Brl3p$QPIU" resolve="Realization_EditorComponent" />
@@ -8776,7 +8797,7 @@
     <property role="3GE5qa" value="controlformalism" />
     <ref role="1XX52x" to="gqxc:5mfFpiaYKff" resolve="CartesianMassSpringDamperController" />
     <node concept="3F0ifn" id="5mfFpiaYKo2" role="2wV5jI">
-      <property role="3F0ifm" value="Spring Damper" />
+      <property role="3F0ifm" value="Mass Spring Damper" />
     </node>
     <node concept="3EZMnI" id="1Brl3p$QPNs" role="6VMZX">
       <node concept="2iRkQZ" id="1Brl3p$QPNt" role="2iSdaV" />
@@ -9116,7 +9137,7 @@
     <property role="3GE5qa" value="controlformalism" />
     <ref role="1XX52x" to="gqxc:5mfFpiaYKhe" resolve="JointMassSpringDamperController" />
     <node concept="3F0ifn" id="5mfFpiaYKqf" role="2wV5jI">
-      <property role="3F0ifm" value="Spring Damper" />
+      <property role="3F0ifm" value="Mass Spring Damper" />
     </node>
     <node concept="PMmxH" id="1Brl3p$QTsd" role="6VMZX">
       <ref role="PMmxG" node="1Brl3p$QPIU" resolve="Realization_EditorComponent" />

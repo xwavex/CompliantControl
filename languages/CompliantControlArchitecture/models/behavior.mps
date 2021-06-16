@@ -10443,7 +10443,7 @@
   </node>
   <node concept="13h7C7" id="1Brl3p$RYUD">
     <property role="3GE5qa" value="controlformalism" />
-    <ref role="13h7C2" to="gqxc:5mfFpiaYK8S" resolve="CartesianConstraintController" />
+    <ref role="13h7C2" to="gqxc:5mfFpiaYK8S" resolve="CartesianForceController" />
     <node concept="13hLZK" id="1Brl3p$RYUE" role="13h7CW">
       <node concept="3clFbS" id="1Brl3p$RYUF" role="2VODD2">
         <node concept="3cpWs8" id="1Brl3p$S_iH" role="3cqZAp">
