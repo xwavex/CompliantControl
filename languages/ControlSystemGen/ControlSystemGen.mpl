@@ -7,7 +7,7 @@
   </models>
   <accessoryModels />
   <generators>
-    <generator alias="main" namespace="ControlSystemGen#1761490994203271899" uuid="437b18a5-62cd-4b53-9ae1-20cd2fba73be" reflective-queries="true">
+    <generator alias="main" namespace="ControlSystemGen#1761490994203271899" uuid="437b18a5-62cd-4b53-9ae1-20cd2fba73be">
       <models>
         <modelRoot contentPath="${module}/generator/template" type="default">
           <sourceRoot location="." />
@@ -18,10 +18,6 @@
         <dependency reexport="false">fba86641-77f1-40ef-ac2c-4d7904eb6f63(AbstractGraphLang)</dependency>
         <dependency reexport="false">218e40b4-75d4-4de8-83e6-b31e4da8bcee(Component)</dependency>
         <dependency reexport="false">708de3ab-d65c-48c9-a632-40656bd206af(CompliantControlArchitecture)</dependency>
-        <dependency reexport="false">99abc364-3965-4ead-ab2d-0b272a528a90(RobotPlatform)</dependency>
-        <dependency reexport="false">b744b93e-0522-4237-a6fd-fa650d0b451a(Geometry)</dependency>
-        <dependency reexport="false">dfed0f13-ca0e-4e6d-b469-ef760982a8ea(EigenTypekit)</dependency>
-        <dependency reexport="false">d6d7f6e1-f407-48f8-a582-7b1489b7163f(ProtoBuf)</dependency>
       </dependencies>
       <languageVersions>
         <language slang="l:4cc07462-84b3-4d01-8adb-629ddd3cebd4:Capabilities" version="0" />

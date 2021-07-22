@@ -7,11 +7,10 @@
   </languages>
   <imports>
     <import index="cewj" ref="r:cd13618c-02ad-4af8-a3e4-3414c58c4613(Kinematics.structure)" />
-    <import index="iobv" ref="r:19496bad-2dd3-478c-9baf-0de95edabf63(Geometry.structure)" />
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" />
     <import index="tpee" ref="r:00000000-0000-4000-0000-011c895902ca(jetbrains.mps.baseLanguage.structure)" />
     <import index="l1zz" ref="r:7dde0f85-b752-4c1f-8bd0-8361dd2efaa4(Component.structure)" />
-    <import index="mz1w" ref="r:f0e63708-fe8e-4a7e-94d7-74a74c6e3725(RobotPlatform.structure)" />
+    <import index="iobv" ref="r:19496bad-2dd3-478c-9baf-0de95edabf63(Geometry.structure)" implicit="true" />
   </imports>
   <registry>
     <language id="c72da2b9-7cce-4447-8389-f407dc1158b7" name="jetbrains.mps.lang.structure">
@@ -65,7 +64,7 @@
       </concept>
       <concept id="709746936026466394" name="jetbrains.mps.lang.core.structure.ChildAttribute" flags="ng" index="3VBwX9">
         <property id="709746936026609031" name="linkId" index="3V$3ak" />
-        <property id="709746936026609029" name="linkRole" index="3V$3am" />
+        <property id="709746936026609029" name="role_DebugInfo" index="3V$3am" />
       </concept>
       <concept id="4452961908202556907" name="jetbrains.mps.lang.core.structure.BaseCommentAttribute" flags="ng" index="1X3_iC">
         <child id="3078666699043039389" name="commentedNode" index="8Wnug" />
@@ -305,13 +304,6 @@
       <property role="TrG5h" value="filter" />
       <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
     </node>
-    <node concept="1TJgyj" id="5mfFpi9H7Cl" role="1TKVEi">
-      <property role="IQ2ns" value="6165337268370569749" />
-      <property role="20lmBu" value="aggregation" />
-      <property role="20kJfa" value="frame" />
-      <property role="20lbJX" value="1" />
-      <ref role="20lvS9" to="iobv:5mfFpi9_5x3" resolve="IReferenceFrameRef" />
-    </node>
     <node concept="1TJgyj" id="5mfFpiaYKYw" role="1TKVEi">
       <property role="IQ2ns" value="6165337268391972768" />
       <property role="20lmBu" value="aggregation" />
@@ -329,13 +321,6 @@
     <property role="3GE5qa" value="relations" />
     <property role="TrG5h" value="EntryRelation" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
-    <node concept="1TJgyj" id="71eMqXFWr6F" role="1TKVEi">
-      <property role="IQ2ns" value="8092627335698821547" />
-      <property role="20lmBu" value="reference" />
-      <property role="20kJfa" value="robotInstance" />
-      <property role="20lbJX" value="1" />
-      <ref role="20lvS9" to="mz1w:71eMqXG9gIx" resolve="IRobotInstance" />
-    </node>
     <node concept="1TJgyj" id="2uDla1thCyz" role="1TKVEi">
       <property role="IQ2ns" value="2857908486279694499" />
       <property role="20lmBu" value="aggregation" />
@@ -703,13 +688,6 @@
       <property role="IQ2nx" value="8092627335693847934" />
       <property role="TrG5h" value="contactsituationName" />
       <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
-    </node>
-    <node concept="1TJgyj" id="4rX5_MQrqjQ" role="1TKVEi">
-      <property role="IQ2ns" value="5115269339216192758" />
-      <property role="20lmBu" value="aggregation" />
-      <property role="20kJfa" value="robotInstanceCopy" />
-      <property role="20lbJX" value="1" />
-      <ref role="20lvS9" to="mz1w:71eMqXG9gIx" resolve="IRobotInstance" />
     </node>
   </node>
 </model>

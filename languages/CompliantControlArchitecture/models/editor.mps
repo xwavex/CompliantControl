@@ -317,11 +317,8 @@
       <concept id="1178549954367" name="jetbrains.mps.baseLanguage.structure.IVisible" flags="ng" index="1B3ioH">
         <child id="1178549979242" name="visibility" index="1B3o_S" />
       </concept>
-      <concept id="6329021646629104957" name="jetbrains.mps.baseLanguage.structure.TextCommentPart" flags="nn" index="3SKdUq">
-        <property id="6329021646629104958" name="text" index="3SKdUp" />
-      </concept>
       <concept id="6329021646629104954" name="jetbrains.mps.baseLanguage.structure.SingleLineComment" flags="nn" index="3SKdUt">
-        <child id="6329021646629175155" name="commentPart" index="3SKWNk" />
+        <child id="1350122676458893092" name="text" index="3ndbpf" />
       </concept>
       <concept id="1146644602865" name="jetbrains.mps.baseLanguage.structure.PublicVisibility" flags="nn" index="3Tm1VV" />
       <concept id="1146644623116" name="jetbrains.mps.baseLanguage.structure.PrivateVisibility" flags="nn" index="3Tm6S6" />
@@ -419,10 +416,18 @@
       </concept>
       <concept id="709746936026466394" name="jetbrains.mps.lang.core.structure.ChildAttribute" flags="ng" index="3VBwX9">
         <property id="709746936026609031" name="linkId" index="3V$3ak" />
-        <property id="709746936026609029" name="linkRole" index="3V$3am" />
+        <property id="709746936026609029" name="role_DebugInfo" index="3V$3am" />
       </concept>
       <concept id="4452961908202556907" name="jetbrains.mps.lang.core.structure.BaseCommentAttribute" flags="ng" index="1X3_iC">
         <child id="3078666699043039389" name="commentedNode" index="8Wnug" />
+      </concept>
+    </language>
+    <language id="c7fb639f-be78-4307-89b0-b5959c3fa8c8" name="jetbrains.mps.lang.text">
+      <concept id="155656958578482948" name="jetbrains.mps.lang.text.structure.Word" flags="ng" index="3oM_SD">
+        <property id="155656958578482949" name="value" index="3oM_SC" />
+      </concept>
+      <concept id="2535923850359271782" name="jetbrains.mps.lang.text.structure.Line" flags="ng" index="1PaTwC">
+        <child id="2535923850359271783" name="elements" index="1PaTwD" />
       </concept>
     </language>
     <language id="83888646-71ce-4f1c-9c53-c54016f6ad4f" name="jetbrains.mps.baseLanguage.collections">
@@ -941,9 +946,6 @@
         </node>
         <node concept="PMmxH" id="5mfFpi9H7vp" role="3EZMnx">
           <ref role="PMmxG" node="5mfFpi9GNV1" resolve="EditorComponent_HorizontalLine" />
-        </node>
-        <node concept="3F1sOY" id="5mfFpi9H7Cy" role="3EZMnx">
-          <ref role="1NtTu8" to="gqxc:5mfFpi9H7Cl" resolve="frame" />
         </node>
       </node>
     </node>
@@ -2764,8 +2766,10 @@
                       </node>
                       <node concept="3clFbH" id="2UiBD4$MKPH" role="3cqZAp" />
                       <node concept="3SKdUt" id="2UiBD4$MN8v" role="3cqZAp">
-                        <node concept="3SKdUq" id="2UiBD4$MN8x" role="3SKWNk">
-                          <property role="3SKdUp" value="hack hardcoded info from triangle" />
+                        <node concept="1PaTwC" id="qYWbB1DiRk" role="3ndbpf">
+                          <node concept="3oM_SD" id="qYWbB1DiRl" role="1PaTwD">
+                            <property role="3oM_SC" value="hack hardcoded info from triangle" />
+                          </node>
                         </node>
                       </node>
                       <node concept="3cpWs8" id="2UiBD4$MUAd" role="3cqZAp">
@@ -4199,8 +4203,10 @@
                       </node>
                       <node concept="3clFbH" id="5mfFpi9uHfm" role="3cqZAp" />
                       <node concept="3SKdUt" id="5mfFpi9wt4b" role="3cqZAp">
-                        <node concept="3SKdUq" id="5mfFpi9wt4d" role="3SKWNk">
-                          <property role="3SKdUp" value="Hack to avoid glitches in the frawing!" />
+                        <node concept="1PaTwC" id="qYWbB1DiRQ" role="3ndbpf">
+                          <node concept="3oM_SD" id="qYWbB1DiRR" role="1PaTwD">
+                            <property role="3oM_SC" value="Hack to avoid glitches in the frawing!" />
+                          </node>
                         </node>
                       </node>
                       <node concept="3clFbF" id="5mfFpi9uIZG" role="3cqZAp">
@@ -5649,8 +5655,10 @@
           </node>
           <node concept="3clFbS" id="5mfFpi9Hibn" role="3clFbx">
             <node concept="3SKdUt" id="5mfFpi9Hibo" role="3cqZAp">
-              <node concept="3SKdUq" id="5mfFpi9Hibp" role="3SKWNk">
-                <property role="3SKdUp" value="get the model that contains the base link" />
+              <node concept="1PaTwC" id="qYWbB1DiRm" role="3ndbpf">
+                <node concept="3oM_SD" id="qYWbB1DiRn" role="1PaTwD">
+                  <property role="3oM_SC" value="get the model that contains the base link" />
+                </node>
               </node>
             </node>
             <node concept="3cpWs8" id="5mfFpi9Hibq" role="3cqZAp">
@@ -5679,8 +5687,10 @@
               </node>
             </node>
             <node concept="3SKdUt" id="5mfFpi9Hib$" role="3cqZAp">
-              <node concept="3SKdUq" id="5mfFpi9Hib_" role="3SKWNk">
-                <property role="3SKdUp" value="get the model that contains the tip link" />
+              <node concept="1PaTwC" id="qYWbB1DiRo" role="3ndbpf">
+                <node concept="3oM_SD" id="qYWbB1DiRp" role="1PaTwD">
+                  <property role="3oM_SC" value="get the model that contains the tip link" />
+                </node>
               </node>
             </node>
             <node concept="3cpWs8" id="5mfFpi9HibA" role="3cqZAp">
@@ -5728,8 +5738,10 @@
                   </node>
                 </node>
                 <node concept="3SKdUt" id="5mfFpi9HibT" role="3cqZAp">
-                  <node concept="3SKdUq" id="5mfFpi9HibU" role="3SKWNk">
-                    <property role="3SKdUp" value="get joint that has baselink as parentLink" />
+                  <node concept="1PaTwC" id="qYWbB1DiRq" role="3ndbpf">
+                    <node concept="3oM_SD" id="qYWbB1DiRr" role="1PaTwD">
+                      <property role="3oM_SC" value="get joint that has baselink as parentLink" />
+                    </node>
                   </node>
                 </node>
                 <node concept="2$JKZl" id="5mfFpi9HibV" role="3cqZAp">
@@ -5856,8 +5868,10 @@
                             </node>
                           </node>
                           <node concept="3SKdUt" id="5mfFpi9HicP" role="3cqZAp">
-                            <node concept="3SKdUq" id="5mfFpi9HicQ" role="3SKWNk">
-                              <property role="3SKdUp" value="TODO analyse joint" />
+                            <node concept="1PaTwC" id="qYWbB1DiRs" role="3ndbpf">
+                              <node concept="3oM_SD" id="qYWbB1DiRt" role="1PaTwD">
+                                <property role="3oM_SC" value="TODO analyse joint" />
+                              </node>
                             </node>
                           </node>
                           <node concept="1X3_iC" id="5mfFpi9HicR" role="lGtFl">
@@ -5932,8 +5946,10 @@
                             <node concept="9aQIb" id="5mfFpi9Hidk" role="9aQIa">
                               <node concept="3clFbS" id="5mfFpi9Hidl" role="9aQI4">
                                 <node concept="3SKdUt" id="5mfFpi9Hidm" role="3cqZAp">
-                                  <node concept="3SKdUq" id="5mfFpi9Hidn" role="3SKWNk">
-                                    <property role="3SKdUp" value="set link for new iteration" />
+                                  <node concept="1PaTwC" id="qYWbB1DiRu" role="3ndbpf">
+                                    <node concept="3oM_SD" id="qYWbB1DiRv" role="1PaTwD">
+                                      <property role="3oM_SC" value="set link for new iteration" />
+                                    </node>
                                   </node>
                                 </node>
                                 <node concept="3clFbF" id="5mfFpi9Hido" role="3cqZAp">
@@ -6056,8 +6072,10 @@
           </node>
           <node concept="3clFbS" id="5mfFpiaOgQs" role="3clFbx">
             <node concept="3SKdUt" id="5mfFpiaOgQt" role="3cqZAp">
-              <node concept="3SKdUq" id="5mfFpiaOgQu" role="3SKWNk">
-                <property role="3SKdUp" value="get the model that contains the base link" />
+              <node concept="1PaTwC" id="qYWbB1DiRw" role="3ndbpf">
+                <node concept="3oM_SD" id="qYWbB1DiRx" role="1PaTwD">
+                  <property role="3oM_SC" value="get the model that contains the base link" />
+                </node>
               </node>
             </node>
             <node concept="3cpWs8" id="5mfFpiaOgQv" role="3cqZAp">
@@ -6086,8 +6104,10 @@
               </node>
             </node>
             <node concept="3SKdUt" id="5mfFpiaOgQD" role="3cqZAp">
-              <node concept="3SKdUq" id="5mfFpiaOgQE" role="3SKWNk">
-                <property role="3SKdUp" value="get the model that contains the tip link" />
+              <node concept="1PaTwC" id="qYWbB1DiRy" role="3ndbpf">
+                <node concept="3oM_SD" id="qYWbB1DiRz" role="1PaTwD">
+                  <property role="3oM_SC" value="get the model that contains the tip link" />
+                </node>
               </node>
             </node>
             <node concept="3cpWs8" id="5mfFpiaOgQF" role="3cqZAp">
@@ -6135,8 +6155,10 @@
                   </node>
                 </node>
                 <node concept="3SKdUt" id="5mfFpiaOgQY" role="3cqZAp">
-                  <node concept="3SKdUq" id="5mfFpiaOgQZ" role="3SKWNk">
-                    <property role="3SKdUp" value="get joint that has baselink as parentLink" />
+                  <node concept="1PaTwC" id="qYWbB1DiR$" role="3ndbpf">
+                    <node concept="3oM_SD" id="qYWbB1DiR_" role="1PaTwD">
+                      <property role="3oM_SC" value="get joint that has baselink as parentLink" />
+                    </node>
                   </node>
                 </node>
                 <node concept="2$JKZl" id="5mfFpiaOgR0" role="3cqZAp">
@@ -6263,8 +6285,10 @@
                             </node>
                           </node>
                           <node concept="3SKdUt" id="5mfFpiaOgRU" role="3cqZAp">
-                            <node concept="3SKdUq" id="5mfFpiaOgRV" role="3SKWNk">
-                              <property role="3SKdUp" value="TODO analyse joint" />
+                            <node concept="1PaTwC" id="qYWbB1DiRA" role="3ndbpf">
+                              <node concept="3oM_SD" id="qYWbB1DiRB" role="1PaTwD">
+                                <property role="3oM_SC" value="TODO analyse joint" />
+                              </node>
                             </node>
                           </node>
                           <node concept="1X3_iC" id="5mfFpiaOgRW" role="lGtFl">
@@ -6334,8 +6358,10 @@
                             <node concept="9aQIb" id="5mfFpiaOgSp" role="9aQIa">
                               <node concept="3clFbS" id="5mfFpiaOgSq" role="9aQI4">
                                 <node concept="3SKdUt" id="5mfFpiaOgSr" role="3cqZAp">
-                                  <node concept="3SKdUq" id="5mfFpiaOgSs" role="3SKWNk">
-                                    <property role="3SKdUp" value="set link for new iteration" />
+                                  <node concept="1PaTwC" id="qYWbB1DiRC" role="3ndbpf">
+                                    <node concept="3oM_SD" id="qYWbB1DiRD" role="1PaTwD">
+                                      <property role="3oM_SC" value="set link for new iteration" />
+                                    </node>
                                   </node>
                                 </node>
                                 <node concept="3clFbF" id="5mfFpiaOgSt" role="3cqZAp">
@@ -6472,8 +6498,10 @@
             <node concept="3clFbJ" id="5mfFpi9Ab6m" role="3cqZAp">
               <node concept="3clFbS" id="5mfFpi9Ab6o" role="3clFbx">
                 <node concept="3SKdUt" id="5mfFpi9AbsN" role="3cqZAp">
-                  <node concept="3SKdUq" id="5mfFpi9AbsP" role="3SKWNk">
-                    <property role="3SKdUp" value="model found!" />
+                  <node concept="1PaTwC" id="qYWbB1DiRE" role="3ndbpf">
+                    <node concept="3oM_SD" id="qYWbB1DiRF" role="1PaTwD">
+                      <property role="3oM_SC" value="model found!" />
+                    </node>
                   </node>
                 </node>
                 <node concept="3cpWs8" id="5mfFpi9_Pfn" role="3cqZAp">
@@ -6511,8 +6539,10 @@
                 <node concept="3clFbJ" id="5mfFpi9IHMw" role="3cqZAp">
                   <node concept="3clFbS" id="5mfFpi9IHMy" role="3clFbx">
                     <node concept="3SKdUt" id="5mfFpi9_KOt" role="3cqZAp">
-                      <node concept="3SKdUq" id="5mfFpi9_KOv" role="3SKWNk">
-                        <property role="3SKdUp" value="also include VA's that include the chain" />
+                      <node concept="1PaTwC" id="qYWbB1DiRG" role="3ndbpf">
+                        <node concept="3oM_SD" id="qYWbB1DiRH" role="1PaTwD">
+                          <property role="3oM_SC" value="also include VA's that include the chain" />
+                        </node>
                       </node>
                     </node>
                     <node concept="3cpWs8" id="5mfFpi9Bge7" role="3cqZAp">
@@ -6645,15 +6675,19 @@
                             <node concept="3clFbJ" id="5mfFpi9CixT" role="3cqZAp">
                               <node concept="3clFbS" id="5mfFpi9CixV" role="3clFbx">
                                 <node concept="3SKdUt" id="5mfFpi9Cpdw" role="3cqZAp">
-                                  <node concept="3SKdUq" id="5mfFpi9Cpdy" role="3SKWNk">
-                                    <property role="3SKdUp" value="check if left or right includes our chain" />
+                                  <node concept="1PaTwC" id="qYWbB1DiRI" role="3ndbpf">
+                                    <node concept="3oM_SD" id="qYWbB1DiRJ" role="1PaTwD">
+                                      <property role="3oM_SC" value="check if left or right includes our chain" />
+                                    </node>
                                   </node>
                                 </node>
                                 <node concept="3clFbJ" id="5mfFpi9CpeP" role="3cqZAp">
                                   <node concept="3clFbS" id="5mfFpi9CpeR" role="3clFbx">
                                     <node concept="3SKdUt" id="5mfFpi9Cqxx" role="3cqZAp">
-                                      <node concept="3SKdUq" id="5mfFpi9Cqxz" role="3SKWNk">
-                                        <property role="3SKdUp" value="then check for links in right chain" />
+                                      <node concept="1PaTwC" id="qYWbB1DiRK" role="3ndbpf">
+                                        <node concept="3oM_SD" id="qYWbB1DiRL" role="1PaTwD">
+                                          <property role="3oM_SC" value="then check for links in right chain" />
+                                        </node>
                                       </node>
                                     </node>
                                     <node concept="3clFbF" id="5mfFpi9CqNb" role="3cqZAp">
@@ -6692,8 +6726,10 @@
                                     </node>
                                     <node concept="3clFbS" id="5mfFpi9Cq93" role="3eOfB_">
                                       <node concept="3SKdUt" id="5mfFpi9Cqy6" role="3cqZAp">
-                                        <node concept="3SKdUq" id="5mfFpi9Cqy7" role="3SKWNk">
-                                          <property role="3SKdUp" value="then check for links in left chain" />
+                                        <node concept="1PaTwC" id="qYWbB1DiRM" role="3ndbpf">
+                                          <node concept="3oM_SD" id="qYWbB1DiRN" role="1PaTwD">
+                                            <property role="3oM_SC" value="then check for links in left chain" />
+                                          </node>
                                         </node>
                                       </node>
                                       <node concept="3clFbF" id="5mfFpi9C_QQ" role="3cqZAp">
@@ -6940,8 +6976,10 @@
             <node concept="3clFbJ" id="5mfFpiaMRFW" role="3cqZAp">
               <node concept="3clFbS" id="5mfFpiaMRFX" role="3clFbx">
                 <node concept="3SKdUt" id="5mfFpiaMRFY" role="3cqZAp">
-                  <node concept="3SKdUq" id="5mfFpiaMRFZ" role="3SKWNk">
-                    <property role="3SKdUp" value="model found!" />
+                  <node concept="1PaTwC" id="qYWbB1DiRO" role="3ndbpf">
+                    <node concept="3oM_SD" id="qYWbB1DiRP" role="1PaTwD">
+                      <property role="3oM_SC" value="model found!" />
+                    </node>
                   </node>
                 </node>
                 <node concept="3cpWs8" id="5mfFpiaMRG0" role="3cqZAp">
@@ -7398,8 +7436,10 @@
           </node>
         </node>
         <node concept="3SKdUt" id="5mfFpiaCGQA" role="3cqZAp">
-          <node concept="3SKdUq" id="5mfFpiaCGQC" role="3SKWNk">
-            <property role="3SKdUp" value="https://en.wikipedia.org/wiki/Mathematical_operators_and_symbols_in_Unicode" />
+          <node concept="1PaTwC" id="qYWbB1DiRe" role="3ndbpf">
+            <node concept="3oM_SD" id="qYWbB1DiRf" role="1PaTwD">
+              <property role="3oM_SC" value="https://en.wikipedia.org/wiki/Mathematical_operators_and_symbols_in_Unicode" />
+            </node>
           </node>
         </node>
       </node>
@@ -7478,8 +7518,10 @@
           </node>
         </node>
         <node concept="3SKdUt" id="5mfFpiaUzRC" role="3cqZAp">
-          <node concept="3SKdUq" id="5mfFpiaUzRD" role="3SKWNk">
-            <property role="3SKdUp" value="https://en.wikipedia.org/wiki/Mathematical_operators_and_symbols_in_Unicode" />
+          <node concept="1PaTwC" id="qYWbB1DiRg" role="3ndbpf">
+            <node concept="3oM_SD" id="qYWbB1DiRh" role="1PaTwD">
+              <property role="3oM_SC" value="https://en.wikipedia.org/wiki/Mathematical_operators_and_symbols_in_Unicode" />
+            </node>
           </node>
         </node>
       </node>
@@ -7610,8 +7652,10 @@
           </node>
         </node>
         <node concept="3SKdUt" id="5mfFpib3rza" role="3cqZAp">
-          <node concept="3SKdUq" id="5mfFpib3rzb" role="3SKWNk">
-            <property role="3SKdUp" value="https://en.wikipedia.org/wiki/Mathematical_operators_and_symbols_in_Unicode" />
+          <node concept="1PaTwC" id="qYWbB1DiRi" role="3ndbpf">
+            <node concept="3oM_SD" id="qYWbB1DiRj" role="1PaTwD">
+              <property role="3oM_SC" value="https://en.wikipedia.org/wiki/Mathematical_operators_and_symbols_in_Unicode" />
+            </node>
           </node>
         </node>
       </node>
@@ -8776,7 +8820,7 @@
     <property role="3GE5qa" value="controlformalism" />
     <ref role="1XX52x" to="gqxc:5mfFpiaYKff" resolve="CartesianMassSpringDamperController" />
     <node concept="3F0ifn" id="5mfFpiaYKo2" role="2wV5jI">
-      <property role="3F0ifm" value="Spring Damper" />
+      <property role="3F0ifm" value="Mass Spring Damper" />
     </node>
     <node concept="3EZMnI" id="1Brl3p$QPNs" role="6VMZX">
       <node concept="2iRkQZ" id="1Brl3p$QPNt" role="2iSdaV" />
@@ -9116,7 +9160,7 @@
     <property role="3GE5qa" value="controlformalism" />
     <ref role="1XX52x" to="gqxc:5mfFpiaYKhe" resolve="JointMassSpringDamperController" />
     <node concept="3F0ifn" id="5mfFpiaYKqf" role="2wV5jI">
-      <property role="3F0ifm" value="Spring Damper" />
+      <property role="3F0ifm" value="Mass Spring Damper" />
     </node>
     <node concept="PMmxH" id="1Brl3p$QTsd" role="6VMZX">
       <ref role="PMmxG" node="1Brl3p$QPIU" resolve="Realization_EditorComponent" />

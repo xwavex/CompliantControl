@@ -162,11 +162,8 @@
         <child id="1178549979242" name="visibility" index="1B3o_S" />
       </concept>
       <concept id="1082113931046" name="jetbrains.mps.baseLanguage.structure.ContinueStatement" flags="nn" index="3N13vt" />
-      <concept id="6329021646629104957" name="jetbrains.mps.baseLanguage.structure.TextCommentPart" flags="nn" index="3SKdUq">
-        <property id="6329021646629104958" name="text" index="3SKdUp" />
-      </concept>
       <concept id="6329021646629104954" name="jetbrains.mps.baseLanguage.structure.SingleLineComment" flags="nn" index="3SKdUt">
-        <child id="6329021646629175155" name="commentPart" index="3SKWNk" />
+        <child id="1350122676458893092" name="text" index="3ndbpf" />
       </concept>
       <concept id="1146644602865" name="jetbrains.mps.baseLanguage.structure.PublicVisibility" flags="nn" index="3Tm1VV" />
       <concept id="1080120340718" name="jetbrains.mps.baseLanguage.structure.AndExpression" flags="nn" index="1Wc70l" />
@@ -258,7 +255,7 @@
       </concept>
     </language>
     <language id="dfed0f13-ca0e-4e6d-b469-ef760982a8ea" name="EigenTypekit">
-      <concept id="5940325661074354410" name="EigenTypekit.structure.EigenMatrix" flags="ig" index="1W2jpt">
+      <concept id="5940325661074354410" name="EigenTypekit.structure.EigenMatrix" flags="ng" index="1W2jpt">
         <child id="5940325661074354411" name="type" index="1W2jps" />
       </concept>
     </language>
@@ -404,11 +401,11 @@
         <child id="5169995583184591170" name="smodelAttribute" index="lGtFl" />
       </concept>
       <concept id="3364660638048049750" name="jetbrains.mps.lang.core.structure.PropertyAttribute" flags="ng" index="A9Btg">
-        <property id="1757699476691236117" name="propertyName" index="2qtEX9" />
+        <property id="1757699476691236117" name="name_DebugInfo" index="2qtEX9" />
         <property id="1341860900487648621" name="propertyId" index="P4ACc" />
       </concept>
       <concept id="3364660638048049745" name="jetbrains.mps.lang.core.structure.LinkAttribute" flags="ng" index="A9Btn">
-        <property id="1757699476691236116" name="linkRole" index="2qtEX8" />
+        <property id="1757699476691236116" name="role_DebugInfo" index="2qtEX8" />
         <property id="1341860900488019036" name="linkId" index="P3scX" />
       </concept>
       <concept id="1169194658468" name="jetbrains.mps.lang.core.structure.INamedConcept" flags="ng" index="TrEIO">
@@ -416,10 +413,18 @@
       </concept>
       <concept id="709746936026466394" name="jetbrains.mps.lang.core.structure.ChildAttribute" flags="ng" index="3VBwX9">
         <property id="709746936026609031" name="linkId" index="3V$3ak" />
-        <property id="709746936026609029" name="linkRole" index="3V$3am" />
+        <property id="709746936026609029" name="role_DebugInfo" index="3V$3am" />
       </concept>
       <concept id="4452961908202556907" name="jetbrains.mps.lang.core.structure.BaseCommentAttribute" flags="ng" index="1X3_iC">
         <child id="3078666699043039389" name="commentedNode" index="8Wnug" />
+      </concept>
+    </language>
+    <language id="c7fb639f-be78-4307-89b0-b5959c3fa8c8" name="jetbrains.mps.lang.text">
+      <concept id="155656958578482948" name="jetbrains.mps.lang.text.structure.Word" flags="ng" index="3oM_SD">
+        <property id="155656958578482949" name="value" index="3oM_SC" />
+      </concept>
+      <concept id="2535923850359271782" name="jetbrains.mps.lang.text.structure.Line" flags="ng" index="1PaTwC">
+        <child id="2535923850359271783" name="elements" index="1PaTwD" />
       </concept>
     </language>
     <language id="83888646-71ce-4f1c-9c53-c54016f6ad4f" name="jetbrains.mps.baseLanguage.collections">
@@ -1543,8 +1548,10 @@
       <node concept="2jfdEK" id="71eMqXGxa_O" role="2jfP_Y">
         <node concept="3clFbS" id="71eMqXGxa_Q" role="2VODD2">
           <node concept="3SKdUt" id="71eMqXFCYcZ" role="3cqZAp">
-            <node concept="3SKdUq" id="71eMqXFCYd1" role="3SKWNk">
-              <property role="3SKdUp" value="for each robot that is based on the same robotic platform" />
+            <node concept="1PaTwC" id="qYWbB1DiSC" role="3ndbpf">
+              <node concept="3oM_SD" id="qYWbB1DiSD" role="1PaTwD">
+                <property role="3oM_SC" value="for each robot that is based on the same robotic platform" />
+              </node>
             </node>
           </node>
           <node concept="1X3_iC" id="3LZWsi4U4NG" role="lGtFl">
@@ -2473,18 +2480,24 @@
           </node>
           <node concept="3clFbH" id="71eMqXGw5rZ" role="3cqZAp" />
           <node concept="3SKdUt" id="71eMqXGoeo_" role="3cqZAp">
-            <node concept="3SKdUq" id="71eMqXGoeoB" role="3SKWNk">
-              <property role="3SKdUp" value="1) Find all the different controllers for all single robots." />
+            <node concept="1PaTwC" id="qYWbB1DiSE" role="3ndbpf">
+              <node concept="3oM_SD" id="qYWbB1DiSF" role="1PaTwD">
+                <property role="3oM_SC" value="1) Find all the different controllers for all single robots." />
+              </node>
             </node>
           </node>
           <node concept="3SKdUt" id="71eMqXGogLf" role="3cqZAp">
-            <node concept="3SKdUq" id="71eMqXGogLh" role="3SKWNk">
-              <property role="3SKdUp" value="2) Order the controllers per type." />
+            <node concept="1PaTwC" id="qYWbB1DiSG" role="3ndbpf">
+              <node concept="3oM_SD" id="qYWbB1DiSH" role="1PaTwD">
+                <property role="3oM_SC" value="2) Order the controllers per type." />
+              </node>
             </node>
           </node>
           <node concept="3SKdUt" id="71eMqXGoj8p" role="3cqZAp">
-            <node concept="3SKdUq" id="71eMqXGoj8r" role="3SKWNk">
-              <property role="3SKdUp" value="3) Map all the indivitual (original) controllers to the ordered ones." />
+            <node concept="1PaTwC" id="qYWbB1DiSI" role="3ndbpf">
+              <node concept="3oM_SD" id="qYWbB1DiSJ" role="1PaTwD">
+                <property role="3oM_SC" value="3) Map all the indivitual (original) controllers to the ordered ones." />
+              </node>
             </node>
           </node>
           <node concept="3cpWs6" id="71eMqXGxSw5" role="3cqZAp">
@@ -3793,8 +3806,10 @@
           </node>
           <node concept="3clFbS" id="6a7EGOkntQf" role="2LFqv$">
             <node concept="3SKdUt" id="6a7EGOko00_" role="3cqZAp">
-              <node concept="3SKdUq" id="6a7EGOko00B" role="3SKWNk">
-                <property role="3SKdUp" value="Fix update all component instances" />
+              <node concept="1PaTwC" id="qYWbB1DiSK" role="3ndbpf">
+                <node concept="3oM_SD" id="qYWbB1DiSL" role="1PaTwD">
+                  <property role="3oM_SC" value="Fix update all component instances" />
+                </node>
               </node>
             </node>
             <node concept="2Gpval" id="6a7EGOko0Qc" role="3cqZAp">
@@ -3933,8 +3948,10 @@
                           </node>
                         </node>
                         <node concept="3SKdUt" id="4LsNulDhzca" role="3cqZAp">
-                          <node concept="3SKdUq" id="4LsNulDhzcc" role="3SKWNk">
-                            <property role="3SKdUp" value="try to find target for that field" />
+                          <node concept="1PaTwC" id="qYWbB1DiSM" role="3ndbpf">
+                            <node concept="3oM_SD" id="qYWbB1DiSN" role="1PaTwD">
+                              <property role="3oM_SC" value="try to find target for that field" />
+                            </node>
                           </node>
                         </node>
                         <node concept="2Gpval" id="4LsNulDhz$T" role="3cqZAp">
@@ -3984,8 +4001,10 @@
                         <node concept="3clFbJ" id="4LsNulDhL1Z" role="3cqZAp">
                           <node concept="3clFbS" id="4LsNulDhL21" role="3clFbx">
                             <node concept="3SKdUt" id="4LsNulDhL8w" role="3cqZAp">
-                              <node concept="3SKdUq" id="4LsNulDhL8y" role="3SKWNk">
-                                <property role="3SKdUp" value="target for this field needs to be added" />
+                              <node concept="1PaTwC" id="qYWbB1DiSO" role="3ndbpf">
+                                <node concept="3oM_SD" id="qYWbB1DiSP" role="1PaTwD">
+                                  <property role="3oM_SC" value="target for this field needs to be added" />
+                                </node>
                               </node>
                             </node>
                             <node concept="3cpWs8" id="4LsNulDhO0F" role="3cqZAp">
@@ -4086,8 +4105,10 @@
                   </node>
                 </node>
                 <node concept="3SKdUt" id="4LsNulDhLBv" role="3cqZAp">
-                  <node concept="3SKdUq" id="4LsNulDhLBx" role="3SKWNk">
-                    <property role="3SKdUp" value=" check other way around" />
+                  <node concept="1PaTwC" id="qYWbB1DiSQ" role="3ndbpf">
+                    <node concept="3oM_SD" id="qYWbB1DiSR" role="1PaTwD">
+                      <property role="3oM_SC" value=" check other way around" />
+                    </node>
                   </node>
                 </node>
                 <node concept="3cpWs8" id="4LsNulDi7fy" role="3cqZAp">
@@ -4189,8 +4210,10 @@
                               </node>
                             </node>
                             <node concept="3SKdUt" id="4LsNulDhNDh" role="3cqZAp">
-                              <node concept="3SKdUq" id="4LsNulDhNDi" role="3SKWNk">
-                                <property role="3SKdUp" value="try to find field for each target" />
+                              <node concept="1PaTwC" id="qYWbB1DiSS" role="3ndbpf">
+                                <node concept="3oM_SD" id="qYWbB1DiST" role="1PaTwD">
+                                  <property role="3oM_SC" value="try to find field for each target" />
+                                </node>
                               </node>
                             </node>
                             <node concept="3clFbJ" id="4LsNulDhNDp" role="3cqZAp">
@@ -4228,8 +4251,10 @@
                     <node concept="3clFbJ" id="4LsNulDhNDA" role="3cqZAp">
                       <node concept="3clFbS" id="4LsNulDhNDB" role="3clFbx">
                         <node concept="3SKdUt" id="4LsNulDhNDC" role="3cqZAp">
-                          <node concept="3SKdUq" id="4LsNulDhNDD" role="3SKWNk">
-                            <property role="3SKdUp" value="target for this field needs to be removed" />
+                          <node concept="1PaTwC" id="qYWbB1DiSU" role="3ndbpf">
+                            <node concept="3oM_SD" id="qYWbB1DiSV" role="1PaTwD">
+                              <property role="3oM_SC" value="target for this field needs to be removed" />
+                            </node>
                           </node>
                         </node>
                         <node concept="3clFbF" id="4LsNulDi7Lk" role="3cqZAp">
@@ -4254,8 +4279,10 @@
                   </node>
                 </node>
                 <node concept="3SKdUt" id="4LsNulDif0u" role="3cqZAp">
-                  <node concept="3SKdUq" id="4LsNulDif0w" role="3SKWNk">
-                    <property role="3SKdUp" value="remove!" />
+                  <node concept="1PaTwC" id="qYWbB1DiSW" role="3ndbpf">
+                    <node concept="3oM_SD" id="qYWbB1DiSX" role="1PaTwD">
+                      <property role="3oM_SC" value="remove!" />
+                    </node>
                   </node>
                 </node>
                 <node concept="2Gpval" id="4LsNulDipl2" role="3cqZAp">
@@ -4679,15 +4706,19 @@
                   </node>
                   <node concept="3clFbS" id="6a7EGOknxuw" role="3clFbx">
                     <node concept="3SKdUt" id="6a7EGOknyEP" role="3cqZAp">
-                      <node concept="3SKdUq" id="6a7EGOknyEQ" role="3SKWNk">
-                        <property role="3SKdUp" value="Fix source" />
+                      <node concept="1PaTwC" id="qYWbB1DiSY" role="3ndbpf">
+                        <node concept="3oM_SD" id="qYWbB1DiSZ" role="1PaTwD">
+                          <property role="3oM_SC" value="Fix source" />
+                        </node>
                       </node>
                     </node>
                     <node concept="3clFbJ" id="6a7EGOkn_A9" role="3cqZAp">
                       <node concept="3clFbS" id="6a7EGOkn_Ab" role="3clFbx">
                         <node concept="3SKdUt" id="6a7EGOknPVF" role="3cqZAp">
-                          <node concept="3SKdUq" id="6a7EGOknPVH" role="3SKWNk">
-                            <property role="3SKdUp" value="Target is in Prioritization" />
+                          <node concept="1PaTwC" id="qYWbB1DiT0" role="3ndbpf">
+                            <node concept="3oM_SD" id="qYWbB1DiT1" role="1PaTwD">
+                              <property role="3oM_SC" value="Target is in Prioritization" />
+                            </node>
                           </node>
                         </node>
                         <node concept="3cpWs8" id="6a7EGOkp1_b" role="3cqZAp">
@@ -5067,8 +5098,10 @@
                             </node>
                           </node>
                           <node concept="3SKdUt" id="yrgLMWjxdF" role="3cqZAp">
-                            <node concept="3SKdUq" id="yrgLMWjxdG" role="3SKWNk">
-                              <property role="3SKdUp" value="Fix target for Task Jacs" />
+                            <node concept="1PaTwC" id="qYWbB1DiT2" role="3ndbpf">
+                              <node concept="3oM_SD" id="qYWbB1DiT3" role="1PaTwD">
+                                <property role="3oM_SC" value="Fix target for Task Jacs" />
+                              </node>
                             </node>
                           </node>
                           <node concept="3cpWs8" id="yrgLMWjCm6" role="3cqZAp">

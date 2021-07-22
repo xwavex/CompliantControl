@@ -120,11 +120,8 @@
       </concept>
       <concept id="1214918800624" name="jetbrains.mps.baseLanguage.structure.PostfixIncrementExpression" flags="nn" index="3uNrnE" />
       <concept id="1082113931046" name="jetbrains.mps.baseLanguage.structure.ContinueStatement" flags="nn" index="3N13vt" />
-      <concept id="6329021646629104957" name="jetbrains.mps.baseLanguage.structure.TextCommentPart" flags="nn" index="3SKdUq">
-        <property id="6329021646629104958" name="text" index="3SKdUp" />
-      </concept>
       <concept id="6329021646629104954" name="jetbrains.mps.baseLanguage.structure.SingleLineComment" flags="nn" index="3SKdUt">
-        <child id="6329021646629175155" name="commentPart" index="3SKWNk" />
+        <child id="1350122676458893092" name="text" index="3ndbpf" />
       </concept>
       <concept id="1080120340718" name="jetbrains.mps.baseLanguage.structure.AndExpression" flags="nn" index="1Wc70l" />
     </language>
@@ -276,7 +273,7 @@
         <child id="5169995583184591170" name="smodelAttribute" index="lGtFl" />
       </concept>
       <concept id="3364660638048049750" name="jetbrains.mps.lang.core.structure.PropertyAttribute" flags="ng" index="A9Btg">
-        <property id="1757699476691236117" name="propertyName" index="2qtEX9" />
+        <property id="1757699476691236117" name="name_DebugInfo" index="2qtEX9" />
         <property id="1341860900487648621" name="propertyId" index="P4ACc" />
       </concept>
       <concept id="1169194658468" name="jetbrains.mps.lang.core.structure.INamedConcept" flags="ng" index="TrEIO">
@@ -284,10 +281,18 @@
       </concept>
       <concept id="709746936026466394" name="jetbrains.mps.lang.core.structure.ChildAttribute" flags="ng" index="3VBwX9">
         <property id="709746936026609031" name="linkId" index="3V$3ak" />
-        <property id="709746936026609029" name="linkRole" index="3V$3am" />
+        <property id="709746936026609029" name="role_DebugInfo" index="3V$3am" />
       </concept>
       <concept id="4452961908202556907" name="jetbrains.mps.lang.core.structure.BaseCommentAttribute" flags="ng" index="1X3_iC">
         <child id="3078666699043039389" name="commentedNode" index="8Wnug" />
+      </concept>
+    </language>
+    <language id="c7fb639f-be78-4307-89b0-b5959c3fa8c8" name="jetbrains.mps.lang.text">
+      <concept id="155656958578482948" name="jetbrains.mps.lang.text.structure.Word" flags="ng" index="3oM_SD">
+        <property id="155656958578482949" name="value" index="3oM_SC" />
+      </concept>
+      <concept id="2535923850359271782" name="jetbrains.mps.lang.text.structure.Line" flags="ng" index="1PaTwC">
+        <child id="2535923850359271783" name="elements" index="1PaTwD" />
       </concept>
     </language>
     <language id="83888646-71ce-4f1c-9c53-c54016f6ad4f" name="jetbrains.mps.baseLanguage.collections">
@@ -471,8 +476,10 @@
             </node>
             <node concept="3clFbH" id="3JOwuCCQaA$" role="3cqZAp" />
             <node concept="3SKdUt" id="3JOwuCCQBfJ" role="3cqZAp">
-              <node concept="3SKdUq" id="3JOwuCCQBfL" role="3SKWNk">
-                <property role="3SKdUp" value="create first stating node" />
+              <node concept="1PaTwC" id="qYWbB1DiS2" role="3ndbpf">
+                <node concept="3oM_SD" id="qYWbB1DiS3" role="1PaTwD">
+                  <property role="3oM_SC" value="create first stating node" />
+                </node>
               </node>
             </node>
             <node concept="3cpWs8" id="3JOwuCCQBEo" role="3cqZAp">
@@ -745,8 +752,10 @@
           </node>
         </node>
         <node concept="3SKdUt" id="49G1a3fSCjk" role="3cqZAp">
-          <node concept="3SKdUq" id="49G1a3fSCjm" role="3SKWNk">
-            <property role="3SKdUp" value="get all unique names of robots (graphs)" />
+          <node concept="1PaTwC" id="qYWbB1DiS4" role="3ndbpf">
+            <node concept="3oM_SD" id="qYWbB1DiS5" role="1PaTwD">
+              <property role="3oM_SC" value="get all unique names of robots (graphs)" />
+            </node>
           </node>
         </node>
         <node concept="3cpWs8" id="49G1a3fSFr8" role="3cqZAp">
@@ -795,8 +804,10 @@
           </node>
         </node>
         <node concept="3SKdUt" id="49G1a3fVDZs" role="3cqZAp">
-          <node concept="3SKdUq" id="49G1a3fVDZu" role="3SKWNk">
-            <property role="3SKdUp" value="TODO for each robot do the sorting? or do it for all graphs?" />
+          <node concept="1PaTwC" id="qYWbB1DiS6" role="3ndbpf">
+            <node concept="3oM_SD" id="qYWbB1DiS7" role="1PaTwD">
+              <property role="3oM_SC" value="TODO for each robot do the sorting? or do it for all graphs?" />
+            </node>
           </node>
         </node>
         <node concept="3clFbH" id="3JOwuCCZ5yP" role="3cqZAp" />
@@ -977,8 +988,10 @@
             </node>
             <node concept="3clFbH" id="3JOwuCCZt7R" role="3cqZAp" />
             <node concept="3SKdUt" id="3JOwuCCZthX" role="3cqZAp">
-              <node concept="3SKdUq" id="3JOwuCCZthZ" role="3SKWNk">
-                <property role="3SKdUp" value="compare to unified graph" />
+              <node concept="1PaTwC" id="qYWbB1DiS8" role="3ndbpf">
+                <node concept="3oM_SD" id="qYWbB1DiS9" role="1PaTwD">
+                  <property role="3oM_SC" value="compare to unified graph" />
+                </node>
               </node>
             </node>
             <node concept="3cpWs8" id="3JOwuCCZyCZ" role="3cqZAp">
@@ -998,13 +1011,17 @@
             </node>
             <node concept="3clFbH" id="3JOwuCCZtno" role="3cqZAp" />
             <node concept="3SKdUt" id="3JOwuCCZtXP" role="3cqZAp">
-              <node concept="3SKdUq" id="3JOwuCCZtXR" role="3SKWNk">
-                <property role="3SKdUp" value="get first node of unifiedG" />
+              <node concept="1PaTwC" id="qYWbB1DiSa" role="3ndbpf">
+                <node concept="3oM_SD" id="qYWbB1DiSb" role="1PaTwD">
+                  <property role="3oM_SC" value="get first node of unifiedG" />
+                </node>
               </node>
             </node>
             <node concept="3SKdUt" id="3JOwuCD5RUb" role="3cqZAp">
-              <node concept="3SKdUq" id="3JOwuCD5RUd" role="3SKWNk">
-                <property role="3SKdUp" value="TODO make sure it starts with ALPHA!" />
+              <node concept="1PaTwC" id="qYWbB1DiSc" role="3ndbpf">
+                <node concept="3oM_SD" id="qYWbB1DiSd" role="1PaTwD">
+                  <property role="3oM_SC" value="TODO make sure it starts with ALPHA!" />
+                </node>
               </node>
             </node>
             <node concept="3cpWs8" id="3JOwuCCZuan" role="3cqZAp">
@@ -1135,8 +1152,10 @@
             </node>
             <node concept="3clFbH" id="49G1a3g41Ul" role="3cqZAp" />
             <node concept="3SKdUt" id="49G1a3g42Vr" role="3cqZAp">
-              <node concept="3SKdUq" id="49G1a3g42Vt" role="3SKWNk">
-                <property role="3SKdUp" value="print unified:" />
+              <node concept="1PaTwC" id="qYWbB1DiSe" role="3ndbpf">
+                <node concept="3oM_SD" id="qYWbB1DiSf" role="1PaTwD">
+                  <property role="3oM_SC" value="print unified:" />
+                </node>
               </node>
             </node>
             <node concept="1X3_iC" id="49G1a3g_89F" role="lGtFl">
@@ -1271,8 +1290,10 @@
             </node>
             <node concept="3clFbH" id="49G1a3g4dty" role="3cqZAp" />
             <node concept="3SKdUt" id="49G1a3g4gxb" role="3cqZAp">
-              <node concept="3SKdUq" id="49G1a3g4gxd" role="3SKWNk">
-                <property role="3SKdUp" value="print candidate" />
+              <node concept="1PaTwC" id="qYWbB1DiSg" role="3ndbpf">
+                <node concept="3oM_SD" id="qYWbB1DiSh" role="1PaTwD">
+                  <property role="3oM_SC" value="print candidate" />
+                </node>
               </node>
             </node>
             <node concept="1X3_iC" id="49G1a3g_icw" role="lGtFl">
@@ -1599,8 +1620,10 @@
             </node>
             <node concept="3clFbH" id="49G1a3gjgNq" role="3cqZAp" />
             <node concept="3SKdUt" id="49G1a3gjiVj" role="3cqZAp">
-              <node concept="3SKdUq" id="49G1a3gjiVl" role="3SKWNk">
-                <property role="3SKdUp" value="update unifiedG" />
+              <node concept="1PaTwC" id="qYWbB1DiSi" role="3ndbpf">
+                <node concept="3oM_SD" id="qYWbB1DiSj" role="1PaTwD">
+                  <property role="3oM_SC" value="update unifiedG" />
+                </node>
               </node>
             </node>
             <node concept="2Gpval" id="49G1a3gjni2" role="3cqZAp">
@@ -2616,8 +2639,10 @@
           </node>
         </node>
         <node concept="3SKdUt" id="BCCyAXbDyZ" role="3cqZAp">
-          <node concept="3SKdUq" id="BCCyAXbDz0" role="3SKWNk">
-            <property role="3SKdUp" value="get all unique names of robots (graphs)" />
+          <node concept="1PaTwC" id="qYWbB1DiSk" role="3ndbpf">
+            <node concept="3oM_SD" id="qYWbB1DiSl" role="1PaTwD">
+              <property role="3oM_SC" value="get all unique names of robots (graphs)" />
+            </node>
           </node>
         </node>
         <node concept="3cpWs8" id="BCCyAXbDz1" role="3cqZAp">
@@ -2667,8 +2692,10 @@
         </node>
         <node concept="3clFbH" id="4WbPc0oSf$9" role="3cqZAp" />
         <node concept="3SKdUt" id="4WbPc0oT89X" role="3cqZAp">
-          <node concept="3SKdUq" id="4WbPc0oT89Z" role="3SKWNk">
-            <property role="3SKdUp" value="for each robot collect all graphs over the different contact situations" />
+          <node concept="1PaTwC" id="qYWbB1DiSm" role="3ndbpf">
+            <node concept="3oM_SD" id="qYWbB1DiSn" role="1PaTwD">
+              <property role="3oM_SC" value="for each robot collect all graphs over the different contact situations" />
+            </node>
           </node>
         </node>
         <node concept="2Gpval" id="4WbPc0oSuik" role="3cqZAp">
@@ -2710,8 +2737,10 @@
               </node>
             </node>
             <node concept="3SKdUt" id="4WbPc0oUsAl" role="3cqZAp">
-              <node concept="3SKdUq" id="4WbPc0oUsAn" role="3SKWNk">
-                <property role="3SKdUp" value="collect all involved vertices" />
+              <node concept="1PaTwC" id="qYWbB1DiSo" role="3ndbpf">
+                <node concept="3oM_SD" id="qYWbB1DiSp" role="1PaTwD">
+                  <property role="3oM_SC" value="collect all involved vertices" />
+                </node>
               </node>
             </node>
             <node concept="2Gpval" id="4WbPc0oUzq$" role="3cqZAp">
@@ -2842,8 +2871,10 @@
                       <node concept="9aQIb" id="4haWroCj0Jd" role="9aQIa">
                         <node concept="3clFbS" id="4haWroCj0Je" role="9aQI4">
                           <node concept="3SKdUt" id="4haWroCj0LU" role="3cqZAp">
-                            <node concept="3SKdUq" id="4haWroCj0LV" role="3SKWNk">
-                              <property role="3SKdUp" value="Make sure to add the filters!" />
+                            <node concept="1PaTwC" id="qYWbB1DiSq" role="3ndbpf">
+                              <node concept="3oM_SD" id="qYWbB1DiSr" role="1PaTwD">
+                                <property role="3oM_SC" value="Make sure to add the filters!" />
+                              </node>
                             </node>
                           </node>
                           <node concept="1X3_iC" id="1BFyXk8WhvD" role="lGtFl">
@@ -3194,8 +3225,10 @@
                   </node>
                 </node>
                 <node concept="3SKdUt" id="4WbPc0oXUoB" role="3cqZAp">
-                  <node concept="3SKdUq" id="4WbPc0oXUoD" role="3SKWNk">
-                    <property role="3SKdUp" value="Optional add all edges" />
+                  <node concept="1PaTwC" id="qYWbB1DiSs" role="3ndbpf">
+                    <node concept="3oM_SD" id="qYWbB1DiSt" role="1PaTwD">
+                      <property role="3oM_SC" value="Optional add all edges" />
+                    </node>
                   </node>
                 </node>
                 <node concept="2Gpval" id="4WbPc0oXUtf" role="3cqZAp">
@@ -3326,8 +3359,10 @@
                       </node>
                       <node concept="3clFbS" id="4WbPc0oY2$w" role="3clFbx">
                         <node concept="3SKdUt" id="4WbPc0p0wC2" role="3cqZAp">
-                          <node concept="3SKdUq" id="4WbPc0p0wC3" role="3SKWNk">
-                            <property role="3SKdUp" value="add edge" />
+                          <node concept="1PaTwC" id="qYWbB1DiSu" role="3ndbpf">
+                            <node concept="3oM_SD" id="qYWbB1DiSv" role="1PaTwD">
+                              <property role="3oM_SC" value="add edge" />
+                            </node>
                           </node>
                         </node>
                         <node concept="3clFbF" id="4WbPc0p0wDj" role="3cqZAp">
@@ -3473,8 +3508,10 @@
               </node>
             </node>
             <node concept="3SKdUt" id="4WbPc0p4I2Y" role="3cqZAp">
-              <node concept="3SKdUq" id="4WbPc0p4I30" role="3SKWNk">
-                <property role="3SKdUp" value="After we have the unified graph, we need to calculate all CS for one robot" />
+              <node concept="1PaTwC" id="qYWbB1DiSw" role="3ndbpf">
+                <node concept="3oM_SD" id="qYWbB1DiSx" role="1PaTwD">
+                  <property role="3oM_SC" value="After we have the unified graph, we need to calculate all CS for one robot" />
+                </node>
               </node>
             </node>
             <node concept="2Gpval" id="4WbPc0oRGhf" role="3cqZAp">
@@ -3731,8 +3768,10 @@
                       </node>
                     </node>
                     <node concept="3SKdUt" id="4WbPc0p7vzs" role="3cqZAp">
-                      <node concept="3SKdUq" id="4WbPc0p7vzu" role="3SKWNk">
-                        <property role="3SKdUp" value="add all vertices from unified" />
+                      <node concept="1PaTwC" id="qYWbB1DiSy" role="3ndbpf">
+                        <node concept="3oM_SD" id="qYWbB1DiSz" role="1PaTwD">
+                          <property role="3oM_SC" value="add all vertices from unified" />
+                        </node>
                       </node>
                     </node>
                     <node concept="1X3_iC" id="1bQsC10qTvg" role="lGtFl">
@@ -4056,8 +4095,10 @@
                       </node>
                     </node>
                     <node concept="3SKdUt" id="4WbPc0p7vLP" role="3cqZAp">
-                      <node concept="3SKdUq" id="4WbPc0p7vLR" role="3SKWNk">
-                        <property role="3SKdUp" value="but only all edge from CS" />
+                      <node concept="1PaTwC" id="qYWbB1DiS$" role="3ndbpf">
+                        <node concept="3oM_SD" id="qYWbB1DiS_" role="1PaTwD">
+                          <property role="3oM_SC" value="but only all edge from CS" />
+                        </node>
                       </node>
                     </node>
                     <node concept="2Gpval" id="4WbPc0p7juc" role="3cqZAp">
@@ -4212,8 +4253,10 @@
                       </node>
                     </node>
                     <node concept="3SKdUt" id="4WbPc0p7Ieh" role="3cqZAp">
-                      <node concept="3SKdUq" id="4WbPc0p7Iej" role="3SKWNk">
-                        <property role="3SKdUp" value="add to model" />
+                      <node concept="1PaTwC" id="qYWbB1DiSA" role="3ndbpf">
+                        <node concept="3oM_SD" id="qYWbB1DiSB" role="1PaTwD">
+                          <property role="3oM_SC" value="add to model" />
+                        </node>
                       </node>
                     </node>
                     <node concept="3clFbF" id="4WbPc0p7K_G" role="3cqZAp">

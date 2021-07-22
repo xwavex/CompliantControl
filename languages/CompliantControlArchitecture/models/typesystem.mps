@@ -97,11 +97,8 @@
         <child id="1163668922816" name="ifTrue" index="3K4E3e" />
         <child id="1163668934364" name="ifFalse" index="3K4GZi" />
       </concept>
-      <concept id="6329021646629104957" name="jetbrains.mps.baseLanguage.structure.TextCommentPart" flags="nn" index="3SKdUq">
-        <property id="6329021646629104958" name="text" index="3SKdUp" />
-      </concept>
       <concept id="6329021646629104954" name="jetbrains.mps.baseLanguage.structure.SingleLineComment" flags="nn" index="3SKdUt">
-        <child id="6329021646629175155" name="commentPart" index="3SKWNk" />
+        <child id="1350122676458893092" name="text" index="3ndbpf" />
       </concept>
       <concept id="1080120340718" name="jetbrains.mps.baseLanguage.structure.AndExpression" flags="nn" index="1Wc70l" />
     </language>
@@ -119,9 +116,9 @@
         <reference id="1227096645744" name="linkDeclaration" index="2OEe5H" />
       </concept>
       <concept id="1227096774658" name="jetbrains.mps.lang.typesystem.structure.MessageStatement" flags="ng" index="2OEH$v">
-        <child id="1227096802791" name="helginsIntention" index="2OEOjU" />
-        <child id="1227096802790" name="nodeToReport" index="2OEOjV" />
-        <child id="1227096836496" name="messageTarget" index="2OEWyd" />
+        <child id="1227096802791" name="helginsIntention_old" index="2OEOjU" />
+        <child id="1227096802790" name="nodeToReport_old" index="2OEOjV" />
+        <child id="1227096836496" name="messageTarget_old" index="2OEWyd" />
       </concept>
       <concept id="1216383170661" name="jetbrains.mps.lang.typesystem.structure.TypesystemQuickFix" flags="ng" index="Q5z_Y">
         <child id="1216383424566" name="executeBlock" index="Q6x$H" />
@@ -224,10 +221,18 @@
       </concept>
       <concept id="709746936026466394" name="jetbrains.mps.lang.core.structure.ChildAttribute" flags="ng" index="3VBwX9">
         <property id="709746936026609031" name="linkId" index="3V$3ak" />
-        <property id="709746936026609029" name="linkRole" index="3V$3am" />
+        <property id="709746936026609029" name="role_DebugInfo" index="3V$3am" />
       </concept>
       <concept id="4452961908202556907" name="jetbrains.mps.lang.core.structure.BaseCommentAttribute" flags="ng" index="1X3_iC">
         <child id="3078666699043039389" name="commentedNode" index="8Wnug" />
+      </concept>
+    </language>
+    <language id="c7fb639f-be78-4307-89b0-b5959c3fa8c8" name="jetbrains.mps.lang.text">
+      <concept id="155656958578482948" name="jetbrains.mps.lang.text.structure.Word" flags="ng" index="3oM_SD">
+        <property id="155656958578482949" name="value" index="3oM_SC" />
+      </concept>
+      <concept id="2535923850359271782" name="jetbrains.mps.lang.text.structure.Line" flags="ng" index="1PaTwC">
+        <child id="2535923850359271783" name="elements" index="1PaTwD" />
       </concept>
     </language>
     <language id="83888646-71ce-4f1c-9c53-c54016f6ad4f" name="jetbrains.mps.baseLanguage.collections">
@@ -257,8 +262,10 @@
     <property role="TrG5h" value="Check_For_Filter_in_MFSub" />
     <node concept="3clFbS" id="1_0ru7r0z2" role="18ibNy">
       <node concept="3SKdUt" id="2L3KICy4En$" role="3cqZAp">
-        <node concept="3SKdUq" id="2L3KICy4EnA" role="3SKWNk">
-          <property role="3SKdUp" value="Check only the first level after the Motion Force Subspace!" />
+        <node concept="1PaTwC" id="qYWbB1DiRS" role="3ndbpf">
+          <node concept="3oM_SD" id="qYWbB1DiRT" role="1PaTwD">
+            <property role="3oM_SC" value="Check only the first level after the Motion Force Subspace!" />
+          </node>
         </node>
       </node>
       <node concept="3clFbJ" id="1_0ru7r0JC" role="3cqZAp">
@@ -676,8 +683,10 @@
           <node concept="3eNFk2" id="2L3KICxVVdi" role="8Wnug">
             <node concept="3clFbS" id="2L3KICxVVdk" role="3eOfB_">
               <node concept="3SKdUt" id="2L3KICxW5Us" role="3cqZAp">
-                <node concept="3SKdUq" id="2L3KICxW5Ut" role="3SKWNk">
-                  <property role="3SKdUp" value="?" />
+                <node concept="1PaTwC" id="qYWbB1DiRU" role="3ndbpf">
+                  <node concept="3oM_SD" id="qYWbB1DiRV" role="1PaTwD">
+                    <property role="3oM_SC" value="?" />
+                  </node>
                 </node>
               </node>
             </node>
@@ -1298,8 +1307,10 @@
               </node>
             </node>
             <node concept="3SKdUt" id="2L3KICy1QyZ" role="3cqZAp">
-              <node concept="3SKdUq" id="2L3KICy1Qz1" role="3SKWNk">
-                <property role="3SKdUp" value="LinkRef" />
+              <node concept="1PaTwC" id="qYWbB1DiRW" role="3ndbpf">
+                <node concept="3oM_SD" id="qYWbB1DiRX" role="1PaTwD">
+                  <property role="3oM_SC" value="LinkRef" />
+                </node>
               </node>
             </node>
             <node concept="3clFbF" id="2L3KICy1lug" role="3cqZAp">
@@ -1704,8 +1715,10 @@
                   <node concept="9aQIb" id="5DxB9Pi49ZX" role="9aQIa">
                     <node concept="3clFbS" id="5DxB9Pi49ZY" role="9aQI4">
                       <node concept="3SKdUt" id="5DxB9Pi4a7A" role="3cqZAp">
-                        <node concept="3SKdUq" id="5DxB9Pi4a7B" role="3SKWNk">
-                          <property role="3SKdUp" value="invert" />
+                        <node concept="1PaTwC" id="qYWbB1DiRY" role="3ndbpf">
+                          <node concept="3oM_SD" id="qYWbB1DiRZ" role="1PaTwD">
+                            <property role="3oM_SC" value="invert" />
+                          </node>
                         </node>
                       </node>
                       <node concept="3clFbJ" id="5DxB9Pi4a9m" role="3cqZAp">
@@ -1713,8 +1726,10 @@
                           <node concept="3clFbJ" id="5DxB9Pi4buF" role="3cqZAp">
                             <node concept="3clFbS" id="5DxB9Pi4buH" role="3clFbx">
                               <node concept="3SKdUt" id="5DxB9Pi4elj" role="3cqZAp">
-                                <node concept="3SKdUq" id="5DxB9Pi4ell" role="3SKWNk">
-                                  <property role="3SKdUp" value="TODO ..." />
+                                <node concept="1PaTwC" id="qYWbB1DiS0" role="3ndbpf">
+                                  <node concept="3oM_SD" id="qYWbB1DiS1" role="1PaTwD">
+                                    <property role="3oM_SC" value="TODO ..." />
+                                  </node>
                                 </node>
                               </node>
                             </node>
