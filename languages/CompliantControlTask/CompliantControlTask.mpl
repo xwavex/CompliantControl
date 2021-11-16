@@ -36,7 +36,6 @@
         <module reference="0078634d-b0cf-498c-ae86-9f82fc5a241f(CompliantControlTask#6011303867107794438)" version="0" />
         <module reference="b744b93e-0522-4237-a6fd-fa650d0b451a(Geometry)" version="0" />
         <module reference="6354ebe7-c22a-4a0f-ac54-50b52ab9b065(JDK)" version="0" />
-        <module reference="d6881f78-a85d-4c9e-931e-30879e67afdd(Kinematics)" version="0" />
         <module reference="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea(MPS.Core)" version="0" />
         <module reference="8865b7a8-5271-43d3-884c-6fd1d9cfdd34(MPS.OpenAPI)" version="0" />
         <module reference="ceab5195-25ea-4f22-9b92-103b95ca8c0c(jetbrains.mps.lang.core)" version="0" />

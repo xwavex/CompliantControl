@@ -14,7 +14,6 @@
   <languageVersions>
     <language slang="l:708de3ab-d65c-48c9-a632-40656bd206af:CompliantControlArchitecture" version="0" />
     <language slang="l:b744b93e-0522-4237-a6fd-fa650d0b451a:Geometry" version="0" />
-    <language slang="l:d6881f78-a85d-4c9e-931e-30879e67afdd:Kinematics" version="0" />
     <language slang="l:ceab5195-25ea-4f22-9b92-103b95ca8c0c:jetbrains.mps.lang.core" version="1" />
   </languageVersions>
   <dependencyVersions>

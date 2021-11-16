@@ -266,7 +266,7 @@
           </node>
           <node concept="3vtaYG" id="3qu6RY9mBqk" role="3vtaj5">
             <property role="25LATQ" value="false" />
-            <ref role="1X0QE6" to="73wf:3keJr8m8xQx" resolve="SimpleTaskController" />
+            <ref role="1X0QE6" to="73wf:3keJr8m8xQx" resolve="direct force controller" />
           </node>
         </node>
         <node concept="1UUrRU" id="3qu6RY9mBiT" role="2t5XIt">
@@ -332,7 +332,7 @@
           </node>
           <node concept="3vtaYG" id="3qu6RY9mBzw" role="3vtaj5">
             <property role="25LATQ" value="false" />
-            <ref role="1X0QE6" to="73wf:3keJr8m8xQx" resolve="SimpleTaskController" />
+            <ref role="1X0QE6" to="73wf:3keJr8m8xQx" resolve="direct force controller" />
           </node>
         </node>
         <node concept="1UUrRU" id="3qu6RY9mBzx" role="2t5XIt">
@@ -401,7 +401,7 @@
           </node>
           <node concept="3vtaYG" id="3qu6RY9mBDT" role="3vtaj5">
             <property role="25LATQ" value="false" />
-            <ref role="1X0QE6" to="73wf:3keJr8m8xQx" resolve="SimpleTaskController" />
+            <ref role="1X0QE6" to="73wf:3keJr8m8xQx" resolve="direct force controller" />
           </node>
         </node>
         <node concept="1UUrRU" id="3qu6RY9mBDU" role="2t5XIt">
@@ -558,14 +558,14 @@
         </node>
         <node concept="1UVX9s" id="FwQJuAOhBJ" role="2t5XIu">
           <property role="TrG5h" value="force1" />
-          <property role="273ZWl" value="Filter:Window Wiping:robot:frame_c:C:783867092352965101" />
+          <property role="273ZWl" value="Filter:Window Wiping:RobotKukaLeft:frame_c:C:783867092352965101" />
           <ref role="FiCiC" node="FwQJuAOhBU" />
           <node concept="30yrw0" id="FwQJuAOkAS" role="3seXu1">
             <ref role="30yrEZ" to="au3b:FwQJuAOkAC" resolve="frame_c" />
           </node>
           <node concept="3vtaYG" id="FwQJuAOhBL" role="3vtaj5">
             <property role="25LATQ" value="false" />
-            <ref role="1X0QE6" to="73wf:3keJr8m8xQx" resolve="SimpleTaskController" />
+            <ref role="1X0QE6" to="73wf:3keJr8m8xQx" resolve="direct force controller" />
           </node>
         </node>
         <node concept="1UUrRU" id="FwQJuAOhBM" role="2t5XIt">
@@ -574,7 +574,7 @@
           </node>
           <node concept="1UVX9s" id="FwQJuAOhBO" role="1UUn5U">
             <property role="TrG5h" value="motion1" />
-            <property role="273ZWl" value="Filter:Window Wiping:robot:frame_c:M:783867092352965101" />
+            <property role="273ZWl" value="Filter:Window Wiping:RobotKukaLeft:frame_c:M:783867092352965101" />
             <ref role="FiCiC" node="FwQJuAOhBV" />
             <node concept="30yrw0" id="FwQJuAOkB7" role="3seXu1">
               <ref role="30yrEZ" to="au3b:FwQJuAOkAC" resolve="frame_c" />
@@ -1013,7 +1013,7 @@
           </node>
           <node concept="3vtaYG" id="6FYcTd4JE0I" role="3vtaj5">
             <property role="25LATQ" value="false" />
-            <ref role="1X0QE6" to="73wf:3keJr8m8xQx" resolve="SimpleTaskController" />
+            <ref role="1X0QE6" to="73wf:3keJr8m8xQx" resolve="direct force controller" />
           </node>
         </node>
         <node concept="1UUrRU" id="6FYcTd4JE0J" role="2t5XIt">
@@ -1079,7 +1079,7 @@
           </node>
           <node concept="3vtaYG" id="6FYcTd4JE0Z" role="3vtaj5">
             <property role="25LATQ" value="false" />
-            <ref role="1X0QE6" to="73wf:3keJr8m8xQx" resolve="SimpleTaskController" />
+            <ref role="1X0QE6" to="73wf:3keJr8m8xQx" resolve="direct force controller" />
           </node>
         </node>
         <node concept="1UUrRU" id="6FYcTd4JE10" role="2t5XIt">

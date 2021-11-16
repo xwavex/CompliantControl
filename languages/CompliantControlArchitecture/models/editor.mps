@@ -105,6 +105,8 @@
         <reference id="1140103550593" name="relationDeclaration" index="1NtTu8" />
       </concept>
       <concept id="1073389446423" name="jetbrains.mps.lang.editor.structure.CellModel_Collection" flags="sn" stub="3013115976261988961" index="3EZMnI">
+        <property id="1160590353935" name="usesFolding" index="S$Qs1" />
+        <property id="6240706158490734113" name="collapseByDefault" index="3EXrWe" />
         <child id="1106270802874" name="cellLayout" index="2iSdaV" />
         <child id="1073389446424" name="childCellModel" index="3EZMnx" />
       </concept>
@@ -8789,8 +8791,36 @@
     <node concept="3F0ifn" id="5mfFpiaYKlP" role="2wV5jI">
       <property role="3F0ifm" value="Force" />
     </node>
-    <node concept="PMmxH" id="1Brl3p$QPNc" role="6VMZX">
-      <ref role="PMmxG" node="1Brl3p$QPIU" resolve="Realization_EditorComponent" />
+    <node concept="3EZMnI" id="IsRiZixrvB" role="6VMZX">
+      <node concept="l2Vlx" id="IsRiZixrvC" role="2iSdaV" />
+      <node concept="3F0ifn" id="IsRiZixrvH" role="3EZMnx">
+        <property role="3F0ifm" value="Parameters:" />
+      </node>
+      <node concept="3EZMnI" id="IsRiZixrw6" role="3EZMnx">
+        <property role="S$Qs1" value="true" />
+        <property role="3EXrWe" value="true" />
+        <node concept="3F0ifn" id="IsRiZixrwi" role="3EZMnx">
+          <property role="3F0ifm" value="aa" />
+        </node>
+        <node concept="3F0ifn" id="IsRiZixrwm" role="3EZMnx">
+          <property role="3F0ifm" value="aa" />
+        </node>
+        <node concept="2iRkQZ" id="IsRiZixrw9" role="2iSdaV" />
+        <node concept="pVoyu" id="IsRiZixryL" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="35HoNQ" id="IsRiZiz20_" role="3EZMnx">
+        <node concept="pVoyu" id="IsRiZiz20T" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="PMmxH" id="1Brl3p$QPNc" role="3EZMnx">
+        <ref role="PMmxG" node="1Brl3p$QPIU" resolve="Realization_EditorComponent" />
+        <node concept="pVoyu" id="IsRiZixryO" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
     </node>
   </node>
   <node concept="24kQdi" id="5mfFpiaYKm3">
