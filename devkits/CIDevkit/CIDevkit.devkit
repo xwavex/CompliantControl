@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dev-kit name="CIDevkit" uuid="5ea3aa67-5e5d-4562-83e7-f34ed25e9bc9">
+  <exported-language name="708de3ab-d65c-48c9-a632-40656bd206af(CompliantControlArchitecture)" />
+  <exported-language name="b744b93e-0522-4237-a6fd-fa650d0b451a(Geometry)" />
+  <exported-language name="247ba1ff-168c-4254-b74e-978769c83933(ControlSystemGen)" />
+  <exported-language name="bbddeb44-4711-4724-adfd-114eadf306e9(GraphToRenderingGen)" />
+  <exported-language name="5f4fc394-20b7-4c7d-bdf3-f79f90436158(CCTaskConfigGen)" />
+  <exported-language name="fba86641-77f1-40ef-ac2c-4d7904eb6f63(AbstractGraphLang)" />
+  <extendedDevKits>
+    <extendedDevKit>e4b22943-9500-4f47-99eb-c2c67851158c(OrocosDevKit)</extendedDevKit>
+    <extendedDevKit>070d953a-ef62-4ed1-99cd-69b79ae1e424(RobotComponentDevKit)</extendedDevKit>
+  </extendedDevKits>
+  <exported-solutions>
+    <exported-solution>864bc811-810b-4e2f-97d7-4ee5ae8cdcfe(RobotRepository)</exported-solution>
+    <exported-solution>3385964e-5b3d-433b-a45e-c97c2abf2862(RSTRTa)</exported-solution>
+    <exported-solution>6d4f5997-0eeb-4a8a-86c2-d4b3ba19dd87(CCL)</exported-solution>
+  </exported-solutions>
+</dev-kit>
+

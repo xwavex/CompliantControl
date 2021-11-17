@@ -389,5 +389,18 @@
       <node concept="Vb9p2" id="3qu6RY9uv$T" role="3F10Kt" />
     </node>
   </node>
+  <node concept="24kQdi" id="4lvPSgOQR4A">
+    <property role="3GE5qa" value="trajectory" />
+    <ref role="1XX52x" to="iobv:4lvPSgOQR26" resolve="TrajectoryRef" />
+    <node concept="1iCGBv" id="4lvPSgOQR5c" role="2wV5jI">
+      <ref role="1NtTu8" to="iobv:4lvPSgOQR4r" resolve="traj" />
+      <node concept="1sVBvm" id="4lvPSgOQR5e" role="1sWHZn">
+        <node concept="3F0A7n" id="4lvPSgOQR5o" role="2wV5jI">
+          <property role="1Intyy" value="true" />
+          <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+        </node>
+      </node>
+    </node>
+  </node>
 </model>
 

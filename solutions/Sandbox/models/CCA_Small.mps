@@ -216,7 +216,7 @@
           </node>
           <node concept="3vtaYG" id="499ZTMONxsL" role="3vtaj5">
             <property role="25LATQ" value="false" />
-            <ref role="1X0QE6" to="73wf:3keJr8m8xQx" resolve="SimpleTaskController" />
+            <ref role="1X0QE6" to="73wf:3keJr8m8xQx" resolve="direct force controller" />
           </node>
         </node>
         <node concept="1UUrRU" id="499ZTMONxsM" role="2t5XIt">
