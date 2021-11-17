@@ -19,13 +19,34 @@
   </imports>
   <registry>
     <language id="b744b93e-0522-4237-a6fd-fa650d0b451a" name="Geometry">
+      <concept id="7718836250438026365" name="Geometry.structure.VirtualManipulator" flags="ng" index="pQDjh">
+        <reference id="7214932431041788247" name="robotRight" index="2M$6Y6" />
+        <reference id="7214932431041788186" name="robotLeft" index="2M$6Zb" />
+        <child id="7718836250438557637" name="anchorLeft" index="pOCXD" />
+        <child id="7718836250438557650" name="anchorRight" index="pOCXY" />
+        <child id="6165337268367337246" name="chainLeft" index="3s38Ea" />
+        <child id="6165337268367337331" name="chainRight" index="3s38FB" />
+        <child id="7511771623538953233" name="internalForce" index="1YQi1J" />
+      </concept>
       <concept id="7718836250438081396" name="Geometry.structure.KinematicChainRef" flags="ng" index="pQWJo">
         <reference id="7718836250438933123" name="chain" index="pNcCJ" />
+      </concept>
+      <concept id="3935613358949427562" name="Geometry.structure.VirtuallyCombinedJoints" flags="ng" index="2ZU78l" />
+      <concept id="3935613358947988427" name="Geometry.structure.VirtualManipulatorChainRef" flags="ng" index="2ZZAyO">
+        <reference id="3935613358948036148" name="vm" index="2ZZNlb" />
       </concept>
       <concept id="6011303867107887364" name="Geometry.structure.FrameRef" flags="ng" index="30yrw0">
         <reference id="6011303867107888059" name="ref" index="30yrEZ" />
       </concept>
       <concept id="6011303867107887907" name="Geometry.structure.Frame" flags="ng" index="30yrCB" />
+      <concept id="6011303867107887629" name="Geometry.structure.LinkRef" flags="ng" index="30yrG9">
+        <reference id="6165337268368241492" name="link" index="3s7PV0" />
+      </concept>
+      <concept id="7511771623538953248" name="Geometry.structure.InternalForce" flags="ng" index="1YQi1u">
+        <property id="7511771623538953293" name="z" index="1YQi0N" />
+        <property id="7511771623538953288" name="y" index="1YQi0Q" />
+        <property id="7511771623538953285" name="x" index="1YQi0V" />
+      </concept>
     </language>
     <language id="99abc364-3965-4ead-ab2d-0b272a528a90" name="RobotPlatform">
       <concept id="7214932431041870825" name="RobotPlatform.structure.RobotInstance" flags="ng" index="2M$EOS">
@@ -105,18 +126,84 @@
   </registry>
   <node concept="1UUkyC" id="7$7Di$72lVt">
     <property role="TrG5h" value="PS1" />
-    <node concept="1UVXM5" id="7$7Di$72q30" role="1UUrXR">
+    <node concept="1UVXM5" id="6wZb7SmTwH9" role="1UUrXR">
       <ref role="rJRw4" node="7$7Di$72qGy" resolve="robot1" />
-      <node concept="1UUn3G" id="7$7Di$72qH7" role="1UVXK3">
-        <node concept="30yrw0" id="7$7Di$72qHT" role="3s6PJk">
+      <node concept="1UUn3G" id="6wZb7SmTwHO" role="1UVXK3">
+        <node concept="30yrw0" id="6wZb7SmTwIi" role="3s6PJk">
           <ref role="30yrEZ" node="7$7Di$72qHk" resolve="frame_c1" />
         </node>
-        <node concept="1UUrRU" id="7$7Di$72$HF" role="2t5XIt">
-          <node concept="30yrw0" id="7$7Di$72$HX" role="3vu4KW">
+        <node concept="1UUrRU" id="6wZb7SmTwI1" role="2t5XIt">
+          <node concept="30yrw0" id="6wZb7SmTwJb" role="3vu4KW">
             <ref role="30yrEZ" node="7$7Di$72qHk" resolve="frame_c1" />
           </node>
-          <node concept="3ve2oW" id="7$7Di$72$I1" role="1UUn57">
+          <node concept="3ve2oW" id="6wZb7SmTwJN" role="1UUn57">
             <property role="TrG5h" value="red1" />
+            <node concept="pQWJo" id="6wZb7SmTwK1" role="3ve2oX">
+              <ref role="pNcCJ" to="d49h:C_g3bnXz3c" resolve="full_arm" />
+            </node>
+            <node concept="3vtaBq" id="6wZb7SmTwJX" role="3vtaj5">
+              <property role="25LATQ" value="false" />
+              <ref role="1X0QE6" to="73wf:3keJr8m8xI7" resolve="JointPositionCtrl" />
+            </node>
+          </node>
+          <node concept="1UVX9s" id="6wZb7SmUqr7" role="1UUn5U">
+            <property role="273ZWl" value="Filter:PS1:robot1:frame_c1:M:7511771623538953076" />
+            <property role="TrG5h" value="msd1" />
+            <ref role="FiCiC" node="6wZb7SmTwK8" />
+            <node concept="30yrw0" id="6wZb7SmUqrl" role="3seXu1">
+              <ref role="30yrEZ" node="7$7Di$72qHk" resolve="frame_c1" />
+            </node>
+            <node concept="3vtaTr" id="6wZb7SmUqrh" role="3vtaj5">
+              <property role="25LATQ" value="false" />
+              <ref role="1X0QE6" to="73wf:3keJr8m8xMo" resolve="PositionController" />
+            </node>
+          </node>
+        </node>
+        <node concept="CG9t2" id="6wZb7SmTwK5" role="FgNOy">
+          <property role="FgRlF" value="0.0f" />
+          <property role="FgRlk" value="0.0f" />
+          <property role="FgRld" value="1.0f" />
+          <property role="FgRkm" value="0.0f" />
+          <property role="FgRnB" value="0.0f" />
+          <property role="FgRmw" value="0.0f" />
+        </node>
+        <node concept="CG9t2" id="6wZb7SmTwK8" role="8r5FV">
+          <property role="FgRlF" value="1.0f" />
+          <property role="FgRlk" value="1.0f" />
+          <property role="FgRld" value="0.0f" />
+          <property role="FgRkm" value="1.0f" />
+          <property role="FgRnB" value="1.0f" />
+          <property role="FgRmw" value="1.0f" />
+        </node>
+        <node concept="1UVX9s" id="6wZb7SmUqd$" role="2t5XIu">
+          <property role="273ZWl" value="Filter:PS1:robot1:frame_c1:C:7511771623538953076" />
+          <property role="TrG5h" value="fctrl1" />
+          <ref role="FiCiC" node="6wZb7SmTwK5" />
+          <node concept="30yrw0" id="6wZb7SmUqdM" role="3seXu1">
+            <ref role="30yrEZ" node="7$7Di$72qHk" resolve="frame_c1" />
+          </node>
+          <node concept="3vtaYG" id="6wZb7SmUqdI" role="3vtaj5">
+            <property role="25LATQ" value="false" />
+            <ref role="1X0QE6" to="73wf:3keJr8m8xQx" resolve="direct force controller" />
+          </node>
+        </node>
+      </node>
+      <node concept="pQWJo" id="6wZb7SmTwIe" role="2ZZomq">
+        <ref role="pNcCJ" to="d49h:C_g3bnXz3c" resolve="full_arm" />
+      </node>
+    </node>
+    <node concept="1UVXM5" id="7$7Di$72q30" role="1UUrXR">
+      <ref role="rJRw4" node="6wZb7SmTvZm" resolve="robot2" />
+      <node concept="1UUn3G" id="7$7Di$72qH7" role="1UVXK3">
+        <node concept="30yrw0" id="6wZb7SmTwIV" role="3s6PJk">
+          <ref role="30yrEZ" node="6wZb7SmTwIm" resolve="frame_c2" />
+        </node>
+        <node concept="1UUrRU" id="7$7Di$72$HF" role="2t5XIt">
+          <node concept="30yrw0" id="6wZb7SmTwJ7" role="3vu4KW">
+            <ref role="30yrEZ" node="6wZb7SmTwIm" resolve="frame_c2" />
+          </node>
+          <node concept="3ve2oW" id="7$7Di$72$I1" role="1UUn57">
+            <property role="TrG5h" value="red2" />
             <node concept="pQWJo" id="7$7Di$72$If" role="3ve2oX">
               <ref role="pNcCJ" to="d49h:C_g3bnXz3c" resolve="full_arm" />
             </node>
@@ -126,11 +213,11 @@
             </node>
           </node>
           <node concept="1UVX9s" id="6wZb7SmTvBN" role="1UUn5U">
-            <property role="273ZWl" value="Filter:PS1:robot1:frame_c1:M:8721120799056571207" />
-            <property role="TrG5h" value="msd1" />
+            <property role="273ZWl" value="Filter:PS1:robot2:frame_c2:M:8721120799056571207" />
+            <property role="TrG5h" value="msd2" />
             <ref role="FiCiC" node="6wZb7SmTb_5" />
-            <node concept="30yrw0" id="6wZb7SmTvC1" role="3seXu1">
-              <ref role="30yrEZ" node="7$7Di$72qHk" resolve="frame_c1" />
+            <node concept="30yrw0" id="6wZb7SmTwJ3" role="3seXu1">
+              <ref role="30yrEZ" node="6wZb7SmTwIm" resolve="frame_c2" />
             </node>
             <node concept="3vtaTr" id="6wZb7SmTvBX" role="3vtaj5">
               <property role="25LATQ" value="false" />
@@ -167,11 +254,11 @@
           <property role="FgRmw" value="1.0f" />
         </node>
         <node concept="1UVX9s" id="6wZb7SmTvxC" role="2t5XIu">
-          <property role="273ZWl" value="Filter:PS1:robot1:frame_c1:C:8721120799056571207" />
-          <property role="TrG5h" value="fctrl1" />
+          <property role="273ZWl" value="Filter:PS1:robot2:frame_c2:C:8721120799056571207" />
+          <property role="TrG5h" value="fctrl2" />
           <ref role="FiCiC" node="6wZb7SmTbnw" />
-          <node concept="30yrw0" id="6wZb7SmTvy0" role="3seXu1">
-            <ref role="30yrEZ" node="7$7Di$72qHk" resolve="frame_c1" />
+          <node concept="30yrw0" id="6wZb7SmTwIZ" role="3seXu1">
+            <ref role="30yrEZ" node="6wZb7SmTwIm" resolve="frame_c2" />
           </node>
           <node concept="3vtaYG" id="6wZb7SmTvxW" role="3vtaj5">
             <property role="25LATQ" value="false" />
@@ -190,6 +277,102 @@
   </node>
   <node concept="30yrCB" id="7$7Di$72qHk">
     <property role="TrG5h" value="frame_c1" />
+  </node>
+  <node concept="1UUkyC" id="6wZb7SmTvYL">
+    <property role="TrG5h" value="PS2" />
+    <node concept="1UVXM5" id="6wZb7SmTwF9" role="1UUrXR">
+      <ref role="rJRw4" node="6wZb7SmTvZV" resolve="vmc1_vmc2" />
+      <node concept="2ZZAyO" id="6wZb7SmTwFi" role="2ZZomq">
+        <ref role="2ZZNlb" node="6wZb7SmTvZV" resolve="vmc1_vmc2" />
+      </node>
+      <node concept="1UUrRU" id="6wZb7SmTwGk" role="1UVXK3">
+        <node concept="30yrw0" id="6wZb7SmTwGN" role="3vu4KW">
+          <ref role="30yrEZ" node="6wZb7SmTwFC" resolve="frame_cube_origin" />
+        </node>
+        <node concept="1UVX9s" id="6wZb7SmTwGx" role="1UUn5U">
+          <property role="TrG5h" value="motion1" />
+          <node concept="30yrw0" id="6wZb7SmTwGJ" role="3seXu1">
+            <ref role="30yrEZ" node="6wZb7SmTwFC" resolve="frame_cube_origin" />
+          </node>
+          <node concept="3vtaTr" id="6wZb7SmTwGF" role="3vtaj5">
+            <property role="25LATQ" value="false" />
+            <ref role="1X0QE6" to="73wf:3keJr8m8xMo" resolve="PositionController" />
+          </node>
+        </node>
+        <node concept="3ve2oW" id="6wZb7SmTwGR" role="1UUn57">
+          <property role="TrG5h" value="redundancy1" />
+          <node concept="2ZU78l" id="6wZb7SmTwH5" role="3ve2oX" />
+          <node concept="3vtaBq" id="6wZb7SmTwH1" role="3vtaj5">
+            <property role="25LATQ" value="false" />
+            <ref role="1X0QE6" to="73wf:3keJr8m8xI7" resolve="JointPositionCtrl" />
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="2M$EOS" id="6wZb7SmTvZm">
+    <property role="TrG5h" value="robot2" />
+    <ref role="2M$EEQ" to="d49h:C_g3bnXz3b" resolve="Kuka LWR 4+ (Sponge)" />
+  </node>
+  <node concept="pQDjh" id="6wZb7SmTvZV">
+    <property role="TrG5h" value="vmc1_vmc2" />
+    <ref role="2M$6Zb" node="7$7Di$72qGy" resolve="robot1" />
+    <ref role="2M$6Y6" node="6wZb7SmTvZm" resolve="robot2" />
+    <node concept="30yrG9" id="6wZb7SmTwEX" role="pOCXD">
+      <ref role="3s7PV0" to="oet6:C_g3bnWAzK" resolve="lwr_tool_link" />
+    </node>
+    <node concept="pQWJo" id="6wZb7SmTwET" role="3s38Ea">
+      <ref role="pNcCJ" to="d49h:C_g3bnXz3c" resolve="full_arm" />
+    </node>
+    <node concept="30yrG9" id="6wZb7SmTwF5" role="pOCXY">
+      <ref role="3s7PV0" to="oet6:C_g3bnWAzK" resolve="lwr_tool_link" />
+    </node>
+    <node concept="pQWJo" id="6wZb7SmTwF1" role="3s38FB">
+      <ref role="pNcCJ" to="d49h:C_g3bnXz3c" resolve="full_arm" />
+    </node>
+    <node concept="1YQi1u" id="6wZb7SmUpWW" role="1YQi1J">
+      <property role="1YQi0V" value="-1.0f" />
+      <property role="1YQi0Q" value="0.0f" />
+      <property role="1YQi0N" value="0.0f" />
+    </node>
+  </node>
+  <node concept="30yrCB" id="6wZb7SmTwFC">
+    <property role="TrG5h" value="frame_cube_origin" />
+  </node>
+  <node concept="30yrCB" id="6wZb7SmTwIm">
+    <property role="TrG5h" value="frame_c2" />
+  </node>
+  <node concept="1UUkyC" id="6wZb7SmUriQ">
+    <property role="TrG5h" value="PS3" />
+    <node concept="1UVXM5" id="6wZb7SmUrjr" role="1UUrXR">
+      <ref role="rJRw4" node="6wZb7SmTvZV" resolve="vmc1_vmc2" />
+      <node concept="1UUrRU" id="6wZb7SmUrjC" role="1UVXK3">
+        <node concept="30yrw0" id="6wZb7SmUrk7" role="3vu4KW">
+          <ref role="30yrEZ" node="6wZb7SmTwFC" resolve="frame_cube_origin" />
+        </node>
+        <node concept="1UVX9s" id="6wZb7SmUrjP" role="1UUn5U">
+          <property role="TrG5h" value="compliance1" />
+          <node concept="30yrw0" id="6wZb7SmUrk3" role="3seXu1">
+            <ref role="30yrEZ" node="6wZb7SmTwFC" resolve="frame_cube_origin" />
+          </node>
+          <node concept="3vtaYG" id="6wZb7SmUrjZ" role="3vtaj5">
+            <property role="25LATQ" value="false" />
+            <ref role="1X0QE6" to="73wf:3keJr8m8xQx" resolve="direct force controller" />
+          </node>
+        </node>
+        <node concept="3ve2oW" id="6wZb7SmUrkb" role="1UUn57">
+          <property role="TrG5h" value="redundancy1" />
+          <node concept="2ZU78l" id="6wZb7SmUrkp" role="3ve2oX" />
+          <node concept="3vtaBq" id="6wZb7SmUrkl" role="3vtaj5">
+            <property role="25LATQ" value="false" />
+            <ref role="1X0QE6" to="73wf:3keJr8m8xI7" resolve="JointPositionCtrl" />
+          </node>
+        </node>
+      </node>
+      <node concept="2ZZAyO" id="6wZb7SmUrj$" role="2ZZomq">
+        <ref role="2ZZNlb" node="6wZb7SmTvZV" resolve="vmc1_vmc2" />
+      </node>
+    </node>
   </node>
 </model>
 

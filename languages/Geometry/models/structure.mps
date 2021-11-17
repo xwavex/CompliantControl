@@ -342,6 +342,12 @@
       <property role="20lbJX" value="1" />
       <ref role="20lvS9" node="6GuOaLMLhHO" resolve="KinematicChainRef" />
     </node>
+    <node concept="1TJgyj" id="6wZb7SmTwKh" role="1TKVEi">
+      <property role="IQ2ns" value="7511771623538953233" />
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="internalForce" />
+      <ref role="20lvS9" node="6wZb7SmTwKw" resolve="InternalForce" />
+    </node>
     <node concept="PrWs8" id="3qu6RY9mCG1" role="PzmwI">
       <ref role="PrY4T" to="tpck:3fifI_xCcJN" resolve="ScopeProvider" />
     </node>
@@ -449,6 +455,26 @@
     <property role="TrG5h" value="World" />
     <property role="3GE5qa" value="world" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+  </node>
+  <node concept="1TIwiD" id="6wZb7SmTwKw">
+    <property role="EcuMT" value="7511771623538953248" />
+    <property role="TrG5h" value="InternalForce" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyi" id="6wZb7SmTwL5" role="1TKVEl">
+      <property role="IQ2nx" value="7511771623538953285" />
+      <property role="TrG5h" value="x" />
+      <ref role="AX2Wp" to="tpee:4_5hYVHKxAU" resolve="_FloatNumberValue" />
+    </node>
+    <node concept="1TJgyi" id="6wZb7SmTwL8" role="1TKVEl">
+      <property role="IQ2nx" value="7511771623538953288" />
+      <property role="TrG5h" value="y" />
+      <ref role="AX2Wp" to="tpee:4_5hYVHKxAU" resolve="_FloatNumberValue" />
+    </node>
+    <node concept="1TJgyi" id="6wZb7SmTwLd" role="1TKVEl">
+      <property role="IQ2nx" value="7511771623538953293" />
+      <property role="TrG5h" value="z" />
+      <ref role="AX2Wp" to="tpee:4_5hYVHKxAU" resolve="_FloatNumberValue" />
+    </node>
   </node>
 </model>
 

@@ -11,10 +11,14 @@
   </imports>
   <registry>
     <language id="18bc6592-03a6-4e29-a83a-7ff23bde13ba" name="jetbrains.mps.lang.editor">
-      <concept id="1071666914219" name="jetbrains.mps.lang.editor.structure.ConceptEditorDeclaration" flags="ig" index="24kQdi" />
+      <concept id="1071666914219" name="jetbrains.mps.lang.editor.structure.ConceptEditorDeclaration" flags="ig" index="24kQdi">
+        <child id="1078153129734" name="inspectedCellModel" index="6VMZX" />
+      </concept>
+      <concept id="1106270571710" name="jetbrains.mps.lang.editor.structure.CellLayout_Vertical" flags="nn" index="2iRkQZ" />
       <concept id="1237303669825" name="jetbrains.mps.lang.editor.structure.CellLayout_Indent" flags="nn" index="l2Vlx" />
       <concept id="1142886221719" name="jetbrains.mps.lang.editor.structure.QueryFunction_NodeCondition" flags="in" index="pkWqt" />
       <concept id="1142886811589" name="jetbrains.mps.lang.editor.structure.ConceptFunctionParameter_node" flags="nn" index="pncrf" />
+      <concept id="1237385578942" name="jetbrains.mps.lang.editor.structure.IndentLayoutOnNewLineStyleClassItem" flags="ln" index="pVoyu" />
       <concept id="1080736578640" name="jetbrains.mps.lang.editor.structure.BaseEditorComponent" flags="ig" index="2wURMF">
         <child id="1080736633877" name="cellModel" index="2wV5jI" />
       </concept>
@@ -23,6 +27,10 @@
         <reference id="1078939183255" name="editorComponent" index="PMmxG" />
       </concept>
       <concept id="1186403751766" name="jetbrains.mps.lang.editor.structure.FontStyleStyleClassItem" flags="ln" index="Vb9p2" />
+      <concept id="1186414536763" name="jetbrains.mps.lang.editor.structure.BooleanStyleSheetItem" flags="ln" index="VOi$J">
+        <property id="1186414551515" name="flag" index="VOm3f" />
+      </concept>
+      <concept id="1186414928363" name="jetbrains.mps.lang.editor.structure.SelectableStyleSheetItem" flags="ln" index="VPM3Z" />
       <concept id="1088013125922" name="jetbrains.mps.lang.editor.structure.CellModel_RefCell" flags="sg" stub="730538219795941030" index="1iCGBv">
         <child id="1088186146602" name="editorComponent" index="1sWHZn" />
       </concept>
@@ -312,6 +320,12 @@
         </node>
       </node>
     </node>
+    <node concept="3EZMnI" id="6wZb7SmTwQ9" role="6VMZX">
+      <node concept="l2Vlx" id="6wZb7SmTwQa" role="2iSdaV" />
+      <node concept="3F1sOY" id="6wZb7SmTwQf" role="3EZMnx">
+        <ref role="1NtTu8" to="iobv:6wZb7SmTwKh" resolve="internalForce" />
+      </node>
+    </node>
   </node>
   <node concept="24kQdi" id="1k4mFkMuO9Q">
     <property role="3GE5qa" value="frame" />
@@ -400,6 +414,57 @@
           <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
         </node>
       </node>
+    </node>
+  </node>
+  <node concept="24kQdi" id="6wZb7SmTwLs">
+    <ref role="1XX52x" to="iobv:6wZb7SmTwKw" resolve="InternalForce" />
+    <node concept="3EZMnI" id="6wZb7SmTwM2" role="2wV5jI">
+      <node concept="3F0ifn" id="6wZb7SmTwMc" role="3EZMnx">
+        <property role="3F0ifm" value="Internal Force" />
+      </node>
+      <node concept="3EZMnI" id="6wZb7SmTwMl" role="3EZMnx">
+        <node concept="3EZMnI" id="6wZb7SmTwN$" role="3EZMnx">
+          <node concept="VPM3Z" id="6wZb7SmTwNA" role="3F10Kt">
+            <property role="VOm3f" value="false" />
+          </node>
+          <node concept="3F0ifn" id="6wZb7SmTwNN" role="3EZMnx">
+            <property role="3F0ifm" value="x:" />
+          </node>
+          <node concept="3F0A7n" id="6wZb7SmTwNW" role="3EZMnx">
+            <ref role="1NtTu8" to="iobv:6wZb7SmTwL5" resolve="x" />
+          </node>
+          <node concept="l2Vlx" id="6wZb7SmTwND" role="2iSdaV" />
+        </node>
+        <node concept="3EZMnI" id="6wZb7SmTwOq" role="3EZMnx">
+          <node concept="VPM3Z" id="6wZb7SmTwOs" role="3F10Kt">
+            <property role="VOm3f" value="false" />
+          </node>
+          <node concept="3F0ifn" id="6wZb7SmTwOu" role="3EZMnx">
+            <property role="3F0ifm" value="y:" />
+          </node>
+          <node concept="3F0A7n" id="6wZb7SmTwOY" role="3EZMnx">
+            <ref role="1NtTu8" to="iobv:6wZb7SmTwL8" resolve="y" />
+          </node>
+          <node concept="l2Vlx" id="6wZb7SmTwOv" role="2iSdaV" />
+        </node>
+        <node concept="3EZMnI" id="6wZb7SmTwPr" role="3EZMnx">
+          <node concept="VPM3Z" id="6wZb7SmTwPt" role="3F10Kt">
+            <property role="VOm3f" value="false" />
+          </node>
+          <node concept="3F0ifn" id="6wZb7SmTwPv" role="3EZMnx">
+            <property role="3F0ifm" value="z:" />
+          </node>
+          <node concept="3F0A7n" id="6wZb7SmTwQ3" role="3EZMnx">
+            <ref role="1NtTu8" to="iobv:6wZb7SmTwLd" resolve="z" />
+          </node>
+          <node concept="l2Vlx" id="6wZb7SmTwPw" role="2iSdaV" />
+        </node>
+        <node concept="2iRkQZ" id="6wZb7SmTwMo" role="2iSdaV" />
+        <node concept="pVoyu" id="6wZb7SmTwNx" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="l2Vlx" id="6wZb7SmTwM5" role="2iSdaV" />
     </node>
   </node>
 </model>
