@@ -81,6 +81,11 @@
       <property role="TrG5h" value="directed" />
       <ref role="AX2Wp" to="tpck:fKAQMTB" resolve="boolean" />
     </node>
+    <node concept="1TJgyi" id="1tqrCDsRbVW" role="1TKVEl">
+      <property role="IQ2nx" value="1682778951318814460" />
+      <property role="TrG5h" value="color" />
+      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+    </node>
     <node concept="1TJgyj" id="3JOwuCCOGHT" role="1TKVEi">
       <property role="IQ2ns" value="4320220785262381945" />
       <property role="20lmBu" value="reference" />
