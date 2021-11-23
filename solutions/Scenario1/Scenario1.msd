@@ -15,7 +15,6 @@
     <dependency reexport="false">3385964e-5b3d-433b-a45e-c97c2abf2862(RSTRTa)</dependency>
     <dependency reexport="false">6d4f5997-0eeb-4a8a-86c2-d4b3ba19dd87(CCL)</dependency>
     <dependency reexport="false">642f71f8-327a-425b-84f9-44ad58786d27(jetbrains.mps.lang.project.modules)</dependency>
-    <dependency reexport="false">69da6341-094b-473d-86eb-0a38402e8a0d(Sandbox)</dependency>
     <dependency reexport="false">f9491b51-fad9-4ade-b5db-36db060ccb6d(GeneratorPlans)</dependency>
   </dependencies>
   <languageVersions>

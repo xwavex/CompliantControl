@@ -9,7 +9,6 @@
   <dependencies>
     <dependency reexport="false">864bc811-810b-4e2f-97d7-4ee5ae8cdcfe(RobotRepository)</dependency>
     <dependency reexport="false">6d4f5997-0eeb-4a8a-86c2-d4b3ba19dd87(CCL)</dependency>
-    <dependency reexport="false">69da6341-094b-473d-86eb-0a38402e8a0d(Sandbox)</dependency>
   </dependencies>
   <languageVersions>
     <language slang="l:708de3ab-d65c-48c9-a632-40656bd206af:CompliantControlArchitecture" version="0" />
